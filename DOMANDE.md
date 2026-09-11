@@ -1,5 +1,7 @@
 # DOMANDE — cose che non so e che cambiano le ricette
 
+> Risposte integrate l'11/09/2026 in SPEC.md v0.2+. Nuova domanda aperta in fondo (#11).
+
 Rispondi sotto ogni domanda (anche in due parole). Se non rispondi, uso l'**assunzione** indicata.
 Nessuna di queste blocca il lavoro sulla piattaforma; influenzano soprattutto il contenuto delle ricette.
 
@@ -66,4 +68,9 @@ Hai scritto "3 padelle": per pasta, risotti, zuppe e arrosti servono una pentola
 
 Assunzione: hai una pentola alta e una teglia.
 
-> si 
+> si
+
+### 11. Vino bianco e prezzemolo: sempre in casa?
+Oggi contano come ingredienti da avere: con zucca + salsiccia + riso il risotto risulta "3/4, manca vino bianco". Se li tieni sempre, li metto nella dispensa base e la lista dei risultati si allarga.
+
+>

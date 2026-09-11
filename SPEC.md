@@ -1,6 +1,6 @@
 # SPEC — Cucina · ricettario intelligente per Bragança
 
-Versione 0.2 · 11 settembre 2026 · stato: **approvata** (risposte a DOMANDE.md integrate)
+Versione 0.3 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-3-4 concluse; online su https://michimodu99.github.io/cucina/ · manca la Fase 2, foto)
 
 ## 1. Obiettivo
 
@@ -74,7 +74,7 @@ Campi **specifici di questo progetto**, assenti nei canali:
 ### 4.2 Risultati
 - Card: foto, titolo, categoria, difficoltà, tempo totale, costo, **copertura** ("hai tutto" / "manca: pecorino").
 - Ordine: copertura 100 % → 1 mancante → 2 mancanti; a parità, tempo totale crescente. Oltre 2 mancanti non compare (soglia in `config`).
-- Filtri (barra sticky): categoria · difficoltà · tempo massimo (30/45/60/90+) · costo · dieta · "solo con la mia attrezzatura" · tag (veloce, one-pan, avanzi, da-ospiti).
+- Filtri (barra sticky): categoria · difficoltà · tempo massimo (30/45/60/90+) · costo · dieta · "solo con la mia attrezzatura" · tag (veloce, one-pan, avanzi, da-ospiti). Su mobile la barra mostra solo [Filtri +] [Ordina]; il tocco apre gli altri in una griglia a due colonne.
 - Ordinamento alternativo: tempo, costo, difficoltà.
 - Se nessun risultato: mostra le 5 ricette più vicine con l'elenco dei mancanti.
 
@@ -94,6 +94,9 @@ Campi **specifici di questo progetto**, assenti nei canali:
 Timer, persistenza dispensa, preferiti, note personali, valori nutrizionali completi, API esterne, PWA offline (valutabile in v2: è quasi gratis con un service worker).
 
 ## 5. Dati
+
+### 5.0 Dove si scrivono le ricette
+Le schede si scrivono in `data/ricette/<categoria>.json` (primi, secondi, piatti-unici, contorni, dolci); `node scripts/build-data.mjs` le valida e le fonde in `data/recipes.json`, l'unico file letto dal sito. Vedi README.md per il workflow.
 
 ### 5.1 `data/recipes.json` — schema di una ricetta
 
@@ -167,8 +170,8 @@ input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 2}
      richiesti = ingredienti.filter(!opzionale).map(id) − base
      mancanti  = richiesti − posseduti
      copertura = 1 − |mancanti| / |richiesti|
-4. scarta se |mancanti| > maxMancanti
-5. ordina per |mancanti| asc, poi tempo totale asc, poi titolo
+4. scarta se |mancanti| > maxMancanti, e scarta se non possiedi nessun ingrediente richiesto (copertura 0: rumore, non suggerimento)
+5. ordina per |mancanti| asc, poi copertura desc, poi tempo totale asc, poi titolo
 output: [{ ricetta, mancanti: id[], copertura }]
 ```
 Test unitari coprono: alias → id, ingrediente vietato rifiutato, base ignorato, opzionale ignorato, ordinamento, soglia.
@@ -210,9 +213,13 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 
 | Fase | Contenuto | Checkpoint |
 |---|---|---|
-| 0 | Setup (fatto): git, skills, MCP Replicate, ricerca, SPEC, DOMANDE, lista ricette | **Tu**: revisione SPEC + risposte DOMANDE + approvazione lista |
-| 1 | Tassonomia, schema, 56 schede per 1 persona, validatore, match.js con test | validate + test verdi |
-| 2 | Generazione e ottimizzazione foto | revisione visiva insieme |
-| 3 | UI (impeccable → build → review) + DESIGN.md | screenshot desktop/mobile |
-| 4 | Repo GitHub, Pages, test dal telefono | link funzionante in cucina |
-| 5 | Aggiornamenti a richiesta | — |
+| 0 | Setup: git, skills, MCP Replicate, ricerca, SPEC, DOMANDE, lista ricette | ✅ fatto |
+| 1 | Tassonomia (116 ingredienti), schema, 57 schede per 1 persona, validatore, match.js con 18 test | ✅ fatto |
+| 2 | Generazione e ottimizzazione foto (`scripts/gen-images.mjs`, `scripts/optimize-images.mjs`) | ⏳ serve un token Replicate (account con carta) |
+| 3 | UI (impeccable → build → review 'ship') + DESIGN.md | ✅ fatto |
+| 4 | Repo pubblico `michimodu99/cucina`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
+| 5 | Aggiornamenti a richiesta | workflow in README.md |
+
+### Aperto
+- Vino bianco e prezzemolo contano come "mancanti": se sono sempre in casa, vanno marcati `base: true` in `data/ingredienti.json`.
+- Prova reale dal telefono in cucina: dimensioni del testo, swipe, cosa manca nella pagina step.

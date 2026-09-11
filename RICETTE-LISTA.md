@@ -91,9 +91,9 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 ---
 
 ## Conteggi
-- 56 ricette totali (57 proposte, tolto il ragù bianco perché già tuo → sostituito dall'amatriciana).
+- 57 ricette totali (il ragù bianco, già tuo, è stato sostituito dall'amatriciana).
 - Richiedono **frullatore**: 2 (#40, #42) — ora nello stack.
 - Attrezzatura extra oltre lo stack: stampo per dolci (#53, #54), stampini (#55, #56), mattarello (#16, #54) → badge nella UI.
 - Reinventate **R**: 0 (con passata/pelati ammessi le classiche tornano classiche). Piatti portoghesi **PT**: 4.
 
-Stato: **approvata** (risposte in `DOMANDE.md`). Le schede complete sono in `data/recipes.json`.
+Stato: **scritte tutte e 57** in `data/ricette/*.json` (→ `data/recipes.json`), online. Mancano solo le foto.
