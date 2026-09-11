@@ -13,7 +13,7 @@ const el = {
 };
 const mqMobile = window.matchMedia('(max-width: 899px)');
 
-let dati, ricetta, posseduti;
+let dati, ricetta, posseduti, sostituzioni;
 let moltiplicatore = 1;
 let pagine = [];      // desktop: nodi pagina; mobile: nodi .pagina-m
 let spread = 0;       // desktop: indice spread; mobile: indice pagina
@@ -30,6 +30,12 @@ export function montaLibro(d, r, params) {
   for (const s of scelti) {
     const x = risolvi(dati.indice, s);
     if (x) posseduti.add(x.id);
+  }
+  sostituzioni = new Map();
+  for (const i of r.ingredienti) {
+    if (i.opzionale || posseduti.has(i.id)) continue;
+    const s = (i.sostituti || []).find((x) => posseduti.has(x.id));
+    if (s) sostituzioni.set(i.id, s);
   }
   attivo = true;
   document.title = `${r.titolo} · Cucinança`;
@@ -199,7 +205,8 @@ function blocchiTesto() {
 function bloccoIngredienti() {
   const d = document.createElement('div');
   d.className = 'blocco-ingredienti';
-  const mancanti = ricetta.ingredienti.filter((i) => !i.opzionale && !posseduti.has(i.id));
+  const mancanti = ricetta.ingredienti.filter((i) => !i.opzionale && !posseduti.has(i.id) && !sostituzioni.has(i.id));
+  const nome = (id) => dati.indice.byId.get(id).nome;
   d.innerHTML = `
     <div class="blocco-testa">
       <h2>Ingredienti</h2>
@@ -209,6 +216,7 @@ function bloccoIngredienti() {
         </div>
       </div>
     </div>
+    ${sostituzioni.size ? `<div class="modifica"><span class="label">Modifica</span><ul>${[...sostituzioni].map(([id, s]) => `<li><b>${nome(s.id)}</b> al posto di ${nome(id).toLowerCase()}${s.nota ? ` — ${s.nota}` : ''}</li>`).join('')}</ul></div>` : ''}
     <ul class="ingredienti"></ul>
     ${mancanti.length ? `<button type="button" class="btn-ghost copia-mancanti">Copia la lista della spesa (${mancanti.length})</button>` : ''}`;
   renderIngredienti(d.querySelector('.ingredienti'));
@@ -241,9 +249,11 @@ function renderIngredienti(ul) {
     const q = scalaQuantita(i, moltiplicatore);
     const qb = i.unita === 'qb';
     const qta = qb ? 'q.b.' : `${formatta(q)} ${unita(i.unita, q)}`.trim();
-    const cls = [i.opzionale ? 'opz' : '', !i.opzionale && !posseduti.has(i.id) ? 'manca' : ''].filter(Boolean).join(' ');
+    const s = sostituzioni.get(i.id);
+    const cls = [i.opzionale ? 'opz' : '', s ? 'sost' : '', !i.opzionale && !s && !posseduti.has(i.id) ? 'manca' : ''].filter(Boolean).join(' ');
     const pt = (i.pt || t.pt) && (i.pt || t.pt).sostituto ? `<span class="pt">a Bragança: ${(i.pt || t.pt).sostituto}</span>` : '';
-    return `<li class="${cls}"><span class="q${qb ? ' qb' : ''}">${qta}</span><span class="n">${t.nome}${i.opzionale ? ' <small>facoltativo</small>' : ''}${i.note ? `<small>${i.note}</small>` : ''}${pt}</span></li>`;
+    const nomeHtml = s ? `<b>${dati.indice.byId.get(s.id).nome}</b> <s>${t.nome}</s>` : t.nome;
+    return `<li class="${cls}"><span class="q${qb ? ' qb' : ''}">${qta}</span><span class="n">${nomeHtml}${i.opzionale ? ' <small>facoltativo</small>' : ''}${i.note ? `<small>${i.note}</small>` : ''}${pt}</span></li>`;
   }).join('');
 }
 

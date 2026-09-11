@@ -109,6 +109,12 @@
 .ingredienti li.manca .n::after { content: 'manca'; margin-left: 6px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; border: var(--rule-ink); padding: 0 4px; vertical-align: middle; }
 .ingredienti li.opz .n { color: var(--ink-2); }
 .ingredienti .pt { display: block; color: var(--ink-2); font-size: var(--t-xs); font-style: italic; }
+.ingredienti li.sost .n s { color: var(--ink-2); text-decoration-thickness: 1px; }
+.modifica { border: var(--rule-ink); padding: 10px 12px; margin: 8px 0 16px; }
+.modifica .label { display: block; margin-bottom: 4px; }
+.modifica ul { margin: 0; padding: 0; list-style: none; }
+.modifica li { font-size: var(--t-sm); line-height: 1.4; }
+.modifica li + li { margin-top: 4px; }
 .copia-mancanti { margin-top: 10px; }
 
 .passo { display: grid; grid-template-columns: 72px 1fr; column-gap: 16px; }
