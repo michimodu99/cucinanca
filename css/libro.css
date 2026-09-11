@@ -52,13 +52,15 @@
   flex-direction: column;
 }
 .pagina + .pagina { border-left: var(--rule); }
-.pagina-vuota { background: var(--mist); }
+.pagina-vuota { background: var(--paper); }
 
-/* cover */
-.pagina-cover .foto { flex: 1; min-height: 0; container-type: size; }
-.cover-testo { padding: calc(var(--u) * 3) var(--margin); border-top: var(--rule-ink); }
-.cover-testo .display { margin-bottom: 12px; font-size: clamp(32px, 3.4vw, 56px); }
-.cover-testo p.desc { font-size: var(--t-md); color: var(--ink); max-width: 60ch; margin-bottom: calc(var(--u) * 2); }
+/* cover: the plate is a true 4:5 frame on the page grid, the title stands beside it */
+.cover-top { flex: 1; min-height: 0; display: flex; align-items: stretch; }
+.cover-top .foto { flex: 0 0 auto; width: 62%; height: auto; aspect-ratio: 4 / 5; max-height: 100%; align-self: flex-start; container-type: size; }
+.cover-titolo { flex: 1; min-width: 0; padding: calc(var(--u) * 3) var(--margin); display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; border-left: var(--rule); }
+.cover-titolo .display { font-size: clamp(28px, 2.6vw, 44px); }
+.cover-titolo .desc { font-size: var(--t-sm); line-height: 1.45; color: var(--ink); }
+.cover-testo { padding: calc(var(--u) * 2) var(--margin) calc(var(--u) * 3); border-top: var(--rule-ink); }
 .meta {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -155,9 +157,12 @@
     gap: calc(var(--u) * 2);
   }
   .pagina-m.cover { padding-top: 0; }
-  .pagina-m.cover .foto { aspect-ratio: 4 / 5; max-height: 52vh; margin: 0 calc(var(--margin) * -1); container-type: inline-size; }
-  .pagina-m.cover .display { font-size: 40px; margin-top: 8px; }
-  .pagina-m.cover .desc { font-size: var(--t-md); }
+  .pagina-m .cover-top { flex: 0 0 auto; display: block; margin: 0 calc(var(--margin) * -1); background: var(--mist); }
+  .pagina-m .cover-top .foto { height: 52vh; width: calc(52vh * 0.8); max-width: 100%; margin: 0 auto; }
+  .pagina-m .cover-titolo { padding: calc(var(--u) * 2) var(--margin) 0; border-left: 0; background: var(--paper); }
+  .pagina-m .cover-titolo .display { font-size: 40px; }
+  .pagina-m .cover-titolo .desc { font-size: var(--t-md); }
+  .pagina-m .cover-testo { padding: 0 0 calc(var(--u) * 2); border-top: 0; }
   .pagina-m .meta { grid-template-columns: repeat(3, 1fr); gap: 10px 12px; }
 
   .pagina-m.step { justify-content: flex-start; }

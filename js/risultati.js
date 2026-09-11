@@ -9,6 +9,7 @@ const el = {
   filtri: document.getElementById('filtri'),
   indice: document.getElementById('indice'),
   vuoto: document.getElementById('indice-vuoto'),
+  toggle: document.getElementById('filtri-toggle'),
 };
 
 const CHIAVI_FILTRO = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr', 'sort'];
@@ -22,6 +23,11 @@ export function montaRisultati(d, params) {
       const f = leggiFiltri();
       vai('risultati', { i: ingredientiDaParams(leggiHash().params), ...f });
     });
+    el.toggle.addEventListener('click', () => {
+      const aperto = el.toggle.getAttribute('aria-expanded') !== 'true';
+      el.toggle.setAttribute('aria-expanded', String(aperto));
+      el.filtri.classList.toggle('aperti', aperto);
+    });
     montato = true;
   }
   // filtri dall'URL → form
@@ -31,7 +37,10 @@ export function montaRisultati(d, params) {
     if (campo.type === 'checkbox') campo.checked = params.get(k) === '1';
     else campo.value = params.get(k) || '';
   }
-  render(ingredientiDaParams(params), leggiFiltri());
+  const f = leggiFiltri();
+  const attivi = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr'].filter((k) => f[k]).length;
+  el.toggle.firstChild.textContent = attivi ? `Filtri (${attivi})` : 'Filtri';
+  render(ingredientiDaParams(params), f);
 }
 
 function leggiFiltri() {

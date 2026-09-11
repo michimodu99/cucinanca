@@ -105,6 +105,15 @@ function costruisciDesktop() {
   }
   misura.remove();
 
+  // un libro non finisce con la pagina destra bianca: se le pagine (copertina + testo) sono dispari,
+  // spezza l'ultimo gruppo in due — note a destra, passi a sinistra — quando ha almeno due blocchi
+  if ((1 + gruppi.length) % 2 === 1 && gruppi.at(-1).length >= 2) {
+    const ultimo = gruppi.pop();
+    let taglio = ultimo.findIndex((b) => b.classList.contains('nota'));
+    if (taglio <= 0) taglio = Math.ceil(ultimo.length / 2);
+    gruppi.push(ultimo.slice(0, taglio), ultimo.slice(taglio));
+  }
+
   pagine = [cover, ...gruppi.map((g) => {
     const p = document.createElement('div');
     p.className = 'pagina pagina-testo';
@@ -155,10 +164,14 @@ function paginaCover() {
   const rip = riposo(r.tempi.riposo);
   const attr = r.attrezzatura.map((a) => `<span class="${STACK.has(a) ? '' : 'manca'}">${STACK.has(a) ? '' : 'serve '}${ETICHETTE.attrezzatura[a]}</span>`).join('');
   p.innerHTML = `
-    <div class="foto"><span class="foto-ph">${r.titolo}</span></div>
+    <div class="cover-top">
+      <div class="foto"><span class="foto-ph">${r.titolo}</span></div>
+      <div class="cover-titolo">
+        <h1 class="display">${r.titolo}</h1>
+        <p class="desc">${r.descrizione}</p>
+      </div>
+    </div>
     <div class="cover-testo">
-      <h1 class="display">${r.titolo}</h1>
-      <p class="desc">${r.descrizione}</p>
       <div class="meta">
         <div><span class="label">Difficoltà</span><span class="val">${ETICHETTE.difficolta[r.difficolta]}</span></div>
         <div><span class="label">Preparazione</span><span class="val">${minuti(r.tempi.preparazione)}</span></div>
