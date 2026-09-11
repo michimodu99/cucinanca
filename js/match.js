@@ -79,7 +79,7 @@ export function tempoTotale(ricetta) {
 
 /**
  * Abbina la dispensa alle ricette.
- * @returns array di { ricetta, mancanti: id[], copertura: 0..1 } ordinato per rilevanza,
+ * @returns array di { ricetta, mancanti: id[], copertura: 0..1, sostituzioni: {richiesto, usato, nota}[] } ordinato per rilevanza,
  *          con proprietà extra `nonRisolti` (testi non riconosciuti).
  */
 export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
@@ -93,21 +93,27 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
 
   const out = [];
   for (const ricetta of ricette) {
-    const richiesti = (ricetta.ingredienti || [])
-      .filter((i) => !i.opzionale && !indice.base.has(i.id))
-      .map((i) => i.id);
-    const mancanti = richiesti.filter((id) => !posseduti.has(id));
+    const richiesti = (ricetta.ingredienti || []).filter((i) => !i.opzionale && !indice.base.has(i.id));
+    const mancanti = [];
+    const sostituzioni = [];
+    for (const i of richiesti) {
+      if (posseduti.has(i.id)) continue;
+      const s = (i.sostituti || []).find((x) => posseduti.has(x.id));
+      if (s) sostituzioni.push({ richiesto: i.id, usato: s.id, nota: s.nota || null });
+      else mancanti.push(i.id);
+    }
     if (mancanti.length > maxMancanti) continue;
     // niente in comune con la dispensa (oltre alle basi): non è un suggerimento, è rumore
     if (richiesti.length && mancanti.length === richiesti.length) continue;
     const copertura = richiesti.length ? (richiesti.length - mancanti.length) / richiesti.length : 1;
-    out.push({ ricetta, mancanti, copertura });
+    out.push({ ricetta, mancanti, copertura, sostituzioni });
   }
 
   out.sort(
     (a, b) =>
       a.mancanti.length - b.mancanti.length ||
       b.copertura - a.copertura ||
+      a.sostituzioni.length - b.sostituzioni.length ||
       tempoTotale(a.ricetta) - tempoTotale(b.ricetta) ||
       a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'),
   );

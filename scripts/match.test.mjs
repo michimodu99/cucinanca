@@ -13,6 +13,7 @@ const tassonomia = [
   { id: 'pecorino', nome: 'Pecorino romano', alias: ['pecorino'], categoria: 'latticino' },
   { id: 'uova', nome: 'Uova', alias: ['uovo', 'tuorli'], categoria: 'uova' },
   { id: 'pasta-corta', nome: 'Pasta corta', alias: ['pasta', 'penne', 'fusilli'], categoria: 'pasta' },
+  { id: 'pancetta', nome: 'Pancetta', alias: ['bacon'], categoria: 'salume' },
 ];
 
 const indice = creaIndice(tassonomia);
@@ -105,6 +106,41 @@ test('abbina: ordina per numero di mancanti, poi per tempo totale crescente', ()
   const out = abbina({ ricette, indice, ingredienti: ['zucca', 'salsiccia', 'riso', 'uova', 'pecorino'] });
   // tutte a 0 mancanti: carbonara 15′ < risotto 20′ < zucca-forno 35′; sugo (0 posseduti) escluso
   assert.deepEqual(out.map((x) => x.ricetta.slug), ['carbonara', 'risotto-zucca', 'zucca-forno']);
+});
+
+// ---------- sostituzioni ----------
+const ricetteSost = [
+  ...ricette,
+  R('gricia', ['pecorino', { id: 'salsiccia', sostituti: [{ id: 'pancetta', nota: 'meno grassa: aggiungi un filo d\'olio' }] }], { tempi: { preparazione: 5, cottura: 15, riposo: 0 } }),
+];
+
+test('abbina: un sostituto posseduto copre l\'ingrediente e viene riportato', () => {
+  const out = abbina({ ricette: ricetteSost, indice, ingredienti: ['pecorino', 'bacon'] });
+  const r = out.find((x) => x.ricetta.slug === 'gricia');
+  assert.deepEqual(r.mancanti, []);
+  assert.equal(r.copertura, 1);
+  assert.deepEqual(r.sostituzioni, [{ richiesto: 'salsiccia', usato: 'pancetta', nota: 'meno grassa: aggiungi un filo d\'olio' }]);
+});
+
+test('abbina: se hai l\'originale, nessuna sostituzione anche se hai il sostituto', () => {
+  const out = abbina({ ricette: ricetteSost, indice, ingredienti: ['pecorino', 'salsiccia', 'pancetta'] });
+  const r = out.find((x) => x.ricetta.slug === 'gricia');
+  assert.deepEqual(r.sostituzioni, []);
+});
+
+test('abbina: senza sostituti la proprietà è un array vuoto', () => {
+  const out = abbina({ ricette: ricetteSost, indice, ingredienti: ['pecorino', 'salsiccia'] });
+  assert.deepEqual(out.find((x) => x.ricetta.slug === 'carbonara').sostituzioni, []);
+});
+
+// a-senza è lenta (60′) ma senza sostituzioni; b-con è veloce ma usa un sostituto: vince a-senza
+test('abbina: a parità di mancanti e copertura, prima la ricetta senza sostituzioni', () => {
+  const due = [
+    R('a-senza', ['pecorino'], { tempi: { preparazione: 30, cottura: 30, riposo: 0 } }),
+    R('b-con', [{ id: 'salsiccia', sostituti: [{ id: 'pancetta' }] }], { tempi: { preparazione: 1, cottura: 1, riposo: 0 } }),
+  ];
+  const out = abbina({ ricette: due, indice, ingredienti: ['pecorino', 'bacon'] });
+  assert.deepEqual(out.map((x) => x.ricetta.slug), ['a-senza', 'b-con']);
 });
 
 test('abbina: input sconosciuti vengono ignorati e riportati; niente proprietà vietati', () => {
