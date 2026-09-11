@@ -10,13 +10,13 @@ web
 static HTML/CSS/JS, no build step, hosted on GitHub Pages (decided by the user in the plan; see SPEC.md §9).
 
 ## Users
-Michele: an intermediate home cook living in Bragança (Portugal) from September 2026 to February 2027. He cooks dinner for himself on weekday evenings (30–45 minutes available), sometimes for the three flatmates who may join. He uses the site from his phone in the kitchen, often with dirty hands, after entering what he has in the pantry. Lunch is at the canteen; the app is a dinner tool.
+Michele: an intermediate home cook living in Bragança (Portugal) from September 2026 to February 2027. He cooks dinner for himself on weekday evenings (30–45 minutes available), sometimes for the three flatmates who may join. He uses the site from his phone in the kitchen, often with dirty hands, after entering what he has in the pantry. Lunch is at the canteen; the app is a dinner tool. Since 2026-09-11 the site is meant to be shared with the other Erasmus students in Bragança: nothing in the data is tuned to one person's dislikes any more.
 
 ## Product Purpose
 Answer one question fast: "I have these ingredients — what do I cook tonight, and how?" The user enters pantry ingredients, gets recipes ranked by how many of them he already has, filters by difficulty / time / cost, and then follows a recipe step by step from the phone, screen kept awake. Success = a recipe chosen in under a minute and cooked without needing the laptop. Secondary purpose: continuous improvement — learning techniques beyond his current repertoire (ragù bianco, pasta tonno e olive).
 
 ## Positioning
-A private, curated cookbook, not a recipe search engine: every recipe is dosed for one person, already excludes what he doesn't eat (peas, green beans, artichokes, raw tomato, broccoli, cauliflower), avoids spicy and offal, is priced in euros at Bragança supermarket prices, and names Portuguese substitutes for Italian ingredients. Updated on request by adding to a JSON file, not by an API.
+A shared, curated cookbook, not a recipe search engine: every recipe is dosed for one person, is priced in euros at Bragança supermarket prices, names Portuguese substitutes for Italian ingredients, and carries curated per-recipe substitutes (porchetta instead of guanciale in a carbonara) so a dish still shows up when you have something close enough. Editorial rules: no offal; chilli only where the dish calls for it, always dosable. Updated on request by adding to a JSON file, not by an API.
 
 ## Operating Context
 - Kitchen: induction hob, oven, microwave, 3 pans, tall pot, baking tray, knives, precision scale, boards; blender being bought. No cake tin, ramekins or rolling pin (recipes needing them are flagged).
@@ -26,11 +26,11 @@ A private, curated cookbook, not a recipe search engine: every recipe is dosed f
 
 ## Capabilities and Constraints
 - Data: `data/recipes.json` (57 recipes, schema in `schema/recipe.schema.json`), `data/ingredienti.json` (taxonomy with aliases, pantry-base flags, forbidden flags, Portuguese availability notes). Validated by `scripts/build-data.mjs`.
-- Matching: pure function in `js/match.js` (coverage-based ranking, pantry staples assumed, ≤2 missing ingredients shown, forbidden inputs rejected). 16 unit tests.
+- Matching: pure function in `js/match.js` (coverage-based ranking, pantry staples assumed, ≤3 missing ingredients shown, curated per-recipe substitutes count as coverage with a notice). 25 unit tests.
 - Portions: always 1 in data; UI offers a ×1 / ×2 / ×4 multiplier with sensible rounding (`scalaQuantita`).
 - Filters: category, difficulty, max time, cost band, diet, "only with my equipment", tags (quick, one-pan, leftovers, guests).
 - Wake Lock API on the recipe screen; copy-missing-ingredients to clipboard.
-- No login, no persistence, no external API, no timers (v1). Italian UI language.
+- No login, no persistence, no external API, no timers (v1). Italian UI language; all UI strings live in `js/i18n.js`, ready for an `en` dictionary.
 - Terminology: dispensa (pantry), risultati (results), ricetta/libro (recipe/book), copertura (coverage), mancanti (missing), attrezzatura (equipment), porzioni (portions).
 
 ## Brand Commitments

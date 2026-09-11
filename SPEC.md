@@ -18,8 +18,8 @@ Non è un'app di meal-planning né un social: nessun login, nessun salvataggio d
 |---|---|
 | Luogo / periodo | Bragança (PT), settembre → febbraio (autunno-inverno) |
 | Persone | Michele cucina **per sé** (dosi e costi per 1 persona); altre 3 persone in casa possono accodarsi → moltiplicatore porzioni nella UI. Nessuna intolleranza; cena in casa, pranzo in mensa |
-| Esclusioni fisse | piselli, fagiolini, carciofi, broccoli, cavolfiore (totali) · pomodoro/pomodorini ammessi solo cotti in ricetta (es. saltati in padella); niente pomodoro crudo in insalata o come guarnizione |
-| Gusti | niente piccante (peperoncino solo opzionale e mite), niente frattaglie |
+| Esclusioni | nessuna in tassonomia (dal 11/09/2026 il sito è pensato per essere condiviso). Regola editoriale: niente frattaglie; peperoncino sempre dosabile |
+| Sostituzioni | un ingrediente di ricetta può avere `sostituti` curati per quel piatto: se ne possiedi uno, la ricetta conta come coperta e mostra l'avviso |
 | Cavalli di battaglia già suoi | ragù bianco, pasta tonno e olive nere (non duplicati) |
 | Tempo feriale | 30–45 min → maggioranza di ricette ≤ 45′; le lunghe sono marcate "weekend" |
 | Budget | ≤ 10 € a persona a cena |
@@ -57,7 +57,7 @@ Fonti consultate l'11/09/2026 (pagine reali, non riassunti):
 | Lista della spesa | — | "Salva nella lista della spesa" | ✓ minimale: ingredienti mancanti copiabili |
 
 Campi **specifici di questo progetto**, assenti nei canali:
-- `reinventata`: come una ricetta classica è stata adattata alle esclusioni (es. insalata caprese senza pomodoro crudo).
+- `reinventata`: nota libera se la ricetta si discosta dalla classica (oggi nessuna la usa per aggirare esclusioni).
 - `ingredienti[].pt`: reperibilità a Bragança + sostituto suggerito.
 - tag `one-pan` (poche stoviglie) e `avanzi` (si presta a dose doppia per il giorno dopo).
 - `attrezzatura` confrontata con lo stack posseduto → badge "serve: frullatore".
@@ -68,7 +68,7 @@ Campi **specifici di questo progetto**, assenti nei canali:
 - Campo di testo con autocomplete sulla tassonomia ingredienti; ogni scelta diventa un chip rimovibile.
 - Chip rapide per categoria (Carne · Pesce · Latticini · Verdure · Cereali e pasta · Legumi · Uova · Salumi · Frutta).
 - Gli ingredienti **base** (§5.2) sono considerati sempre presenti e mostrati come nota "consideriamo che tu abbia: olio, sale…".
-- Un ingrediente vietato digitato viene riconosciuto e rifiutato con messaggio.
+- Un ingrediente posseduto che è sostituto curato di un ingrediente richiesto copre quell'ingrediente; la riga dei risultati mostra "con X al posto di Y" e il libro un riquadro *Modifica* con la nota culinaria.
 - Pulsante "Cosa cucino?" → risultati. Lo stato vive nell'URL (`#/risultati?i=zucca,salsiccia,riso`), così si può ricaricare o passare il link al telefono.
 
 ### 4.2 Risultati
@@ -132,7 +132,13 @@ Le schede si scrivono in `data/ricette/<categoria>.json` (primi, secondi, piatti
 ```
 
 Regole:
-- `ingredienti[].id` deve esistere in `ingredienti.json`; nessun id con `vietato: true` è ammesso (il validatore fallisce). `pomodoro-fresco` è vietato; `passata`, `pelati`, `concentrato-di-pomodoro` no.
+- `ingredienti[].id` deve esistere in `ingredienti.json`.
+- `ingredienti[].sostituti` (opzionale): `[{ "id", "nota"? }]`, curati per la ricetta. Ogni id esiste in tassonomia, non è `base`, non è l'ingrediente stesso, non si ripete; un ingrediente `opzionale` non ha sostituti. Il matcher usa il primo sostituto posseduto nell'ordine dell'array; a parità di mancanti e copertura, prima le ricette senza sostituzioni.
+
+```jsonc
+{ "id": "guanciale", "qta": 50, "unita": "g",
+  "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }] }
+```
 - `porzioni` è sempre 1; il moltiplicatore è solo in UI. Per gli ingredienti non divisibili (uova) si indica la quantità per 1 e, se serve, una `note` ("1 uovo; con ×2 usa 2").
 - `unita` ∈ `g | ml | pz | cucchiai | cucchiaini | qb | bustina | spicchi | foglie | rametti`.
 - `pt` è presente solo se la reperibilità non è `facile` o se c'è un sostituto utile.
@@ -141,21 +147,20 @@ Regole:
 ### 5.2 `data/ingredienti.json` — tassonomia
 
 ```jsonc
-{ "id": "pomodoro-fresco", "nome": "Pomodoro fresco", "alias": ["pomodoro", "pomodori", "pomodorini", "ciliegini", "datterini"],
-  "categoria": "verdura", "base": false, "vietato": true }
-{ "id": "passata", "nome": "Passata di pomodoro", "alias": ["passata", "polpa di pomodoro", "sugo di pomodoro"], "categoria": "condimento", "base": false, "vietato": false }
-{ "id": "olio-evo", "nome": "Olio extravergine", "alias": ["olio", "olio d'oliva", "evo"], "categoria": "condimento", "base": true, "vietato": false }
-{ "id": "guanciale", "nome": "Guanciale", "alias": [], "categoria": "salume", "base": false, "vietato": false,
+{ "id": "pomodoro-fresco", "nome": "Pomodoro fresco", "alias": ["pomodoro", "pomodori", "pomodorini", "ciliegini", "datterini"], "categoria": "verdura" }
+{ "id": "passata", "nome": "Passata di pomodoro", "alias": ["passata", "polpa di pomodoro", "sugo di pomodoro"], "categoria": "condimento" }
+{ "id": "olio-evo", "nome": "Olio extravergine", "alias": ["olio", "olio d'oliva", "evo"], "categoria": "condimento", "base": true }
+{ "id": "guanciale", "nome": "Guanciale", "alias": [], "categoria": "salume",
   "pt": { "reperibilita": "difficile", "sostituto": "toucinho fumado o pancetta (Continente)" } }
 ```
 
 - Categorie: `carne` `pesce` `salume` `latticino` `uova` `verdura` `frutta` `cereale` `pasta` `legume` `condimento` `spezia` `erba` `dolce` `altro`.
-- **Dispensa base** (confermata): olio evo, sale, pepe, aglio, cipolla, burro, farina 00, zucchero, aceto, limone, dado/brodo, parmigiano grattugiato, alloro, rosmarino, basilico, coriandolo, paprika, curry. (Peperoncino tolto dalla base: non è gradito, compare solo come opzionale.)
+- **Dispensa base** (confermata): olio evo, sale, pepe, aglio, cipolla, burro, farina 00, zucchero, aceto, limone, dado/brodo, parmigiano grattugiato, alloro, rosmarino, basilico, coriandolo, paprika, curry. (Peperoncino non è in base: va scelto, e nelle ricette è sempre dosabile.)
 - Gli alias risolvono anche il plurale/singolare più comune; la normalizzazione rimuove accenti e maiuscole.
 
 ### 5.3 Validazione (`scripts/validate.mjs`)
 1. Ogni ricetta rispetta `schema/recipe.schema.json`.
-2. Nessun ingrediente vietato (per id o alias contenuto nei testi degli ingredienti).
+2. I `sostituti` rispettano le regole di §5.1.
 3. Ogni `ingredienti[].id` esiste nella tassonomia.
 4. Ogni `foto.copertina` esiste su disco.
 5. Slug unici; `procedimento[].n` consecutivi da 1.
@@ -174,7 +179,7 @@ input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 3}
 5. ordina per |mancanti| asc, poi copertura desc, poi tempo totale asc, poi titolo
 output: [{ ricetta, mancanti: id[], copertura }]
 ```
-Test unitari coprono: alias → id, ingrediente vietato rifiutato, base ignorato, opzionale ignorato, ordinamento, soglia.
+Test unitari coprono: alias → id, base ignorato, opzionale ignorato, sostituzioni (copertura, precedenza dell'originale, ordinamento), ordinamento, soglia.
 
 ## 7. Design
 
