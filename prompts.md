@@ -424,3 +424,12 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
+
+## Da generare ora
+
+### Polpette avanzate in padella con pomodorini
+`polpette-avanzate-in-padella-con-pomodorini`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, pan-seared meatballs in a blistered cherry tomato sauce with fresh basil leaves, glossy, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
