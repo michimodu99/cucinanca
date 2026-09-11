@@ -35,7 +35,7 @@ A private, curated cookbook, not a recipe search engine: every recipe is dosed f
 
 ## Brand Commitments
 - Binding visual constraint volunteered by the user: Swiss design aesthetic (grid, Helvetica-type sans, black/grey/white), with the food photography keeping its natural colors — photos are the only color. References in `reference/` (editorial cookbook spreads, "cook book like app", Swiss typographic poster with #2E2E2E / #E8E8E8).
-- Name: "Cucina" (working title). Voice: direct, second person singular, practical, no fluff, occasional dry humour ("la prima crêpe viene sempre male: è la legge").
+- Name: "Cucinança" (cucina + Bragança). Voice: direct, second person singular, practical, no fluff, occasional dry humour ("la prima crêpe viene sempre male: è la legge").
 
 ## Evidence on Hand
 - 57 real recipes with full method, Portuguese substitutions and cost estimates (`data/recipes.json`).

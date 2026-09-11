@@ -144,6 +144,9 @@
 .azione-count { grid-column: 1 / span 6; font-size: var(--t-sm); color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .azione-bar .btn-primary { grid-column: 7 / span 6; justify-content: space-between; }
 
+/* la barra fissa della dispensa coprirebbe il footer sottostante: gli riservo lo spazio */
+body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+
 @media (max-width: 899px) {
   .dispensa-grid { display: block; padding-top: calc(var(--u) * 4); }
   .dispensa-intro .display { margin-bottom: calc(var(--u) * 2); }

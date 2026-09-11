@@ -32,7 +32,7 @@ export function montaLibro(d, r, params) {
     if (x && !x.vietato) posseduti.add(x.id);
   }
   attivo = true;
-  document.title = `${r.titolo} · Cucina`;
+  document.title = `${r.titolo} · Cucinança`;
   el.meta.textContent = ETICHETTE.categoria[r.categoria];
 
   costruisci();
@@ -59,7 +59,7 @@ export function smontaLibro() {
   if (onScroll) el.libro.removeEventListener('scroll', onScroll);
   el.libro.innerHTML = '';
   el.meta.textContent = 'Bragança · 2026';
-  document.title = 'Cucina · cosa cucino stasera';
+  document.title = "Cucinança · cosa c'è in frigo?";
   rilasciaWakeLock();
 }
 

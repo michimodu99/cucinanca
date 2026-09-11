@@ -1,4 +1,4 @@
-# Cucina
+# Cucinança
 
 Ricettario personale per Bragança: scrivi cosa hai in dispensa, sfoglia le ricette che puoi cucinare stasera, leggile dal telefono come un libro.
 

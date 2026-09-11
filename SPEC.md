@@ -1,6 +1,6 @@
-# SPEC — Cucina · ricettario intelligente per Bragança
+# SPEC — Cucinança · ricettario intelligente per Bragança
 
-Versione 0.4 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-2-3-4 concluse; online su https://michimodu99.github.io/cucina/ · 61 ricette, tutte con foto)
+Versione 0.4 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-2-3-4 concluse; online su https://michimodu99.github.io/cucinanca/ · 61 ricette, tutte con foto)
 
 ## 1. Obiettivo
 
@@ -193,7 +193,7 @@ Test unitari coprono: alias → id, ingrediente vietato rifiutato, base ignorato
 
 ## 9. Architettura tecnica
 
-- Sito statico, **HTML/CSS/JS vanilla, senza build**. Hosting **GitHub Pages**, repo `michimodu99/cucina` pubblico (con GitHub Student/Pro si può rendere privato in qualsiasi momento senza perdere Pages).
+- Sito statico, **HTML/CSS/JS vanilla, senza build**. Hosting **GitHub Pages**, repo `michimodu99/cucinanca` pubblico (con GitHub Student/Pro si può rendere privato in qualsiasi momento senza perdere Pages).
 - Single-page con router hash: `#/` dispensa · `#/risultati?i=…&f=…` · `#/ricetta/<slug>`.
 - Struttura: `css/tokens.css base.css dispensa.css risultati.css libro.css`, `js/app.js data.js match.js dispensa.js risultati.js libro.js`, `data/`, `schema/`, `scripts/`, `img/`, `reference/`.
 - Dipendenze runtime: nessuna. Dipendenze dev (solo per gli script): `sharp` (ottimizzazione immagini), `ajv` (validazione schema).
@@ -217,7 +217,7 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 | 1 | Tassonomia (142 ingredienti), schema, 61 schede per 1 persona, validatore, match.js con 21 test | ✅ fatto |
 | 2 | Generazione e ottimizzazione foto (`scripts/generate_image.py`, `scripts/optimize-images.mjs`) | ✅ fatto — 61/61 foto generate a mano su Gemini (Nano Banana 2, free tier non abilitato per l'API) e ottimizzate |
 | 3 | UI (impeccable → build → review 'ship') + DESIGN.md | ✅ fatto |
-| 4 | Repo pubblico `michimodu99/cucina`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
+| 4 | Repo pubblico `michimodu99/cucinanca`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
 | 5 | Aggiornamenti a richiesta | workflow in README.md |
 
 ### Aperto

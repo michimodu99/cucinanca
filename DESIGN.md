@@ -155,7 +155,7 @@ components:
     textColor: "{colors.ink}"
 ---
 
-# Design System: Cucina
+# Design System: Cucinança
 
 ## Overview
 

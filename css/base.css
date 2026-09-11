@@ -89,6 +89,19 @@ h1, h2, h3, p { margin: 0; }
 .topbar-meta { justify-self: end; font-size: var(--t-xs); color: var(--ink-2); letter-spacing: 0.04em; }
 @media (max-width: 899px) { .topbar-meta { display: none; } .topbar { grid-template-columns: auto 1fr; } .topbar-nav { justify-self: end; } }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--u) * 2.5) var(--margin);
+  border-top: var(--rule);
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+  letter-spacing: 0.04em;
+}
+.footer a { color: var(--ink-2); }
+.footer a:hover { color: var(--ink); }
+
 .view { min-height: calc(100vh - var(--topbar)); }
 .view-errore { padding: calc(var(--u) * 8) var(--margin); }
 .view-errore a { text-decoration: underline; text-underline-offset: 0.18em; }

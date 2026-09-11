@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Cucina · cosa cucino stasera</title>
-  <meta name="description" content="Ricettario personale: scrivi cosa hai in dispensa e sfoglia le ricette che puoi cucinare stasera.">
+  <title>Cucinança · cosa c'è in frigo?</title>
+  <meta name="description" content="Ricettario personale: scrivi cosa hai in frigo e sfoglia le ricette che puoi cucinare, senza sprechi.">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Cucina">
-  <meta property="og:title" content="Cucina · cosa cucino stasera">
-  <meta property="og:description" content="Ricettario personale: scrivi cosa hai in dispensa e sfoglia le ricette che puoi cucinare stasera.">
-  <meta property="og:url" content="https://michimodu99.github.io/cucina/">
-  <meta property="og:image" content="https://michimodu99.github.io/cucina/img/risotto-zucca-e-salsiccia.webp">
+  <meta property="og:site_name" content="Cucinança">
+  <meta property="og:title" content="Cucinança · cosa c'è in frigo?">
+  <meta property="og:description" content="Ricettario personale: scrivi cosa hai in frigo e sfoglia le ricette che puoi cucinare, senza sprechi.">
+  <meta property="og:url" content="https://michimodu99.github.io/cucinanca/">
+  <meta property="og:image" content="https://michimodu99.github.io/cucinanca/img/risotto-zucca-e-salsiccia.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cucina · cosa cucino stasera">
-  <meta name="twitter:description" content="Ricettario personale: scrivi cosa hai in dispensa e sfoglia le ricette che puoi cucinare stasera.">
-  <meta name="twitter:image" content="https://michimodu99.github.io/cucina/img/risotto-zucca-e-salsiccia.webp">
+  <meta name="twitter:title" content="Cucinança · cosa c'è in frigo?">
+  <meta name="twitter:description" content="Ricettario personale: scrivi cosa hai in frigo e sfoglia le ricette che puoi cucinare, senza sprechi.">
+  <meta name="twitter:image" content="https://michimodu99.github.io/cucinanca/img/risotto-zucca-e-salsiccia.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232E2E2E'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial' font-weight='800' font-size='20' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/tokens.css">
@@ -35,7 +35,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 -->
 
 <header class="topbar">
-  <a class="wordmark" href="#/" aria-label="Cucina, torna alla dispensa">Cucina</a>
+  <a class="wordmark" href="#/" aria-label="Cucinança, torna alla dispensa">Cucinança</a>
   <nav class="topbar-nav" aria-label="Sezioni">
     <a href="#/" data-nav="dispensa">Dispensa</a>
     <a href="#/risultati" data-nav="risultati">Ricette</a>
@@ -48,7 +48,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="view view-dispensa" id="view-dispensa" hidden>
     <div class="dispensa-grid">
       <div class="dispensa-intro">
-        <h1 class="display">Cosa cucino stasera?</h1>
+        <h1 class="display">Cosa c'è in frigo?</h1>
         <p class="lede">Scrivi cosa hai in casa. Olio, sale, aglio, cipolla, burro e le altre basi le do per scontate.</p>
         <p class="basi" id="basi"></p>
       </div>
@@ -170,6 +170,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <p><a href="#/">Torna alla dispensa</a></p>
   </section>
 </main>
+
+<footer class="footer">
+  <span>Michi</span>
+  <a href="https://github.com/michimodu99/cucinanca" target="_blank" rel="noopener">Codice su GitHub</a>
+</footer>
 
 <script type="module" src="js/app.js"></script>
 </body>
