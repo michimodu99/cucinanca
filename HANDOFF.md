@@ -1,33 +1,31 @@
-# HANDOFF — stato al 11/09/2026, fine sessione
+# HANDOFF — stato al 11/09/2026, fine sessione (seconda)
 
-Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap) e `MEMORY.md` (assistant memory, fuori da questo repo) per il perché delle decisioni.
+Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
 
 ## Stato attuale
 
-- **61 ricette**, tutte con foto ottimizzata (`img/*.webp`).
-- Sito live: **https://michimodu99.github.io/cucinanca/** (repo rinominato da `cucina` a `cucinanca` in questa sessione; il vecchio URL non fa redirect, torna 404).
-- Nome progetto: **Cucinança** (cucina + Bragança) ovunque — wordmark, title, meta OG, docs.
-- Hero dispensa: "Cosa c'è in frigo?" / "Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri."
-- Footer: "By Michi" + link Instagram `@michelemodu`. **Niente link al repo** (Michele non vuole invitare a curiosare nel codice pubblico).
-- `MAX_MANCANTI` (soglia ingredienti mancanti per comparire nei risultati) alzata da 2 a 3 in `js/risultati.js` — quasi raddoppia le ricette raggiungibili da dispensa vuota.
-- Termini non riconosciuti in dispensa ora mostrati esplicitamente ("non riconosciuto: xyz") invece di sparire silenziosamente.
-- Badge rosso/verde "PT" (stile bandiera portoghese) sulle 6 ricette taggate `portoghese` — unico accento cromatico del sito.
-- Pomodoro fresco/pomodorini **non più vietati** in tassonomia (ammessi se cotti in ricetta, non a crudo/guarnizione). Restano vietati: piselli, fagiolini, carciofi, broccoli, cavolfiore.
-- Plugin **humanizer** installato (`claude plugin install humanizer@humanizer`, scope user) — rimuove pattern di scrittura da IA (contrasti "non X ma Y", trattini universali, linguaggio gonfiato, ecc.). Si carica automaticamente dalla prossima sessione, invocabile con lo Skill tool.
+- **100 ricette** (30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci; 12 portoghesi). Le prime 61 hanno la foto; **le 39 nuove no** (vedi sotto).
+- Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). L'ultimo push di questa sessione è da fare/verificare: guarda `git status` e `git log origin/main..main`.
+- **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
+- **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. 157 ingredienti con sostituti su 100 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
+- **i18n pronto, UI in italiano**: `js/i18n.js` (`LINGUA`, `STRINGHE.it`, `t()`, `applicaTesti()`); `ETICHETTE` in `data.js` legge da lì; il testo statico di `index.html` ha `data-i18n`. Tradurre l'interfaccia = aggiungere `STRINGHE.en` e cambiare `LINGUA`. I contenuti (ricette) restano un progetto a parte.
+- Toggle crescente/decrescente su "Ordina" (bottone ↑/↓, `dir=desc` in URL) fatto a inizio sessione.
+- `npm run prompts` rigenera `prompts.md` da `recipes.json` (100 prompt, senza più la frase di esclusione).
+- Tassonomia: nuove voci `alheira`, `porchetta`, `panini`, `tahina`, `fagioli-borlotti`; alias `bacon`, `natas`, `grelos`, `riso carolino`, `piri-piri`. Mai usati direttamente: ricotta, gorgonzola, miele (piadina e porchetta compaiono solo come sostituti).
+- I file `data/ricette/*.json` sono ora tutti nello stile compatto (una riga per ingrediente/passo).
 
-## Fatto in questa sessione: toggle crescente/decrescente su "Ordina"
+## Da fare subito: le 39 foto
 
-Implementata l'alternativa consigliata (pulsante di direzione separato, non 9 voci nel dropdown):
-- `index.html`: nel `<label class="filtro filtro-sort">`, il `<select name="sort">` è ora affiancato da un `<input type="hidden" name="dir">` e da `<button id="ordina-dir" class="btn-dir">` (↑/↓), dentro un wrapper `<span class="ordina-riga">`.
-- `js/risultati.js`: `CHIAVI_FILTRO` include ora `dir`. Click su `#ordina-dir` inverte `dir` fra `''` e `'desc'` e rinaviga (helper `naviga()`, condiviso col listener `change` del form). Cambiare il `select[name=sort]` resetta `dir` a `''`. Il comparatore in `render()` viene negato quando `f.dir === 'desc'`. Il bottone è `disabled` (e mostra ↑) quando `sort` è vuoto ("Per copertura", che non ha una direzione naturale).
-- `css/risultati.css`: stile `.btn-dir` (28px, coerente con `.libro-btn`), `.ordina-riga` per il layout select+bottone.
-- Verificato in browser (desktop): toggle funziona, persiste in URL (`&dir=desc`), si disabilita su "Per copertura". Non verificato manualmente il layout mobile (resize del tool non ha funzionato in sessione) — dare un'occhiata al primo giro su telefono/DevTools.
+`python scripts/generate_image.py --all` fallisce con **429 "free tier, limit 0"**: la chiave `GEMINI_API_KEY` in `.env` è su un progetto Google senza fatturazione per i modelli immagine (le 61 foto precedenti erano state fatte con fatturazione attiva). Due strade:
+1. Attivare la fatturazione su https://aistudio.google.com (Settings > Plan) o mettere in `.env` una chiave di un progetto con fatturazione, poi `python scripts/generate_image.py --all` (salta le ricette che hanno già png/jpg/webp) e `npm run images:optimize`.
+2. Generare a mano da `prompts.md` (sezioni per categoria; le 39 nuove sono quelle senza `img/<slug>.webp`), salvare in `img/raw/<slug>.png`, poi `npm run images:optimize`.
 
-## Chiuso: "problema del footer" nelle acquisizioni complete
+Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0. Poi occhio a foto con testo, mani o piatto sbagliato: `--slug <slug> --force`.
 
-Michele aveva segnalato due screenshot a pagina intera in cui la barra fissa "COSA CUCINO" appariva in due posizioni diverse (a metà lista in uno, in fondo nell'altro). Riprodotto dal vivo in sessione (scroll reale, non screenshot): non è un bug di rendering, sono semplicemente due posizioni di scroll diverse. La barra è `position: fixed; bottom: 0`, quindi resta sempre incollata al fondo della finestra e copre qualunque riga di ingredienti si trovi lì in quel momento — comportamento normale per una barra CTA fissa (stesso pattern del carrello in un e-commerce). Il vero `<footer>` ("By Michi") a fine pagina è invece pulito: misurato dal vivo, il testo si ferma a 0,4px dalla barra, il fix della sessione precedente (`padding-bottom` calcolato su `.footer`) funziona correttamente. Michele ha confermato di voler lasciare il comportamento com'è, nessuna modifica.
+## Cose aperte non urgenti
 
-## Cose aperte non urgenti (dalla ricerca di coverage di questa sessione)
-
-- Buco strutturale sui legumi (solo 2 ricette li usano). Proteine "intrappolate" in una sola ricetta: salmone, orata, baccalà, petto di pollo.
-- Vale la pena un giro di ~10-12 nuove ricette mirate su questo, quando si riprende l'espansione del ventaglio ricette (tema di fondo: l'app serve a ridurre gli sprechi, non solo a imparare a cucinare — e a servire anche chi è alle prime armi).
+- **Preferenze personali per utente** ("non mangio…") e **dispensa base personalizzabile** (oggi curry, coriandolo, basilico, paprika sono "sempre presenti" perché sono di Michele): stesso problema dei vietati, da fare quando l'app viene davvero condivisa. Idea: preferenze salvate nel browser (localStorage), non nei dati.
+- **Persistenza della dispensa** fra visite (oggi si riparte da zero, scelta esplicita di Michele: per gli altri è la prima frizione).
+- **Inglese dei contenuti** (100 ricette × procedimento) e selettore lingua.
+- Riserva di ricette oltre le 100 in `RICETTE-LISTA.md` (Conteggi v2).
+- La barra fissa "Cosa cucino" copre l'ultima riga di ingredienti mentre scorri: è il comportamento normale di una barra fissa, Michele ha deciso di lasciarlo così (verificato dal vivo, non è un bug del footer).

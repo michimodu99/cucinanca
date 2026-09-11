@@ -1,7 +1,10 @@
-# Lista ricette (v1) — approvata l'11/09/2026
+# Lista ricette
 
-56 ricette, **tutte dosate per 1 persona**. Senza piselli, fagiolini, carciofi, broccoli, cavolfiore;
-pomodoro solo cotto (passata/pelati), mai crudo. Niente piccante, niente frattaglie. Tempi totali indicativi (prep + cottura, escluso riposo).
+100 ricette, **tutte dosate per 1 persona**. Niente frattaglie; peperoncino sempre dosabile. Tempi totali indicativi (prep + cottura, escluso riposo).
+
+La v1 (61 ricette, sotto) era scritta per una persona sola, con le sue esclusioni; la v2 (in fondo) le toglie e porta il ricettario a 100 per condividerlo con gli altri erasmus.
+
+## v1 — le prime 57 (11/09/2026)
 
 Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **🌀** = usa il frullatore/minipimer ·
 **PT** = ingrediente chiave con nota di reperibilità/sostituzione a Bragança · **W** = da weekend (oltre 45′ o con riposo)
@@ -90,10 +93,82 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 
 ---
 
-## Conteggi
-- 57 ricette totali (il ragù bianco, già tuo, è stato sostituito dall'amatriciana).
-- Richiedono **frullatore**: 2 (#40, #42) — ora nello stack.
+## Conteggi v1
+- 57 ricette (il ragù bianco, già tuo, è stato sostituito dall'amatriciana); poi 61 con insalata di patate al coriandolo, patate alla paprika, caril de galinha, spaghetti con polpette e pomodorini.
+- Richiedono **frullatore**: 2 (#40, #42).
 - Attrezzatura extra oltre lo stack: stampo per dolci (#53, #54), stampini (#55, #56), mattarello (#16, #54) → badge nella UI.
-- Reinventate **R**: 0 (con passata/pelati ammessi le classiche tornano classiche). Piatti portoghesi **PT**: 4.
 
-Stato: **scritte tutte e 57** in `data/ricette/*.json` (→ `data/recipes.json`), online. Mancano solo le foto.
+## v2 — le 39 aggiunte (11/09/2026), per arrivare a 100
+
+Scelte contro tre assi: gli ingredienti prima esclusi (broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante, pomodoro crudo), i buchi di copertura (legumi, pesce, petto di pollo, ingredienti mai usati) e i piatti portoghesi / erasmus-friendly. Legenda: **PT** portoghese · 🌀 frullatore · W weekend.
+
+### Primi (12 → 30)
+
+| # | Ricetta | Difficoltà | Tempo | Note |
+|---|---|---|---|---|
+| 62 | Spaghetti al pomodoro e basilico | molto facile | 25′ | vegana |
+| 63 | Penne all'arrabbiata | facile | 25′ | vegana |
+| 64 | Spaghetti alla puttanesca | facile | 25′ |  |
+| 65 | Pasta al pesto genovese | facile | 25′ | 🌀 vegetariana |
+| 66 | Orecchiette con broccoli e acciughe | facile | 30′ |  |
+| 67 | Pasta con cavolfiore alla siciliana | media | 40′ |  |
+| 68 | Risi e bisi | facile | 35′ | vegetariana |
+| 69 | Pasta con carciofi e pancetta | media | 40′ |  |
+| 70 | Pasta e fagioli | facile | 45′ | vegetariana |
+| 71 | Tagliatelle al ragù bianco | media | 60′ | W |
+| 72 | Lasagne alla bolognese | difficile | 120′ | W |
+| 73 | Spaghetti tonno, olive e capperi | facile | 20′ |  |
+
+### Secondi (8 → 25)
+
+| # | Ricetta | Difficoltà | Tempo | Note |
+|---|---|---|---|---|
+| 74 | Frango piri-piri | facile | 55′ + 1 h | **PT** W |
+| 75 | Pollo alla pizzaiola | facile | 25′ |  |
+| 76 | Scaloppine al marsala | facile | 20′ |  |
+| 77 | Salsiccia e broccoli in padella | facile | 30′ |  |
+| 78 | Salmone allo yogurt ed erba cipollina | facile | 22′ |  |
+| 79 | Insalata caprese | molto facile | 10′ | vegetariana |
+| 80 | Bacalhau com natas | media | 60′ | **PT** W |
+| 81 | Hamburger fatti in casa con cipolle caramellate | facile | 30′ |  |
+
+### Piatti unici (10 → 23)
+
+| # | Ricetta | Difficoltà | Tempo | Note |
+|---|---|---|---|---|
+| 82 | Pizza margherita | difficile | 45′ + 24 h | W vegetariana |
+| 83 | Minestrone | facile | 45′ | vegetariana |
+| 84 | Zuppa di lenticchie | facile | 45′ | vegana |
+| 85 | Curry di ceci e spinaci | facile | 30′ | vegana |
+| 86 | Shakshuka | facile | 30′ | vegetariana |
+| 87 | Insalata di riso | facile | 30′ + 1 h |  |
+| 88 | Vellutata di cavolfiore e porro | facile | 40′ | 🌀 vegetariana |
+| 89 | Bitoque | facile | 30′ | **PT** |
+| 90 | Alheira no forno com ovo e grelos | molto facile | 30′ | **PT** |
+| 91 | Feijoada à transmontana | media | 90′ | **PT** W |
+
+### Contorni (5 → 12)
+
+| # | Ricetta | Difficoltà | Tempo | Note |
+|---|---|---|---|---|
+| 92 | Carciofi alla romana | media | 45′ | vegana |
+| 93 | Fagiolini al pomodoro con patate | facile | 40′ | vegana |
+| 94 | Cavolfiore gratinato | facile | 40′ | vegetariana |
+| 95 | Patatas bravas | facile | 40′ | vegana |
+| 96 | Hummus con pane tostato | molto facile | 15′ | 🌀 vegana |
+
+### Dolci (4 → 10)
+
+| # | Ricetta | Difficoltà | Tempo | Note |
+|---|---|---|---|---|
+| 97 | Torta caprese | media | 60′ | W vegetariana |
+| 98 | Arroz doce | facile | 45′ + 1 h | **PT** vegetariana |
+| 99 | Mousse al cioccolato | facile | 25′ + 3 h | vegetariana |
+| 100 | Torta allo yogurt | molto facile | 50′ | W vegetariana |
+
+## Conteggi v2
+- **100 ricette**: 30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci. Portoghesi: 12. Vegetariane fra le nuove: 17 (1 vegana).
+- Sbloccate dagli ingredienti prima esclusi: 11; dal piccante: 5; dal pomodoro crudo: 3. Buchi di copertura: 14 (legumi da 2 a 8 ricette; tonno da 0 a 2; salmone e baccalà da 1 a 2). Ingredienti in tassonomia mai usati direttamente: da 21 a 5 (ricotta, gorgonzola, miele, piadine pronte, porchetta — gli ultimi due compaiono solo come sostituti).
+- **Sostituzioni**: 157 ingredienti con sostituti curati per ricetta (porchetta al posto del guanciale nella carbonara, chouriço al posto della salsiccia nel risotto…).
+- Richiedono **frullatore**: pesto, vellutata di cavolfiore e porro, hummus (oltre a #40, #42). Stampo da 16 cm: torta caprese, torta allo yogurt.
+- Riserva oltre le 100: pasta ricotta e spinaci, risotto gorgonzola e noci, polpette di tonno, frittata di pasta, arroz de ervilhas, panzanella, riso saltato uova e piselli, pollo al limone, peperonata, broccoli ripassati, sopa de legumes, pastéis de bacalhau, bruschetta, gnocchi alla sorrentina.

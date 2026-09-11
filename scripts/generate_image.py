@@ -4,7 +4,7 @@ Uso:
   python scripts/generate_image.py "Risotto zucca e salsiccia"
   python scripts/generate_image.py "Carbonara" --style "dark moody photography"
   python scripts/generate_image.py --slug carbonara,cacio-e-pepe   # dai foto.prompt di recipes.json
-  python scripts/generate_image.py --all                            # tutte le ricette senza png
+  python scripts/generate_image.py --all                            # tutte le ricette senza foto (png/jpg grezza o webp finale)
 Opzioni: --model gemini-3.1-flash-image  --out img/raw  --force  --dry
 
 Legge GEMINI_API_KEY da .env (UTF-8 o UTF-16). Output: <out>/<slug>.png + <slug>.json (prompt, modello, data).
@@ -92,7 +92,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--all", action="store_true", help="tutte le ricette di recipes.json")
     ap.add_argument("--model", default=MODELLO_DEFAULT)
     ap.add_argument("--out", type=Path, default=OUT_DEFAULT)
-    ap.add_argument("--force", action="store_true", help="rigenera anche se il png esiste")
+    ap.add_argument("--force", action="store_true", help="rigenera anche se la foto esiste già")
     ap.add_argument("--dry", action="store_true", help="stampa i prompt senza chiamare l'API")
     a = ap.parse_args(argv)
 
@@ -110,7 +110,11 @@ def main(argv: list[str] | None = None) -> int:
 
     a.out.mkdir(parents=True, exist_ok=True)
     if not a.force:
-        lavori = [(s, p) for s, p in lavori if not (a.out / f"{s}.png").exists()]
+        # salta chi ha già una foto: grezza (png/jpg in img/raw) o finale (img/<slug>.webp)
+        def ha_foto(slug: str) -> bool:
+            return any((a.out / f"{slug}.{ext}").exists() for ext in ("png", "jpg", "jpeg")) or (ROOT / "img" / f"{slug}.webp").exists()
+
+        lavori = [(s, p) for s, p in lavori if not ha_foto(s)]
     print(f"{len(lavori)} immagini da generare con {a.model}{' (dry run)' if a.dry else ''}")
     if not lavori:
         return 0
