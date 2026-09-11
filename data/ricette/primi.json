@@ -15,7 +15,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "rigatoni", "nota": "mezze maniche: la versione \"da cucchiaio\"" }, { "id": "bucatini" }] },
-      { "id": "guanciale", "qta": 50, "unita": "g", "note": "a listarelle spesse 1 cm", "sostituti": [{ "id": "pancetta" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
+      { "id": "guanciale", "qta": 50, "unita": "g", "note": "a listarelle spesse 1 cm", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)" },
       { "id": "pecorino", "qta": 30, "unita": "g", "note": "grattugiato fine" },
       { "id": "pepe", "qta": null, "unita": "qb", "note": "macinato al momento, abbondante" },
@@ -83,7 +83,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "rigatoni", "qta": 100, "unita": "g", "note": "o mezze maniche", "sostituti": [{ "id": "pasta-corta", "nota": "mezze maniche" }, { "id": "spaghetti" }] },
-      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
+      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
       { "id": "pecorino", "qta": 35, "unita": "g" },
       { "id": "pepe", "qta": null, "unita": "qb" },
       { "id": "vino-bianco", "qta": 30, "unita": "ml", "opzionale": true, "note": "per sfumare il guanciale" }

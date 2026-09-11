@@ -3461,6 +3461,10 @@
       "id": "pancetta"
      },
      {
+      "id": "porchetta",
+      "nota": "più grassa e speziata: dadini piccoli, rosolala meno"
+     },
+     {
       "id": "speck",
       "nota": "affumicato: il piatto cambia carattere, ma regge"
      }
@@ -6375,6 +6379,10 @@
     "sostituti": [
      {
       "id": "pancetta"
+     },
+     {
+      "id": "porchetta",
+      "nota": "più grassa e speziata: dadini piccoli, rosolala meno"
      },
      {
       "id": "speck",
