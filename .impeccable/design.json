@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T00:00:00Z",
+  "title": "Design System: Cucina",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "primary", "displayName": "Ink", "canonical": "#2e2e2e", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(58% 0 0)", "oklch(72% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(28% 0 0)", "oklch(42% 0 0)", "oklch(56% 0 0)", "oklch(70% 0 0)", "oklch(84% 0 0)", "oklch(94% 0 0)", "oklch(100% 0 0)"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#6b6b6b", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"] },
+      "ash": { "role": "neutral", "displayName": "Ash", "canonical": "#e8e8e8", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(40% 0 0)", "oklch(53% 0 0)", "oklch(66% 0 0)", "oklch(79% 0 0)", "oklch(92.5% 0 0)", "oklch(97% 0 0)"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#f4f4f4", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(40% 0 0)", "oklch(53% 0 0)", "oklch(66% 0 0)", "oklch(80% 0 0)", "oklch(90% 0 0)", "oklch(96.5% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The page question on the dispensa; one per screen, condensed width 68." },
+      "display-md": { "displayName": "Display MD", "purpose": "Results headline; 40px on mobile." },
+      "numeral": { "displayName": "Numeral", "purpose": "Poster step number (56px desktop, 128px mobile step page) and the coverage fraction; width 62, tabular." },
+      "headline": { "displayName": "Headline", "purpose": "Recipe title in an index row; condensed 28px, 22px mobile." },
+      "title": { "displayName": "Title", "purpose": "Step headings, meta values, primary button label." },
+      "lede": { "displayName": "Lede", "purpose": "The single 20px line under the display; max 34ch." },
+      "body": { "displayName": "Body", "purpose": "Step text and rows; tnum and ss01 on globally." },
+      "body-sm": { "displayName": "Body SM", "purpose": "Metadata, filters, chips, ingredient rows." },
+      "label": { "displayName": "Label", "purpose": "Functional uppercase labels: form fields, index categories, filter names, nav links, section heads." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The one exponential ease-out for every transition and entrance." },
+      { "name": "dur", "value": "320ms", "purpose": "The one duration; entrance once (rows rise 8px, chips 6px, spreads slide 32px)." },
+      { "name": "press", "value": "120ms", "purpose": "Primary button active scale (0.985)." },
+      { "name": "stagger", "value": "30ms", "purpose": "Per-row delay on index entrance, capped at 12 rows." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "899px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The black rectangle: the one call to action per screen, with a trailing typographic arrow.",
+      "html": "<button class=\"ds-btn-primary\">Cosa cucino <span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; background: var(--ink, #2e2e2e); color: var(--paper, #fff); padding: 0 24px; height: 56px; font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; border: 0; border-radius: 0; cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), transform 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: #111; } .ds-btn-primary:active { transform: scale(0.985); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; } .ds-btn-primary:disabled { background: var(--ash, #e8e8e8); color: #585858; cursor: not-allowed; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "1px ink-ruled rectangle in label type; inverts to ink on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Copia la lista della spesa (2)</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; background: transparent; color: var(--ink, #2e2e2e); border: 1px solid var(--ink, #2e2e2e); border-radius: 0; font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), color 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost:hover { background: var(--ink, #2e2e2e); color: var(--paper, #fff); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "A chosen ingredient: ruled rectangle with a hairline-separated remove button.",
+      "html": "<span class=\"ds-chip\">zucca<button type=\"button\" aria-label=\"Togli zucca\">×</button></span> <span class=\"ds-chip ds-chip-sconosciuto\">ingrediente ignoto<button type=\"button\" aria-label=\"Togli\">×</button></span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; height: 40px; border: 1px solid var(--ink, #2e2e2e); padding-left: 12px; font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; color: var(--ink, #2e2e2e); border-radius: 0; margin-right: 8px; } .ds-chip-sconosciuto { border-style: dashed; color: var(--ink-2, #6b6b6b); } .ds-chip button { width: 40px; height: 100%; margin-left: 10px; background: none; border: 0; border-left: 1px solid var(--ash, #e8e8e8); font: inherit; font-size: 18px; line-height: 1; color: inherit; cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), color 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-chip button:hover { background: var(--ink, #2e2e2e); color: var(--paper, #fff); } .ds-chip button:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Pantry Input",
+      "kind": "input",
+      "refersTo": "input-ingresso",
+      "description": "A 28px field on a single ink hairline with a light '+' add button; the rule is the field.",
+      "html": "<form class=\"ds-ingresso\"><label class=\"ds-label\" for=\"ds-ing\">Ingrediente</label><div class=\"ds-ingresso-field\"><input id=\"ds-ing\" type=\"text\" placeholder=\"zucca, salsiccia, riso…\"><button type=\"submit\" class=\"ds-ingresso-add\" aria-label=\"Aggiungi ingrediente\">+</button></div></form>",
+      "css": ".ds-ingresso { font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink, #2e2e2e); } .ds-label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2, #6b6b6b); margin-bottom: 4px; } .ds-ingresso-field { display: flex; align-items: flex-end; border-bottom: 1px solid var(--ink, #2e2e2e); } .ds-ingresso-field input { flex: 1; border: 0; background: transparent; padding: 8px 0 12px; font: inherit; font-size: 28px; font-weight: 500; letter-spacing: -0.01em; color: inherit; min-width: 0; border-radius: 0; caret-color: var(--ink, #2e2e2e); } .ds-ingresso-field input::placeholder { color: var(--ink-2, #6b6b6b); opacity: 1; } .ds-ingresso-field input:focus-visible { outline: 0; } .ds-ingresso-add { width: 44px; height: 44px; margin-bottom: 4px; background: none; border: 0; font: inherit; font-size: 28px; font-weight: 300; line-height: 1; color: var(--ink, #2e2e2e); cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), color 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-ingresso-add:hover { background: var(--ink, #2e2e2e); color: var(--paper, #fff); } .ds-ingresso-add:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Select",
+      "kind": "input",
+      "refersTo": "select-filtro",
+      "description": "Native select on an ink bottom rule with a drawn chevron, label above.",
+      "html": "<label class=\"ds-filtro\"><span class=\"ds-filtro-label\">Portata</span><select><option>Tutte</option><option>Primi</option><option>Secondi</option></select></label>",
+      "css": ".ds-filtro { display: inline-flex; flex-direction: column; gap: 2px; font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink, #2e2e2e); } .ds-filtro-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2, #6b6b6b); } .ds-filtro select { appearance: none; -webkit-appearance: none; background: transparent url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232e2e2e' stroke-width='1.5'/%3E%3C/svg%3E\") no-repeat right 0 center; border: 0; border-bottom: 1px solid var(--ink, #2e2e2e); border-radius: 0; padding: 8px 20px 8px 0; font: inherit; font-size: 14px; font-weight: 600; color: inherit; min-width: 120px; } .ds-filtro select:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 4px; }"
+    },
+    {
+      "name": "Segment Control",
+      "kind": "custom",
+      "refersTo": "seg-button",
+      "description": "Portion multiplier: a ruled group whose pressed segment inverts to ink.",
+      "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"Porzioni\"><button type=\"button\" aria-pressed=\"true\">×1</button><button type=\"button\" aria-pressed=\"false\">×2</button><button type=\"button\" aria-pressed=\"false\">×4</button></div>",
+      "css": ".ds-seg { display: inline-flex; border: 1px solid var(--ink, #2e2e2e); font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; } .ds-seg button { height: 36px; min-width: 48px; padding: 0 12px; background: none; border: 0; border-right: 1px solid var(--ink, #2e2e2e); font: inherit; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink, #2e2e2e); cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), color 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-seg button:last-child { border-right: 0; } .ds-seg button:hover { background: var(--mist, #f4f4f4); } .ds-seg button[aria-pressed=\"true\"] { background: var(--ink, #2e2e2e); color: var(--paper, #fff); } .ds-seg button:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Topbar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky paper bar on an ash rule: condensed wordmark, uppercase label links with an ink underline for the current page.",
+      "html": "<header class=\"ds-topbar\"><a class=\"ds-wordmark\" href=\"#\">Cucina</a><nav class=\"ds-topbar-nav\"><a href=\"#\">Dispensa</a><a href=\"#\" aria-current=\"page\">Ricette</a></nav><span class=\"ds-topbar-meta\">Bragança · 2026</span></header>",
+      "css": ".ds-topbar { height: 56px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 32px; border-bottom: 1px solid var(--ash, #e8e8e8); background: var(--paper, #fff); color: var(--ink, #2e2e2e); font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; } .ds-wordmark { font-variation-settings: 'wdth' 62; font-weight: 900; font-size: 22px; letter-spacing: -0.01em; text-transform: uppercase; color: inherit; text-decoration: none; } .ds-topbar-nav { display: flex; gap: 24px; } .ds-topbar-nav a { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2, #6b6b6b); padding: 6px 0; border-bottom: 2px solid transparent; text-decoration: none; } .ds-topbar-nav a:hover { color: var(--ink, #2e2e2e); } .ds-topbar-nav a[aria-current=\"page\"] { color: var(--ink, #2e2e2e); border-bottom-color: var(--ink, #2e2e2e); } .ds-topbar-nav a:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; } .ds-topbar-meta { justify-self: end; font-size: 12px; color: var(--ink-2, #6b6b6b); letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Index Row",
+      "kind": "card",
+      "refersTo": "index-row",
+      "description": "A recipe in the results index: ruled row with a 4:5 frame, condensed title, tabular meta and a coverage fraction. Not a card.",
+      "html": "<a class=\"ds-riga\" href=\"#\"><div class=\"ds-foto\"><span class=\"ds-foto-ph\">Risotto zucca e salsiccia</span></div><div class=\"ds-riga-corpo\"><h2 class=\"ds-riga-titolo\">Risotto zucca e salsiccia</h2><p class=\"ds-riga-meta\"><span class=\"ds-cat\">Primo</span><span>Facile</span><span>40′</span><span>2,30 €</span></p></div><div class=\"ds-riga-cop\"><div class=\"ds-frazione\">3<small>/4</small></div><div class=\"ds-manca\">manca: <b>vino bianco secco</b></div></div></a>",
+      "css": ".ds-riga { display: grid; grid-template-columns: 96px 1fr auto; column-gap: 24px; align-items: center; padding: 16px 32px; border-bottom: 1px solid var(--ash, #e8e8e8); color: var(--ink, #2e2e2e); text-decoration: none; font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-feature-settings: 'tnum' 1; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-riga:hover { background: var(--mist, #f4f4f4); } .ds-riga:hover .ds-riga-titolo { text-decoration: underline; text-underline-offset: 0.12em; text-decoration-thickness: 2px; } .ds-riga:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: -2px; } .ds-foto { position: relative; width: 96px; aspect-ratio: 4 / 5; background: var(--mist, #f4f4f4); overflow: hidden; } .ds-foto-ph { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 8px; font-variation-settings: 'wdth' 62; font-weight: 900; font-size: 18px; line-height: 0.9; letter-spacing: -0.02em; color: var(--ash, #e8e8e8); text-transform: uppercase; overflow: hidden; } .ds-riga-titolo { margin: 0 0 8px; font-variation-settings: 'wdth' 68; font-weight: 800; font-size: 28px; line-height: 1; letter-spacing: -0.015em; } .ds-riga-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 0 12px; font-size: 14px; color: var(--ink-2, #6b6b6b); font-variant-numeric: tabular-nums; } .ds-cat { color: var(--ink, #2e2e2e); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 12px; } .ds-riga-cop { text-align: right; min-width: 120px; } .ds-frazione { font-variation-settings: 'wdth' 68; font-weight: 800; font-size: 40px; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; } .ds-frazione small { font-size: 0.55em; font-weight: 600; color: var(--ink-2, #6b6b6b); } .ds-manca { font-size: 14px; color: var(--ink-2, #6b6b6b); margin-top: 4px; } .ds-manca b { color: var(--ink, #2e2e2e); font-weight: 600; }"
+    },
+    {
+      "name": "Step Numeral",
+      "kind": "custom",
+      "refersTo": "numeral",
+      "description": "The poster-size step number of the mobile step page: 128px condensed 900 with a small ink-2 denominator, above an ink rule.",
+      "html": "<div class=\"ds-step\"><div class=\"ds-step-n\">1<small>/4</small></div><h3>Salsiccia e zucca <small>10′</small></h3><p>Scalda il brodo. In una pentola larga rosola la salsiccia sbriciolata nell'olio finché è dorata.</p></div>",
+      "css": ".ds-step { font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink, #2e2e2e); max-width: 40ch; } .ds-step-n { font-variation-settings: 'wdth' 62; font-weight: 900; font-size: 128px; line-height: 0.8; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; margin-top: 8px; } .ds-step-n small { font-size: 20px; font-weight: 600; color: var(--ink-2, #6b6b6b); letter-spacing: 0; margin-left: 6px; } .ds-step h3 { margin: 16px 0 0; font-size: 20px; font-weight: 700; border-top: 1px solid var(--ink, #2e2e2e); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; } .ds-step h3 small { font-weight: 500; color: var(--ink-2, #6b6b6b); font-size: 14px; } .ds-step p { margin: 12px 0 0; font-size: 21px; line-height: 1.45; }"
+    },
+    {
+      "name": "Page-turn Nav",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "The book nav: ruled arrow buttons at the edges and a tabular page position centered, on an ink rule.",
+      "html": "<div class=\"ds-libro-nav\"><button class=\"ds-libro-btn\" aria-label=\"Pagina precedente\">←</button><span class=\"ds-libro-pos\">3 / 7</span><button class=\"ds-libro-btn\" aria-label=\"Pagina successiva\">→</button></div>",
+      "css": ".ds-libro-nav { height: 56px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-top: 1px solid var(--ink, #2e2e2e); padding: 0 32px; background: var(--paper, #fff); color: var(--ink, #2e2e2e); font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif; } .ds-libro-btn { height: 44px; min-width: 44px; padding: 0 16px; background: none; border: 1px solid var(--ink, #2e2e2e); border-radius: 0; font: inherit; font-size: 22px; font-weight: 300; color: inherit; cursor: pointer; transition: background 320ms cubic-bezier(0.16, 1, 0.3, 1), color 320ms cubic-bezier(0.16, 1, 0.3, 1), opacity 320ms; } .ds-libro-btn:first-child { justify-self: start; } .ds-libro-btn:last-child { justify-self: end; } .ds-libro-btn:hover { background: var(--ink, #2e2e2e); color: var(--paper, #fff); } .ds-libro-btn:focus-visible { outline: 2px solid var(--ink, #2e2e2e); outline-offset: 2px; } .ds-libro-btn:disabled { opacity: 0.25; cursor: default; } .ds-libro-pos { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 0.06em; color: var(--ink-2, #6b6b6b); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Swiss Spread",
+    "overview": "Cucina is a cookbook that is a typographic grid before it is a gallery. Every screen is set like a spread from a Swiss cookbook or a Basel poster: a twelve-column grid on white paper, hairline rules doing the work of boxes, one grotesque (Archivo, self-hosted variable) drawn at two widths, and black ink at a single weight of contrast. The plate of food is meant to be the only colored object on the page; until the 4:5 photographs land, the frame holds a mist block with the recipe title set in ash, so even the interim state reads as a typographic object rather than a broken image.\n\nDensity is editorial, not app-like. Content sits in ruled rows and columns with generous margins (32px) and a strict 8px rhythm; hierarchy is carried by size, width and weight of a single typeface rather than by color, badges or containers. Numbers are the second voice of the system: coverage fractions (\"3/4\"), poster-size step numerals (\"1 /4\") and tabular metadata (40', 2,30 €) are always set in tabular figures and are often the largest thing on a page.\n\nThe build deliberately refuses the recipe-app default: no grid of rounded photo cards, no colored badges, no pill filter bar, no shadows, no radius anywhere. Interaction feedback is a swap of ink and paper (the hovered or pressed element inverts) or a mist wash on rows, never a glow or a lift. Motion is one exponential ease-out at 320ms, played once on entrance, and the signature interaction is the page turn: spreads slide horizontally on desktop, and mobile snaps one step per screen.",
+    "keyCharacteristics": [
+      "Two greys and black on white; no accent hue in the UI, the photograph is the only color.",
+      "One typeface, two widths: condensed (68, and 62 for numerals and the wordmark) for display, normal (100) for text.",
+      "Hairline rules (1px ash) structure everything; 1px ink rules mark section heads and control edges.",
+      "Zero radius, zero shadows, zero gradients; state is an ink/paper inversion.",
+      "Twelve-column grid at 24px gutter and 32px margin; mobile collapses to a single stacked column at 20px margin.",
+      "Coverage and progress are fractions in tabular numerals, never bars.",
+      "4:5 photo frame as the fixed proportion for every plate."
+    ],
+    "rules": [
+      { "name": "The Inversion Rule", "body": "Interactive state is expressed by swapping ink and paper. A hovered ghost button, a pressed segment, a selected ingredient, an expanded filter toggle all become ink-on-paper inverted to paper-on-ink. There is no third state color.", "section": "colors" },
+      { "name": "The One Colored Object Rule", "body": "The only chromatic element permitted on a screen is the recipe photograph. Chips, tags, badges, missing-ingredient markers and category labels are drawn in ink and rules, never in hue.", "section": "colors" },
+      { "name": "The Two Rules Rule", "body": "Only two rule weights exist: the 1px ash hairline for dividing content, and the 1px ink rule for section heads, control borders and the top edge of bars. No 2px rules except the current-nav underline and the hover underline on an index title.", "section": "colors" },
+      { "name": "The Two Widths Rule", "body": "Display and numerals are condensed (68; 62 for the step numeral, wordmark and placeholder), text is normal width (100). Never set running text condensed, never set a headline at width 100.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Every number is tabular. Fractions, times, prices, counts and page positions (\"3 / 7\") use tnum so they align and do not shift as they change.", "section": "typography" },
+      { "name": "The Fraction Rule", "body": "Coverage is a fraction (\"3/4\") set as a numeral with a small ink-2 denominator, never a progress bar, ring or percentage.", "section": "typography" },
+      { "name": "The Paper Only Rule", "body": "Every surface is paper. Layering is signaled by a rule, never by a shadow or a tint shift; the only non-paper fill is mist inside a field, a frame or a hover.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set every screen on the twelve-column grid (24px gutter, 32px margin) and collapse to one stacked column at 899px with 16px / 20px.",
+      "Do carry hierarchy with Archivo's width and weight axes: 68 / 800 for display, 62 / 900 for numerals, 100 / 400 to 700 for text.",
+      "Do turn on tabular numerals for every count, fraction, time, price and position.",
+      "Do express interactive state as an ink/paper inversion (hover, pressed, selected, expanded) or a mist wash on rows.",
+      "Do divide with 1px ash hairlines and mark heads and control edges with 1px ink rules.",
+      "Do keep photos at 4:5, unfiltered, in a mist frame; use the typographic placeholder only until the image lands.",
+      "Do use the one motion: cubic-bezier(0.16, 1, 0.3, 1) at 320ms, played once on entrance (6 to 8px rise for rows and chips, 32px slide for spreads), with row stagger at 30ms and reduced-motion collapsing it all.",
+      "Do show coverage and progress as fractions (\"3/4\", \"3 / 7\")."
+    ],
+    "donts": [
+      "Don't introduce a chromatic accent, a colored badge, a status color or a red error; errors switch ink-2 to ink.",
+      "Don't round anything; no border-radius on buttons, chips, inputs, frames or outlines.",
+      "Don't add shadows, blur, gradients or tinted overlays; separation is a rule.",
+      "Don't put recipes in photo cards or a card grid; the index is ruled rows with the plate at 96px.",
+      "Don't build pill filters or a pill chip; chips and toggles are 1px ruled rectangles 40px tall.",
+      "Don't draw progress as a bar, ring or percentage.",
+      "Don't use a second typeface, an icon font or glyph-set icons; the arrows, plus and minus are Archivo characters at weight 300, and the select chevron is the only drawn icon.",
+      "Don't set running text condensed or headlines at normal width."
+    ]
+  }
+}
