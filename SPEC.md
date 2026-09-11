@@ -163,8 +163,8 @@ Regole:
 ## 6. Matching (`js/match.js`, funzione pura)
 
 ```
-input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 2}
-1. normalizza(s) = minuscole, senza accenti, trim → cerca in id | nome | alias → id canonico (o null)
+input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 3}
+1. normalizza(s) = minuscole, senza accenti, trim → cerca in id | nome | alias → id canonico; se fallisce, fallback di singolarizzazione plurale (o null)
 2. posseduti = set(id risolti) ∪ set(base)
 3. per ogni ricetta:
      richiesti = ingredienti.filter(!opzionale).map(id) − base

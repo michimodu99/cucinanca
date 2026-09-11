@@ -2,7 +2,7 @@
 import { risolvi, scalaQuantita, tempoTotale } from './match.js';
 import { ETICHETTE, STACK, euro, minuti, riposo } from './data.js';
 import { ingredientiDaParams } from './app.js';
-import { caricaFoto } from './risultati.js';
+import { caricaFoto, badgePortoghese } from './risultati.js';
 
 const el = {
   libro: document.getElementById('libro'),
@@ -165,7 +165,7 @@ function paginaCover() {
   const attr = r.attrezzatura.map((a) => `<span class="${STACK.has(a) ? '' : 'manca'}">${STACK.has(a) ? '' : 'serve '}${ETICHETTE.attrezzatura[a]}</span>`).join('');
   p.innerHTML = `
     <div class="cover-top">
-      <div class="foto"><span class="foto-ph">${r.titolo}</span></div>
+      <div class="foto">${badgePortoghese(r)}<span class="foto-ph">${r.titolo}</span></div>
       <div class="cover-titolo">
         <h1 class="display">${r.titolo}</h1>
         <p class="desc">${r.descrizione}</p>

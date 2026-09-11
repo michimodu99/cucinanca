@@ -13,6 +13,7 @@ const el = {
 };
 
 const CHIAVI_FILTRO = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr', 'sort'];
+const MAX_MANCANTI = 3; // quanti ingredienti puoi ancora non avere e vederti comunque proposta la ricetta
 let dati;
 let montato = false;
 
@@ -57,10 +58,11 @@ function render(ingredienti, f) {
   const conDispensa = ingredienti.length > 0;
   let lista;
   if (conDispensa) {
-    lista = abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti, maxMancanti: 2 });
+    lista = abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti, maxMancanti: MAX_MANCANTI });
   } else {
     lista = dati.ricette.map((ricetta) => ({ ricetta, mancanti: [], copertura: null }));
   }
+  const nonRisolti = lista.nonRisolti || []; // .filter() sotto perde le proprietà extra dell'array, va salvato prima
 
   // filtri
   lista = lista.filter(({ ricetta: r }) => {
@@ -85,13 +87,16 @@ function render(ingredienti, f) {
   else if (!conDispensa) lista = [...lista].sort((a, b) => a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'));
 
   // testa
-  const nomi = ingredienti.map((s) => risolvi(dati.indice, s)?.nome.toLowerCase() || s);
-  el.titolo.textContent = conDispensa ? `Con ${elenco(nomi)}` : 'Tutte le ricette';
+  const nomi = ingredienti.map((s) => risolvi(dati.indice, s)?.nome.toLowerCase()).filter(Boolean);
+  el.titolo.textContent = nomi.length ? `Con ${elenco(nomi)}` : conDispensa ? 'Nessun ingrediente riconosciuto' : 'Tutte le ricette';
   const complete = lista.filter((x) => x.mancanti.length === 0).length;
   const linkDispensa = costruisciHash('', { i: ingredienti });
-  el.sotto.innerHTML = conDispensa
+  const avviso = nonRisolti.length
+    ? ` · non riconosciuto${nonRisolti.length > 1 ? 'i' : ''}: <b>${nonRisolti.join(', ')}</b>`
+    : '';
+  el.sotto.innerHTML = (conDispensa
     ? `<strong>${lista.length}</strong> ricette · <strong>${complete}</strong> senza spesa · <a href="${linkDispensa}">cambia dispensa</a>`
-    : `<strong>${lista.length}</strong> ricette · <a href="#/">scrivi cosa hai in dispensa</a>`;
+    : `<strong>${lista.length}</strong> ricette · <a href="#/">scrivi cosa hai in dispensa</a>`) + avviso;
 
   // righe
   el.indice.innerHTML = '';
@@ -99,7 +104,7 @@ function render(ingredienti, f) {
   if (!lista.length) {
     el.vuoto.hidden = false;
     el.vuoto.innerHTML = conDispensa
-      ? `Con questi ingredienti (e al massimo due da comprare) non esce niente. Prova a <a href="${linkDispensa}">aggiungerne qualcuno</a> o togli un filtro.`
+      ? `Con questi ingredienti (e al massimo ${MAX_MANCANTI} da comprare) non esce niente. Prova a <a href="${linkDispensa}">aggiungerne qualcuno</a> o togli un filtro.`
       : 'Nessuna ricetta con questi filtri.';
     return;
   }
@@ -109,7 +114,7 @@ function render(ingredienti, f) {
   lista.forEach((x, k) => {
     // intestazioni di sezione solo nell'ordine per copertura
     if (conDispensa && !ord) {
-      const s = x.mancanti.length === 0 ? 'Puoi farle adesso' : x.mancanti.length === 1 ? 'Manca un ingrediente' : 'Mancano due ingredienti';
+      const s = x.mancanti.length === 0 ? 'Puoi farle adesso' : x.mancanti.length === 1 ? 'Manca un ingrediente' : `Mancano ${x.mancanti.length} ingredienti`;
       if (s !== sezione) {
         sezione = s;
         const h = document.createElement('li');
@@ -133,7 +138,7 @@ function riga({ ricetta: r, mancanti, copertura }, k, ingredienti) {
   const rip = r.tempi.riposo ? ` <span>+ riposo</span>` : '';
   li.innerHTML = `
     <a href="${href}">
-      <div class="foto" data-slug="${r.slug}"><span class="foto-ph">${r.titolo}</span></div>
+      <div class="foto" data-slug="${r.slug}">${badgePortoghese(r)}<span class="foto-ph">${r.titolo}</span></div>
       <div class="riga-corpo">
         <h2 class="riga-titolo">${r.titolo}</h2>
         <p class="riga-meta">
@@ -153,6 +158,11 @@ function riga({ ricetta: r, mancanti, copertura }, k, ingredienti) {
     </a>`;
   caricaFoto(li.querySelector('.foto'), r);
   return li;
+}
+
+/** Etichetta rosso/verde per i piatti tipici di Bragança/Portogallo (tag "portoghese"). */
+export function badgePortoghese(r) {
+  return r.tag.includes('portoghese') ? '<span class="badge-pt" title="Piatto tipico di Bragança / Portogallo">PT</span>' : '';
 }
 
 /** Mostra la foto se il file esiste; altrimenti resta il segnaposto tipografico. */
