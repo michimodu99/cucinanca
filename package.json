@@ -8,6 +8,7 @@
     "build:data": "node scripts/build-data.mjs",
     "validate": "node scripts/build-data.mjs --check",
     "test": "node --test scripts/*.test.mjs",
+    "images:generate": "python scripts/generate_image.py",
     "images:optimize": "node scripts/optimize-images.mjs",
     "serve": "node scripts/serve.mjs 8080"
   },

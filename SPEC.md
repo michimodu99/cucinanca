@@ -186,7 +186,7 @@ Test unitari coprono: alias → id, ingrediente vietato rifiutato, base ignorato
 
 ## 8. Immagini
 
-- Generazione via **Replicate MCP** (server remoto `mcp.replicate.com`, già configurato in Claude Code; autenticazione con `/mcp`).
+- Generazione via **Gemini API** (`scripts/generate_image.py`, libreria `google-genai`, chiave `GEMINI_API_KEY` in `.env`). Modello **gemini-3.1-flash-image** (Nano Banana 2); i modelli immagine non sono nel free tier, serve la fatturazione attiva su AI Studio. Alternativa precedente: Replicate/FLUX (`gen-images.mjs`).
 - Modello: **FLUX Schnell** (≈ 0,003 $/immagine) per il primo passaggio; **FLUX Dev** (≈ 0,025 $) per rigenerare quelle non convincenti. Budget atteso < 1 $ per ~56 ricette.
 - Prompt template (coerenza visiva): `editorial food photography, {descrizione piatto in inglese}, white ceramic plate on light grey linen, soft natural daylight, 45-degree angle, minimal Swiss composition, muted background, no text, no hands, no cutlery clutter`. Rapporto 4:5 (verticale, come la pagina sinistra). Il prompt e il modello sono salvati nel JSON.
 - Post-produzione: `scripts/optimize-images.mjs` → WebP 1200 px lato lungo, qualità ~80, target < 150 KB.
@@ -203,7 +203,7 @@ Test unitari coprono: alias → id, ingrediente vietato rifiutato, base ignorato
 
 "Aggiungi risotto ai funghi" →
 1. Scrivo la scheda in `recipes.json` (e nuovi ingredienti in `ingredienti.json` se servono).
-2. Genero la foto (Replicate) e la ottimizzo.
+2. Genero la foto (`python scripts/generate_image.py --slug ...`) e la ottimizzo.
 3. `node scripts/validate.mjs` verde.
 4. `git commit` + `git push` → GitHub Pages aggiorna in ~1 minuto.
 
@@ -215,7 +215,7 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 |---|---|---|
 | 0 | Setup: git, skills, MCP Replicate, ricerca, SPEC, DOMANDE, lista ricette | ✅ fatto |
 | 1 | Tassonomia (116 ingredienti), schema, 57 schede per 1 persona, validatore, match.js con 18 test | ✅ fatto |
-| 2 | Generazione e ottimizzazione foto (`scripts/gen-images.mjs`, `scripts/optimize-images.mjs`) | ⏳ serve un token Replicate (account con carta) |
+| 2 | Generazione e ottimizzazione foto (`scripts/generate_image.py`, `scripts/optimize-images.mjs`) | ⏳ script pronto e testato; serve attivare la fatturazione Gemini (free tier = 0 per i modelli immagine) |
 | 3 | UI (impeccable → build → review 'ship') + DESIGN.md | ✅ fatto |
 | 4 | Repo pubblico `michimodu99/cucina`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
 | 5 | Aggiornamenti a richiesta | workflow in README.md |

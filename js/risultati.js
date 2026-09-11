@@ -161,7 +161,10 @@ export function caricaFoto(box, r) {
   img.alt = '';
   img.loading = 'lazy';
   img.decoding = 'async';
-  img.onload = () => { box.appendChild(img); box.classList.add('has-img'); };
+  // va aggiunta al DOM prima di impostare src: altrimenti loading="lazy" non
+  // ha modo di sapere quando è vicina al viewport e non parte mai il caricamento.
+  img.onload = () => box.classList.add('has-img');
+  box.appendChild(img);
   img.src = r.foto.copertina;
 }
 
