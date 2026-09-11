@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recipe.schema.json",
+  "title": "Ricetta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "titolo", "descrizione", "categoria", "difficolta", "tempi", "porzioni", "costo", "attrezzatura", "tag", "dieta", "origine", "ingredienti", "procedimento", "foto"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "titolo": { "type": "string", "minLength": 3 },
+    "descrizione": { "type": "string", "minLength": 40 },
+    "categoria": { "enum": ["antipasto", "primo", "secondo", "piatto-unico", "contorno", "dolce"] },
+    "difficolta": { "enum": ["molto-facile", "facile", "media", "difficile"] },
+    "tempi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["preparazione", "cottura", "riposo"],
+      "properties": {
+        "preparazione": { "type": "integer", "minimum": 0 },
+        "cottura": { "type": "integer", "minimum": 0 },
+        "riposo": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "porzioni": { "const": 1 },
+    "costo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fascia", "stima_eur"],
+      "properties": {
+        "fascia": { "enum": ["basso", "medio", "alto"] },
+        "stima_eur": { "type": "number", "minimum": 0, "maximum": 10 }
+      }
+    },
+    "attrezzatura": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["padella", "pentola", "forno", "microonde", "teglia", "frullatore", "mattarello", "stampo", "stampini", "frusta", "griglia"] }
+    },
+    "tag": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["veloce", "weekend", "one-pan", "avanzi", "low-cost", "da-ospiti", "autunno", "inverno", "classico", "portoghese"] }
+    },
+    "dieta": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["vegetariano", "vegano", "senza-glutine", "senza-lattosio"] }
+    },
+    "origine": { "type": "string" },
+    "reinventata": { "type": ["string", "null"] },
+    "ingredienti": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "qta", "unita"],
+        "properties": {
+          "id": { "type": "string" },
+          "qta": { "type": ["number", "null"] },
+          "unita": { "enum": ["g", "ml", "pz", "cucchiai", "cucchiaini", "qb", "bustina", "spicchi", "foglie", "rametti", "fette", "pizzico"] },
+          "note": { "type": "string" },
+          "opzionale": { "type": "boolean" }
+        }
+      }
+    },
+    "procedimento": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["n", "titolo", "testo"],
+        "properties": {
+          "n": { "type": "integer", "minimum": 1 },
+          "titolo": { "type": "string", "maxLength": 40 },
+          "testo": { "type": "string", "minLength": 30 },
+          "minuti": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "consigli": { "type": "string" },
+    "conservazione": { "type": "string" },
+    "varianti": { "type": "array", "items": { "type": "string" } },
+    "kcal": { "type": ["integer", "null"] },
+    "foto": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["copertina", "prompt"],
+      "properties": {
+        "copertina": { "type": "string", "pattern": "^img/[a-z0-9-]+\\.webp$" },
+        "prompt": { "type": "string", "minLength": 20 },
+        "modello": { "type": "string" }
+      }
+    },
+    "fonte": { "type": "string" }
+  }
+}
