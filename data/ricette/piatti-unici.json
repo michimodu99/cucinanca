@@ -532,5 +532,136 @@
       "prompt": "Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl"
     },
     "fonte": "Tradizione luso-goana"
+  },
+  {
+    "slug": "spaghetti-con-polpette-e-pomodorini",
+    "titolo": "Spaghetti con polpette e pomodorini",
+    "descrizione": "Polpettine di macinato rosolate in padella e finite nel sugo di pomodorini scoppiati, poi gli spaghetti mantecati dentro con basilico fresco. Un piatto unico, non un modo per smaltire avanzi.",
+    "categoria": "piatto-unico",
+    "difficolta": "media",
+    "tempi": {
+      "preparazione": 20,
+      "cottura": 25,
+      "riposo": 0
+    },
+    "porzioni": 1,
+    "costo": {
+      "fascia": "medio",
+      "stima_eur": 3
+    },
+    "attrezzatura": [
+      "padella",
+      "pentola"
+    ],
+    "tag": [
+      "classico",
+      "da-ospiti"
+    ],
+    "dieta": [],
+    "origine": "Italia (ispirazione italoamericana)",
+    "reinventata": null,
+    "ingredienti": [
+      {
+        "id": "spaghetti",
+        "qta": 90,
+        "unita": "g"
+      },
+      {
+        "id": "macinato-misto",
+        "qta": 150,
+        "unita": "g"
+      },
+      {
+        "id": "pane-raffermo",
+        "qta": 20,
+        "unita": "g"
+      },
+      {
+        "id": "latte",
+        "qta": 30,
+        "unita": "ml"
+      },
+      {
+        "id": "uova",
+        "qta": 0.5,
+        "unita": "pz",
+        "note": "mezzo uovo sbattuto"
+      },
+      {
+        "id": "parmigiano",
+        "qta": 15,
+        "unita": "g"
+      },
+      {
+        "id": "prezzemolo",
+        "qta": null,
+        "unita": "qb"
+      },
+      {
+        "id": "aglio",
+        "qta": 1,
+        "unita": "spicchi"
+      },
+      {
+        "id": "pomodoro-fresco",
+        "qta": 200,
+        "unita": "g",
+        "note": "pomodorini o ciliegini, tagliati a metà"
+      },
+      {
+        "id": "basilico",
+        "qta": 8,
+        "unita": "foglie"
+      },
+      {
+        "id": "olio-evo",
+        "qta": 2,
+        "unita": "cucchiai"
+      },
+      {
+        "id": "peperoncino",
+        "qta": null,
+        "unita": "qb",
+        "opzionale": true
+      }
+    ],
+    "procedimento": [
+      {
+        "n": 1,
+        "titolo": "Impasto polpette",
+        "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, mezzo uovo, parmigiano, prezzemolo e metà dell'aglio tritati, sale e pepe. Forma polpettine piccole, a bocconcino.",
+        "minuti": 10
+      },
+      {
+        "n": 2,
+        "titolo": "Rosola",
+        "testo": "Scalda l'olio in padella e rosola le polpettine a fuoco medio su tutti i lati finché dorate fuori: non serve che siano cotte dentro, finiranno di cuocere nel sugo.",
+        "minuti": 6
+      },
+      {
+        "n": 3,
+        "titolo": "Sugo di pomodorini",
+        "testo": "Aggiungi i pomodorini nella stessa padella con l'aglio rimasto, un pizzico di sale. Copri e cuoci a fuoco medio-basso 10-12 minuti, finché le polpette sono cotte e i pomodorini si sono disfatti in sugo.",
+        "minuti": 12
+      },
+      {
+        "n": 4,
+        "titolo": "Manteca",
+        "testo": "Lessa gli spaghetti in acqua bollente salata, scolali al dente conservando un mestolo d'acqua di cottura. Uniscili in padella con polpette e sugo, manteca con un filo d'olio e l'acqua di cottura se serve, basilico spezzettato alla fine.",
+        "minuti": 10
+      }
+    ],
+    "consigli": "Polpettine piccole (noce, non uovo) cuociono del tutto nei 10-12 minuti di sugo senza seccarsi. Non lavorare troppo l'impasto: resta più morbido.",
+    "conservazione": "In frigo 2 giorni; si scalda in padella con un goccio d'acqua.",
+    "varianti": [
+      "Con passata al posto dei pomodorini, per un sugo più lungo e omogeneo.",
+      "Polpette al forno invece che in padella, poi unite al sugo già pronto."
+    ],
+    "kcal": 650,
+    "foto": {
+      "copertina": "img/spaghetti-con-polpette-e-pomodorini.webp",
+      "prompt": "spaghetti tangled with small meatballs in a blistered cherry tomato sauce, fresh basil, white ceramic plate"
+    },
+    "fonte": "Ispirato allo spaghetti and meatballs italoamericano"
   }
 ]

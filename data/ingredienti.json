@@ -61,7 +61,6 @@
   { "id": "fettine-di-tacchino", "nome": "Fettine di tacchino", "alias": ["tacchino", "petto di tacchino"], "categoria": "carne", "pt": { "reperibilita": "facile", "sostituto": "\"bifes de peru\"" } },
   { "id": "costoletta-di-vitello", "nome": "Costoletta di vitello con osso", "alias": ["costoletta", "cotoletta con osso"], "categoria": "carne", "pt": { "reperibilita": "media", "sostituto": "\"costeleta de vitela\" o lombo di maiale a fetta alta" } },
   { "id": "macinato-misto", "nome": "Macinato misto", "alias": ["macinato", "carne macinata", "macinato di manzo", "trito"], "categoria": "carne", "pt": { "reperibilita": "facile", "sostituto": "\"carne picada\" mista" } },
-  { "id": "polpette-avanzate", "nome": "Polpette avanzate", "alias": ["polpette", "polpette cotte", "avanzi di polpette", "polpette del giorno prima"], "categoria": "carne" },
   { "id": "manzo-per-spezzatino", "nome": "Manzo per spezzatino", "alias": ["spezzatino", "bocconcini di manzo", "manzo a cubetti"], "categoria": "carne", "pt": { "reperibilita": "facile", "sostituto": "\"carne para guisar\"" } },
   { "id": "cappello-del-prete", "nome": "Manzo per brasato", "alias": ["brasato", "cappello del prete", "muscolo"], "categoria": "carne", "pt": { "reperibilita": "media", "sostituto": "\"chã de fora\" o \"pá\" di manzo in pezzo unico" } },
   { "id": "lonza-di-maiale", "nome": "Lonza di maiale", "alias": ["lonza", "arista", "lombo di maiale"], "categoria": "carne", "pt": { "reperibilita": "facile", "sostituto": "\"lombo de porco\"" } },

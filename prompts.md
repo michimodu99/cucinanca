@@ -183,6 +183,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, thick Tuscan ribollita with dark kale, white beans and bread, olive oil drizzle, rustic white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
 
+### Spaghetti con polpette e pomodorini
+`spaghetti-con-polpette-e-pomodorini`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti tangled with small meatballs in a blistered cherry tomato sauce, fresh basil, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
 ### Vellutata di zucca con crostini
 `vellutata-di-zucca-con-crostini`
 
@@ -411,13 +418,6 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, golden baked meatballs with a bowl of white yogurt mint sauce, parsley, white ceramic plate, minimal. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
 
-### Polpette avanzate in padella con pomodorini
-`polpette-avanzate-in-padella-con-pomodorini`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, pan-seared meatballs in a blistered cherry tomato sauce with fresh basil leaves, glossy, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
-```
-
 ### Salmone al forno in crosta di erbe e pistacchi
 `salmone-in-crosta-di-erbe-e-pistacchi`
 
@@ -469,9 +469,9 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
 
-### Polpette avanzate in padella con pomodorini
-`polpette-avanzate-in-padella-con-pomodorini`
+### Spaghetti con polpette e pomodorini
+`spaghetti-con-polpette-e-pomodorini`
 
 ```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, pan-seared meatballs in a blistered cherry tomato sauce with fresh basil leaves, glossy, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti tangled with small meatballs in a blistered cherry tomato sauce, fresh basil, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
