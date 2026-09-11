@@ -3,6 +3,7 @@ import { caricaDati } from './data.js';
 import { montaDispensa } from './dispensa.js';
 import { montaRisultati } from './risultati.js';
 import { montaLibro, smontaLibro } from './libro.js';
+import { t, applicaTesti } from './i18n.js';
 
 const viste = {
   dispensa: document.getElementById('view-dispensa'),
@@ -50,7 +51,9 @@ function mostra(nome) {
 }
 
 let dati;
+let testiApplicati = false;
 async function route() {
+  if (!testiApplicati) { applicaTesti(); document.title = t('titolo'); testiApplicati = true; }
   dati = dati || (await caricaDati());
   const { path, params } = leggiHash();
   smontaLibro();
@@ -72,7 +75,7 @@ async function route() {
 window.addEventListener('hashchange', route);
 route().catch((e) => {
   console.error(e);
-  document.getElementById('app').innerHTML = `<p style="padding:32px">Non riesco a caricare le ricette (${e.message}). Se hai aperto il file dal disco, servilo con <code>npm run serve</code>.</p>`;
+  document.getElementById('app').innerHTML = `<p style="padding:32px">${t('errore.caricamento', { msg: e.message })}</p>`;
 });
 
 // il link "Ricette" nella barra tiene gli ingredienti scelti

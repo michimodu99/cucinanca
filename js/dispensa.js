@@ -1,6 +1,7 @@
 // Vista dispensa: input con suggerimenti, chip, indice per categoria, barra azione.
 import { normalizza, risolvi } from './match.js';
 import { ETICHETTE } from './data.js';
+import { t } from './i18n.js';
 import { vai, ingredientiDaParams } from './app.js';
 
 const ORDINE_CATEGORIE = ['verdura', 'carne', 'pesce', 'salume', 'latticino', 'uova', 'pasta', 'cereale', 'legume', 'frutta', 'condimento', 'erba', 'spezia', 'dolce', 'altro'];
@@ -35,7 +36,7 @@ export function montaDispensa(d, params) {
 function montaUnaVolta() {
   // dispensa base
   const base = dati.tassonomia.filter((i) => i.base).map((i) => i.nome.toLowerCase());
-  el.basi.textContent = 'Dispensa base, sempre presente: ' + base.join(', ') + '.';
+  el.basi.textContent = t('dispensa.basi', { elenco: base.join(', ') });
 
   // indice per categoria (esclusi i base), ordinato per quante ricette lo usano
   const perCat = new Map();
@@ -113,7 +114,7 @@ function suggerisci(testo) {
     li.dataset.id = i.id;
     li.setAttribute('role', 'option');
     li.setAttribute('aria-selected', 'false');
-    li.innerHTML = `<span>${i.nome}</span><small>${alias ? `anche: ${alias}` : (ETICHETTE.categoriaIngrediente[i.categoria] || '')}</small>`;
+    li.innerHTML = `<span>${i.nome}</span><small>${alias ? t('dispensa.anche', { alias }) : (ETICHETTE.categoriaIngrediente[i.categoria] || '')}</small>`;
     li.addEventListener('mousedown', (e) => { e.preventDefault(); aggiungi(i.id); });
     el.sugg.appendChild(li);
   }
@@ -132,13 +133,13 @@ function chiudiSugg() {
 }
 
 function aggiungiTesto(testo) {
-  const t = testo.trim();
-  if (!t) return;
-  const r = risolvi(dati.indice, t);
+  const t0 = testo.trim();
+  if (!t0) return;
+  const r = risolvi(dati.indice, t0);
   if (r) return aggiungi(r.id);
   // non riconosciuto: lo teniamo come chip tratteggiato, il matching lo ignorerà
-  if (!scelti.includes(t)) scelti.push(t);
-  el.msg.textContent = `«${t}» non lo conosco ancora: lo ignoro nel calcolo.`;
+  if (!scelti.includes(t0)) scelti.push(t0);
+  el.msg.textContent = t('dispensa.sconosciuto', { t: t0 });
   el.msg.classList.remove('err');
   el.input.value = '';
   chiudiSugg();
@@ -150,7 +151,7 @@ function aggiungi(id) {
   el.input.value = '';
   chiudiSugg();
   if (ing.base) {
-    el.msg.textContent = `${ing.nome} è nella dispensa base: lo considero già presente.`;
+    el.msg.textContent = t('dispensa.giaBase', { nome: ing.nome });
     el.msg.classList.remove('err');
     return;
   }
@@ -181,7 +182,7 @@ function render() {
     li.innerHTML = `<span>${r ? r.nome : s}</span>`;
     const b = document.createElement('button');
     b.type = 'button';
-    b.setAttribute('aria-label', `Togli ${r ? r.nome : s}`);
+    b.setAttribute('aria-label', t('dispensa.togli', { nome: r ? r.nome : s }));
     b.textContent = '×';
     b.addEventListener('click', () => rimuovi(s));
     li.appendChild(b);
@@ -192,7 +193,7 @@ function render() {
   for (const b of el.indice.querySelectorAll('button[data-id]')) b.setAttribute('aria-pressed', String(ids.has(b.dataset.id)));
   // barra
   const n = ids.size;
-  el.count.textContent = n === 0 ? 'Nessun ingrediente scelto' : n === 1 ? '1 ingrediente' : `${n} ingredienti`;
+  el.count.textContent = n === 0 ? t('dispensa.nessuno') : n === 1 ? t('dispensa.uno') : t('dispensa.molti', { n });
   el.btn.disabled = n === 0;
   // URL senza navigare (così un refresh non perde la lista)
   const hash = scelti.length ? `#/?i=${encodeURIComponent(scelti.join(','))}` : '#/';

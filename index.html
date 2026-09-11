@@ -35,12 +35,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 -->
 
 <header class="topbar">
-  <a class="wordmark" href="#/" aria-label="Cucinança, torna alla dispensa">Cucinança</a>
-  <nav class="topbar-nav" aria-label="Sezioni">
-    <a href="#/" data-nav="dispensa">Dispensa</a>
-    <a href="#/risultati" data-nav="risultati">Ricette</a>
+  <a class="wordmark" href="#/" aria-label="Cucinança, torna alla dispensa" data-i18n-attr="aria-label:topbar.wordmark">Cucinança</a>
+  <nav class="topbar-nav" aria-label="Sezioni" data-i18n-attr="aria-label:topbar.sezioni">
+    <a href="#/" data-nav="dispensa" data-i18n="topbar.dispensa">Dispensa</a>
+    <a href="#/risultati" data-nav="risultati" data-i18n="topbar.ricette">Ricette</a>
   </nav>
-  <span class="topbar-meta" id="topbar-meta">Bragança · 2026</span>
+  <span class="topbar-meta" id="topbar-meta" data-i18n="topbar.meta">Bragança · 2026</span>
 </header>
 
 <main id="app">
@@ -48,88 +48,88 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section class="view view-dispensa" id="view-dispensa" hidden>
     <div class="dispensa-grid">
       <div class="dispensa-intro">
-        <h1 class="display">Cosa c'è in frigo?</h1>
-        <p class="lede">Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri.</p>
+        <h1 class="display" data-i18n="dispensa.hero">Cosa c'è in frigo?</h1>
+        <p class="lede" data-i18n="dispensa.lede">Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri.</p>
         <p class="basi" id="basi"></p>
       </div>
 
       <div class="dispensa-input">
         <form class="ingresso" id="ingresso" autocomplete="off">
-          <label class="label" for="ingrediente">Ingrediente</label>
+          <label class="label" for="ingrediente" data-i18n="dispensa.labelIngrediente">Ingrediente</label>
           <div class="ingresso-field">
             <input id="ingrediente" name="ingrediente" type="text" inputmode="text" enterkeyhint="done"
-                   placeholder="zucca, salsiccia, riso…" aria-autocomplete="list" aria-controls="suggerimenti" aria-expanded="false">
-            <button type="submit" class="ingresso-add" aria-label="Aggiungi ingrediente">+</button>
+                   placeholder="zucca, salsiccia, riso…" data-i18n-attr="placeholder:dispensa.placeholder" aria-autocomplete="list" aria-controls="suggerimenti" aria-expanded="false">
+            <button type="submit" class="ingresso-add" aria-label="Aggiungi ingrediente" data-i18n-attr="aria-label:dispensa.aggiungi">+</button>
           </div>
           <ul class="suggerimenti" id="suggerimenti" role="listbox" hidden></ul>
           <p class="ingresso-msg" id="ingresso-msg" aria-live="polite"></p>
         </form>
 
-        <ul class="chips" id="chips" aria-label="Ingredienti scelti"></ul>
+        <ul class="chips" id="chips" aria-label="Ingredienti scelti" data-i18n-attr="aria-label:dispensa.scelti"></ul>
 
         <div class="indice-ingredienti" id="indice-ingredienti"></div>
       </div>
     </div>
 
     <div class="azione-bar" id="azione-bar">
-      <span class="azione-count" id="azione-count">Nessun ingrediente</span>
-      <button type="button" class="btn-primary" id="btn-cucina" disabled>Cosa cucino <span aria-hidden="true">→</span></button>
+      <span class="azione-count" id="azione-count" data-i18n="dispensa.nessuno">Nessun ingrediente scelto</span>
+      <button type="button" class="btn-primary" id="btn-cucina" disabled><span data-i18n="dispensa.cucina">Cosa cucino</span> <span aria-hidden="true">→</span></button>
     </div>
   </section>
 
   <!-- ===== RISULTATI ===== -->
   <section class="view view-risultati" id="view-risultati" hidden>
     <div class="risultati-testa">
-      <h1 class="display display-md" id="risultati-titolo">Ricette</h1>
+      <h1 class="display display-md" id="risultati-titolo" data-i18n="risultati.titoloDefault">Ricette</h1>
       <p class="risultati-sotto" id="risultati-sotto"></p>
     </div>
 
     <div class="filtri-bar">
     <button type="button" class="filtri-toggle" id="filtri-toggle" aria-expanded="false" aria-controls="filtri">Filtri</button>
-    <form class="filtri" id="filtri" aria-label="Filtri">
-      <label class="filtro"><span class="label">Portata</span>
+    <form class="filtri" id="filtri" aria-label="Filtri" data-i18n-attr="aria-label:risultati.filtri">
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.portata">Portata</span>
         <select name="cat">
-          <option value="">Tutte</option>
+          <option value="" data-i18n="risultati.opzioni.tutte">Tutte</option>
           <option value="primo">Primi</option>
           <option value="secondo">Secondi</option>
           <option value="piatto-unico">Piatti unici</option>
           <option value="contorno">Contorni</option>
           <option value="dolce">Dolci</option>
         </select></label>
-      <label class="filtro"><span class="label">Difficoltà</span>
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.difficolta">Difficoltà</span>
         <select name="diff">
-          <option value="">Tutte</option>
+          <option value="" data-i18n="risultati.opzioni.tutte">Tutte</option>
           <option value="molto-facile">Molto facile</option>
           <option value="facile">Facile</option>
           <option value="media">Media</option>
           <option value="difficile">Difficile</option>
         </select></label>
-      <label class="filtro"><span class="label">Tempo</span>
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.tempo">Tempo</span>
         <select name="t">
-          <option value="">Qualsiasi</option>
-          <option value="30">entro 30′</option>
-          <option value="45">entro 45′</option>
-          <option value="60">entro 60′</option>
-          <option value="90">entro 90′</option>
+          <option value="" data-i18n="risultati.opzioni.qualsiasi">Qualsiasi</option>
+          <option value="30" data-i18n="risultati.opzioni.entro30">entro 30′</option>
+          <option value="45" data-i18n="risultati.opzioni.entro45">entro 45′</option>
+          <option value="60" data-i18n="risultati.opzioni.entro60">entro 60′</option>
+          <option value="90" data-i18n="risultati.opzioni.entro90">entro 90′</option>
         </select></label>
-      <label class="filtro"><span class="label">Costo</span>
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.costo">Costo</span>
         <select name="costo">
-          <option value="">Qualsiasi</option>
-          <option value="basso">Basso (≤ 3 €)</option>
-          <option value="medio">Medio (3–6 €)</option>
-          <option value="alto">Alto (6–10 €)</option>
+          <option value="" data-i18n="risultati.opzioni.qualsiasi">Qualsiasi</option>
+          <option value="basso" data-i18n="risultati.opzioni.costoBasso">Basso (≤ 3 €)</option>
+          <option value="medio" data-i18n="risultati.opzioni.costoMedio">Medio (3–6 €)</option>
+          <option value="alto" data-i18n="risultati.opzioni.costoAlto">Alto (6–10 €)</option>
         </select></label>
-      <label class="filtro"><span class="label">Dieta</span>
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.dieta">Dieta</span>
         <select name="dieta">
-          <option value="">Tutte</option>
+          <option value="" data-i18n="risultati.opzioni.tutte">Tutte</option>
           <option value="vegetariano">Vegetariana</option>
           <option value="vegano">Vegana</option>
           <option value="senza-glutine">Senza glutine</option>
           <option value="senza-lattosio">Senza lattosio</option>
         </select></label>
-      <label class="filtro"><span class="label">Tag</span>
+      <label class="filtro"><span class="label" data-i18n="risultati.filtro.tag">Tag</span>
         <select name="tag">
-          <option value="">Tutti</option>
+          <option value="" data-i18n="risultati.opzioni.tutti">Tutti</option>
           <option value="veloce">Veloce</option>
           <option value="one-pan">Una padella</option>
           <option value="avanzi">Avanzi per domani</option>
@@ -139,18 +139,18 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <option value="portoghese">Portoghese</option>
           <option value="classico">Classico</option>
         </select></label>
-      <label class="filtro filtro-check"><input type="checkbox" name="attr" value="1"><span>Solo con la mia attrezzatura</span></label>
-      <label class="filtro filtro-sort"><span class="label">Ordina</span>
+      <label class="filtro filtro-check"><input type="checkbox" name="attr" value="1"><span data-i18n="risultati.filtro.attrezzatura">Solo con la mia attrezzatura</span></label>
+      <label class="filtro filtro-sort"><span class="label" data-i18n="risultati.filtro.ordina">Ordina</span>
         <span class="ordina-riga">
           <select name="sort">
-            <option value="">Per copertura</option>
-            <option value="tempo">Per tempo</option>
-            <option value="costo">Per costo</option>
-            <option value="diff">Per difficoltà</option>
-            <option value="az">A–Z</option>
+            <option value="" data-i18n="risultati.opzioni.perCopertura">Per copertura</option>
+            <option value="tempo" data-i18n="risultati.opzioni.perTempo">Per tempo</option>
+            <option value="costo" data-i18n="risultati.opzioni.perCosto">Per costo</option>
+            <option value="diff" data-i18n="risultati.opzioni.perDifficolta">Per difficoltà</option>
+            <option value="az" data-i18n="risultati.opzioni.az">A–Z</option>
           </select>
           <input type="hidden" name="dir" value="">
-          <button type="button" class="btn-dir" id="ordina-dir" title="Inverti ordine" aria-label="Inverti ordine">↑</button>
+          <button type="button" class="btn-dir" id="ordina-dir" title="Inverti ordine" aria-label="Inverti ordine" data-i18n-attr="title:risultati.filtro.inverti;aria-label:risultati.filtro.inverti">↑</button>
         </span></label>
     </form>
     </div>
@@ -162,21 +162,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <!-- ===== RICETTA / LIBRO ===== -->
   <section class="view view-libro" id="view-libro" hidden>
     <div class="libro" id="libro"></div>
-    <nav class="libro-nav" aria-label="Pagine">
-      <button type="button" class="libro-btn" id="libro-prev" aria-label="Pagina precedente">←</button>
+    <nav class="libro-nav" aria-label="Pagine" data-i18n-attr="aria-label:libro.pagine">
+      <button type="button" class="libro-btn" id="libro-prev" aria-label="Pagina precedente" data-i18n-attr="aria-label:libro.precedente">←</button>
       <span class="libro-pos" id="libro-pos" aria-live="polite">1 / 1</span>
-      <button type="button" class="libro-btn" id="libro-next" aria-label="Pagina successiva">→</button>
+      <button type="button" class="libro-btn" id="libro-next" aria-label="Pagina successiva" data-i18n-attr="aria-label:libro.successiva">→</button>
     </nav>
   </section>
 
   <section class="view view-errore" id="view-errore" hidden>
-    <h1 class="display display-md">Pagina non trovata</h1>
-    <p><a href="#/">Torna alla dispensa</a></p>
+    <h1 class="display display-md" data-i18n="errore.titolo">Pagina non trovata</h1>
+    <p><a href="#/" data-i18n="errore.torna">Torna alla dispensa</a></p>
   </section>
 </main>
 
 <footer class="footer">
-  <span>By Michi</span>
+  <span data-i18n="footer.by">By Michi</span>
   <a href="https://www.instagram.com/michelemodu/" target="_blank" rel="noopener">@michelemodu</a>
 </footer>
 

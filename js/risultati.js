@@ -1,6 +1,7 @@
 // Vista risultati: l'indice delle ricette ordinato per copertura, con filtri.
 import { abbina, tempoTotale, risolvi } from './match.js';
 import { ETICHETTE, STACK, euro, minuti } from './data.js';
+import { t } from './i18n.js';
 import { vai, ingredientiDaParams, costruisciHash, leggiHash } from './app.js';
 
 const el = {
@@ -46,7 +47,7 @@ export function montaRisultati(d, params) {
   }
   const f = leggiFiltri();
   const attivi = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr'].filter((k) => f[k]).length;
-  el.toggle.firstChild.textContent = attivi ? `Filtri (${attivi})` : 'Filtri';
+  el.toggle.firstChild.textContent = attivi ? t('risultati.filtriN', { n: attivi }) : t('risultati.filtri');
   el.dir.disabled = !f.sort;
   el.dir.textContent = f.dir === 'desc' ? '↓' : '↑';
   el.dir.setAttribute('aria-pressed', String(f.dir === 'desc'));
@@ -102,15 +103,15 @@ function render(ingredienti, f) {
 
   // testa
   const nomi = ingredienti.map((s) => risolvi(dati.indice, s)?.nome.toLowerCase()).filter(Boolean);
-  el.titolo.textContent = nomi.length ? `Con ${elenco(nomi)}` : conDispensa ? 'Nessun ingrediente riconosciuto' : 'Tutte le ricette';
+  el.titolo.textContent = nomi.length ? t('risultati.con', { elenco: elenco(nomi) }) : conDispensa ? t('risultati.nessunRiconosciuto') : t('risultati.tutte');
   const complete = lista.filter((x) => x.mancanti.length === 0).length;
   const linkDispensa = costruisciHash('', { i: ingredienti });
   const avviso = nonRisolti.length
-    ? ` · non riconosciuto${nonRisolti.length > 1 ? 'i' : ''}: <b>${nonRisolti.join(', ')}</b>`
+    ? t(nonRisolti.length > 1 ? 'risultati.nonRiconosciuti' : 'risultati.nonRiconosciuto', { elenco: nonRisolti.join(', ') })
     : '';
   el.sotto.innerHTML = (conDispensa
-    ? `<strong>${lista.length}</strong> ricette · <strong>${complete}</strong> senza spesa · <a href="${linkDispensa}">cambia dispensa</a>`
-    : `<strong>${lista.length}</strong> ricette · <a href="#/">scrivi cosa hai in dispensa</a>`) + avviso;
+    ? t('risultati.sottoDispensa', { n: lista.length, c: complete, link: linkDispensa })
+    : t('risultati.sottoTutte', { n: lista.length })) + avviso;
 
   // righe
   el.indice.innerHTML = '';
@@ -118,8 +119,8 @@ function render(ingredienti, f) {
   if (!lista.length) {
     el.vuoto.hidden = false;
     el.vuoto.innerHTML = conDispensa
-      ? `Con questi ingredienti (e al massimo ${MAX_MANCANTI} da comprare) non esce niente. Prova a <a href="${linkDispensa}">aggiungerne qualcuno</a> o togli un filtro.`
-      : 'Nessuna ricetta con questi filtri.';
+      ? t('risultati.vuotoDispensa', { n: MAX_MANCANTI, link: linkDispensa })
+      : t('risultati.vuotoFiltri');
     return;
   }
 
@@ -128,7 +129,7 @@ function render(ingredienti, f) {
   lista.forEach((x, k) => {
     // intestazioni di sezione solo nell'ordine per copertura
     if (conDispensa && !ord) {
-      const s = x.mancanti.length === 0 ? 'Puoi farle adesso' : x.mancanti.length === 1 ? 'Manca un ingrediente' : `Mancano ${x.mancanti.length} ingredienti`;
+      const s = x.mancanti.length === 0 ? t('risultati.sezioneAdesso') : x.mancanti.length === 1 ? t('risultati.sezioneUno') : t('risultati.sezioneN', { n: x.mancanti.length });
       if (s !== sezione) {
         sezione = s;
         const h = document.createElement('li');
@@ -149,9 +150,9 @@ function riga({ ricetta: r, mancanti, copertura, sostituzioni }, k, ingredienti)
   const href = costruisciHash(`ricetta/${r.slug}`, { i: ingredienti });
   const richiesti = r.ingredienti.filter((i) => !i.opzionale && !dati.indice.base.has(i.id)).length;
   const attrManca = r.attrezzatura.filter((a) => !STACK.has(a));
-  const rip = r.tempi.riposo ? ` <span>+ riposo</span>` : '';
+  const rip = r.tempi.riposo ? ` <span>${t('risultati.riposo')}</span>` : '';
   const nome = (id) => dati.indice.byId.get(id).nome.toLowerCase();
-  const sost = sostituzioni.map((s) => `<b>${nome(s.usato)}</b> al posto di ${nome(s.richiesto)}`).join(', ');
+  const sost = sostituzioni.map((s) => t('risultati.alPostoDi', { usato: nome(s.usato), richiesto: nome(s.richiesto) })).join(', ');
   li.innerHTML = `
     <a href="${href}">
       <div class="foto" data-slug="${r.slug}">${badgePortoghese(r)}<span class="foto-ph">${r.titolo}</span></div>
@@ -162,15 +163,15 @@ function riga({ ricetta: r, mancanti, copertura, sostituzioni }, k, ingredienti)
           <span>${ETICHETTE.difficolta[r.difficolta]}</span>
           <span>${minuti(tempoTotale(r))}${rip}</span>
           <span>${euro(r.costo.stima_eur)}</span>
-          ${attrManca.map((a) => `<span class="attr-manca">serve ${ETICHETTE.attrezzatura[a].toLowerCase()}</span>`).join('')}
+          ${attrManca.map((a) => `<span class="attr-manca">${t('risultati.serve', { attrezzo: ETICHETTE.attrezzatura[a].toLowerCase() })}</span>`).join('')}
         </p>
       </div>
       <div class="riga-cop">
         ${copertura === null
-          ? `<div class="frazione">${richiesti}<small> ingr.</small></div>`
+          ? `<div class="frazione">${richiesti}<small>${t('risultati.ingr')}</small></div>`
           : `<div class="frazione">${richiesti - mancanti.length}<small>/${richiesti}</small></div>
-             ${sost ? `<div class="sost">con ${sost}</div>` : ''}
-             <div class="manca">${mancanti.length ? 'manca: <b>' + mancanti.map(nome).join(', ') + '</b>' : 'hai tutto'}</div>`}
+             ${sost ? `<div class="sost">${t('risultati.conSostituto', { elenco: sost })}</div>` : ''}
+             <div class="manca">${mancanti.length ? t('risultati.manca', { elenco: mancanti.map(nome).join(', ') }) : t('risultati.haiTutto')}</div>`}
       </div>
     </a>`;
   caricaFoto(li.querySelector('.foto'), r);
@@ -179,7 +180,7 @@ function riga({ ricetta: r, mancanti, copertura, sostituzioni }, k, ingredienti)
 
 /** Etichetta rosso/verde per i piatti tipici di Bragança/Portogallo (tag "portoghese"). */
 export function badgePortoghese(r) {
-  return r.tag.includes('portoghese') ? '<span class="badge-pt" title="Piatto tipico di Bragança / Portogallo">PT</span>' : '';
+  return r.tag.includes('portoghese') ? `<span class="badge-pt" title="${t('risultati.badgePt')}">PT</span>` : '';
 }
 
 /** Mostra la foto se il file esiste; altrimenti resta il segnaposto tipografico. */
@@ -197,5 +198,5 @@ export function caricaFoto(box, r) {
 
 function elenco(nomi) {
   if (nomi.length <= 1) return nomi.join('');
-  return nomi.slice(0, -1).join(', ') + ' e ' + nomi.at(-1);
+  return nomi.slice(0, -1).join(', ') + t('risultati.e') + nomi.at(-1);
 }

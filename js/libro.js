@@ -1,6 +1,7 @@
 // Vista ricetta: libro a doppia pagina su desktop, pagine a scorrimento su mobile.
 import { risolvi, scalaQuantita, tempoTotale } from './match.js';
 import { ETICHETTE, STACK, euro, minuti, riposo } from './data.js';
+import { t } from './i18n.js';
 import { ingredientiDaParams } from './app.js';
 import { caricaFoto, badgePortoghese } from './risultati.js';
 
@@ -64,8 +65,8 @@ export function smontaLibro() {
   document.removeEventListener('visibilitychange', riWakeLock);
   if (onScroll) el.libro.removeEventListener('scroll', onScroll);
   el.libro.innerHTML = '';
-  el.meta.textContent = 'Bragança · 2026';
-  document.title = "Cucinança · cosa c'è in frigo?";
+  el.meta.textContent = t('topbar.meta');
+  document.title = t('titolo');
   rilasciaWakeLock();
 }
 
@@ -168,7 +169,7 @@ function paginaCover() {
   const p = document.createElement('div');
   p.className = 'pagina pagina-cover';
   const rip = riposo(r.tempi.riposo);
-  const attr = r.attrezzatura.map((a) => `<span class="${STACK.has(a) ? '' : 'manca'}">${STACK.has(a) ? '' : 'serve '}${ETICHETTE.attrezzatura[a]}</span>`).join('');
+  const attr = r.attrezzatura.map((a) => `<span class="${STACK.has(a) ? '' : 'manca'}">${STACK.has(a) ? '' : t('libro.serve')}${ETICHETTE.attrezzatura[a]}</span>`).join('');
   p.innerHTML = `
     <div class="cover-top">
       <div class="foto">${badgePortoghese(r)}<span class="foto-ph">${r.titolo}</span></div>
@@ -179,11 +180,11 @@ function paginaCover() {
     </div>
     <div class="cover-testo">
       <div class="meta">
-        <div><span class="label">Difficoltà</span><span class="val">${ETICHETTE.difficolta[r.difficolta]}</span></div>
-        <div><span class="label">Preparazione</span><span class="val">${minuti(r.tempi.preparazione)}</span></div>
-        <div><span class="label">Cottura</span><span class="val">${r.tempi.cottura ? minuti(r.tempi.cottura) : '—'}</span></div>
-        <div><span class="label">Riposo</span><span class="val">${rip || '—'}</span></div>
-        <div><span class="label">Costo</span><span class="val">${euro(r.costo.stima_eur)} <small>a persona</small></span></div>
+        <div><span class="label">${t('libro.difficolta')}</span><span class="val">${ETICHETTE.difficolta[r.difficolta]}</span></div>
+        <div><span class="label">${t('libro.preparazione')}</span><span class="val">${minuti(r.tempi.preparazione)}</span></div>
+        <div><span class="label">${t('libro.cottura')}</span><span class="val">${r.tempi.cottura ? minuti(r.tempi.cottura) : '—'}</span></div>
+        <div><span class="label">${t('libro.riposo')}</span><span class="val">${rip || '—'}</span></div>
+        <div><span class="label">${t('libro.costo')}</span><span class="val">${euro(r.costo.stima_eur)} <small>${t('libro.aPersona')}</small></span></div>
       </div>
       ${attr ? `<div class="attrezzatura">${attr}</div>` : ''}
       ${r.reinventata ? `<p class="reinventata">${r.reinventata}</p>` : ''}
@@ -209,16 +210,16 @@ function bloccoIngredienti() {
   const nome = (id) => dati.indice.byId.get(id).nome;
   d.innerHTML = `
     <div class="blocco-testa">
-      <h2>Ingredienti</h2>
-      <div class="porzioni"><span class="label">Porzioni</span>
-        <div class="seg" role="group" aria-label="Porzioni">
+      <h2>${t('libro.ingredienti')}</h2>
+      <div class="porzioni"><span class="label">${t('libro.porzioni')}</span>
+        <div class="seg" role="group" aria-label="${t('libro.porzioni')}">
           ${[1, 2, 4].map((m) => `<button type="button" data-m="${m}" aria-pressed="${m === moltiplicatore}">×${m}</button>`).join('')}
         </div>
       </div>
     </div>
-    ${sostituzioni.size ? `<div class="modifica"><span class="label">Modifica</span><ul>${[...sostituzioni].map(([id, s]) => `<li><b>${nome(s.id)}</b> al posto di ${nome(id).toLowerCase()}${s.nota ? ` — ${s.nota}` : ''}</li>`).join('')}</ul></div>` : ''}
+    ${sostituzioni.size ? `<div class="modifica"><span class="label">${t('libro.modifica')}</span><ul>${[...sostituzioni].map(([id, s]) => `<li>${t('libro.alPostoDi', { usato: nome(s.id), richiesto: nome(id).toLowerCase() })}${s.nota ? ` — ${s.nota}` : ''}</li>`).join('')}</ul></div>` : ''}
     <ul class="ingredienti"></ul>
-    ${mancanti.length ? `<button type="button" class="btn-ghost copia-mancanti">Copia la lista della spesa (${mancanti.length})</button>` : ''}`;
+    ${mancanti.length ? `<button type="button" class="btn-ghost copia-mancanti">${t('libro.copia', { n: mancanti.length })}</button>` : ''}`;
   renderIngredienti(d.querySelector('.ingredienti'));
   d.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
     moltiplicatore = Number(b.dataset.m);
@@ -234,10 +235,10 @@ function bloccoIngredienti() {
     }).join('\n');
     try {
       await navigator.clipboard.writeText(testo);
-      copia.textContent = 'Copiata';
-      setTimeout(() => { copia.textContent = `Copia la lista della spesa (${mancanti.length})`; }, 1800);
+      copia.textContent = t('libro.copiata');
+      setTimeout(() => { copia.textContent = t('libro.copia', { n: mancanti.length }); }, 1800);
     } catch {
-      copia.textContent = 'Non riesco a copiare';
+      copia.textContent = t('libro.copiaErrore');
     }
   });
   return d;
@@ -245,15 +246,15 @@ function bloccoIngredienti() {
 
 function renderIngredienti(ul) {
   ul.innerHTML = ricetta.ingredienti.map((i) => {
-    const t = dati.indice.byId.get(i.id);
+    const tx = dati.indice.byId.get(i.id);
     const q = scalaQuantita(i, moltiplicatore);
     const qb = i.unita === 'qb';
     const qta = qb ? 'q.b.' : `${formatta(q)} ${unita(i.unita, q)}`.trim();
     const s = sostituzioni.get(i.id);
     const cls = [i.opzionale ? 'opz' : '', s ? 'sost' : '', !i.opzionale && !s && !posseduti.has(i.id) ? 'manca' : ''].filter(Boolean).join(' ');
-    const pt = (i.pt || t.pt) && (i.pt || t.pt).sostituto ? `<span class="pt">a Bragança: ${(i.pt || t.pt).sostituto}</span>` : '';
-    const nomeHtml = s ? `<b>${dati.indice.byId.get(s.id).nome}</b> <s>${t.nome}</s>` : t.nome;
-    return `<li class="${cls}"><span class="q${qb ? ' qb' : ''}">${qta}</span><span class="n">${nomeHtml}${i.opzionale ? ' <small>facoltativo</small>' : ''}${i.note ? `<small>${i.note}</small>` : ''}${pt}</span></li>`;
+    const pt = (i.pt || tx.pt) && (i.pt || tx.pt).sostituto ? `<span class="pt">${t('libro.aBraganca', { testo: (i.pt || tx.pt).sostituto })}</span>` : '';
+    const nomeHtml = s ? `<b>${dati.indice.byId.get(s.id).nome}</b> <s>${tx.nome}</s>` : tx.nome;
+    return `<li class="${cls}"><span class="q${qb ? ' qb' : ''}">${qta}</span><span class="n">${nomeHtml}${i.opzionale ? ` <small>${t('libro.facoltativo')}</small>` : ''}${i.note ? `<small>${i.note}</small>` : ''}${pt}</span></li>`;
   }).join('');
 }
 
@@ -266,10 +267,10 @@ function blocchiNote() {
     d.innerHTML = `<h3>${titolo}</h3>${html}`;
     out.push(d);
   };
-  if (r.consigli) nota('Consiglio', `<p>${r.consigli}</p>`);
-  if (r.conservazione) nota('Conservazione', `<p>${r.conservazione}</p>`);
-  if (r.varianti?.length) nota('Varianti', `<ul>${r.varianti.map((v) => `<li>${v}</li>`).join('')}</ul>`);
-  if (r.fonte) nota('Fonte', `<p>${r.fonte}</p>`);
+  if (r.consigli) nota(t('libro.consiglio'), `<p>${r.consigli}</p>`);
+  if (r.conservazione) nota(t('libro.conservazione'), `<p>${r.conservazione}</p>`);
+  if (r.varianti?.length) nota(t('libro.varianti'), `<ul>${r.varianti.map((v) => `<li>${v}</li>`).join('')}</ul>`);
+  if (r.fonte) nota(t('libro.fonte'), `<p>${r.fonte}</p>`);
   return out;
 }
 
@@ -326,9 +327,8 @@ function rilasciaWakeLock() {
 
 /* ---------- util ---------- */
 
-const SINGOLARE = { cucchiai: 'cucchiaio', cucchiaini: 'cucchiaino', spicchi: 'spicchio', foglie: 'foglia', rametti: 'rametto', fette: 'fetta' };
 function unita(u, q) {
-  return q === 1 && SINGOLARE[u] ? SINGOLARE[u] : ETICHETTE.unita[u];
+  return q === 1 && ETICHETTE.unitaSingolare[u] ? ETICHETTE.unitaSingolare[u] : ETICHETTE.unita[u];
 }
 function formatta(n) {
   if (n === null) return '';
