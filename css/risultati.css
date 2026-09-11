@@ -92,6 +92,8 @@
 .riga-cop .frazione small { font-size: 0.55em; font-weight: 600; color: var(--ink-2); }
 .riga-cop .manca { font-size: var(--t-sm); color: var(--ink-2); margin-top: 4px; }
 .riga-cop .manca b { color: var(--ink); font-weight: 600; }
+.riga-cop .sost { font-size: var(--t-sm); color: var(--ink); margin-top: 4px; }
+.riga-cop .sost b { font-weight: 600; }
 .riga.completa .riga-cop .manca { color: var(--ink); }
 
 .indice-vuoto { padding: calc(var(--u) * 6) var(--margin); font-size: var(--t-lg); max-width: 50ch; }

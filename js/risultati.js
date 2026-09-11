@@ -74,7 +74,7 @@ function render(ingredienti, f) {
   if (conDispensa) {
     lista = abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti, maxMancanti: MAX_MANCANTI });
   } else {
-    lista = dati.ricette.map((ricetta) => ({ ricetta, mancanti: [], copertura: null }));
+    lista = dati.ricette.map((ricetta) => ({ ricetta, mancanti: [], copertura: null, sostituzioni: [] }));
   }
   const nonRisolti = lista.nonRisolti || []; // .filter() sotto perde le proprietà extra dell'array, va salvato prima
 
@@ -142,7 +142,7 @@ function render(ingredienti, f) {
   el.indice.appendChild(frag);
 }
 
-function riga({ ricetta: r, mancanti, copertura }, k, ingredienti) {
+function riga({ ricetta: r, mancanti, copertura, sostituzioni }, k, ingredienti) {
   const li = document.createElement('li');
   li.className = 'riga' + (mancanti.length === 0 && copertura !== null ? ' completa' : '');
   li.style.setProperty('--i', Math.min(k, 12));
@@ -150,6 +150,8 @@ function riga({ ricetta: r, mancanti, copertura }, k, ingredienti) {
   const richiesti = r.ingredienti.filter((i) => !i.opzionale && !dati.indice.base.has(i.id)).length;
   const attrManca = r.attrezzatura.filter((a) => !STACK.has(a));
   const rip = r.tempi.riposo ? ` <span>+ riposo</span>` : '';
+  const nome = (id) => dati.indice.byId.get(id).nome.toLowerCase();
+  const sost = sostituzioni.map((s) => `<b>${nome(s.usato)}</b> al posto di ${nome(s.richiesto)}`).join(', ');
   li.innerHTML = `
     <a href="${href}">
       <div class="foto" data-slug="${r.slug}">${badgePortoghese(r)}<span class="foto-ph">${r.titolo}</span></div>
@@ -167,7 +169,8 @@ function riga({ ricetta: r, mancanti, copertura }, k, ingredienti) {
         ${copertura === null
           ? `<div class="frazione">${richiesti}<small> ingr.</small></div>`
           : `<div class="frazione">${richiesti - mancanti.length}<small>/${richiesti}</small></div>
-             <div class="manca">${mancanti.length ? 'manca: <b>' + mancanti.map((id) => dati.indice.byId.get(id).nome.toLowerCase()).join(', ') + '</b>' : 'hai tutto'}</div>`}
+             ${sost ? `<div class="sost">con ${sost}</div>` : ''}
+             <div class="manca">${mancanti.length ? 'manca: <b>' + mancanti.map(nome).join(', ') + '</b>' : 'hai tutto'}</div>`}
       </div>
     </a>`;
   caricaFoto(li.querySelector('.foto'), r);
