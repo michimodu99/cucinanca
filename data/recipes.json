@@ -5829,7 +5829,16 @@
     "id": "guanciale",
     "qta": 50,
     "unita": "g",
-    "note": "a listarelle spesse 1 cm"
+    "note": "a listarelle spesse 1 cm",
+    "sostituti": [
+     {
+      "id": "pancetta"
+     },
+     {
+      "id": "speck",
+      "nota": "affumicato: il piatto cambia carattere, ma regge"
+     }
+    ]
    },
    {
     "id": "uova",

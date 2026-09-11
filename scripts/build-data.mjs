@@ -63,6 +63,17 @@ for (const r of ricette) {
     if (!t) { err(`${where}: ingrediente sconosciuto "${ing.id}"`); continue; }
     if (ing.unita === 'qb' && ing.qta !== null) err(`${where}: "${ing.id}" con unità qb deve avere qta null`);
     if (ing.unita !== 'qb' && (ing.qta === null || ing.qta === undefined)) err(`${where}: "${ing.id}" senza quantità`);
+    const sost = ing.sostituti || [];
+    if (sost.length && ing.opzionale) err(`${where}: "${ing.id}" è opzionale, non ha senso dargli sostituti`);
+    const vistiSost = new Set();
+    for (const s of sost) {
+      const ts = byId.get(s.id);
+      if (!ts) err(`${where}: sostituto sconosciuto "${s.id}" per "${ing.id}"`);
+      else if (ts.base) err(`${where}: "${s.id}" è nella dispensa base, non può essere un sostituto`);
+      if (s.id === ing.id) err(`${where}: "${ing.id}" sostituto di sé stesso`);
+      if (vistiSost.has(s.id)) err(`${where}: sostituto "${s.id}" ripetuto per "${ing.id}"`);
+      vistiSost.add(s.id);
+    }
   }
   (r.procedimento || []).forEach((s, i) => {
     if (s.n !== i + 1) err(`${where}: step ${i + 1} ha n=${s.n}`);
