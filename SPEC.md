@@ -150,7 +150,7 @@ Regole:
 ```
 
 - Categorie: `carne` `pesce` `salume` `latticino` `uova` `verdura` `frutta` `cereale` `pasta` `legume` `condimento` `spezia` `erba` `dolce` `altro`.
-- **Dispensa base** (confermata): olio evo, sale, pepe, aglio, cipolla, burro, farina 00, zucchero, aceto, limone, dado/brodo, parmigiano grattugiato, alloro, rosmarino. (Peperoncino tolto dalla base: non è gradito, compare solo come opzionale.)
+- **Dispensa base** (confermata): olio evo, sale, pepe, aglio, cipolla, burro, farina 00, zucchero, aceto, limone, dado/brodo, parmigiano grattugiato, alloro, rosmarino, basilico, coriandolo, paprika, curry. (Peperoncino tolto dalla base: non è gradito, compare solo come opzionale.)
 - Gli alias risolvono anche il plurale/singolare più comune; la normalizzazione rimuove accenti e maiuscole.
 
 ### 5.3 Validazione (`scripts/validate.mjs`)

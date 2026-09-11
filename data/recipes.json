@@ -903,6 +903,131 @@
   "fonte": "Tradizione portoghese"
  },
  {
+  "slug": "caril-de-galinha",
+  "titolo": "Caril de galinha",
+  "descrizione": "Pollo al curry di tradizione luso-goana: cipolla e aglio, curry dolce tostato, pomodoro cotto e latte di cocco, coriandolo fresco alla fine. Niente piccante, si mangia col riso.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.5
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "portoghese",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Portogallo (origine goana)",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "petto-di-pollo",
+    "qta": 200,
+    "unita": "g",
+    "note": "a bocconcini"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "curry",
+    "qta": 1,
+    "unita": "cucchiai",
+    "note": "dolce, non piccante"
+   },
+   {
+    "id": "pomodoro-fresco",
+    "qta": 100,
+    "unita": "g",
+    "note": "a pezzi, cotto nel sugo"
+   },
+   {
+    "id": "latte-di-cocco",
+    "qta": 150,
+    "unita": "ml"
+   },
+   {
+    "id": "riso-carnaroli",
+    "qta": 80,
+    "unita": "g",
+    "note": "o qualsiasi riso bianco, per servire"
+   },
+   {
+    "id": "coriandolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "limone",
+    "qta": 0.25,
+    "unita": "pz",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Soffritto e curry",
+    "testo": "Scalda l'olio in pentola, soffriggi cipolla e aglio tritati finché sono morbidi. Aggiungi il curry e tostalo a secco un minuto mescolando: sprigiona molto più aroma.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Pollo e pomodoro",
+    "testo": "Aggiungi il pollo a bocconcini, rosola 2-3 minuti, poi il pomodoro a pezzi e un pizzico di sale. Cuoci 5 minuti finché il pomodoro si disfa in un sugo.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Cocco",
+    "testo": "Versa il latte di cocco, abbassa il fuoco e cuoci scoperto 15-18 minuti, mescolando ogni tanto, finché il pollo è cotto e il sugo si è leggermente ristretto.",
+    "minuti": 18
+   },
+   {
+    "n": 4,
+    "titolo": "Riso e servizio",
+    "testo": "Lessa il riso a parte in acqua salata. Servi il curry sul riso con coriandolo fresco spezzettato sopra e, se vuoi, una spruzzata di limone.",
+    "minuti": 15
+   }
+  ],
+  "consigli": "Il curry va sempre tostato a secco prima di aggiungere liquidi: da crudo resta amaro e piatto.",
+  "conservazione": "In frigo 2 giorni, si scalda bene; tieni il riso a parte.",
+  "varianti": [
+   "Con gamberi al posto del pollo: bastano 5 minuti di cottura nel sugo.",
+   "Con patate a cubetti aggiunte al passo 2, per allungare il piatto."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/caril-de-galinha.webp",
+   "prompt": "Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl"
+  },
+  "fonte": "Tradizione luso-goana"
+ },
+ {
   "slug": "cotoletta-alla-milanese",
   "titolo": "Cotoletta alla milanese",
   "descrizione": "Con l'osso, alta, impanata due volte e fritta nel burro chiarificato. Non si sala prima, non si usa il pangrattato fine ma il pane raffermo grattato al momento. Una fetta di limone e basta.",
@@ -1852,6 +1977,100 @@
    "prompt": "shaved fennel and orange salad with black olives and fennel fronds, olive oil, bright and fresh, white ceramic plate"
   },
   "fonte": "Tradizione siciliana"
+ },
+ {
+  "slug": "insalata-di-patate-al-coriandolo",
+  "titolo": "Insalata di patate al coriandolo",
+  "descrizione": "Patate lesse ancora tiepide condite con aglio, olio, limone e una manciata abbondante di coriandolo fresco tritato. Il contorno freddo più comune in Portogallo.",
+  "categoria": "contorno",
+  "difficolta": "molto-facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 20,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.8
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost",
+   "portoghese",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Portogallo",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "patate",
+    "qta": 250,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi",
+    "note": "tritato finissimo"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "il succo"
+   },
+   {
+    "id": "coriandolo",
+    "qta": null,
+    "unita": "qb",
+    "note": "una manciata abbondante, tritato"
+   },
+   {
+    "id": "sale",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Lessa",
+    "testo": "Cuoci le patate intere con la buccia in acqua salata 18-20 minuti finché sono tenere alla forchetta. Scola, fai intiepidire un minuto, pela e taglia a pezzi grossi.",
+    "minuti": 22
+   },
+   {
+    "n": 2,
+    "titolo": "Condisci e coriandolo",
+    "testo": "Ancora tiepide, condisci le patate con aglio tritato, olio, succo di limone e sale: assorbono meglio da calde. Aggiungi il coriandolo tritato solo alla fine, a crudo, e mescola. Servi tiepida o fredda.",
+    "minuti": 5
+   }
+  ],
+  "consigli": "Condisci le patate calde, non fredde: assorbono molto meglio il condimento.",
+  "conservazione": "In frigo 2 giorni; il coriandolo perde un po' di colore ma non di sapore.",
+  "varianti": [
+   "Con qualche oliva nera spezzettata.",
+   "Con un cucchiaino di aceto di vino al posto di parte del limone."
+  ],
+  "kcal": 180,
+  "foto": {
+   "copertina": "img/insalata-di-patate-al-coriandolo.webp",
+   "prompt": "warm potato salad with fresh chopped coriander, garlic and olive oil, rustic, white ceramic bowl"
+  },
+  "fonte": "Tradizione portoghese"
  },
  {
   "slug": "involtini-di-tacchino-con-speck-e-scamorza",
@@ -3553,6 +3772,93 @@
    "prompt": "three Portuguese pasteis de nata custard tarts with blistered caramelized tops and flaky spiral pastry, cinnamon dust, light grey background"
   },
   "fonte": "Tradizione portoghese, versione domestica"
+ },
+ {
+  "slug": "patate-al-forno-alla-paprika",
+  "titolo": "Patate al forno alla paprika",
+  "descrizione": "Spicchi di patata con la buccia, conditi con paprika dolce e aglio in camicia, arrostiti in forno: crosta rossa e speziata, dentro morbide. Stessa tecnica delle patate al rosmarino, gusto diverso.",
+  "categoria": "contorno",
+  "difficolta": "molto-facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 35,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.6
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "low-cost",
+   "one-pan"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia (variante)",
+  "reinventata": "Patate al forno croccanti, con paprika al posto del rosmarino",
+  "ingredienti": [
+   {
+    "id": "patate",
+    "qta": 350,
+    "unita": "g",
+    "note": "con la buccia, a spicchi"
+   },
+   {
+    "id": "paprika-dolce",
+    "qta": 2,
+    "unita": "cucchiaini"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi",
+    "note": "in camicia"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "sale",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Condisci",
+    "testo": "Taglia le patate a spicchi con la buccia e asciugale bene con un canovaccio. Mescola in una ciotola con olio, paprika, aglio in camicia schiacciato e sale.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Forno",
+    "testo": "Disponi su una teglia in un solo strato, spaziate. Cuoci a 210 °C per 30-35 minuti, girando a metà, finché sono dorate e croccanti fuori.",
+    "minuti": 35
+   }
+  ],
+  "consigli": "Le patate vanno asciugate bene prima di condirle: se sono umide vaporizzano invece di arrostire.",
+  "conservazione": "In frigo 2 giorni; ripassale in forno o padella per ricompattare la crosta.",
+  "varianti": [
+   "Con una punta di curry al posto della paprika.",
+   "Con patate dolci al posto di quelle normali."
+  ],
+  "kcal": 260,
+  "foto": {
+   "copertina": "img/patate-al-forno-alla-paprika.webp",
+   "prompt": "crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead"
+  },
+  "fonte": "Variante di famiglia"
  },
  {
   "slug": "patate-al-forno-croccanti",

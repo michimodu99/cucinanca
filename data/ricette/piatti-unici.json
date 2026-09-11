@@ -407,5 +407,130 @@
     "kcal": 620,
     "foto": { "copertina": "img/crepes-salate-prosciutto-e-formaggio.webp", "prompt": "two folded savory crepes with melted cheese and ham, golden lace edges, white ceramic plate, minimal" },
     "fonte": "Classico francese"
+  },
+  {
+    "slug": "caril-de-galinha",
+    "titolo": "Caril de galinha",
+    "descrizione": "Pollo al curry di tradizione luso-goana: cipolla e aglio, curry dolce tostato, pomodoro cotto e latte di cocco, coriandolo fresco alla fine. Niente piccante, si mangia col riso.",
+    "categoria": "piatto-unico",
+    "difficolta": "facile",
+    "tempi": {
+      "preparazione": 10,
+      "cottura": 30,
+      "riposo": 0
+    },
+    "porzioni": 1,
+    "costo": {
+      "fascia": "medio",
+      "stima_eur": 3.5
+    },
+    "attrezzatura": [
+      "pentola"
+    ],
+    "tag": [
+      "portoghese",
+      "classico"
+    ],
+    "dieta": [
+      "senza-glutine",
+      "senza-lattosio"
+    ],
+    "origine": "Portogallo (origine goana)",
+    "reinventata": null,
+    "ingredienti": [
+      {
+        "id": "petto-di-pollo",
+        "qta": 200,
+        "unita": "g",
+        "note": "a bocconcini"
+      },
+      {
+        "id": "cipolla",
+        "qta": 0.5,
+        "unita": "pz"
+      },
+      {
+        "id": "aglio",
+        "qta": 1,
+        "unita": "spicchi"
+      },
+      {
+        "id": "curry",
+        "qta": 1,
+        "unita": "cucchiai",
+        "note": "dolce, non piccante"
+      },
+      {
+        "id": "pomodoro-fresco",
+        "qta": 100,
+        "unita": "g",
+        "note": "a pezzi, cotto nel sugo"
+      },
+      {
+        "id": "latte-di-cocco",
+        "qta": 150,
+        "unita": "ml"
+      },
+      {
+        "id": "riso-carnaroli",
+        "qta": 80,
+        "unita": "g",
+        "note": "o qualsiasi riso bianco, per servire"
+      },
+      {
+        "id": "coriandolo",
+        "qta": null,
+        "unita": "qb"
+      },
+      {
+        "id": "olio-evo",
+        "qta": 1,
+        "unita": "cucchiai"
+      },
+      {
+        "id": "limone",
+        "qta": 0.25,
+        "unita": "pz",
+        "opzionale": true
+      }
+    ],
+    "procedimento": [
+      {
+        "n": 1,
+        "titolo": "Soffritto e curry",
+        "testo": "Scalda l'olio in pentola, soffriggi cipolla e aglio tritati finché sono morbidi. Aggiungi il curry e tostalo a secco un minuto mescolando: sprigiona molto più aroma.",
+        "minuti": 6
+      },
+      {
+        "n": 2,
+        "titolo": "Pollo e pomodoro",
+        "testo": "Aggiungi il pollo a bocconcini, rosola 2-3 minuti, poi il pomodoro a pezzi e un pizzico di sale. Cuoci 5 minuti finché il pomodoro si disfa in un sugo.",
+        "minuti": 8
+      },
+      {
+        "n": 3,
+        "titolo": "Cocco",
+        "testo": "Versa il latte di cocco, abbassa il fuoco e cuoci scoperto 15-18 minuti, mescolando ogni tanto, finché il pollo è cotto e il sugo si è leggermente ristretto.",
+        "minuti": 18
+      },
+      {
+        "n": 4,
+        "titolo": "Riso e servizio",
+        "testo": "Lessa il riso a parte in acqua salata. Servi il curry sul riso con coriandolo fresco spezzettato sopra e, se vuoi, una spruzzata di limone.",
+        "minuti": 15
+      }
+    ],
+    "consigli": "Il curry va sempre tostato a secco prima di aggiungere liquidi: da crudo resta amaro e piatto.",
+    "conservazione": "In frigo 2 giorni, si scalda bene; tieni il riso a parte.",
+    "varianti": [
+      "Con gamberi al posto del pollo: bastano 5 minuti di cottura nel sugo.",
+      "Con patate a cubetti aggiunte al passo 2, per allungare il piatto."
+    ],
+    "kcal": 560,
+    "foto": {
+      "copertina": "img/caril-de-galinha.webp",
+      "prompt": "Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl"
+    },
+    "fonte": "Tradizione luso-goana"
   }
 ]
