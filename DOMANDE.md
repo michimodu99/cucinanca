@@ -18,52 +18,52 @@ Pomodoro → passata, pelati, concentrato, ketchup, sugo pronto. Piselli → anc
 
 Assunzione: **sì, esclusi tutti i derivati**.
 
->
+>escludi solo pomodoro crudo, tutto il resto includilo nelle ricette
 
 ### 3. Quali sono i tuoi "cavalli di battaglia"?
 Serve per due motivi: non duplicarli (o includerli come "già tuoi" per il matching) e capire il tuo livello reale.
 
->
+> ragu bianco, pasta tonno e olive nere
 
 ### 4. Gusti degli altri tre
 Piccante? Pesce (anche baccalà)? Frattaglie? Formaggi forti (gorgonzola)? Funghi? Qualcuno vegetariano nei fatti?
 
 Assunzione: mangiano tutto, moderatamente piccante ok.
 
->
+> mangiano tutto, evita piccante, frattaglie. nessuno è vegetariano.
 
 ### 5. Budget medio di una cena per 4
 Assunzione: 5–12 € (carne/pesce nella fascia alta).
 
->
+> le ricette devono essere sempre per 1, così come la taratura degli ingredienti. questo è importantissimo. io cucinerò in primis per me, anche per imparare. Se gli altro vorranno accodarsi, ben venga. a testa preferirei non spendere oltre i 10 euro 
 
 ### 6. Solo cucina italiana o anche piatti portoghesi / internazionali?
 Assunzione: prevalenza italiana (~80 %) + qualche piatto portoghese con ingredienti locali (bacalhau, chouriço, grelos) e 2–3 internazionali facili.
 
->
+> 
 
 ### 7. Repository GitHub: pubblico o privato?
 GitHub Pages sul piano gratuito funziona solo con repo **pubblici**. Un repo privato richiede GitHub Pro (4 $/mese). Il contenuto sono ricette e foto generate: niente di sensibile.
 
 Assunzione: **pubblico**, nome `cucina`.
 
->
+> ho github student. michimodu99, la cui mail è m.modugno6@studenti.poliba.it 
 
 ### 8. Frullatore / minipimer
 Nella lista ricette segno quali lo richiedono (vellutate, pesto, caldo verde…). Un minipimer costa ~15–20 € da Continente. Decidi dopo aver visto la lista.
 
->
+> si, lo comprerò. 
 
 ### 9. Tempo: quanto tempo hai di solito la sera per cucinare?
 Serve per tarare la proporzione di ricette "veloci" (≤ 30′) contro quelle lunghe (brasati, lievitati nel weekend).
 
 Assunzione: 30–60 minuti nei giorni feriali, senza limiti nel weekend.
 
->
+> 30-45 minuti nei feriali
 
 ### 10. Pentole: hai anche una pentola alta (per pasta/brodo) e una teglia da forno?
 Hai scritto "3 padelle": per pasta, risotti, zuppe e arrosti servono una pentola alta e almeno una teglia. Se non le hai, le segnalo come attrezzatura come per il frullatore.
 
 Assunzione: hai una pentola alta e una teglia.
 
->
+> si 

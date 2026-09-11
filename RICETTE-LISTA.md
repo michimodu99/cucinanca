@@ -1,11 +1,10 @@
-# Lista ricette proposta (v1) — da approvare
+# Lista ricette (v1) — approvata l'11/09/2026
 
-55 ricette: qualcuna in più delle 50 previste, così puoi cancellarne senza restare scoperto.
-Segna con ✗ quelle da togliere, aggiungi in fondo quelle che vuoi. Tutte già senza piselli, fagiolini,
-carciofi, pomodoro, broccoli, cavolfiore. Tempi totali indicativi (prep + cottura, escluso riposo).
+56 ricette, **tutte dosate per 1 persona**. Senza piselli, fagiolini, carciofi, broccoli, cavolfiore;
+pomodoro solo cotto (passata/pelati), mai crudo. Niente piccante, niente frattaglie. Tempi totali indicativi (prep + cottura, escluso riposo).
 
-Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **🌀** = richiede frullatore/minipimer ·
-**PT** = ingrediente chiave con nota di reperibilità/sostituzione a Bragança · **W** = da weekend (lunga o con riposo)
+Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **🌀** = usa il frullatore/minipimer ·
+**PT** = ingrediente chiave con nota di reperibilità/sostituzione a Bragança · **W** = da weekend (oltre 45′ o con riposo)
 
 ## Primi (18)
 
@@ -23,18 +22,18 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 | 10 | Gnocchi di patate burro e salvia | media | 60′ | impasto a mano, no attrezzi |
 | 11 | Pasta al limone e mascarpone | facile | 20′ | veloce; PT mascarpone (Continente, Lidl) |
 | 12 | Pasta con crema di zucchine, speck e zafferano | facile | 30′ | crema schiacciata a forchetta (no frullatore) |
-| 13 | Pasta alla norma **R** | media | 45′ | **R**: melanzane fritte + ricotta salata + menta + burro all'aglio, senza pomodoro |
-| 14 | Spaghetti aglio, olio, peperoncino e pangrattato tostato | facile | 15′ | dispensa-only |
-| 15 | Pasta al ragù bianco di salsiccia | facile | 40′ | classico umbro, naturalmente senza pomodoro |
-| 16 | Tagliatelle fresche all'uovo (impasto) | difficile | 60′ W | mattarello; da abbinare al ragù bianco o burro e salvia |
-| 17 | Pasta e ceci alla romana **R** | facile | 35′ | **R**: rosmarino, aglio, acciughe, niente pomodoro; ceci in barattolo |
+| 13 | Pasta alla norma | media | 45′ | classica con passata; melanzane fritte, ricotta salata |
+| 14 | Spaghetti aglio, olio e pangrattato tostato | facile | 15′ | dispensa-only; peperoncino opzionale |
+| 15 | Bucatini all'amatriciana | facile | 35′ | pelati; PT guanciale → toucinho; non piccante |
+| 16 | Tagliatelle fresche all'uovo (impasto) | difficile | 60′ W | mattarello (o bottiglia); da abbinare al tuo ragù bianco o burro e salvia |
+| 17 | Pasta e ceci alla romana | facile | 35′ | rosmarino, aglio, acciughe, un cucchiaio di concentrato; ceci in barattolo |
 | 18 | Minestra di farro, zucca e cavolo nero | facile | 45′ | PT farro → Continente (bio) o orzo; cavolo nero → *couve galega* |
 
 ## Secondi (16)
 
 | # | Ricetta | Difficoltà | Tempo | Note |
 |---|---|---|---|---|
-| 19 | Pollo alla cacciatora in bianco **R** | media | 60′ | **R**: fondo di vino bianco, olive, rosmarino, aglio |
+| 19 | Pollo alla cacciatora | media | 60′ | pelati, olive, rosmarino, vino bianco |
 | 20 | Scaloppine al limone | facile | 20′ | vitello o tacchino (*peru*, economico in PT) |
 | 21 | Saltimbocca alla romana | media | 25′ | PT prosciutto crudo → *presunto* (ottimo) |
 | 22 | Cotoletta alla milanese | media | 30′ | frittura nel burro chiarificato |
@@ -58,10 +57,10 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 |---|---|---|---|---|
 | 36 | Pizza bianca a lunga lievitazione (patate e rosmarino / mortadella e stracciatella) | difficile | 60′ + 24 h riposo W | teglia; senza pomodoro per natura |
 | 37 | Focaccia genovese | media | 40′ + 3 h riposo W | teglia |
-| 38 | Parmigiana bianca di melanzane **R** | media | 75′ | **R**: besciamella al posto del sugo, melanzane grigliate |
+| 38 | Parmigiana di melanzane | media | 75′ W | passata; melanzane grigliate (versione leggera) o fritte |
 | 39 | Polenta con funghi e salsiccia | facile | 50′ | polenta istantanea o *farinha de milho* |
-| 40 | Vellutata di zucca con crostini 🌀 | facile | 45′ | **🌀 frullatore** (o schiacciapatate per versione rustica) |
-| 41 | Ribollita **R** | media | 90′ W | **R**: senza pomodoro; cavolo nero, fagioli cannellini, pane raffermo |
+| 40 | Vellutata di zucca con crostini 🌀 | facile | 45′ | **🌀 frullatore** |
+| 41 | Ribollita | media | 90′ W | cavolo nero, fagioli cannellini, pane raffermo, concentrato |
 | 42 | Caldo verde 🌀 | facile | 40′ | **PT** piatto locale; **🌀 frullatore** per la base di patate; chouriço |
 | 43 | Arroz de pato | media | 90′ W | **PT** riso al forno con anatra e chouriço; teglia |
 | 44 | Piadina romagnola con squacquerone e rucola | facile | 30′ | PT squacquerone → *requeijão* o stracchino se c'è |
@@ -72,7 +71,7 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 
 | # | Ricetta | Difficoltà | Tempo | Note |
 |---|---|---|---|---|
-| 47 | Patate al forno croccanti (pre-lessate) | facile | 60′ | teglia |
+| 47 | Patate al forno croccanti (pre-lessate) | facile | 60′ W | teglia |
 | 48 | Verze stufate con pancetta | facile | 40′ | *couve lombarda* |
 | 49 | Zucca al forno con rosmarino e aceto balsamico | facile | 40′ | teglia |
 | 50 | Funghi trifolati | facile | 20′ | padella |
@@ -92,13 +91,9 @@ Legenda: **R** = ricetta classica *reinventata* per aggirare un'esclusione · **
 ---
 
 ## Conteggi
-- 57 ricette totali (obiettivo 50: elimina ~7 o tienile tutte).
-- Difficoltà: molto facile 2 · facile 27 · media 22 · difficile 6.
-- Richiedono **frullatore**: 2 (#40, #42) — entrambe hanno alternativa rustica.
-- Attrezzatura extra oltre lo stack dichiarato: teglia (molte), stampo per dolci (#53, #54), stampini (#55, #56), mattarello (#16, #54).
-- Reinventate **R**: 6 · Piatti portoghesi **PT**: 4.
+- 56 ricette totali (57 proposte, tolto il ragù bianco perché già tuo → sostituito dall'amatriciana).
+- Richiedono **frullatore**: 2 (#40, #42) — ora nello stack.
+- Attrezzatura extra oltre lo stack: stampo per dolci (#53, #54), stampini (#55, #56), mattarello (#16, #54) → badge nella UI.
+- Reinventate **R**: 0 (con passata/pelati ammessi le classiche tornano classiche). Piatti portoghesi **PT**: 4.
 
-## Cosa mi serve da te
-1. ✗ sulle ricette da togliere, + su quelle da aggiungere.
-2. Un'occhiata a `DOMANDE.md` (10 domande, risposte brevi).
-3. Se `SPEC.md` ti convince, dimmelo e parto con la Fase 1 (dati + matching).
+Stato: **approvata** (risposte in `DOMANDE.md`). Le schede complete sono in `data/recipes.json`.
