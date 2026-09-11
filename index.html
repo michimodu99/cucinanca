@@ -141,13 +141,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </select></label>
       <label class="filtro filtro-check"><input type="checkbox" name="attr" value="1"><span>Solo con la mia attrezzatura</span></label>
       <label class="filtro filtro-sort"><span class="label">Ordina</span>
-        <select name="sort">
-          <option value="">Per copertura</option>
-          <option value="tempo">Per tempo</option>
-          <option value="costo">Per costo</option>
-          <option value="diff">Per difficoltà</option>
-          <option value="az">A–Z</option>
-        </select></label>
+        <span class="ordina-riga">
+          <select name="sort">
+            <option value="">Per copertura</option>
+            <option value="tempo">Per tempo</option>
+            <option value="costo">Per costo</option>
+            <option value="diff">Per difficoltà</option>
+            <option value="az">A–Z</option>
+          </select>
+          <input type="hidden" name="dir" value="">
+          <button type="button" class="btn-dir" id="ordina-dir" title="Inverti ordine" aria-label="Inverti ordine">↑</button>
+        </span></label>
     </form>
     </div>
 

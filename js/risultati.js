@@ -10,9 +10,10 @@ const el = {
   indice: document.getElementById('indice'),
   vuoto: document.getElementById('indice-vuoto'),
   toggle: document.getElementById('filtri-toggle'),
+  dir: document.getElementById('ordina-dir'),
 };
 
-const CHIAVI_FILTRO = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr', 'sort'];
+const CHIAVI_FILTRO = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr', 'sort', 'dir'];
 const MAX_MANCANTI = 3; // quanti ingredienti puoi ancora non avere e vederti comunque proposta la ricetta
 let dati;
 let montato = false;
@@ -20,9 +21,14 @@ let montato = false;
 export function montaRisultati(d, params) {
   dati = d;
   if (!montato) {
-    el.filtri.addEventListener('change', () => {
-      const f = leggiFiltri();
-      vai('risultati', { i: ingredientiDaParams(leggiHash().params), ...f });
+    el.filtri.addEventListener('change', (ev) => {
+      if (ev.target.name === 'sort') el.filtri.elements.dir.value = ''; // cambiando il criterio riparti da ordine crescente
+      naviga();
+    });
+    el.dir.addEventListener('click', () => {
+      const campo = el.filtri.elements.dir;
+      campo.value = campo.value === 'desc' ? '' : 'desc';
+      naviga();
     });
     el.toggle.addEventListener('click', () => {
       const aperto = el.toggle.getAttribute('aria-expanded') !== 'true';
@@ -41,7 +47,15 @@ export function montaRisultati(d, params) {
   const f = leggiFiltri();
   const attivi = ['cat', 'diff', 't', 'costo', 'dieta', 'tag', 'attr'].filter((k) => f[k]).length;
   el.toggle.firstChild.textContent = attivi ? `Filtri (${attivi})` : 'Filtri';
+  el.dir.disabled = !f.sort;
+  el.dir.textContent = f.dir === 'desc' ? '↓' : '↑';
+  el.dir.setAttribute('aria-pressed', String(f.dir === 'desc'));
   render(ingredientiDaParams(params), f);
+}
+
+function naviga() {
+  const f = leggiFiltri();
+  vai('risultati', { i: ingredientiDaParams(leggiHash().params), ...f });
 }
 
 function leggiFiltri() {
@@ -83,7 +97,7 @@ function render(ingredienti, f) {
     diff: (a, b) => ETICHETTE.difficoltaOrdine[a.ricetta.difficolta] - ETICHETTE.difficoltaOrdine[b.ricetta.difficolta],
     az: (a, b) => a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'),
   }[f.sort];
-  if (ord) lista = [...lista].sort(ord);
+  if (ord) lista = [...lista].sort(f.dir === 'desc' ? (a, b) => -ord(a, b) : ord);
   else if (!conDispensa) lista = [...lista].sort((a, b) => a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'));
 
   // testa

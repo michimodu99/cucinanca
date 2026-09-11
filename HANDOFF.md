@@ -15,22 +15,17 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap) e `MEMO
 - Pomodoro fresco/pomodorini **non più vietati** in tassonomia (ammessi se cotti in ricetta, non a crudo/guarnizione). Restano vietati: piselli, fagiolini, carciofi, broccoli, cavolfiore.
 - Plugin **humanizer** installato (`claude plugin install humanizer@humanizer`, scope user) — rimuove pattern di scrittura da IA (contrasti "non X ma Y", trattini universali, linguaggio gonfiato, ecc.). Si carica automaticamente dalla prossima sessione, invocabile con lo Skill tool.
 
-## Da fare: toggle crescente/decrescente su "Ordina"
+## Fatto in questa sessione: toggle crescente/decrescente su "Ordina"
 
-Richiesta di Michele, non ancora implementata. Il select `ORDINA` in `index.html` (risultati) ha oggi 5 opzioni:
-```
-Per copertura (default, nessun value) · Per tempo · Per costo · Per difficoltà · A–Z
-```
-Logica in `js/risultati.js`, oggetto `ord` (righe ~80-87).
+Implementata l'alternativa consigliata (pulsante di direzione separato, non 9 voci nel dropdown):
+- `index.html`: nel `<label class="filtro filtro-sort">`, il `<select name="sort">` è ora affiancato da un `<input type="hidden" name="dir">` e da `<button id="ordina-dir" class="btn-dir">` (↑/↓), dentro un wrapper `<span class="ordina-riga">`.
+- `js/risultati.js`: `CHIAVI_FILTRO` include ora `dir`. Click su `#ordina-dir` inverte `dir` fra `''` e `'desc'` e rinaviga (helper `naviga()`, condiviso col listener `change` del form). Cambiare il `select[name=sort]` resetta `dir` a `''`. Il comparatore in `render()` viene negato quando `f.dir === 'desc'`. Il bottone è `disabled` (e mostra ↑) quando `sort` è vuoto ("Per copertura", che non ha una direzione naturale).
+- `css/risultati.css`: stile `.btn-dir` (28px, coerente con `.libro-btn`), `.ordina-riga` per il layout select+bottone.
+- Verificato in browser (desktop): toggle funziona, persiste in URL (`&dir=desc`), si disabilita su "Per copertura". Non verificato manualmente il layout mobile (resize del tool non ha funzionato in sessione) — dare un'occhiata al primo giro su telefono/DevTools.
 
-**Analisi fatta in sessione, per chi implementa:**
-- "Per copertura" non ha una direzione naturale (è un ordinamento a più chiavi: mancanti asc → copertura desc → tempo asc → titolo — non un singolo valore invertibile). Non ha senso dargli crescente/decrescente.
-- Tempo, costo, difficoltà, A–Z hanno tutti una direzione naturale invertibile.
-- **Se si raddoppia ogni voce direzionale nel dropdown**: 1 (copertura) + 2 (tempo) + 2 (costo) + 2 (difficoltà) + 2 (A–Z/Z–A) = **9 voci totali**. Rischia di appesantire un dropdown pensato per stare su una riga sola, specialmente su mobile (dove i filtri sono già compressi in "Filtri +").
-- **Alternativa consigliata**: tenere il dropdown a 5 voci com'è, e aggiungere un pulsante/icona di direzione (↑/↓) accanto a "Ordina" che inverte l'ordinamento corrente — disabilitato o ignorato quando è selezionato "Per copertura". Più pulito, non serve raddoppiare le opzioni, coerente con lo stile a icone minime già usato altrove (frecce ← → nel libro).
-- Se invece si preferisce restare su un dropdown singolo (più semplice da implementare, meno stato da gestire), 9 voci è il numero corretto.
+## Chiuso: "problema del footer" nelle acquisizioni complete
 
-Decisione su quale delle due strade finale: da prendere insieme a Michele a inizio prossima sessione, non ancora scelta.
+Michele aveva segnalato due screenshot a pagina intera in cui la barra fissa "COSA CUCINO" appariva in due posizioni diverse (a metà lista in uno, in fondo nell'altro). Riprodotto dal vivo in sessione (scroll reale, non screenshot): non è un bug di rendering, sono semplicemente due posizioni di scroll diverse. La barra è `position: fixed; bottom: 0`, quindi resta sempre incollata al fondo della finestra e copre qualunque riga di ingredienti si trovi lì in quel momento — comportamento normale per una barra CTA fissa (stesso pattern del carrello in un e-commerce). Il vero `<footer>` ("By Michi") a fine pagina è invece pulito: misurato dal vivo, il testo si ferma a 0,4px dalla barra, il fix della sessione precedente (`padding-bottom` calcolato su `.footer`) funziona correttamente. Michele ha confermato di voler lasciare il comportamento com'è, nessuna modifica.
 
 ## Cose aperte non urgenti (dalla ricerca di coverage di questa sessione)
 
