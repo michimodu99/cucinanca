@@ -4,7 +4,7 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 
 ## Stato attuale
 
-- **100 ricette** (30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci; 12 portoghesi). Le prime 61 hanno la foto; **le 39 nuove no** (vedi sotto).
+- **100 ricette** (30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci; 12 portoghesi). Le prime 61 hanno la foto; **le 39 nuove no** (vedi sotto: si fanno a mano da `prompts.md`).
 - Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). L'ultimo push di questa sessione è da fare/verificare: guarda `git status` e `git log origin/main..main`.
 - **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
 - **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. 157 ingredienti con sostituti su 100 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
@@ -16,11 +16,11 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 
 ## Da fare subito: le 39 foto
 
-`python scripts/generate_image.py --all` fallisce con **429 "free tier, limit 0"**: la chiave `GEMINI_API_KEY` in `.env` è su un progetto Google senza fatturazione per i modelli immagine (le 61 foto precedenti erano state fatte con fatturazione attiva). Due strade:
-1. Attivare la fatturazione su https://aistudio.google.com (Settings > Plan) o mettere in `.env` una chiave di un progetto con fatturazione, poi `python scripts/generate_image.py --all` (salta le ricette che hanno già png/jpg/webp) e `npm run images:optimize`.
-2. Generare a mano da `prompts.md` (sezioni per categoria; le 39 nuove sono quelle senza `img/<slug>.webp`), salvare in `img/raw/<slug>.png`, poi `npm run images:optimize`.
+Le 61 foto esistenti le ha fatte Michele **a mano**: prompt incollati uno a uno in Gemini (Nano Banana 2), immagine salvata in `img/raw/<slug>.jpg`, poi `npm run images:optimize`. Lo script `generate_image.py --all` con la chiave in `.env` non funziona (429: progetto senza fatturazione per i modelli immagine) e non è la strada usata.
 
-Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0. Poi occhio a foto con testo, mani o piatto sbagliato: `--slug <slug> --force`.
+Per le 39 nuove, stesso metodo: `prompts.md` ha in fondo la sezione **"Da generare (39)"** (per categoria, in ordine alfabetico); le 61 già fatte stanno sopra, separate. Flusso: incolla il prompt → salva la foto in `img/raw/<slug>.jpg` (o .png) → `npm run images:optimize` → `npm run prompts` (la sezione "Da generare" si svuota da sola man mano) → commit e push.
+
+Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0.
 
 ## Cose aperte non urgenti
 
