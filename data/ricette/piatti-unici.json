@@ -87,9 +87,9 @@
     "origine": "Italia · Campania / Sicilia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "melanzane", "qta": 350, "unita": "g", "note": "una grande, a fette da 5 mm per il lungo" },
-      { "id": "passata", "qta": 250, "unita": "ml" },
-      { "id": "mozzarella", "qta": 100, "unita": "g", "note": "ben sgocciolata" },
+      { "id": "melanzane", "qta": 350, "unita": "g", "note": "una grande, a fette da 5 mm per il lungo", "sostituti": [{ "id": "zucchine", "nota": "grigliate: parmigiana di zucchine, più leggera" }] },
+      { "id": "passata", "qta": 250, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciali con la forchetta" }] },
+      { "id": "mozzarella", "qta": 100, "unita": "g", "note": "ben sgocciolata", "sostituti": [{ "id": "provola", "nota": "affumicata, alla napoletana" }, { "id": "formaggio-fuso" }] },
       { "id": "parmigiano", "qta": 30, "unita": "g" },
       { "id": "basilico", "qta": 6, "unita": "foglie" },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
@@ -124,8 +124,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "polenta", "qta": 80, "unita": "g" },
-      { "id": "salsiccia", "qta": 100, "unita": "g" },
-      { "id": "funghi-champignon", "qta": 150, "unita": "g" },
+      { "id": "salsiccia", "qta": 100, "unita": "g", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }, { "id": "chourico", "nota": "a rondelle: più paprika, meno finocchietto" }] },
+      { "id": "funghi-champignon", "qta": 150, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }] },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "vino-bianco", "qta": 50, "unita": "ml" },
       { "id": "parmigiano", "qta": 20, "unita": "g" },
@@ -160,7 +160,7 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "zucca", "qta": 300, "unita": "g" },
+      { "id": "zucca", "qta": 300, "unita": "g", "sostituti": [{ "id": "carote", "nota": "vellutata di carote: stessa tecnica, 5 minuti in più" }] },
       { "id": "patate", "qta": 100, "unita": "g" },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "brodo", "qta": 400, "unita": "ml" },
@@ -199,8 +199,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "fagioli-cannellini", "qta": 200, "unita": "g", "note": "lessati" },
-      { "id": "cavolo-nero", "qta": 100, "unita": "g" },
-      { "id": "verza", "qta": 80, "unita": "g" },
+      { "id": "cavolo-nero", "qta": 100, "unita": "g", "sostituti": [{ "id": "verza", "nota": "doppia dose di verza" }] },
+      { "id": "verza", "qta": 80, "unita": "g", "sostituti": [{ "id": "cavolo-nero", "nota": "doppia dose di cavolo nero" }] },
       { "id": "patate", "qta": 100, "unita": "g" },
       { "id": "carote", "qta": 1, "unita": "pz" },
       { "id": "sedano", "qta": 1, "unita": "pz" },
@@ -241,8 +241,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "patate", "qta": 250, "unita": "g" },
-      { "id": "cavolo-nero", "qta": 80, "unita": "g", "note": "couve galega, a striscioline finissime (al supermercato la vendono già tagliata)" },
-      { "id": "chourico", "qta": 50, "unita": "g", "note": "a rondelle" },
+      { "id": "cavolo-nero", "qta": 80, "unita": "g", "note": "couve galega, a striscioline finissime (al supermercato la vendono già tagliata)", "sostituti": [{ "id": "verza", "nota": "couve lombarda: è la versione di casa" }, { "id": "cime-di-rapa" }] },
+      { "id": "chourico", "qta": 50, "unita": "g", "note": "a rondelle", "sostituti": [{ "id": "salsiccia", "nota": "manca la paprika: aggiungine un cucchiaino" }] },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "olio-evo", "qta": 3, "unita": "cucchiai" }
@@ -275,10 +275,10 @@
     "origine": "Portogallo · Braga",
     "reinventata": null,
     "ingredienti": [
-      { "id": "anatra", "qta": 350, "unita": "g", "note": "una coscia grande" },
+      { "id": "anatra", "qta": 350, "unita": "g", "note": "una coscia grande", "sostituti": [{ "id": "pollo-intero", "nota": "cosce: diventa arroz de frango, 20 minuti in meno" }] },
       { "id": "riso-carnaroli", "qta": 90, "unita": "g", "note": "arroz carolino o qualsiasi riso" },
-      { "id": "chourico", "qta": 60, "unita": "g" },
-      { "id": "pancetta", "qta": 30, "unita": "g" },
+      { "id": "chourico", "qta": 60, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "manca la paprika: aggiungine un cucchiaino" }] },
+      { "id": "pancetta", "qta": 30, "unita": "g", "sostituti": [{ "id": "guanciale" }, { "id": "speck" }] },
       { "id": "cipolla", "qta": 1, "unita": "pz" },
       { "id": "carote", "qta": 1, "unita": "pz" },
       { "id": "aglio", "qta": 2, "unita": "spicchi" },
@@ -318,8 +318,8 @@
       { "id": "farina-00", "qta": 120, "unita": "g" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "lievito-per-dolci", "qta": 0.5, "unita": "cucchiaini", "opzionale": true, "note": "per una piada più soffice" },
-      { "id": "stracchino", "qta": 70, "unita": "g" },
-      { "id": "prosciutto-crudo", "qta": 3, "unita": "fette" },
+      { "id": "stracchino", "qta": 70, "unita": "g", "sostituti": [{ "id": "stracciatella" }, { "id": "ricotta", "nota": "con un filo d'olio e sale" }] },
+      { "id": "prosciutto-crudo", "qta": 3, "unita": "fette", "sostituti": [{ "id": "speck" }, { "id": "prosciutto-cotto" }] },
       { "id": "rucola", "qta": 30, "unita": "g" }
     ],
     "procedimento": [
@@ -350,10 +350,10 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "rigatoni", "qta": 100, "unita": "g" },
-      { "id": "salsiccia", "qta": 90, "unita": "g" },
-      { "id": "provola", "qta": 60, "unita": "g", "note": "scamorza affumicata" },
-      { "id": "latte", "qta": 200, "unita": "ml" },
+      { "id": "rigatoni", "qta": 100, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "penne o mezze maniche" }] },
+      { "id": "salsiccia", "qta": 90, "unita": "g", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }] },
+      { "id": "provola", "qta": 60, "unita": "g", "note": "scamorza affumicata", "sostituti": [{ "id": "mozzarella", "nota": "scolala bene un'ora prima: rilascia acqua" }, { "id": "formaggio-fuso" }] },
+      { "id": "latte", "qta": 200, "unita": "ml", "sostituti": [{ "id": "panna-fresca", "nota": "più ricca: dimezza il burro" }] },
       { "id": "burro", "qta": 20, "unita": "g" },
       { "id": "farina-00", "qta": 20, "unita": "g" },
       { "id": "parmigiano", "qta": 25, "unita": "g" },
@@ -392,7 +392,7 @@
       { "id": "uova", "qta": 1, "unita": "pz" },
       { "id": "latte", "qta": 150, "unita": "ml" },
       { "id": "burro", "qta": 15, "unita": "g" },
-      { "id": "prosciutto-cotto", "qta": 60, "unita": "g" },
+      { "id": "prosciutto-cotto", "qta": 60, "unita": "g", "sostituti": [{ "id": "mortadella" }, { "id": "prosciutto-crudo" }] },
       { "id": "formaggio-fuso", "qta": 60, "unita": "g", "note": "emmental o flamengo grattugiato" },
       { "id": "noce-moscata", "qta": null, "unita": "qb" }
     ],
@@ -414,123 +414,37 @@
     "descrizione": "Pollo al curry di tradizione luso-goana: cipolla e aglio, curry dolce tostato, pomodoro cotto e latte di cocco, coriandolo fresco alla fine. Niente piccante, si mangia col riso.",
     "categoria": "piatto-unico",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 30,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 30, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.5
-    },
-    "attrezzatura": [
-      "pentola"
-    ],
-    "tag": [
-      "portoghese",
-      "classico"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.5 },
+    "attrezzatura": ["pentola"],
+    "tag": ["portoghese", "classico"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Portogallo (origine goana)",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "petto-di-pollo",
-        "qta": 200,
-        "unita": "g",
-        "note": "a bocconcini"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "curry",
-        "qta": 1,
-        "unita": "cucchiai",
-        "note": "dolce, non piccante"
-      },
-      {
-        "id": "pomodoro-fresco",
-        "qta": 100,
-        "unita": "g",
-        "note": "a pezzi, cotto nel sugo"
-      },
-      {
-        "id": "latte-di-cocco",
-        "qta": 150,
-        "unita": "ml"
-      },
-      {
-        "id": "riso-carnaroli",
-        "qta": 80,
-        "unita": "g",
-        "note": "o qualsiasi riso bianco, per servire"
-      },
-      {
-        "id": "coriandolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "limone",
-        "qta": 0.25,
-        "unita": "pz",
-        "opzionale": true
-      }
+      { "id": "petto-di-pollo", "qta": 200, "unita": "g", "note": "a bocconcini", "sostituti": [{ "id": "pollo-intero", "nota": "cosce disossate: più saporite, 10 minuti in più" }] },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "curry", "qta": 1, "unita": "cucchiai", "note": "dolce, non piccante" },
+      { "id": "pomodoro-fresco", "qta": 100, "unita": "g", "note": "a pezzi, cotto nel sugo" },
+      { "id": "latte-di-cocco", "qta": 150, "unita": "ml", "sostituti": [{ "id": "yogurt-greco", "nota": "a fuoco spento, altrimenti impazzisce" }] },
+      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "o qualsiasi riso bianco, per servire" },
+      { "id": "coriandolo", "qta": null, "unita": "qb" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
+      { "id": "limone", "qta": 0.25, "unita": "pz", "opzionale": true }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Soffritto e curry",
-        "testo": "Scalda l'olio in pentola, soffriggi cipolla e aglio tritati finché sono morbidi. Aggiungi il curry e tostalo a secco un minuto mescolando: sprigiona molto più aroma.",
-        "minuti": 6
-      },
-      {
-        "n": 2,
-        "titolo": "Pollo e pomodoro",
-        "testo": "Aggiungi il pollo a bocconcini, rosola 2-3 minuti, poi il pomodoro a pezzi e un pizzico di sale. Cuoci 5 minuti finché il pomodoro si disfa in un sugo.",
-        "minuti": 8
-      },
-      {
-        "n": 3,
-        "titolo": "Cocco",
-        "testo": "Versa il latte di cocco, abbassa il fuoco e cuoci scoperto 15-18 minuti, mescolando ogni tanto, finché il pollo è cotto e il sugo si è leggermente ristretto.",
-        "minuti": 18
-      },
-      {
-        "n": 4,
-        "titolo": "Riso e servizio",
-        "testo": "Lessa il riso a parte in acqua salata. Servi il curry sul riso con coriandolo fresco spezzettato sopra e, se vuoi, una spruzzata di limone.",
-        "minuti": 15
-      }
+      { "n": 1, "titolo": "Soffritto e curry", "testo": "Scalda l'olio in pentola, soffriggi cipolla e aglio tritati finché sono morbidi. Aggiungi il curry e tostalo a secco un minuto mescolando: sprigiona molto più aroma.", "minuti": 6 },
+      { "n": 2, "titolo": "Pollo e pomodoro", "testo": "Aggiungi il pollo a bocconcini, rosola 2-3 minuti, poi il pomodoro a pezzi e un pizzico di sale. Cuoci 5 minuti finché il pomodoro si disfa in un sugo.", "minuti": 8 },
+      { "n": 3, "titolo": "Cocco", "testo": "Versa il latte di cocco, abbassa il fuoco e cuoci scoperto 15-18 minuti, mescolando ogni tanto, finché il pollo è cotto e il sugo si è leggermente ristretto.", "minuti": 18 },
+      { "n": 4, "titolo": "Riso e servizio", "testo": "Lessa il riso a parte in acqua salata. Servi il curry sul riso con coriandolo fresco spezzettato sopra e, se vuoi, una spruzzata di limone.", "minuti": 15 }
     ],
     "consigli": "Il curry va sempre tostato a secco prima di aggiungere liquidi: da crudo resta amaro e piatto.",
     "conservazione": "In frigo 2 giorni, si scalda bene; tieni il riso a parte.",
-    "varianti": [
-      "Con gamberi al posto del pollo: bastano 5 minuti di cottura nel sugo.",
-      "Con patate a cubetti aggiunte al passo 2, per allungare il piatto."
-    ],
+    "varianti": ["Con gamberi al posto del pollo: bastano 5 minuti di cottura nel sugo.", "Con patate a cubetti aggiunte al passo 2, per allungare il piatto."],
     "kcal": 560,
-    "foto": {
-      "copertina": "img/caril-de-galinha.webp",
-      "prompt": "Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl"
-    },
+    "foto": { "copertina": "img/caril-de-galinha.webp", "prompt": "Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl" },
     "fonte": "Tradizione luso-goana"
   },
   {
@@ -539,129 +453,39 @@
     "descrizione": "Polpettine di macinato rosolate in padella e finite nel sugo di pomodorini scoppiati, poi gli spaghetti mantecati dentro con basilico fresco. Un piatto unico, non un modo per smaltire avanzi.",
     "categoria": "piatto-unico",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 20,
-      "cottura": 25,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 20, "cottura": 25, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3
-    },
-    "attrezzatura": [
-      "padella",
-      "pentola"
-    ],
-    "tag": [
-      "classico",
-      "da-ospiti"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3 },
+    "attrezzatura": ["padella", "pentola"],
+    "tag": ["classico", "da-ospiti"],
     "dieta": [],
     "origine": "Italia (ispirazione italoamericana)",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "spaghetti",
-        "qta": 90,
-        "unita": "g"
-      },
-      {
-        "id": "macinato-misto",
-        "qta": 150,
-        "unita": "g"
-      },
-      {
-        "id": "pane-raffermo",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "latte",
-        "qta": 30,
-        "unita": "ml"
-      },
-      {
-        "id": "uova",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "mezzo uovo sbattuto"
-      },
-      {
-        "id": "parmigiano",
-        "qta": 15,
-        "unita": "g"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "pomodoro-fresco",
-        "qta": 200,
-        "unita": "g",
-        "note": "pomodorini o ciliegini, tagliati a metà"
-      },
-      {
-        "id": "basilico",
-        "qta": 8,
-        "unita": "foglie"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "peperoncino",
-        "qta": null,
-        "unita": "qb",
-        "opzionale": true
-      }
+      { "id": "spaghetti", "qta": 90, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "il condimento si lega meno: scola un minuto prima e finisci in padella" }] },
+      { "id": "macinato-misto", "qta": 150, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }] },
+      { "id": "pane-raffermo", "qta": 20, "unita": "g", "sostituti": [{ "id": "pangrattato", "nota": "ne basta la metà, ammollato nel latte" }] },
+      { "id": "latte", "qta": 30, "unita": "ml" },
+      { "id": "uova", "qta": 0.5, "unita": "pz", "note": "mezzo uovo sbattuto" },
+      { "id": "parmigiano", "qta": 15, "unita": "g" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "pomodoro-fresco", "qta": 200, "unita": "g", "note": "pomodorini o ciliegini, tagliati a metà" },
+      { "id": "basilico", "qta": 8, "unita": "foglie" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "peperoncino", "qta": null, "unita": "qb", "opzionale": true }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Impasto polpette",
-        "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, mezzo uovo, parmigiano, prezzemolo e metà dell'aglio tritati, sale e pepe. Forma polpettine piccole, a bocconcino.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Rosola",
-        "testo": "Scalda l'olio in padella e rosola le polpettine a fuoco medio su tutti i lati finché dorate fuori: non serve che siano cotte dentro, finiranno di cuocere nel sugo.",
-        "minuti": 6
-      },
-      {
-        "n": 3,
-        "titolo": "Sugo di pomodorini",
-        "testo": "Aggiungi i pomodorini nella stessa padella con l'aglio rimasto, un pizzico di sale. Copri e cuoci a fuoco medio-basso 10-12 minuti, finché le polpette sono cotte e i pomodorini si sono disfatti in sugo.",
-        "minuti": 12
-      },
-      {
-        "n": 4,
-        "titolo": "Manteca",
-        "testo": "Lessa gli spaghetti in acqua bollente salata, scolali al dente conservando un mestolo d'acqua di cottura. Uniscili in padella con polpette e sugo, manteca con un filo d'olio e l'acqua di cottura se serve, basilico spezzettato alla fine.",
-        "minuti": 10
-      }
+      { "n": 1, "titolo": "Impasto polpette", "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, mezzo uovo, parmigiano, prezzemolo e metà dell'aglio tritati, sale e pepe. Forma polpettine piccole, a bocconcino.", "minuti": 10 },
+      { "n": 2, "titolo": "Rosola", "testo": "Scalda l'olio in padella e rosola le polpettine a fuoco medio su tutti i lati finché dorate fuori: non serve che siano cotte dentro, finiranno di cuocere nel sugo.", "minuti": 6 },
+      { "n": 3, "titolo": "Sugo di pomodorini", "testo": "Aggiungi i pomodorini nella stessa padella con l'aglio rimasto, un pizzico di sale. Copri e cuoci a fuoco medio-basso 10-12 minuti, finché le polpette sono cotte e i pomodorini si sono disfatti in sugo.", "minuti": 12 },
+      { "n": 4, "titolo": "Manteca", "testo": "Lessa gli spaghetti in acqua bollente salata, scolali al dente conservando un mestolo d'acqua di cottura. Uniscili in padella con polpette e sugo, manteca con un filo d'olio e l'acqua di cottura se serve, basilico spezzettato alla fine.", "minuti": 10 }
     ],
     "consigli": "Polpettine piccole (noce, non uovo) cuociono del tutto nei 10-12 minuti di sugo senza seccarsi. Non lavorare troppo l'impasto: resta più morbido.",
     "conservazione": "In frigo 2 giorni; si scalda in padella con un goccio d'acqua.",
-    "varianti": [
-      "Con passata al posto dei pomodorini, per un sugo più lungo e omogeneo.",
-      "Polpette al forno invece che in padella, poi unite al sugo già pronto."
-    ],
+    "varianti": ["Con passata al posto dei pomodorini, per un sugo più lungo e omogeneo.", "Polpette al forno invece che in padella, poi unite al sugo già pronto."],
     "kcal": 650,
-    "foto": {
-      "copertina": "img/spaghetti-con-polpette-e-pomodorini.webp",
-      "prompt": "spaghetti tangled with small meatballs in a blistered cherry tomato sauce, fresh basil, white ceramic plate"
-    },
+    "foto": { "copertina": "img/spaghetti-con-polpette-e-pomodorini.webp", "prompt": "spaghetti tangled with small meatballs in a blistered cherry tomato sauce, fresh basil, white ceramic plate" },
     "fonte": "Ispirato allo spaghetti and meatballs italoamericano"
   }
 ]

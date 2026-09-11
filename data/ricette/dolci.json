@@ -17,7 +17,7 @@
       { "id": "mascarpone", "qta": 125, "unita": "g" },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "solo il tuorlo, freschissimo" },
       { "id": "zucchero", "qta": 25, "unita": "g" },
-      { "id": "savoiardi", "qta": 6, "unita": "pz" },
+      { "id": "savoiardi", "qta": 6, "unita": "pz", "sostituti": [{ "id": "biscotti-secchi", "nota": "inzuppali meno: si sfaldano prima" }] },
       { "id": "caffe", "qta": 80, "unita": "ml", "note": "2 tazzine, freddo, senza zucchero" },
       { "id": "cacao", "qta": null, "unita": "qb" }
     ],

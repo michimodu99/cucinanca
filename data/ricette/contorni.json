@@ -47,8 +47,8 @@
     "origine": "Italia · Nord",
     "reinventata": null,
     "ingredienti": [
-      { "id": "verza", "qta": 250, "unita": "g" },
-      { "id": "pancetta", "qta": 40, "unita": "g" },
+      { "id": "verza", "qta": 250, "unita": "g", "sostituti": [{ "id": "cavolo-nero" }] },
+      { "id": "pancetta", "qta": 40, "unita": "g", "sostituti": [{ "id": "guanciale" }, { "id": "speck" }, { "id": "chourico", "nota": "a rondelle: più paprika, meno finocchietto" }] },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "aceto", "qta": 1, "unita": "cucchiai" },
       { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
@@ -115,7 +115,7 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "funghi-champignon", "qta": 250, "unita": "g" },
+      { "id": "funghi-champignon", "qta": 250, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }] },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "prezzemolo", "qta": null, "unita": "qb" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
@@ -150,7 +150,7 @@
     "ingredienti": [
       { "id": "finocchi", "qta": 1, "unita": "pz", "note": "piccolo" },
       { "id": "arance", "qta": 1, "unita": "pz" },
-      { "id": "olive-nere", "qta": 25, "unita": "g" },
+      { "id": "olive-nere", "qta": 25, "unita": "g", "sostituti": [{ "id": "olive-verdi" }] },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "menta", "qta": 3, "unita": "foglie", "opzionale": true },
       { "id": "noci", "qta": 15, "unita": "g", "opzionale": true }
@@ -173,85 +173,30 @@
     "descrizione": "Spicchi di patata con la buccia, conditi con paprika dolce e aglio in camicia, arrostiti in forno: crosta rossa e speziata, dentro morbide. Stessa tecnica delle patate al rosmarino, gusto diverso.",
     "categoria": "contorno",
     "difficolta": "molto-facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 35,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 35, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 0.6
-    },
-    "attrezzatura": [
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "low-cost",
-      "one-pan"
-    ],
-    "dieta": [
-      "vegano",
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 0.6 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["low-cost", "one-pan"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
     "origine": "Italia (variante)",
     "reinventata": "Patate al forno croccanti, con paprika al posto del rosmarino",
     "ingredienti": [
-      {
-        "id": "patate",
-        "qta": 350,
-        "unita": "g",
-        "note": "con la buccia, a spicchi"
-      },
-      {
-        "id": "paprika-dolce",
-        "qta": 2,
-        "unita": "cucchiaini"
-      },
-      {
-        "id": "aglio",
-        "qta": 2,
-        "unita": "spicchi",
-        "note": "in camicia"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "sale",
-        "qta": null,
-        "unita": "qb"
-      }
+      { "id": "patate", "qta": 350, "unita": "g", "note": "con la buccia, a spicchi" },
+      { "id": "paprika-dolce", "qta": 2, "unita": "cucchiaini" },
+      { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "in camicia" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "sale", "qta": null, "unita": "qb" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Condisci",
-        "testo": "Taglia le patate a spicchi con la buccia e asciugale bene con un canovaccio. Mescola in una ciotola con olio, paprika, aglio in camicia schiacciato e sale.",
-        "minuti": 8
-      },
-      {
-        "n": 2,
-        "titolo": "Forno",
-        "testo": "Disponi su una teglia in un solo strato, spaziate. Cuoci a 210 °C per 30-35 minuti, girando a metà, finché sono dorate e croccanti fuori.",
-        "minuti": 35
-      }
+      { "n": 1, "titolo": "Condisci", "testo": "Taglia le patate a spicchi con la buccia e asciugale bene con un canovaccio. Mescola in una ciotola con olio, paprika, aglio in camicia schiacciato e sale.", "minuti": 8 },
+      { "n": 2, "titolo": "Forno", "testo": "Disponi su una teglia in un solo strato, spaziate. Cuoci a 210 °C per 30-35 minuti, girando a metà, finché sono dorate e croccanti fuori.", "minuti": 35 }
     ],
     "consigli": "Le patate vanno asciugate bene prima di condirle: se sono umide vaporizzano invece di arrostire.",
     "conservazione": "In frigo 2 giorni; ripassale in forno o padella per ricompattare la crosta.",
-    "varianti": [
-      "Con una punta di curry al posto della paprika.",
-      "Con patate dolci al posto di quelle normali."
-    ],
+    "varianti": ["Con una punta di curry al posto della paprika.", "Con patate dolci al posto di quelle normali."],
     "kcal": 260,
-    "foto": {
-      "copertina": "img/patate-al-forno-alla-paprika.webp",
-      "prompt": "crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead"
-    },
+    "foto": { "copertina": "img/patate-al-forno-alla-paprika.webp", "prompt": "crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead" },
     "fonte": "Variante di famiglia"
   },
   {
@@ -260,92 +205,31 @@
     "descrizione": "Patate lesse ancora tiepide condite con aglio, olio, limone e una manciata abbondante di coriandolo fresco tritato. Il contorno freddo più comune in Portogallo.",
     "categoria": "contorno",
     "difficolta": "molto-facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 20,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 20, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 0.8
-    },
-    "attrezzatura": [
-      "pentola"
-    ],
-    "tag": [
-      "veloce",
-      "low-cost",
-      "portoghese",
-      "avanzi"
-    ],
-    "dieta": [
-      "vegano",
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 0.8 },
+    "attrezzatura": ["pentola"],
+    "tag": ["veloce", "low-cost", "portoghese", "avanzi"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
     "origine": "Portogallo",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "patate",
-        "qta": 250,
-        "unita": "g"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi",
-        "note": "tritato finissimo"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "il succo"
-      },
-      {
-        "id": "coriandolo",
-        "qta": null,
-        "unita": "qb",
-        "note": "una manciata abbondante, tritato"
-      },
-      {
-        "id": "sale",
-        "qta": null,
-        "unita": "qb"
-      }
+      { "id": "patate", "qta": 250, "unita": "g" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "tritato finissimo" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "limone", "qta": 0.5, "unita": "pz", "note": "il succo" },
+      { "id": "coriandolo", "qta": null, "unita": "qb", "note": "una manciata abbondante, tritato" },
+      { "id": "sale", "qta": null, "unita": "qb" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Lessa",
-        "testo": "Cuoci le patate intere con la buccia in acqua salata 18-20 minuti finché sono tenere alla forchetta. Scola, fai intiepidire un minuto, pela e taglia a pezzi grossi.",
-        "minuti": 22
-      },
-      {
-        "n": 2,
-        "titolo": "Condisci e coriandolo",
-        "testo": "Ancora tiepide, condisci le patate con aglio tritato, olio, succo di limone e sale: assorbono meglio da calde. Aggiungi il coriandolo tritato solo alla fine, a crudo, e mescola. Servi tiepida o fredda.",
-        "minuti": 5
-      }
+      { "n": 1, "titolo": "Lessa", "testo": "Cuoci le patate intere con la buccia in acqua salata 18-20 minuti finché sono tenere alla forchetta. Scola, fai intiepidire un minuto, pela e taglia a pezzi grossi.", "minuti": 22 },
+      { "n": 2, "titolo": "Condisci e coriandolo", "testo": "Ancora tiepide, condisci le patate con aglio tritato, olio, succo di limone e sale: assorbono meglio da calde. Aggiungi il coriandolo tritato solo alla fine, a crudo, e mescola. Servi tiepida o fredda.", "minuti": 5 }
     ],
     "consigli": "Condisci le patate calde, non fredde: assorbono molto meglio il condimento.",
     "conservazione": "In frigo 2 giorni; il coriandolo perde un po' di colore ma non di sapore.",
-    "varianti": [
-      "Con qualche oliva nera spezzettata.",
-      "Con un cucchiaino di aceto di vino al posto di parte del limone."
-    ],
+    "varianti": ["Con qualche oliva nera spezzettata.", "Con un cucchiaino di aceto di vino al posto di parte del limone."],
     "kcal": 180,
-    "foto": {
-      "copertina": "img/insalata-di-patate-al-coriandolo.webp",
-      "prompt": "warm potato salad with fresh chopped coriander, garlic and olive oil, rustic, white ceramic bowl"
-    },
+    "foto": { "copertina": "img/insalata-di-patate-al-coriandolo.webp", "prompt": "warm potato salad with fresh chopped coriander, garlic and olive oil, rustic, white ceramic bowl" },
     "fonte": "Tradizione portoghese"
   }
 ]

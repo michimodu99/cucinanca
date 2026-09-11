@@ -5,122 +5,37 @@
     "descrizione": "Sovracosce rosolate e stufate con pelati, olive, rosmarino e vino bianco. Un'ora in tutto, quasi tutta senza fare niente. Con pane per il sugo.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 50,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 50, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 2.8
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "weekend",
-      "one-pan",
-      "avanzi",
-      "classico"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 2.8 },
+    "attrezzatura": ["padella"],
+    "tag": ["weekend", "one-pan", "avanzi", "classico"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Italia · Toscana",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "pollo-intero",
-        "qta": 300,
-        "unita": "g",
-        "note": "2 sovracosce con pelle, o 1 coscia intera"
-      },
-      {
-        "id": "pelati",
-        "qta": 150,
-        "unita": "g"
-      },
-      {
-        "id": "olive-nere",
-        "qta": 30,
-        "unita": "g"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "carote",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 60,
-        "unita": "ml"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "farina-00",
-        "qta": 1,
-        "unita": "cucchiai",
-        "note": "per infarinare"
-      }
+      { "id": "pollo-intero", "qta": 300, "unita": "g", "note": "2 sovracosce con pelle, o 1 coscia intera" },
+      { "id": "pelati", "qta": 150, "unita": "g", "sostituti": [{ "id": "passata" }] },
+      { "id": "olive-nere", "qta": 30, "unita": "g", "sostituti": [{ "id": "olive-verdi" }] },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz" },
+      { "id": "carote", "qta": 0.5, "unita": "pz" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "vino-bianco", "qta": 60, "unita": "ml" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "farina-00", "qta": 1, "unita": "cucchiai", "note": "per infarinare" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Rosolatura",
-        "testo": "Asciuga il pollo, sala, pepa e infarinalo leggermente. Rosolalo nell'olio a fuoco medio-alto partendo dalla pelle, 4 minuti per lato, finché è dorato. Toglilo.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Fondo",
-        "testo": "Nella stessa padella appassisci cipolla e carota tritate con aglio e rosmarino 4 minuti. Rimetti il pollo, sfuma col vino e lascia evaporare 2 minuti.",
-        "minuti": 6
-      },
-      {
-        "n": 3,
-        "titolo": "Stufatura",
-        "testo": "Aggiungi i pelati schiacciati, le olive e mezzo bicchiere d'acqua. Copri e cuoci a fuoco basso 35 minuti, girando il pollo a metà. Scopri gli ultimi 10 minuti per restringere il sugo.",
-        "minuti": 35
-      },
-      {
-        "n": 4,
-        "titolo": "Servi",
-        "testo": "Il pollo deve staccarsi dall'osso. Regola di sale e servi con il sugo e pane, o con polenta.",
-        "minuti": 1
-      }
+      { "n": 1, "titolo": "Rosolatura", "testo": "Asciuga il pollo, sala, pepa e infarinalo leggermente. Rosolalo nell'olio a fuoco medio-alto partendo dalla pelle, 4 minuti per lato, finché è dorato. Toglilo.", "minuti": 10 },
+      { "n": 2, "titolo": "Fondo", "testo": "Nella stessa padella appassisci cipolla e carota tritate con aglio e rosmarino 4 minuti. Rimetti il pollo, sfuma col vino e lascia evaporare 2 minuti.", "minuti": 6 },
+      { "n": 3, "titolo": "Stufatura", "testo": "Aggiungi i pelati schiacciati, le olive e mezzo bicchiere d'acqua. Copri e cuoci a fuoco basso 35 minuti, girando il pollo a metà. Scopri gli ultimi 10 minuti per restringere il sugo.", "minuti": 35 },
+      { "n": 4, "titolo": "Servi", "testo": "Il pollo deve staccarsi dall'osso. Regola di sale e servi con il sugo e pane, o con polenta.", "minuti": 1 }
     ],
     "consigli": "Le sovracosce con osso e pelle restano succose; il petto in questa ricetta diventa stopposo.",
     "conservazione": "In frigo 3 giorni, meglio il giorno dopo. Si congela.",
-    "varianti": [
-      "Con funghi champignon aggiunti a metà cottura.",
-      "In bianco: senza pelati, con più vino e brodo."
-    ],
+    "varianti": ["Con funghi champignon aggiunti a metà cottura.", "In bianco: senza pelati, con più vino e brodo."],
     "kcal": 520,
-    "foto": {
-      "copertina": "img/pollo-alla-cacciatora.webp",
-      "prompt": "chicken thighs braised in tomato sauce with black olives and rosemary, glossy, rustic white ceramic plate"
-    },
+    "foto": { "copertina": "img/pollo-alla-cacciatora.webp", "prompt": "chicken thighs braised in tomato sauce with black olives and rosemary, glossy, rustic white ceramic plate" },
     "fonte": "Tradizione toscana"
   },
   {
@@ -129,97 +44,33 @@
     "descrizione": "Fettine sottili infarinate, burro, limone e un cucchiaio d'acqua per fare la salsina. Venti minuti. Con il tacchino portoghese costa la metà.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 5,
-      "cottura": 12,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 5, "cottura": 12, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "veloce",
-      "classico"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce", "classico"],
     "dieta": [],
     "origine": "Italia · Lombardia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "fettine-di-vitello",
-        "qta": 150,
-        "unita": "g",
-        "note": "2 fettine sottili, battute"
-      },
-      {
-        "id": "farina-00",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "burro",
-        "qta": 25,
-        "unita": "g"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "succo + scorza"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "fettine-di-vitello", "qta": 150, "unita": "g", "note": "2 fettine sottili, battute", "sostituti": [{ "id": "fettine-di-tacchino" }, { "id": "petto-di-pollo", "nota": "battuto sottile: un minuto in più" }] },
+      { "id": "farina-00", "qta": 2, "unita": "cucchiai" },
+      { "id": "burro", "qta": 25, "unita": "g" },
+      { "id": "limone", "qta": 0.5, "unita": "pz", "note": "succo + scorza" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Infarina",
-        "testo": "Batti le fettine sottili (con il fondo di una padella), sala e infarinale scuotendo via l'eccesso.",
-        "minuti": 4
-      },
-      {
-        "n": 2,
-        "titolo": "Cottura",
-        "testo": "Scalda olio e metà burro a fuoco medio-alto. Cuoci le fettine 1,5 minuti per lato finché sono dorate. Toglile su un piatto.",
-        "minuti": 4
-      },
-      {
-        "n": 3,
-        "titolo": "Salsa",
-        "testo": "Nella padella versa il succo di limone e 3 cucchiai d'acqua, raschia il fondo, aggiungi il burro rimasto e mescola finché la salsa è cremosa (1 minuto). Rimetti le fettine 30 secondi per napparle.",
-        "minuti": 2
-      },
-      {
-        "n": 4,
-        "titolo": "Servi",
-        "testo": "Prezzemolo, scorza di limone, pepe. Con patate saltate o insalata.",
-        "minuti": 1
-      }
+      { "n": 1, "titolo": "Infarina", "testo": "Batti le fettine sottili (con il fondo di una padella), sala e infarinale scuotendo via l'eccesso.", "minuti": 4 },
+      { "n": 2, "titolo": "Cottura", "testo": "Scalda olio e metà burro a fuoco medio-alto. Cuoci le fettine 1,5 minuti per lato finché sono dorate. Toglile su un piatto.", "minuti": 4 },
+      { "n": 3, "titolo": "Salsa", "testo": "Nella padella versa il succo di limone e 3 cucchiai d'acqua, raschia il fondo, aggiungi il burro rimasto e mescola finché la salsa è cremosa (1 minuto). Rimetti le fettine 30 secondi per napparle.", "minuti": 2 },
+      { "n": 4, "titolo": "Servi", "testo": "Prezzemolo, scorza di limone, pepe. Con patate saltate o insalata.", "minuti": 1 }
     ],
     "consigli": "Non affollare la padella: la carne deve friggere, non bollire. Due fettine alla volta.",
     "conservazione": "Non si conserva bene: la salsa si rapprende.",
-    "varianti": [
-      "Al marsala (o Porto): sostituisci il limone con 50 ml di vino liquoroso.",
-      "Con capperi nella salsa."
-    ],
+    "varianti": ["Al marsala (o Porto): sostituisci il limone con 50 ml di vino liquoroso.", "Con capperi nella salsa."],
     "kcal": 420,
-    "foto": {
-      "copertina": "img/scaloppine-al-limone.webp",
-      "prompt": "veal scaloppine in glossy lemon butter sauce with parsley and lemon zest, white ceramic plate"
-    },
+    "foto": { "copertina": "img/scaloppine-al-limone.webp", "prompt": "veal scaloppine in glossy lemon butter sauce with parsley and lemon zest, white ceramic plate" },
     "fonte": "Classico italiano"
   },
   {
@@ -228,95 +79,32 @@
     "descrizione": "Fettina, prosciutto crudo e salvia fissati con uno stecchino, cotti nel burro e sfumati col vino. Il presunto portoghese è perfetto.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 10,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 10, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.6
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "veloce",
-      "classico",
-      "da-ospiti"
-    ],
-    "dieta": [
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.6 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce", "classico", "da-ospiti"],
+    "dieta": ["senza-glutine"],
     "origine": "Italia · Lazio",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "fettine-di-vitello",
-        "qta": 150,
-        "unita": "g",
-        "note": "3 fettine piccole e sottili"
-      },
-      {
-        "id": "prosciutto-crudo",
-        "qta": 3,
-        "unita": "fette"
-      },
-      {
-        "id": "salvia",
-        "qta": 3,
-        "unita": "foglie"
-      },
-      {
-        "id": "burro",
-        "qta": 25,
-        "unita": "g"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 60,
-        "unita": "ml"
-      },
-      {
-        "id": "farina-00",
-        "qta": 1,
-        "unita": "cucchiai",
-        "opzionale": true,
-        "note": "solo sul lato senza prosciutto"
-      }
+      { "id": "fettine-di-vitello", "qta": 150, "unita": "g", "note": "3 fettine piccole e sottili", "sostituti": [{ "id": "fettine-di-tacchino" }, { "id": "petto-di-pollo", "nota": "battuto sottile: un minuto in più" }] },
+      { "id": "prosciutto-crudo", "qta": 3, "unita": "fette", "sostituti": [{ "id": "speck", "nota": "affumicato: meno classico, ma buono" }] },
+      { "id": "salvia", "qta": 3, "unita": "foglie" },
+      { "id": "burro", "qta": 25, "unita": "g" },
+      { "id": "vino-bianco", "qta": 60, "unita": "ml" },
+      { "id": "farina-00", "qta": 1, "unita": "cucchiai", "opzionale": true, "note": "solo sul lato senza prosciutto" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Montaggio",
-        "testo": "Batti le fettine sottili. Su ognuna appoggia una fetta di prosciutto e una foglia di salvia, fissa con uno stecchino attraversando i tre strati. Niente sale: il prosciutto basta.",
-        "minuti": 6
-      },
-      {
-        "n": 2,
-        "titolo": "Cottura",
-        "testo": "Sciogli il burro a fuoco medio-alto. Cuoci i saltimbocca prima dal lato della carne 2 minuti, poi dal lato del prosciutto 1 minuto.",
-        "minuti": 4
-      },
-      {
-        "n": 3,
-        "titolo": "Sfumatura",
-        "testo": "Sfuma col vino, lascia ridurre 1 minuto agitando la padella finché la salsa si lega. Servi subito con la salsa sopra.",
-        "minuti": 2
-      }
+      { "n": 1, "titolo": "Montaggio", "testo": "Batti le fettine sottili. Su ognuna appoggia una fetta di prosciutto e una foglia di salvia, fissa con uno stecchino attraversando i tre strati. Niente sale: il prosciutto basta.", "minuti": 6 },
+      { "n": 2, "titolo": "Cottura", "testo": "Sciogli il burro a fuoco medio-alto. Cuoci i saltimbocca prima dal lato della carne 2 minuti, poi dal lato del prosciutto 1 minuto.", "minuti": 4 },
+      { "n": 3, "titolo": "Sfumatura", "testo": "Sfuma col vino, lascia ridurre 1 minuto agitando la padella finché la salsa si lega. Servi subito con la salsa sopra.", "minuti": 2 }
     ],
     "consigli": "Tieni la padella ben calda e la cottura breve: la fettina è sottile e in 3 minuti è pronta.",
     "conservazione": "Non si conserva.",
-    "varianti": [
-      "Con fettine di tacchino: più economico, stessa resa.",
-      "Arrotolati a involtino invece che piatti."
-    ],
+    "varianti": ["Con fettine di tacchino: più economico, stessa resa.", "Arrotolati a involtino invece che piatti."],
     "kcal": 400,
-    "foto": {
-      "copertina": "img/saltimbocca-alla-romana.webp",
-      "prompt": "saltimbocca alla romana, veal with prosciutto and sage leaf pinned with toothpick, buttery wine sauce, white plate"
-    },
+    "foto": { "copertina": "img/saltimbocca-alla-romana.webp", "prompt": "saltimbocca alla romana, veal with prosciutto and sage leaf pinned with toothpick, buttery wine sauce, white plate" },
     "fonte": "Tradizione romana"
   },
   {
@@ -325,95 +113,32 @@
     "descrizione": "Con l'osso, alta, impanata due volte e fritta nel burro chiarificato. Non si sala prima, non si usa il pangrattato fine ma il pane raffermo grattato al momento. Una fetta di limone e basta.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 15,
-      "cottura": 10,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 15, "cottura": 10, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 5
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "veloce",
-      "classico",
-      "da-ospiti"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 5 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce", "classico", "da-ospiti"],
     "dieta": [],
     "origine": "Italia · Lombardia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "costoletta-di-vitello",
-        "qta": 250,
-        "unita": "g",
-        "note": "con osso, alta 2 cm"
-      },
-      {
-        "id": "uova",
-        "qta": 1,
-        "unita": "pz"
-      },
-      {
-        "id": "pangrattato",
-        "qta": 60,
-        "unita": "g",
-        "note": "meglio da pane raffermo grattato"
-      },
-      {
-        "id": "burro",
-        "qta": 80,
-        "unita": "g",
-        "note": "da chiarificare"
-      },
-      {
-        "id": "limone",
-        "qta": 0.25,
-        "unita": "pz",
-        "note": "uno spicchio per servire"
-      }
+      { "id": "costoletta-di-vitello", "qta": 250, "unita": "g", "note": "con osso, alta 2 cm", "sostituti": [{ "id": "petto-di-pollo", "nota": "battuto a 1 cm: cotoletta di pollo" }, { "id": "fettine-di-tacchino" }] },
+      { "id": "uova", "qta": 1, "unita": "pz" },
+      { "id": "pangrattato", "qta": 60, "unita": "g", "note": "meglio da pane raffermo grattato" },
+      { "id": "burro", "qta": 80, "unita": "g", "note": "da chiarificare" },
+      { "id": "limone", "qta": 0.25, "unita": "pz", "note": "uno spicchio per servire" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Burro chiarificato",
-        "testo": "Sciogli il burro in un pentolino a fuoco bassissimo senza mescolare, 8 minuti. Togli la schiuma, versa la parte gialla limpida in una tazza lasciando il fondo bianco. È il tuo grasso di frittura: non brucia.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Impanatura",
-        "testo": "Incidi il bordo della costoletta in 2–3 punti (non si arriccia). Passala nell'uovo sbattuto (senza sale), poi nel pangrattato premendo con il palmo. Ripeti uovo e pangrattato per una crosta doppia.",
-        "minuti": 5
-      },
-      {
-        "n": 3,
-        "titolo": "Frittura",
-        "testo": "Scalda il burro chiarificato in padella a fuoco medio: deve sfrigolare senza fumare. Friggi 4 minuti per lato, bagnando la superficie con il burro con un cucchiaio. Deve essere dorata scura, non bruciata.",
-        "minuti": 8
-      },
-      {
-        "n": 4,
-        "titolo": "Servi",
-        "testo": "Scola su carta, sala solo ora con sale grosso. Spicchio di limone a parte. Con insalata o patate al forno.",
-        "minuti": 1
-      }
+      { "n": 1, "titolo": "Burro chiarificato", "testo": "Sciogli il burro in un pentolino a fuoco bassissimo senza mescolare, 8 minuti. Togli la schiuma, versa la parte gialla limpida in una tazza lasciando il fondo bianco. È il tuo grasso di frittura: non brucia.", "minuti": 10 },
+      { "n": 2, "titolo": "Impanatura", "testo": "Incidi il bordo della costoletta in 2–3 punti (non si arriccia). Passala nell'uovo sbattuto (senza sale), poi nel pangrattato premendo con il palmo. Ripeti uovo e pangrattato per una crosta doppia.", "minuti": 5 },
+      { "n": 3, "titolo": "Frittura", "testo": "Scalda il burro chiarificato in padella a fuoco medio: deve sfrigolare senza fumare. Friggi 4 minuti per lato, bagnando la superficie con il burro con un cucchiaio. Deve essere dorata scura, non bruciata.", "minuti": 8 },
+      { "n": 4, "titolo": "Servi", "testo": "Scola su carta, sala solo ora con sale grosso. Spicchio di limone a parte. Con insalata o patate al forno.", "minuti": 1 }
     ],
     "consigli": "Se la costoletta è alta, dopo la frittura passala 5 minuti in forno a 180 °C per finire il centro senza bruciare la crosta.",
     "conservazione": "Non si conserva. Fredda il giorno dopo nel panino è però un classico.",
-    "varianti": [
-      "Senza osso e battuta sottile: la 'orecchia d'elefante'.",
-      "Con lonza di maiale a fetta alta: più economica."
-    ],
+    "varianti": ["Senza osso e battuta sottile: la 'orecchia d'elefante'.", "Con lonza di maiale a fetta alta: più economica."],
     "kcal": 720,
-    "foto": {
-      "copertina": "img/cotoletta-alla-milanese.webp",
-      "prompt": "bone-in veal cotoletta alla milanese with golden breadcrumb crust and a lemon wedge, white ceramic plate"
-    },
+    "foto": { "copertina": "img/cotoletta-alla-milanese.webp", "prompt": "bone-in veal cotoletta alla milanese with golden breadcrumb crust and a lemon wedge, white ceramic plate" },
     "fonte": "Tradizione milanese"
   },
   {
@@ -422,122 +147,38 @@
     "descrizione": "Macinato, pane ammollato nel latte, parmigiano e prezzemolo. Al forno, senza frittura, con una salsa fresca di yogurt greco e menta. Raddoppia e le porti in mensa.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 15,
-      "cottura": 25,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 15, "cottura": 25, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 2.4
-    },
-    "attrezzatura": [
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "avanzi",
-      "low-cost"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 2.4 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["avanzi", "low-cost"],
     "dieta": [],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "macinato-misto",
-        "qta": 180,
-        "unita": "g"
-      },
-      {
-        "id": "pane-raffermo",
-        "qta": 30,
-        "unita": "g"
-      },
-      {
-        "id": "latte",
-        "qta": 50,
-        "unita": "ml"
-      },
-      {
-        "id": "uova",
-        "qta": 1,
-        "unita": "pz",
-        "note": "piccolo, o mezzo sbattuto"
-      },
-      {
-        "id": "parmigiano",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "aglio",
-        "qta": 0.5,
-        "unita": "spicchi"
-      },
-      {
-        "id": "yogurt-greco",
-        "qta": 100,
-        "unita": "g"
-      },
-      {
-        "id": "menta",
-        "qta": 4,
-        "unita": "foglie"
-      },
-      {
-        "id": "limone",
-        "qta": 0.25,
-        "unita": "pz"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "macinato-misto", "qta": 180, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }] },
+      { "id": "pane-raffermo", "qta": 30, "unita": "g", "sostituti": [{ "id": "pangrattato", "nota": "ne basta la metà, ammollato nel latte" }] },
+      { "id": "latte", "qta": 50, "unita": "ml" },
+      { "id": "uova", "qta": 1, "unita": "pz", "note": "piccolo, o mezzo sbattuto" },
+      { "id": "parmigiano", "qta": 20, "unita": "g" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "aglio", "qta": 0.5, "unita": "spicchi" },
+      { "id": "yogurt-greco", "qta": 100, "unita": "g" },
+      { "id": "menta", "qta": 4, "unita": "foglie" },
+      { "id": "limone", "qta": 0.25, "unita": "pz" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Impasto",
-        "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, uovo, parmigiano, prezzemolo e aglio tritati, sale e pepe. Impasta poco, giusto per amalgamare.",
-        "minuti": 8
-      },
-      {
-        "n": 2,
-        "titolo": "Forma",
-        "testo": "Forma 6 polpette da noce grande con le mani unte. Disponile sulla teglia con carta forno, un filo d'olio sopra.",
-        "minuti": 4
-      },
-      {
-        "n": 3,
-        "titolo": "Forno",
-        "testo": "Cuoci a 200 °C per 20–25 minuti girandole a metà, finché sono dorate.",
-        "minuti": 25
-      },
-      {
-        "n": 4,
-        "titolo": "Salsa",
-        "testo": "Mescola yogurt, menta tritata, succo di limone, un filo d'olio, sale. Servi le polpette con la salsa e insalata o pane.",
-        "minuti": 3
-      }
+      { "n": 1, "titolo": "Impasto", "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, uovo, parmigiano, prezzemolo e aglio tritati, sale e pepe. Impasta poco, giusto per amalgamare.", "minuti": 8 },
+      { "n": 2, "titolo": "Forma", "testo": "Forma 6 polpette da noce grande con le mani unte. Disponile sulla teglia con carta forno, un filo d'olio sopra.", "minuti": 4 },
+      { "n": 3, "titolo": "Forno", "testo": "Cuoci a 200 °C per 20–25 minuti girandole a metà, finché sono dorate.", "minuti": 25 },
+      { "n": 4, "titolo": "Salsa", "testo": "Mescola yogurt, menta tritata, succo di limone, un filo d'olio, sale. Servi le polpette con la salsa e insalata o pane.", "minuti": 3 }
     ],
     "consigli": "Il pane ammollato è ciò che le tiene morbide: non saltarlo e non usare pangrattato secco.",
     "conservazione": "Cotte in frigo 3 giorni; crude si congelano. Ottime fredde.",
-    "varianti": [
-      "In padella con 200 ml di passata: polpette al sugo.",
-      "Con macinato di pollo e scorza di limone nell'impasto."
-    ],
+    "varianti": ["In padella con 200 ml di passata: polpette al sugo.", "Con macinato di pollo e scorza di limone nell'impasto."],
     "kcal": 560,
-    "foto": {
-      "copertina": "img/polpette-al-forno-con-salsa-allo-yogurt.webp",
-      "prompt": "golden baked meatballs with a bowl of white yogurt mint sauce, parsley, white ceramic plate, minimal"
-    },
+    "foto": { "copertina": "img/polpette-al-forno-con-salsa-allo-yogurt.webp", "prompt": "golden baked meatballs with a bowl of white yogurt mint sauce, parsley, white ceramic plate, minimal" },
     "fonte": "Ricetta di famiglia"
   },
   {
@@ -546,132 +187,39 @@
     "descrizione": "Due ore a fuoco basso: la carne da stufato diventa morbida, le patate assorbono il fondo di vino e rosmarino. Fallo la domenica, in doppia dose, e ringraziati il martedì.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 15,
-      "cottura": 110,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 15, "cottura": 110, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.8
-    },
-    "attrezzatura": [
-      "pentola"
-    ],
-    "tag": [
-      "weekend",
-      "one-pan",
-      "avanzi",
-      "inverno",
-      "classico"
-    ],
-    "dieta": [
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.8 },
+    "attrezzatura": ["pentola"],
+    "tag": ["weekend", "one-pan", "avanzi", "inverno", "classico"],
+    "dieta": ["senza-lattosio"],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "manzo-per-spezzatino",
-        "qta": 250,
-        "unita": "g",
-        "note": "cubi da 3 cm"
-      },
-      {
-        "id": "patate",
-        "qta": 200,
-        "unita": "g"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "carote",
-        "qta": 1,
-        "unita": "pz"
-      },
-      {
-        "id": "sedano",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 80,
-        "unita": "ml"
-      },
-      {
-        "id": "brodo",
-        "qta": 400,
-        "unita": "ml"
-      },
-      {
-        "id": "farina-00",
-        "qta": 1,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti"
-      },
-      {
-        "id": "alloro",
-        "qta": 1,
-        "unita": "foglie"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      }
+      { "id": "manzo-per-spezzatino", "qta": 250, "unita": "g", "note": "cubi da 3 cm", "sostituti": [{ "id": "cappello-del-prete", "nota": "a cubi: 20 minuti in più" }] },
+      { "id": "patate", "qta": 200, "unita": "g" },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz" },
+      { "id": "carote", "qta": 1, "unita": "pz" },
+      { "id": "sedano", "qta": 0.5, "unita": "pz" },
+      { "id": "vino-bianco", "qta": 80, "unita": "ml" },
+      { "id": "brodo", "qta": 400, "unita": "ml" },
+      { "id": "farina-00", "qta": 1, "unita": "cucchiai" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "alloro", "qta": 1, "unita": "foglie" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Rosolatura",
-        "testo": "Asciuga la carne, infarinala leggermente e rosolala nell'olio a fuoco vivo, pochi pezzi alla volta, finché è scura su tutti i lati (5 minuti). Toglila.",
-        "minuti": 8
-      },
-      {
-        "n": 2,
-        "titolo": "Soffritto e sfumatura",
-        "testo": "Nella stessa pentola appassisci cipolla, carota e sedano a dadini 5 minuti. Rimetti la carne, sfuma col vino raschiando il fondo.",
-        "minuti": 7
-      },
-      {
-        "n": 3,
-        "titolo": "Cottura lenta",
-        "testo": "Copri con il brodo, aggiungi rosmarino e alloro, sale. Coperchio, fuoco al minimo, 1 ora e 15 minuti. Deve sobbollire appena.",
-        "minuti": 75
-      },
-      {
-        "n": 4,
-        "titolo": "Patate",
-        "testo": "Aggiungi le patate a tocchi e cuoci altri 30 minuti scoperto, finché sono tenere e il fondo si è addensato. Se serve, un po' d'acqua.",
-        "minuti": 30
-      },
-      {
-        "n": 5,
-        "titolo": "Servi",
-        "testo": "Togli alloro e rosmarino, pepe, e servi con pane. Meglio se aspetta 10 minuti.",
-        "minuti": 2
-      }
+      { "n": 1, "titolo": "Rosolatura", "testo": "Asciuga la carne, infarinala leggermente e rosolala nell'olio a fuoco vivo, pochi pezzi alla volta, finché è scura su tutti i lati (5 minuti). Toglila.", "minuti": 8 },
+      { "n": 2, "titolo": "Soffritto e sfumatura", "testo": "Nella stessa pentola appassisci cipolla, carota e sedano a dadini 5 minuti. Rimetti la carne, sfuma col vino raschiando il fondo.", "minuti": 7 },
+      { "n": 3, "titolo": "Cottura lenta", "testo": "Copri con il brodo, aggiungi rosmarino e alloro, sale. Coperchio, fuoco al minimo, 1 ora e 15 minuti. Deve sobbollire appena.", "minuti": 75 },
+      { "n": 4, "titolo": "Patate", "testo": "Aggiungi le patate a tocchi e cuoci altri 30 minuti scoperto, finché sono tenere e il fondo si è addensato. Se serve, un po' d'acqua.", "minuti": 30 },
+      { "n": 5, "titolo": "Servi", "testo": "Togli alloro e rosmarino, pepe, e servi con pane. Meglio se aspetta 10 minuti.", "minuti": 2 }
     ],
     "consigli": "Se dopo 75 minuti la carne è ancora dura, continua a cuocere finché la forchetta entra senza sforzo: dipende dal pezzo, non hai sbagliato niente.",
     "conservazione": "In frigo 3 giorni, migliora. Si congela.",
-    "varianti": [
-      "Con 100 g di funghi negli ultimi 20 minuti.",
-      "Rosso: con 2 cucchiai di concentrato di pomodoro e vino rosso."
-    ],
+    "varianti": ["Con 100 g di funghi negli ultimi 20 minuti.", "Rosso: con 2 cucchiai di concentrato di pomodoro e vino rosso."],
     "kcal": 560,
-    "foto": {
-      "copertina": "img/spezzatino-di-manzo-con-patate.webp",
-      "prompt": "beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl"
-    },
+    "foto": { "copertina": "img/spezzatino-di-manzo-con-patate.webp", "prompt": "beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl" },
     "fonte": "Classico italiano"
   },
   {
@@ -680,106 +228,34 @@
     "descrizione": "Lonza rosolata e cotta lentamente nel latte con salvia e aglio: il latte si rapprende in una salsa granulosa e dolce. Tecnica di Marcella Hazan. Un pezzo da 400 g dà 2 cene.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 80,
-      "riposo": 10
-    },
+    "tempi": { "preparazione": 10, "cottura": 80, "riposo": 10 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.4
-    },
-    "attrezzatura": [
-      "pentola"
-    ],
-    "tag": [
-      "weekend",
-      "avanzi",
-      "da-ospiti",
-      "classico"
-    ],
-    "dieta": [
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.4 },
+    "attrezzatura": ["pentola"],
+    "tag": ["weekend", "avanzi", "da-ospiti", "classico"],
+    "dieta": ["senza-glutine"],
     "origine": "Italia · Emilia / Veneto",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "lonza-di-maiale",
-        "qta": 400,
-        "unita": "g",
-        "note": "in un pezzo unico (avanza per il giorno dopo)"
-      },
-      {
-        "id": "latte",
-        "qta": 500,
-        "unita": "ml"
-      },
-      {
-        "id": "burro",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "salvia",
-        "qta": 5,
-        "unita": "foglie"
-      },
-      {
-        "id": "aglio",
-        "qta": 2,
-        "unita": "spicchi"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "solo la scorza"
-      }
+      { "id": "lonza-di-maiale", "qta": 400, "unita": "g", "note": "in un pezzo unico (avanza per il giorno dopo)", "sostituti": [{ "id": "filetto-di-maiale", "nota": "30 minuti in meno: si asciuga" }] },
+      { "id": "latte", "qta": 500, "unita": "ml" },
+      { "id": "burro", "qta": 20, "unita": "g" },
+      { "id": "salvia", "qta": 5, "unita": "foglie" },
+      { "id": "aglio", "qta": 2, "unita": "spicchi" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
+      { "id": "limone", "qta": 0.5, "unita": "pz", "note": "solo la scorza" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Rosolatura",
-        "testo": "Sala e pepa la lonza. In una pentola stretta (la carne deve starci giusta) rosolala in olio e burro a fuoco medio-alto su tutti i lati, 8 minuti, finché è dorata.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Latte",
-        "testo": "Aggiungi aglio schiacciato, salvia, scorza di limone e il latte fino a coprire per due terzi. Porta a leggero bollore, poi coperchio semiaperto e fuoco basso.",
-        "minuti": 3
-      },
-      {
-        "n": 3,
-        "titolo": "Cottura lenta",
-        "testo": "Cuoci 70 minuti girando la carne ogni 20. Il latte si riduce e forma grumi dorati: è normale, è la salsa. Se si asciuga troppo, un po' di latte.",
-        "minuti": 70
-      },
-      {
-        "n": 4,
-        "titolo": "Riposo e salsa",
-        "testo": "Togli la carne e lasciala riposare 10 minuti coperta. Alza il fuoco sotto la salsa 2 minuti raschiando il fondo. Affetta la lonza sottile e servila con la salsa e le sue 'briciole'.",
-        "minuti": 12
-      }
+      { "n": 1, "titolo": "Rosolatura", "testo": "Sala e pepa la lonza. In una pentola stretta (la carne deve starci giusta) rosolala in olio e burro a fuoco medio-alto su tutti i lati, 8 minuti, finché è dorata.", "minuti": 10 },
+      { "n": 2, "titolo": "Latte", "testo": "Aggiungi aglio schiacciato, salvia, scorza di limone e il latte fino a coprire per due terzi. Porta a leggero bollore, poi coperchio semiaperto e fuoco basso.", "minuti": 3 },
+      { "n": 3, "titolo": "Cottura lenta", "testo": "Cuoci 70 minuti girando la carne ogni 20. Il latte si riduce e forma grumi dorati: è normale, è la salsa. Se si asciuga troppo, un po' di latte.", "minuti": 70 },
+      { "n": 4, "titolo": "Riposo e salsa", "testo": "Togli la carne e lasciala riposare 10 minuti coperta. Alza il fuoco sotto la salsa 2 minuti raschiando il fondo. Affetta la lonza sottile e servila con la salsa e le sue 'briciole'.", "minuti": 12 }
     ],
     "consigli": "La pentola stretta è importante: se è larga il latte evapora prima che la carne sia cotta.",
     "conservazione": "In frigo 3 giorni; a fette fredde nel panino con senape è eccellente.",
-    "varianti": [
-      "Con 1 cucchiaio di senape nel latte.",
-      "Con rosmarino al posto della salvia."
-    ],
+    "varianti": ["Con 1 cucchiaio di senape nel latte.", "Con rosmarino al posto della salvia."],
     "kcal": 480,
-    "foto": {
-      "copertina": "img/arrosto-di-maiale-al-latte.webp",
-      "prompt": "sliced pork loin braised in milk with golden curdled milk sauce and sage leaves, white ceramic plate"
-    },
+    "foto": { "copertina": "img/arrosto-di-maiale-al-latte.webp", "prompt": "sliced pork loin braised in milk with golden curdled milk sauce and sage leaves, white ceramic plate" },
     "fonte": "Marcella Hazan, Essentials of Classic Italian Cooking"
   },
   {
@@ -788,103 +264,33 @@
     "descrizione": "Mezzo pollo (o due cosce) sopra un letto di patate che cuociono nel suo grasso. Il forno fa tutto. Rosmarino, aglio, limone.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 65,
-      "riposo": 5
-    },
+    "tempi": { "preparazione": 10, "cottura": 65, "riposo": 5 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 2.9
-    },
-    "attrezzatura": [
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "weekend",
-      "one-pan",
-      "avanzi",
-      "classico"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 2.9 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["weekend", "one-pan", "avanzi", "classico"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "pollo-intero",
-        "qta": 400,
-        "unita": "g",
-        "note": "2 cosce intere con pelle, o mezzo pollo piccolo"
-      },
-      {
-        "id": "patate",
-        "qta": 250,
-        "unita": "g"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 2,
-        "unita": "rametti"
-      },
-      {
-        "id": "aglio",
-        "qta": 2,
-        "unita": "spicchi",
-        "note": "in camicia, schiacciati"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "paprika-dolce",
-        "qta": 1,
-        "unita": "cucchiaini",
-        "opzionale": true
-      }
+      { "id": "pollo-intero", "qta": 400, "unita": "g", "note": "2 cosce intere con pelle, o mezzo pollo piccolo" },
+      { "id": "patate", "qta": 250, "unita": "g" },
+      { "id": "rosmarino", "qta": 2, "unita": "rametti" },
+      { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "in camicia, schiacciati" },
+      { "id": "limone", "qta": 0.5, "unita": "pz" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "paprika-dolce", "qta": 1, "unita": "cucchiaini", "opzionale": true }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Preparazione",
-        "testo": "Forno a 200 °C. Taglia le patate a spicchi, condiscile con olio, sale, un rametto di rosmarino e l'aglio e stendile nella teglia. Massaggia il pollo con olio, sale, pepe, paprika e succo di limone; infila la mezza scorza e il rosmarino sotto la pelle o accanto.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Forno",
-        "testo": "Appoggia il pollo sulle patate, pelle in su. Cuoci 60–65 minuti; a metà gira le patate senza spostare il pollo. La pelle deve essere croccante e i succhi trasparenti pungendo la coscia.",
-        "minuti": 65
-      },
-      {
-        "n": 3,
-        "titolo": "Riposo",
-        "testo": "Lascia riposare 5 minuti fuori dal forno prima di servire: la carne resta succosa.",
-        "minuti": 5
-      }
+      { "n": 1, "titolo": "Preparazione", "testo": "Forno a 200 °C. Taglia le patate a spicchi, condiscile con olio, sale, un rametto di rosmarino e l'aglio e stendile nella teglia. Massaggia il pollo con olio, sale, pepe, paprika e succo di limone; infila la mezza scorza e il rosmarino sotto la pelle o accanto.", "minuti": 10 },
+      { "n": 2, "titolo": "Forno", "testo": "Appoggia il pollo sulle patate, pelle in su. Cuoci 60–65 minuti; a metà gira le patate senza spostare il pollo. La pelle deve essere croccante e i succhi trasparenti pungendo la coscia.", "minuti": 65 },
+      { "n": 3, "titolo": "Riposo", "testo": "Lascia riposare 5 minuti fuori dal forno prima di servire: la carne resta succosa.", "minuti": 5 }
     ],
     "consigli": "Patate a contatto con la teglia e non ammucchiate: così diventano croccanti. Se restano pallide, ultimi 5 minuti col grill.",
     "conservazione": "In frigo 3 giorni. Il pollo freddo sfilacciato è la base di un'insalata o di un panino.",
-    "varianti": [
-      "Con cipolle a spicchi e zucca tra le patate.",
-      "Con limone e origano alla greca."
-    ],
+    "varianti": ["Con cipolle a spicchi e zucca tra le patate.", "Con limone e origano alla greca."],
     "kcal": 650,
-    "foto": {
-      "copertina": "img/pollo-arrosto-con-patate.webp",
-      "prompt": "roast chicken leg with crispy golden skin over roasted potato wedges, rosemary and lemon, white ceramic plate"
-    },
+    "foto": { "copertina": "img/pollo-arrosto-con-patate.webp", "prompt": "roast chicken leg with crispy golden skin over roasted potato wedges, rosemary and lemon, white ceramic plate" },
     "fonte": "Classico"
   },
   {
@@ -893,122 +299,37 @@
     "descrizione": "Il piatto portoghese da imparare per primo: baccalà sfilacciato, patate a fiammifero fritte, cipolla e uova strapazzate morbide. Olive nere e prezzemolo sopra.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 15,
-      "cottura": 25,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 15, "cottura": 25, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.5
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "portoghese",
-      "one-pan"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.5 },
+    "attrezzatura": ["padella"],
+    "tag": ["portoghese", "one-pan"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Portogallo · Lisbona",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "baccala",
-        "qta": 150,
-        "unita": "g",
-        "note": "già dissalato (bacalhau demolhado)"
-      },
-      {
-        "id": "patate",
-        "qta": 200,
-        "unita": "g",
-        "note": "a fiammifero sottile"
-      },
-      {
-        "id": "uova",
-        "qta": 2,
-        "unita": "pz"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "a fettine sottili"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "olive-nere",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 80,
-        "unita": "ml",
-        "note": "per friggere le patate + 2 cucchiai"
-      },
-      {
-        "id": "alloro",
-        "qta": 1,
-        "unita": "foglie"
-      }
+      { "id": "baccala", "qta": 150, "unita": "g", "note": "già dissalato (bacalhau demolhado)" },
+      { "id": "patate", "qta": 200, "unita": "g", "note": "a fiammifero sottile" },
+      { "id": "uova", "qta": 2, "unita": "pz" },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz", "note": "a fettine sottili" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "olive-nere", "qta": 20, "unita": "g", "sostituti": [{ "id": "olive-verdi" }] },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "olio-evo", "qta": 80, "unita": "ml", "note": "per friggere le patate + 2 cucchiai" },
+      { "id": "alloro", "qta": 1, "unita": "foglie" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Baccalà",
-        "testo": "Metti il baccalà in acqua fredda con l'alloro, porta a bollore e spegni. Dopo 5 minuti scolalo, togli pelle e lische e sfilaccialo con le mani.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Patate a fiammifero",
-        "testo": "Taglia le patate a bastoncini sottilissimi (2 mm), asciugale bene e friggile nell'olio caldo in padella finché sono dorate e croccanti (6–8 minuti). Scola su carta. (Al Continente vendono le 'batata palha' già fritte: scorciatoia legittima.)",
-        "minuti": 10
-      },
-      {
-        "n": 3,
-        "titolo": "Cipolla e baccalà",
-        "testo": "In 2 cucchiai d'olio stufa cipolla e aglio a fuoco basso 5 minuti finché sono trasparenti. Aggiungi il baccalà e cuoci 3 minuti.",
-        "minuti": 8
-      },
-      {
-        "n": 4,
-        "titolo": "Uova",
-        "testo": "Unisci le patate, poi versa le uova sbattute con poco sale e pepe. Mescola a fuoco basso 1–2 minuti: le uova devono restare cremose, non asciutte. Spegni prima che sembrino pronte.",
-        "minuti": 2
-      },
-      {
-        "n": 5,
-        "titolo": "Servi",
-        "testo": "Olive nere e prezzemolo tritato sopra. Subito.",
-        "minuti": 1
-      }
+      { "n": 1, "titolo": "Baccalà", "testo": "Metti il baccalà in acqua fredda con l'alloro, porta a bollore e spegni. Dopo 5 minuti scolalo, togli pelle e lische e sfilaccialo con le mani.", "minuti": 10 },
+      { "n": 2, "titolo": "Patate a fiammifero", "testo": "Taglia le patate a bastoncini sottilissimi (2 mm), asciugale bene e friggile nell'olio caldo in padella finché sono dorate e croccanti (6–8 minuti). Scola su carta. (Al Continente vendono le 'batata palha' già fritte: scorciatoia legittima.)", "minuti": 10 },
+      { "n": 3, "titolo": "Cipolla e baccalà", "testo": "In 2 cucchiai d'olio stufa cipolla e aglio a fuoco basso 5 minuti finché sono trasparenti. Aggiungi il baccalà e cuoci 3 minuti.", "minuti": 8 },
+      { "n": 4, "titolo": "Uova", "testo": "Unisci le patate, poi versa le uova sbattute con poco sale e pepe. Mescola a fuoco basso 1–2 minuti: le uova devono restare cremose, non asciutte. Spegni prima che sembrino pronte.", "minuti": 2 },
+      { "n": 5, "titolo": "Servi", "testo": "Olive nere e prezzemolo tritato sopra. Subito.", "minuti": 1 }
     ],
     "consigli": "Il segreto è togliere dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
     "conservazione": "Non si conserva: le patate perdono croccantezza.",
-    "varianti": [
-      "Con tonno sott'olio al posto del baccalà (versione da dispensa)."
-    ],
+    "varianti": ["Con tonno sott'olio al posto del baccalà (versione da dispensa)."],
     "kcal": 620,
-    "foto": {
-      "copertina": "img/bacalhau-a-bras.webp",
-      "prompt": "bacalhau a bras, shredded cod with matchstick potatoes and soft scrambled eggs, black olives and parsley, white ceramic plate"
-    },
+    "foto": { "copertina": "img/bacalhau-a-bras.webp", "prompt": "bacalhau a bras, shredded cod with matchstick potatoes and soft scrambled eggs, black olives and parsley, white ceramic plate" },
     "fonte": "Tradizione portoghese"
   },
   {
@@ -1017,105 +338,34 @@
     "descrizione": "Filetto con una crosta di pangrattato, pistacchi tritati, scorza di limone e prezzemolo, 12 minuti in forno. Elegante, quasi zero fatica.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 14,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 10, "cottura": 14, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 4.5
-    },
-    "attrezzatura": [
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "veloce",
-      "da-ospiti"
-    ],
-    "dieta": [
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 4.5 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["veloce", "da-ospiti"],
+    "dieta": ["senza-lattosio"],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "salmone",
-        "qta": 180,
-        "unita": "g",
-        "note": "un filetto con pelle"
-      },
-      {
-        "id": "pistacchi",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "pangrattato",
-        "qta": 15,
-        "unita": "g"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz",
-        "note": "scorza + spicchio"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "senape",
-        "qta": 1,
-        "unita": "cucchiaini"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "salmone", "qta": 180, "unita": "g", "note": "un filetto con pelle" },
+      { "id": "pistacchi", "qta": 20, "unita": "g", "sostituti": [{ "id": "mandorle" }, { "id": "noci" }] },
+      { "id": "pangrattato", "qta": 15, "unita": "g" },
+      { "id": "limone", "qta": 0.5, "unita": "pz", "note": "scorza + spicchio" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "senape", "qta": 1, "unita": "cucchiaini" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Crosta",
-        "testo": "Forno a 200 °C. Trita i pistacchi grossolanamente e mescolali con pangrattato, scorza di limone, prezzemolo tritato, olio, sale e pepe.",
-        "minuti": 6
-      },
-      {
-        "n": 2,
-        "titolo": "Salmone",
-        "testo": "Asciuga il filetto, sala leggermente, spalma la senape sul lato senza pelle e premi sopra la crosta di pistacchi.",
-        "minuti": 3
-      },
-      {
-        "n": 3,
-        "titolo": "Forno",
-        "testo": "Su teglia con carta forno, pelle in giù, 12–14 minuti: la crosta è dorata e il centro appena rosato. Non cuocerlo di più.",
-        "minuti": 14
-      },
-      {
-        "n": 4,
-        "titolo": "Servi",
-        "testo": "Con lo spicchio di limone e una verdura al forno o insalata di finocchi.",
-        "minuti": 1
-      }
+      { "n": 1, "titolo": "Crosta", "testo": "Forno a 200 °C. Trita i pistacchi grossolanamente e mescolali con pangrattato, scorza di limone, prezzemolo tritato, olio, sale e pepe.", "minuti": 6 },
+      { "n": 2, "titolo": "Salmone", "testo": "Asciuga il filetto, sala leggermente, spalma la senape sul lato senza pelle e premi sopra la crosta di pistacchi.", "minuti": 3 },
+      { "n": 3, "titolo": "Forno", "testo": "Su teglia con carta forno, pelle in giù, 12–14 minuti: la crosta è dorata e il centro appena rosato. Non cuocerlo di più.", "minuti": 14 },
+      { "n": 4, "titolo": "Servi", "testo": "Con lo spicchio di limone e una verdura al forno o insalata di finocchi.", "minuti": 1 }
     ],
     "consigli": "Il salmone è cotto quando le lamelle si separano appena con la forchetta. 50 °C al cuore se hai un termometro.",
     "conservazione": "In frigo 1 giorno; freddo in insalata.",
-    "varianti": [
-      "Con mandorle al posto dei pistacchi.",
-      "Con orata o merluzzo."
-    ],
+    "varianti": ["Con mandorle al posto dei pistacchi.", "Con orata o merluzzo."],
     "kcal": 520,
-    "foto": {
-      "copertina": "img/salmone-in-crosta-di-erbe-e-pistacchi.webp",
-      "prompt": "baked salmon fillet with green pistachio herb crust and a lemon wedge, white ceramic plate, minimal"
-    },
+    "foto": { "copertina": "img/salmone-in-crosta-di-erbe-e-pistacchi.webp", "prompt": "baked salmon fillet with green pistachio herb crust and a lemon wedge, white ceramic plate, minimal" },
     "fonte": "Ricetta moderna"
   },
   {
@@ -1124,117 +374,36 @@
     "descrizione": "Un'orata intera (la dourada, qui costa poco) su patate a fette sottili, olive, aglio e vino bianco. Mezz'ora di forno e il pesce si sfila da solo.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 15,
-      "cottura": 35,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 15, "cottura": 35, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 5
-    },
-    "attrezzatura": [
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "weekend",
-      "one-pan",
-      "da-ospiti"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 5 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["weekend", "one-pan", "da-ospiti"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Italia · Liguria",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "orata",
-        "qta": 400,
-        "unita": "g",
-        "note": "una, pulita e squamata dal pescivendolo"
-      },
-      {
-        "id": "patate",
-        "qta": 200,
-        "unita": "g",
-        "note": "a fette da 3 mm"
-      },
-      {
-        "id": "olive-nere",
-        "qta": 30,
-        "unita": "g"
-      },
-      {
-        "id": "aglio",
-        "qta": 2,
-        "unita": "spicchi"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 60,
-        "unita": "ml"
-      },
-      {
-        "id": "limone",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 3,
-        "unita": "cucchiai"
-      }
+      { "id": "orata", "qta": 400, "unita": "g", "note": "una, pulita e squamata dal pescivendolo", "sostituti": [{ "id": "salmone", "nota": "un trancio: 20 minuti bastano" }] },
+      { "id": "patate", "qta": 200, "unita": "g", "note": "a fette da 3 mm" },
+      { "id": "olive-nere", "qta": 30, "unita": "g", "sostituti": [{ "id": "olive-verdi" }] },
+      { "id": "aglio", "qta": 2, "unita": "spicchi" },
+      { "id": "vino-bianco", "qta": 60, "unita": "ml" },
+      { "id": "limone", "qta": 0.5, "unita": "pz" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "olio-evo", "qta": 3, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Patate",
-        "testo": "Forno a 200 °C. Stendi le patate a fette nella teglia oliata in uno strato solo, condisci con olio, sale, aglio a fettine e rosmarino. Inforna 15 minuti da sole.",
-        "minuti": 18
-      },
-      {
-        "n": 2,
-        "titolo": "Orata",
-        "testo": "Asciuga l'orata, sala dentro e fuori, riempi il ventre con fette di limone e prezzemolo. Appoggiala sulle patate, aggiungi le olive, bagna con vino e olio.",
-        "minuti": 5
-      },
-      {
-        "n": 3,
-        "titolo": "Forno",
-        "testo": "Cuoci 20 minuti. È pronta quando l'occhio è bianco e la pinna dorsale si stacca tirando. Se le patate sono chiare, 3 minuti di grill.",
-        "minuti": 20
-      },
-      {
-        "n": 4,
-        "titolo": "Sfilettatura",
-        "testo": "Incidi lungo la spina dorsale, solleva il filetto con un cucchiaio, togli la lisca intera e prendi il secondo filetto. Servi con patate, olive e il fondo di cottura.",
-        "minuti": 3
-      }
+      { "n": 1, "titolo": "Patate", "testo": "Forno a 200 °C. Stendi le patate a fette nella teglia oliata in uno strato solo, condisci con olio, sale, aglio a fettine e rosmarino. Inforna 15 minuti da sole.", "minuti": 18 },
+      { "n": 2, "titolo": "Orata", "testo": "Asciuga l'orata, sala dentro e fuori, riempi il ventre con fette di limone e prezzemolo. Appoggiala sulle patate, aggiungi le olive, bagna con vino e olio.", "minuti": 5 },
+      { "n": 3, "titolo": "Forno", "testo": "Cuoci 20 minuti. È pronta quando l'occhio è bianco e la pinna dorsale si stacca tirando. Se le patate sono chiare, 3 minuti di grill.", "minuti": 20 },
+      { "n": 4, "titolo": "Sfilettatura", "testo": "Incidi lungo la spina dorsale, solleva il filetto con un cucchiaio, togli la lisca intera e prendi il secondo filetto. Servi con patate, olive e il fondo di cottura.", "minuti": 3 }
     ],
     "consigli": "Chiedi al pescivendolo di pulirla ('limpar e escamar'): lo fanno gratis. Il pesce al forno è pronto quando smette di sembrare traslucido vicino alla lisca.",
     "conservazione": "In frigo 1 giorno.",
-    "varianti": [
-      "Con branzino (robalo).",
-      "In cartoccio di carta forno, senza patate, in 18 minuti."
-    ],
+    "varianti": ["Con branzino (robalo).", "In cartoccio di carta forno, senza patate, in 18 minuti."],
     "kcal": 560,
-    "foto": {
-      "copertina": "img/orata-al-forno-con-patate-e-olive.webp",
-      "prompt": "whole roasted sea bream on sliced potatoes with black olives, lemon and rosemary, white ceramic baking dish, overhead light"
-    },
+    "foto": { "copertina": "img/orata-al-forno-con-patate-e-olive.webp", "prompt": "whole roasted sea bream on sliced potatoes with black olives, lemon and rosemary, white ceramic baking dish, overhead light" },
     "fonte": "Tradizione ligure"
   },
   {
@@ -1243,107 +412,34 @@
     "descrizione": "Alta, morbida, senza girarla: al forno in una teglia piccola. Patate a dadini stufate con la cipolla, uova, parmigiano. Cena di dispensa che vale anche fredda in mensa.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 30,
-      "riposo": 5
-    },
+    "tempi": { "preparazione": 10, "cottura": 30, "riposo": 5 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 1.2
-    },
-    "attrezzatura": [
-      "padella",
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "low-cost",
-      "avanzi"
-    ],
-    "dieta": [
-      "vegetariano",
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 1.2 },
+    "attrezzatura": ["padella", "forno", "teglia"],
+    "tag": ["low-cost", "avanzi"],
+    "dieta": ["vegetariano", "senza-glutine"],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "uova",
-        "qta": 3,
-        "unita": "pz"
-      },
-      {
-        "id": "patate",
-        "qta": 150,
-        "unita": "g",
-        "note": "a dadini da 1 cm"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.5,
-        "unita": "pz"
-      },
-      {
-        "id": "parmigiano",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "latte",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti",
-        "opzionale": true
-      }
+      { "id": "uova", "qta": 3, "unita": "pz" },
+      { "id": "patate", "qta": 150, "unita": "g", "note": "a dadini da 1 cm" },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz" },
+      { "id": "parmigiano", "qta": 20, "unita": "g" },
+      { "id": "latte", "qta": 2, "unita": "cucchiai" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti", "opzionale": true }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Patate e cipolla",
-        "testo": "In padella scalda l'olio e cuoci patate e cipolla a fettine con rosmarino e sale, coperte, a fuoco medio-basso per 12 minuti finché le patate sono tenere. Forno a 180 °C.",
-        "minuti": 14
-      },
-      {
-        "n": 2,
-        "titolo": "Uova",
-        "testo": "Sbatti le uova con latte, parmigiano, sale e pepe. Unisci le patate tiepide.",
-        "minuti": 3
-      },
-      {
-        "n": 3,
-        "titolo": "Forno",
-        "testo": "Versa in una teglia piccola (o pirofila da 15 cm) unta d'olio. Cuoci 18–20 minuti finché è gonfia e dorata e il centro non trema più.",
-        "minuti": 20
-      },
-      {
-        "n": 4,
-        "titolo": "Riposo",
-        "testo": "Aspetta 5 minuti prima di tagliare. Con insalata.",
-        "minuti": 5
-      }
+      { "n": 1, "titolo": "Patate e cipolla", "testo": "In padella scalda l'olio e cuoci patate e cipolla a fettine con rosmarino e sale, coperte, a fuoco medio-basso per 12 minuti finché le patate sono tenere. Forno a 180 °C.", "minuti": 14 },
+      { "n": 2, "titolo": "Uova", "testo": "Sbatti le uova con latte, parmigiano, sale e pepe. Unisci le patate tiepide.", "minuti": 3 },
+      { "n": 3, "titolo": "Forno", "testo": "Versa in una teglia piccola (o pirofila da 15 cm) unta d'olio. Cuoci 18–20 minuti finché è gonfia e dorata e il centro non trema più.", "minuti": 20 },
+      { "n": 4, "titolo": "Riposo", "testo": "Aspetta 5 minuti prima di tagliare. Con insalata.", "minuti": 5 }
     ],
     "consigli": "Uova a temperatura ambiente e forno non troppo alto: viene soffice invece che gommosa.",
     "conservazione": "In frigo 3 giorni; fredda è perfetta per il pranzo.",
-    "varianti": [
-      "Con zucchine al posto delle patate.",
-      "Con 50 g di provola a cubetti dentro."
-    ],
+    "varianti": ["Con zucchine al posto delle patate.", "Con 50 g di provola a cubetti dentro."],
     "kcal": 480,
-    "foto": {
-      "copertina": "img/frittata-di-patate-e-cipolle-al-forno.webp",
-      "prompt": "thick golden baked potato and onion frittata slice on a white ceramic plate, rosemary, minimal styling"
-    },
+    "foto": { "copertina": "img/frittata-di-patate-e-cipolle-al-forno.webp", "prompt": "thick golden baked potato and onion frittata slice on a white ceramic plate, rosemary, minimal styling" },
     "fonte": "Ricetta di casa"
   },
   {
@@ -1352,97 +448,33 @@
     "descrizione": "Fettine di tacchino arrotolate con speck e formaggio, rosolate e sfumate col vino. Formaggio che fila dentro, salsina fuori, 30 minuti.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 12,
-      "cottura": 15,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 12, "cottura": 15, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 2.9
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "veloce"
-    ],
-    "dieta": [
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 2.9 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce"],
+    "dieta": ["senza-glutine"],
     "origine": "Italia · Trentino",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "fettine-di-tacchino",
-        "qta": 160,
-        "unita": "g",
-        "note": "3 fettine sottili"
-      },
-      {
-        "id": "speck",
-        "qta": 3,
-        "unita": "fette"
-      },
-      {
-        "id": "provola",
-        "qta": 45,
-        "unita": "g",
-        "note": "scamorza o flamengo, a bastoncini"
-      },
-      {
-        "id": "salvia",
-        "qta": 3,
-        "unita": "foglie"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 50,
-        "unita": "ml"
-      },
-      {
-        "id": "burro",
-        "qta": 15,
-        "unita": "g"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "fettine-di-tacchino", "qta": 160, "unita": "g", "note": "3 fettine sottili", "sostituti": [{ "id": "fettine-di-vitello" }, { "id": "petto-di-pollo", "nota": "aperto a libro e battuto sottile" }] },
+      { "id": "speck", "qta": 3, "unita": "fette", "sostituti": [{ "id": "pancetta" }, { "id": "prosciutto-crudo" }] },
+      { "id": "provola", "qta": 45, "unita": "g", "note": "scamorza o flamengo, a bastoncini", "sostituti": [{ "id": "mozzarella", "nota": "scolala bene un'ora prima: rilascia acqua" }, { "id": "formaggio-fuso" }] },
+      { "id": "salvia", "qta": 3, "unita": "foglie" },
+      { "id": "vino-bianco", "qta": 50, "unita": "ml" },
+      { "id": "burro", "qta": 15, "unita": "g" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Involtini",
-        "testo": "Batti le fettine sottili, pepa (niente sale: lo speck basta). Su ognuna metti una fetta di speck, un bastoncino di formaggio e una foglia di salvia. Arrotola stretto e chiudi con uno stecchino.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Rosolatura",
-        "testo": "Scalda olio e burro a fuoco medio-alto e rosola gli involtini su tutti i lati 5 minuti finché sono dorati.",
-        "minuti": 5
-      },
-      {
-        "n": 3,
-        "titolo": "Sfumatura",
-        "testo": "Sfuma col vino, copri e cuoci a fuoco basso 6–8 minuti. Scopri, fai restringere 1 minuto e servi con la salsina.",
-        "minuti": 9
-      }
+      { "n": 1, "titolo": "Involtini", "testo": "Batti le fettine sottili, pepa (niente sale: lo speck basta). Su ognuna metti una fetta di speck, un bastoncino di formaggio e una foglia di salvia. Arrotola stretto e chiudi con uno stecchino.", "minuti": 10 },
+      { "n": 2, "titolo": "Rosolatura", "testo": "Scalda olio e burro a fuoco medio-alto e rosola gli involtini su tutti i lati 5 minuti finché sono dorati.", "minuti": 5 },
+      { "n": 3, "titolo": "Sfumatura", "testo": "Sfuma col vino, copri e cuoci a fuoco basso 6–8 minuti. Scopri, fai restringere 1 minuto e servi con la salsina.", "minuti": 9 }
     ],
     "consigli": "Chiudi bene le estremità con lo stecchino o il formaggio scappa. Se scappa comunque, diventa crosticina: non è una tragedia.",
     "conservazione": "In frigo 2 giorni.",
-    "varianti": [
-      "Con prosciutto cotto e mozzarella.",
-      "Con fettine di vitello."
-    ],
+    "varianti": ["Con prosciutto cotto e mozzarella.", "Con fettine di vitello."],
     "kcal": 470,
-    "foto": {
-      "copertina": "img/involtini-di-tacchino-con-speck-e-scamorza.webp",
-      "prompt": "turkey roulades wrapped with speck, melted smoked cheese oozing, sage, light pan sauce, white ceramic plate"
-    },
+    "foto": { "copertina": "img/involtini-di-tacchino-con-speck-e-scamorza.webp", "prompt": "turkey roulades wrapped with speck, melted smoked cheese oozing, sage, light pan sauce, white ceramic plate" },
     "fonte": "Ricetta di casa"
   },
   {
@@ -1451,117 +483,36 @@
     "descrizione": "Un peperone grande, ripieno di macinato, riso, parmigiano e erbe, cotto in forno finché la buccia si arriccia. Piatto completo. Due peperoni e il giorno dopo è risolto.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 20,
-      "cottura": 50,
-      "riposo": 0
-    },
+    "tempi": { "preparazione": 20, "cottura": 50, "riposo": 0 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "basso",
-      "stima_eur": 2.5
-    },
-    "attrezzatura": [
-      "pentola",
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "weekend",
-      "avanzi"
-    ],
-    "dieta": [
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "basso", "stima_eur": 2.5 },
+    "attrezzatura": ["pentola", "forno", "teglia"],
+    "tag": ["weekend", "avanzi"],
+    "dieta": ["senza-glutine"],
     "origine": "Italia · Sud",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "peperoni",
-        "qta": 1,
-        "unita": "pz",
-        "note": "grande, rosso o giallo"
-      },
-      {
-        "id": "macinato-misto",
-        "qta": 120,
-        "unita": "g"
-      },
-      {
-        "id": "riso-carnaroli",
-        "qta": 40,
-        "unita": "g",
-        "note": "qualsiasi riso"
-      },
-      {
-        "id": "parmigiano",
-        "qta": 20,
-        "unita": "g"
-      },
-      {
-        "id": "uova",
-        "qta": 1,
-        "unita": "pz",
-        "note": "piccolo"
-      },
-      {
-        "id": "cipolla",
-        "qta": 0.25,
-        "unita": "pz"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "passata",
-        "qta": 100,
-        "unita": "ml"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      }
+      { "id": "peperoni", "qta": 1, "unita": "pz", "note": "grande, rosso o giallo" },
+      { "id": "macinato-misto", "qta": 120, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }] },
+      { "id": "riso-carnaroli", "qta": 40, "unita": "g", "note": "qualsiasi riso" },
+      { "id": "parmigiano", "qta": 20, "unita": "g" },
+      { "id": "uova", "qta": 1, "unita": "pz", "note": "piccolo" },
+      { "id": "cipolla", "qta": 0.25, "unita": "pz" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "passata", "qta": 100, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciali con la forchetta" }] },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Riso",
-        "testo": "Lessa il riso in acqua salata 10 minuti (deve restare molto al dente) e scolalo. Forno a 190 °C.",
-        "minuti": 12
-      },
-      {
-        "n": 2,
-        "titolo": "Ripieno",
-        "testo": "Rosola la cipolla tritata nell'olio, aggiungi il macinato e cuoci 5 minuti sbriciolando. Fuori dal fuoco unisci riso, uovo, parmigiano, prezzemolo, sale e pepe.",
-        "minuti": 8
-      },
-      {
-        "n": 3,
-        "titolo": "Peperone",
-        "testo": "Taglia la calotta del peperone e svuotalo dai semi. Riempilo con il ripieno senza pressare troppo, rimetti la calotta.",
-        "minuti": 4
-      },
-      {
-        "n": 4,
-        "titolo": "Forno",
-        "testo": "In una teglia piccola versa la passata con mezzo bicchiere d'acqua e un filo d'olio, appoggia il peperone e cuoci 45 minuti coperto con alluminio, poi 5 minuti scoperto. Il peperone deve essere morbido e un po' bruciacchiato.",
-        "minuti": 50
-      }
+      { "n": 1, "titolo": "Riso", "testo": "Lessa il riso in acqua salata 10 minuti (deve restare molto al dente) e scolalo. Forno a 190 °C.", "minuti": 12 },
+      { "n": 2, "titolo": "Ripieno", "testo": "Rosola la cipolla tritata nell'olio, aggiungi il macinato e cuoci 5 minuti sbriciolando. Fuori dal fuoco unisci riso, uovo, parmigiano, prezzemolo, sale e pepe.", "minuti": 8 },
+      { "n": 3, "titolo": "Peperone", "testo": "Taglia la calotta del peperone e svuotalo dai semi. Riempilo con il ripieno senza pressare troppo, rimetti la calotta.", "minuti": 4 },
+      { "n": 4, "titolo": "Forno", "testo": "In una teglia piccola versa la passata con mezzo bicchiere d'acqua e un filo d'olio, appoggia il peperone e cuoci 45 minuti coperto con alluminio, poi 5 minuti scoperto. Il peperone deve essere morbido e un po' bruciacchiato.", "minuti": 50 }
     ],
     "consigli": "Il riso deve entrare mezzo crudo: finisce di cuocere nel peperone assorbendo i succhi.",
     "conservazione": "In frigo 3 giorni; riscalda in forno o microonde.",
-    "varianti": [
-      "Vegetariano: con feta, olive e riso.",
-      "Con tonno e capperi al posto della carne."
-    ],
+    "varianti": ["Vegetariano: con feta, olive e riso.", "Con tonno e capperi al posto della carne."],
     "kcal": 540,
-    "foto": {
-      "copertina": "img/peperoni-ripieni-di-carne-e-riso.webp",
-      "prompt": "one roasted red bell pepper stuffed with meat and rice, slightly charred, tomato sauce underneath, white ceramic plate"
-    },
+    "foto": { "copertina": "img/peperoni-ripieni-di-carne-e-riso.webp", "prompt": "one roasted red bell pepper stuffed with meat and rice, slightly charred, tomato sauce underneath, white ceramic plate" },
     "fonte": "Tradizione del Sud"
   },
   {
@@ -1570,106 +521,34 @@
     "descrizione": "Il lombinho avvolto nella pancetta, rosolato in padella e finito in forno: fuori croccante, dentro rosato. Da ristorante, in 45 minuti.",
     "categoria": "secondo",
     "difficolta": "media",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 25,
-      "riposo": 5
-    },
+    "tempi": { "preparazione": 10, "cottura": 25, "riposo": 5 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "medio",
-      "stima_eur": 3.6
-    },
-    "attrezzatura": [
-      "padella",
-      "forno",
-      "teglia"
-    ],
-    "tag": [
-      "da-ospiti"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "medio", "stima_eur": 3.6 },
+    "attrezzatura": ["padella", "forno", "teglia"],
+    "tag": ["da-ospiti"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "filetto-di-maiale",
-        "qta": 250,
-        "unita": "g",
-        "note": "un pezzo intero"
-      },
-      {
-        "id": "pancetta",
-        "qta": 6,
-        "unita": "fette",
-        "note": "sottili, o bacon"
-      },
-      {
-        "id": "senape",
-        "qta": 1,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "vino-bianco",
-        "qta": 50,
-        "unita": "ml"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "filetto-di-maiale", "qta": 250, "unita": "g", "note": "un pezzo intero", "sostituti": [{ "id": "lonza-di-maiale", "nota": "20 minuti in più: è più spessa" }] },
+      { "id": "pancetta", "qta": 6, "unita": "fette", "note": "sottili, o bacon", "sostituti": [{ "id": "speck", "nota": "fette larghe, avvolgono meglio" }, { "id": "prosciutto-crudo" }] },
+      { "id": "senape", "qta": 1, "unita": "cucchiai" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "vino-bianco", "qta": 50, "unita": "ml" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Avvolgi",
-        "testo": "Forno a 200 °C. Pepa il filetto, spalmalo di senape e rosmarino tritato. Stendi le fette di pancetta sovrapposte su un foglio di carta forno, appoggia il filetto e arrotola stretto usando la carta. Fissa con stecchini se serve.",
-        "minuti": 8
-      },
-      {
-        "n": 2,
-        "titolo": "Rosolatura",
-        "testo": "In padella con l'olio, rosola il filetto a fuoco vivo 1 minuto per lato, con la chiusura sotto per prima, finché la pancetta è dorata.",
-        "minuti": 5
-      },
-      {
-        "n": 3,
-        "titolo": "Forno",
-        "testo": "Trasferisci sulla teglia con l'aglio schiacciato e cuoci 15–18 minuti (62 °C al cuore). Il centro deve restare rosato.",
-        "minuti": 18
-      },
-      {
-        "n": 4,
-        "titolo": "Riposo e salsa",
-        "testo": "Lascia riposare 5 minuti. Intanto deglassa la padella col vino a fuoco vivo 1 minuto. Affetta a medaglioni e servi con la salsa.",
-        "minuti": 6
-      }
+      { "n": 1, "titolo": "Avvolgi", "testo": "Forno a 200 °C. Pepa il filetto, spalmalo di senape e rosmarino tritato. Stendi le fette di pancetta sovrapposte su un foglio di carta forno, appoggia il filetto e arrotola stretto usando la carta. Fissa con stecchini se serve.", "minuti": 8 },
+      { "n": 2, "titolo": "Rosolatura", "testo": "In padella con l'olio, rosola il filetto a fuoco vivo 1 minuto per lato, con la chiusura sotto per prima, finché la pancetta è dorata.", "minuti": 5 },
+      { "n": 3, "titolo": "Forno", "testo": "Trasferisci sulla teglia con l'aglio schiacciato e cuoci 15–18 minuti (62 °C al cuore). Il centro deve restare rosato.", "minuti": 18 },
+      { "n": 4, "titolo": "Riposo e salsa", "testo": "Lascia riposare 5 minuti. Intanto deglassa la padella col vino a fuoco vivo 1 minuto. Affetta a medaglioni e servi con la salsa.", "minuti": 6 }
     ],
     "consigli": "Il filetto di maiale è magro e in 5 minuti di troppo diventa secco: rispetta i tempi e fidati del riposo.",
     "conservazione": "In frigo 2 giorni; a fette fredde nell'insalata.",
-    "varianti": [
-      "Con prosciutto crudo al posto della pancetta.",
-      "Con salsa di senape e panna."
-    ],
+    "varianti": ["Con prosciutto crudo al posto della pancetta.", "Con salsa di senape e panna."],
     "kcal": 520,
-    "foto": {
-      "copertina": "img/filetto-di-maiale-in-crosta-di-pancetta.webp",
-      "prompt": "sliced pork tenderloin wrapped in crispy pancetta, pink center, rosemary, light pan jus, white ceramic plate"
-    },
+    "foto": { "copertina": "img/filetto-di-maiale-in-crosta-di-pancetta.webp", "prompt": "sliced pork tenderloin wrapped in crispy pancetta, pink center, rosemary, light pan jus, white ceramic plate" },
     "fonte": "Ricetta moderna"
   },
   {
@@ -1678,146 +557,41 @@
     "descrizione": "Un pezzo di manzo marinato una notte nel Douro con verdure e spezie, poi cotto tre ore. Il sugo si fa dalla marinata. Da domenica di pioggia; avanza per giorni.",
     "categoria": "secondo",
     "difficolta": "difficile",
-    "tempi": {
-      "preparazione": 20,
-      "cottura": 180,
-      "riposo": 720
-    },
+    "tempi": { "preparazione": 20, "cottura": 180, "riposo": 720 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "alto",
-      "stima_eur": 6.5
-    },
-    "attrezzatura": [
-      "pentola",
-      "frullatore"
-    ],
-    "tag": [
-      "weekend",
-      "avanzi",
-      "inverno",
-      "da-ospiti",
-      "classico"
-    ],
-    "dieta": [
-      "senza-glutine",
-      "senza-lattosio"
-    ],
+    "costo": { "fascia": "alto", "stima_eur": 6.5 },
+    "attrezzatura": ["pentola", "frullatore"],
+    "tag": ["weekend", "avanzi", "inverno", "da-ospiti", "classico"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
     "origine": "Italia · Piemonte",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "cappello-del-prete",
-        "qta": 500,
-        "unita": "g",
-        "note": "in un pezzo unico (avanza per 2 cene)"
-      },
-      {
-        "id": "vino-rosso",
-        "qta": 500,
-        "unita": "ml",
-        "note": "corposo"
-      },
-      {
-        "id": "cipolla",
-        "qta": 1,
-        "unita": "pz"
-      },
-      {
-        "id": "carote",
-        "qta": 1,
-        "unita": "pz"
-      },
-      {
-        "id": "sedano",
-        "qta": 1,
-        "unita": "pz"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "alloro",
-        "qta": 2,
-        "unita": "foglie"
-      },
-      {
-        "id": "rosmarino",
-        "qta": 1,
-        "unita": "rametti"
-      },
-      {
-        "id": "chiodi-di-garofano",
-        "qta": 2,
-        "unita": "pz"
-      },
-      {
-        "id": "cannella",
-        "qta": 1,
-        "unita": "pizzico"
-      },
-      {
-        "id": "ginepro",
-        "qta": 3,
-        "unita": "pz",
-        "opzionale": true
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      },
-      {
-        "id": "farina-00",
-        "qta": 1,
-        "unita": "cucchiai"
-      }
+      { "id": "cappello-del-prete", "qta": 500, "unita": "g", "note": "in un pezzo unico (avanza per 2 cene)", "sostituti": [{ "id": "manzo-per-spezzatino", "nota": "a pezzi grossi: 30 minuti in meno" }] },
+      { "id": "vino-rosso", "qta": 500, "unita": "ml", "note": "corposo" },
+      { "id": "cipolla", "qta": 1, "unita": "pz" },
+      { "id": "carote", "qta": 1, "unita": "pz" },
+      { "id": "sedano", "qta": 1, "unita": "pz" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "alloro", "qta": 2, "unita": "foglie" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "chiodi-di-garofano", "qta": 2, "unita": "pz" },
+      { "id": "cannella", "qta": 1, "unita": "pizzico" },
+      { "id": "ginepro", "qta": 3, "unita": "pz", "opzionale": true },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "farina-00", "qta": 1, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Marinata (la sera prima)",
-        "testo": "Metti la carne in una ciotola con vino, verdure a pezzi grossi, aglio, erbe e spezie. Copri e lascia in frigo 12 ore, girando una volta.",
-        "minuti": 10
-      },
-      {
-        "n": 2,
-        "titolo": "Rosolatura",
-        "testo": "Scola la carne (tieni marinata e verdure), asciugala bene, infarinala. Rosolala nell'olio a fuoco vivo su tutti i lati finché è scura (8 minuti). Toglila.",
-        "minuti": 10
-      },
-      {
-        "n": 3,
-        "titolo": "Verdure e vino",
-        "testo": "Nella stessa pentola rosola le verdure della marinata 5 minuti. Rimetti la carne, versa la marinata filtrata, sala. Porta a bollore.",
-        "minuti": 8
-      },
-      {
-        "n": 4,
-        "titolo": "Cottura lenta",
-        "testo": "Coperchio, fuoco al minimo, 3 ore. Gira la carne ogni ora. Deve sobbollire appena: se bolle forte diventa stopposa. È pronta quando una forchetta entra come nel burro.",
-        "minuti": 180
-      },
-      {
-        "n": 5,
-        "titolo": "Salsa",
-        "testo": "Togli la carne e tienila al caldo. Elimina alloro, rosmarino e chiodi, frulla il fondo con le verdure fino a una salsa liscia; se è liquida, riducila a fuoco vivo. Affetta il brasato spesso e nappalo con la salsa.",
-        "minuti": 10
-      }
+      { "n": 1, "titolo": "Marinata (la sera prima)", "testo": "Metti la carne in una ciotola con vino, verdure a pezzi grossi, aglio, erbe e spezie. Copri e lascia in frigo 12 ore, girando una volta.", "minuti": 10 },
+      { "n": 2, "titolo": "Rosolatura", "testo": "Scola la carne (tieni marinata e verdure), asciugala bene, infarinala. Rosolala nell'olio a fuoco vivo su tutti i lati finché è scura (8 minuti). Toglila.", "minuti": 10 },
+      { "n": 3, "titolo": "Verdure e vino", "testo": "Nella stessa pentola rosola le verdure della marinata 5 minuti. Rimetti la carne, versa la marinata filtrata, sala. Porta a bollore.", "minuti": 8 },
+      { "n": 4, "titolo": "Cottura lenta", "testo": "Coperchio, fuoco al minimo, 3 ore. Gira la carne ogni ora. Deve sobbollire appena: se bolle forte diventa stopposa. È pronta quando una forchetta entra come nel burro.", "minuti": 180 },
+      { "n": 5, "titolo": "Salsa", "testo": "Togli la carne e tienila al caldo. Elimina alloro, rosmarino e chiodi, frulla il fondo con le verdure fino a una salsa liscia; se è liquida, riducila a fuoco vivo. Affetta il brasato spesso e nappalo con la salsa.", "minuti": 10 }
     ],
     "consigli": "Con polenta o purè. Il brasato affettato e riscaldato nella sua salsa il giorno dopo è più buono: cucinalo in anticipo.",
     "conservazione": "In frigo 4 giorni nella salsa; si congela a fette.",
-    "varianti": [
-      "Senza frullatore: passa le verdure al setaccio o lasciale a pezzi.",
-      "Con 50 ml di Porto nella marinata."
-    ],
+    "varianti": ["Senza frullatore: passa le verdure al setaccio o lasciale a pezzi.", "Con 50 ml di Porto nella marinata."],
     "kcal": 620,
-    "foto": {
-      "copertina": "img/brasato-al-vino-rosso.webp",
-      "prompt": "thick slices of red wine braised beef with dark glossy sauce and soft polenta, white ceramic plate"
-    },
+    "foto": { "copertina": "img/brasato-al-vino-rosso.webp", "prompt": "thick slices of red wine braised beef with dark glossy sauce and soft polenta, white ceramic plate" },
     "fonte": "Tradizione piemontese"
   },
   {
@@ -1826,110 +600,35 @@
     "descrizione": "Tecnica più che ricetta: carne a temperatura ambiente, padella rovente, 2 minuti per lato, riposo. Il burro con erbe e aglio si scioglie sopra. Patate saltate nel frattempo.",
     "categoria": "secondo",
     "difficolta": "facile",
-    "tempi": {
-      "preparazione": 10,
-      "cottura": 20,
-      "riposo": 5
-    },
+    "tempi": { "preparazione": 10, "cottura": 20, "riposo": 5 },
     "porzioni": 1,
-    "costo": {
-      "fascia": "alto",
-      "stima_eur": 6
-    },
-    "attrezzatura": [
-      "padella"
-    ],
-    "tag": [
-      "veloce",
-      "da-ospiti"
-    ],
-    "dieta": [
-      "senza-glutine"
-    ],
+    "costo": { "fascia": "alto", "stima_eur": 6 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce", "da-ospiti"],
+    "dieta": ["senza-glutine"],
     "origine": "Italia / Francia",
     "reinventata": null,
     "ingredienti": [
-      {
-        "id": "bistecca",
-        "qta": 220,
-        "unita": "g",
-        "note": "alta 2–2,5 cm"
-      },
-      {
-        "id": "patate",
-        "qta": 200,
-        "unita": "g"
-      },
-      {
-        "id": "burro",
-        "qta": 30,
-        "unita": "g",
-        "note": "morbido"
-      },
-      {
-        "id": "prezzemolo",
-        "qta": null,
-        "unita": "qb"
-      },
-      {
-        "id": "timo",
-        "qta": 2,
-        "unita": "rametti"
-      },
-      {
-        "id": "aglio",
-        "qta": 1,
-        "unita": "spicchi"
-      },
-      {
-        "id": "limone",
-        "qta": 0.25,
-        "unita": "pz",
-        "note": "solo la scorza"
-      },
-      {
-        "id": "olio-evo",
-        "qta": 2,
-        "unita": "cucchiai"
-      }
+      { "id": "bistecca", "qta": 220, "unita": "g", "note": "alta 2–2,5 cm" },
+      { "id": "patate", "qta": 200, "unita": "g" },
+      { "id": "burro", "qta": 30, "unita": "g", "note": "morbido" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "timo", "qta": 2, "unita": "rametti" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "limone", "qta": 0.25, "unita": "pz", "note": "solo la scorza" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" }
     ],
     "procedimento": [
-      {
-        "n": 1,
-        "titolo": "Burro alle erbe",
-        "testo": "Tira fuori la carne dal frigo 30 minuti prima. Mescola il burro morbido con prezzemolo tritato, mezzo spicchio d'aglio grattugiato, scorza di limone, sale e pepe. Mettilo in frigo a rassodare.",
-        "minuti": 5
-      },
-      {
-        "n": 2,
-        "titolo": "Patate saltate",
-        "testo": "Taglia le patate a cubetti da 1,5 cm, sciacquale e asciugale. Cuocile in padella con olio a fuoco medio, coperte 8 minuti, poi scoperte 8 minuti girando ogni tanto, finché sono dorate. Sala, timo. Tienile da parte.",
-        "minuti": 17
-      },
-      {
-        "n": 3,
-        "titolo": "Bistecca",
-        "testo": "Asciuga la carne, sala. Scalda una padella pulita a fuoco massimo finché fuma. Un filo d'olio e la bistecca: 2 minuti senza toccarla, gira, 2 minuti. Per il bordo di grasso, tienila in verticale 30 secondi.",
-        "minuti": 5
-      },
-      {
-        "n": 4,
-        "titolo": "Riposo",
-        "testo": "Su un piatto, con una fetta di burro alle erbe sopra, 5 minuti coperta. Affetta contro fibra e servi con il burro sciolto e le patate.",
-        "minuti": 5
-      }
+      { "n": 1, "titolo": "Burro alle erbe", "testo": "Tira fuori la carne dal frigo 30 minuti prima. Mescola il burro morbido con prezzemolo tritato, mezzo spicchio d'aglio grattugiato, scorza di limone, sale e pepe. Mettilo in frigo a rassodare.", "minuti": 5 },
+      { "n": 2, "titolo": "Patate saltate", "testo": "Taglia le patate a cubetti da 1,5 cm, sciacquale e asciugale. Cuocile in padella con olio a fuoco medio, coperte 8 minuti, poi scoperte 8 minuti girando ogni tanto, finché sono dorate. Sala, timo. Tienile da parte.", "minuti": 17 },
+      { "n": 3, "titolo": "Bistecca", "testo": "Asciuga la carne, sala. Scalda una padella pulita a fuoco massimo finché fuma. Un filo d'olio e la bistecca: 2 minuti senza toccarla, gira, 2 minuti. Per il bordo di grasso, tienila in verticale 30 secondi.", "minuti": 5 },
+      { "n": 4, "titolo": "Riposo", "testo": "Su un piatto, con una fetta di burro alle erbe sopra, 5 minuti coperta. Affetta contro fibra e servi con il burro sciolto e le patate.", "minuti": 5 }
     ],
     "consigli": "Al sangue: 2 minuti per lato per 2 cm. Media: 3. Il riposo non è opzionale: senza, i succhi finiscono nel piatto.",
     "conservazione": "Il burro alle erbe in frigo 1 settimana, in freezer 3 mesi: fanne di più.",
-    "varianti": [
-      "Con senape e rosmarino nel burro.",
-      "Con funghi trifolati al posto delle patate."
-    ],
+    "varianti": ["Con senape e rosmarino nel burro.", "Con funghi trifolati al posto delle patate."],
     "kcal": 700,
-    "foto": {
-      "copertina": "img/bistecca-con-burro-alle-erbe-e-patate.webp",
-      "prompt": "sliced seared steak with melting herb butter and golden sauteed potato cubes, thyme, white ceramic plate"
-    },
+    "foto": { "copertina": "img/bistecca-con-burro-alle-erbe-e-patate.webp", "prompt": "sliced seared steak with melting herb butter and golden sauteed potato cubes, thyme, white ceramic plate" },
     "fonte": "Tecnica classica"
   }
 ]

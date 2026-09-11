@@ -34,7 +34,13 @@
     "id": "lonza-di-maiale",
     "qta": 400,
     "unita": "g",
-    "note": "in un pezzo unico (avanza per il giorno dopo)"
+    "note": "in un pezzo unico (avanza per il giorno dopo)",
+    "sostituti": [
+     {
+      "id": "filetto-di-maiale",
+      "nota": "30 minuti in meno: si asciuga"
+     }
+    ]
    },
    {
     "id": "latte",
@@ -145,7 +151,13 @@
     "id": "anatra",
     "qta": 350,
     "unita": "g",
-    "note": "una coscia grande"
+    "note": "una coscia grande",
+    "sostituti": [
+     {
+      "id": "pollo-intero",
+      "nota": "cosce: diventa arroz de frango, 20 minuti in meno"
+     }
+    ]
    },
    {
     "id": "riso-carnaroli",
@@ -156,12 +168,26 @@
    {
     "id": "chourico",
     "qta": 60,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "salsiccia",
+      "nota": "manca la paprika: aggiungine un cucchiaino"
+     }
+    ]
    },
    {
     "id": "pancetta",
     "qta": 30,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "guanciale"
+     },
+     {
+      "id": "speck"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -298,7 +324,12 @@
    {
     "id": "olive-nere",
     "qta": 20,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "olive-verdi"
+     }
+    ]
    },
    {
     "id": "prezzemolo",
@@ -511,7 +542,13 @@
     "id": "cappello-del-prete",
     "qta": 500,
     "unita": "g",
-    "note": "in un pezzo unico (avanza per 2 cene)"
+    "note": "in un pezzo unico (avanza per 2 cene)",
+    "sostituti": [
+     {
+      "id": "manzo-per-spezzatino",
+      "nota": "a pezzi grossi: 30 minuti in meno"
+     }
+    ]
    },
    {
     "id": "vino-rosso",
@@ -652,18 +689,37 @@
     "id": "bucatini",
     "qta": 100,
     "unita": "g",
-    "note": "o spaghetti/rigatoni"
+    "note": "o spaghetti/rigatoni",
+    "sostituti": [
+     {
+      "id": "spaghetti"
+     },
+     {
+      "id": "rigatoni",
+      "nota": "mezze maniche: l'altra versione ufficiale"
+     }
+    ]
    },
    {
     "id": "guanciale",
     "qta": 50,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pancetta"
+     }
+    ]
    },
    {
     "id": "pelati",
     "qta": 200,
     "unita": "g",
-    "note": "schiacciati a mano"
+    "note": "schiacciati a mano",
+    "sostituti": [
+     {
+      "id": "passata"
+     }
+    ]
    },
    {
     "id": "pecorino",
@@ -743,7 +799,16 @@
     "id": "spaghetti",
     "qta": 100,
     "unita": "g",
-    "note": "o tonnarelli"
+    "note": "o tonnarelli",
+    "sostituti": [
+     {
+      "id": "rigatoni",
+      "nota": "mezze maniche o tonnarelli: le altre versioni romane"
+     },
+     {
+      "id": "bucatini"
+     }
+    ]
    },
    {
     "id": "pecorino",
@@ -839,13 +904,28 @@
     "id": "cavolo-nero",
     "qta": 80,
     "unita": "g",
-    "note": "couve galega, a striscioline finissime (al supermercato la vendono già tagliata)"
+    "note": "couve galega, a striscioline finissime (al supermercato la vendono già tagliata)",
+    "sostituti": [
+     {
+      "id": "verza",
+      "nota": "couve lombarda: è la versione di casa"
+     },
+     {
+      "id": "cime-di-rapa"
+     }
+    ]
    },
    {
     "id": "chourico",
     "qta": 50,
     "unita": "g",
-    "note": "a rondelle"
+    "note": "a rondelle",
+    "sostituti": [
+     {
+      "id": "salsiccia",
+      "nota": "manca la paprika: aggiungine un cucchiaino"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -936,7 +1016,13 @@
     "id": "petto-di-pollo",
     "qta": 200,
     "unita": "g",
-    "note": "a bocconcini"
+    "note": "a bocconcini",
+    "sostituti": [
+     {
+      "id": "pollo-intero",
+      "nota": "cosce disossate: più saporite, 10 minuti in più"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -963,7 +1049,13 @@
    {
     "id": "latte-di-cocco",
     "qta": 150,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "yogurt-greco",
+      "nota": "a fuoco spento, altrimenti impazzisce"
+     }
+    ]
    },
    {
     "id": "riso-carnaroli",
@@ -1059,7 +1151,16 @@
     "id": "costoletta-di-vitello",
     "qta": 250,
     "unita": "g",
-    "note": "con osso, alta 2 cm"
+    "note": "con osso, alta 2 cm",
+    "sostituti": [
+     {
+      "id": "petto-di-pollo",
+      "nota": "battuto a 1 cm: cotoletta di pollo"
+     },
+     {
+      "id": "fettine-di-tacchino"
+     }
+    ]
    },
    {
     "id": "uova",
@@ -1177,7 +1278,15 @@
    {
     "id": "prosciutto-cotto",
     "qta": 60,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "mortadella"
+     },
+     {
+      "id": "prosciutto-crudo"
+     }
+    ]
    },
    {
     "id": "formaggio-fuso",
@@ -1386,13 +1495,28 @@
     "id": "filetto-di-maiale",
     "qta": 250,
     "unita": "g",
-    "note": "un pezzo intero"
+    "note": "un pezzo intero",
+    "sostituti": [
+     {
+      "id": "lonza-di-maiale",
+      "nota": "20 minuti in più: è più spessa"
+     }
+    ]
    },
    {
     "id": "pancetta",
     "qta": 6,
     "unita": "fette",
-    "note": "sottili, o bacon"
+    "note": "sottili, o bacon",
+    "sostituti": [
+     {
+      "id": "speck",
+      "nota": "fette larghe, avvolgono meglio"
+     },
+     {
+      "id": "prosciutto-crudo"
+     }
+    ]
    },
    {
     "id": "senape",
@@ -1709,7 +1833,13 @@
    {
     "id": "funghi-champignon",
     "qta": 250,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "porcini-secchi",
+      "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata"
+     }
+    ]
    },
    {
     "id": "aglio",
@@ -1925,7 +2055,12 @@
    {
     "id": "olive-nere",
     "qta": 25,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "olive-verdi"
+     }
+    ]
    },
    {
     "id": "olio-evo",
@@ -2104,18 +2239,44 @@
     "id": "fettine-di-tacchino",
     "qta": 160,
     "unita": "g",
-    "note": "3 fettine sottili"
+    "note": "3 fettine sottili",
+    "sostituti": [
+     {
+      "id": "fettine-di-vitello"
+     },
+     {
+      "id": "petto-di-pollo",
+      "nota": "aperto a libro e battuto sottile"
+     }
+    ]
    },
    {
     "id": "speck",
     "qta": 3,
-    "unita": "fette"
+    "unita": "fette",
+    "sostituti": [
+     {
+      "id": "pancetta"
+     },
+     {
+      "id": "prosciutto-crudo"
+     }
+    ]
    },
    {
     "id": "provola",
     "qta": 45,
     "unita": "g",
-    "note": "scamorza o flamengo, a bastoncini"
+    "note": "scamorza o flamengo, a bastoncini",
+    "sostituti": [
+     {
+      "id": "mozzarella",
+      "nota": "scolala bene un'ora prima: rilascia acqua"
+     },
+     {
+      "id": "formaggio-fuso"
+     }
+    ]
    },
    {
     "id": "salvia",
@@ -2213,23 +2374,52 @@
    {
     "id": "funghi-champignon",
     "qta": 200,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "porcini-secchi",
+      "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata"
+     }
+    ]
    },
    {
     "id": "prosciutto-cotto",
     "qta": 60,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "mortadella"
+     },
+     {
+      "id": "speck"
+     }
+    ]
    },
    {
     "id": "mozzarella",
     "qta": 80,
     "unita": "g",
-    "note": "o formaggio flamengo"
+    "note": "o formaggio flamengo",
+    "sostituti": [
+     {
+      "id": "provola",
+      "nota": "affumicata: più decisa"
+     },
+     {
+      "id": "formaggio-fuso"
+     }
+    ]
    },
    {
     "id": "latte",
     "qta": 300,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "panna-fresca",
+      "nota": "più ricca: dimezza il burro"
+     }
+    ]
    },
    {
     "id": "burro",
@@ -2349,7 +2539,13 @@
     "id": "farro",
     "qta": 60,
     "unita": "g",
-    "note": "perlato"
+    "note": "perlato",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "20 minuti invece di 30"
+     }
+    ]
    },
    {
     "id": "zucca",
@@ -2360,7 +2556,15 @@
     "id": "cavolo-nero",
     "qta": 80,
     "unita": "g",
-    "note": "senza la costa centrale"
+    "note": "senza la costa centrale",
+    "sostituti": [
+     {
+      "id": "verza"
+     },
+     {
+      "id": "cime-di-rapa"
+     }
+    ]
    },
    {
     "id": "fagioli-cannellini",
@@ -2474,7 +2678,13 @@
     "id": "orata",
     "qta": 400,
     "unita": "g",
-    "note": "una, pulita e squamata dal pescivendolo"
+    "note": "una, pulita e squamata dal pescivendolo",
+    "sostituti": [
+     {
+      "id": "salmone",
+      "nota": "un trancio: 20 minuti bastano"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -2485,7 +2695,12 @@
    {
     "id": "olive-nere",
     "qta": 30,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "olive-verdi"
+     }
+    ]
    },
    {
     "id": "aglio",
@@ -2588,18 +2803,36 @@
    {
     "id": "orecchiette",
     "qta": 90,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pasta-corta",
+      "nota": "cavatelli o fusilli"
+     }
+    ]
    },
    {
     "id": "cime-di-rapa",
     "qta": 200,
     "unita": "g",
-    "note": "grelos, pulite"
+    "note": "grelos, pulite",
+    "sostituti": [
+     {
+      "id": "broccoli",
+      "nota": "solo le cime: più dolce, meno amaro"
+     }
+    ]
    },
    {
     "id": "salsiccia",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "macinato-misto",
+      "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
+     }
+    ]
    },
    {
     "id": "aglio",
@@ -2654,7 +2887,7 @@
   "consigli": "In Puglia si cuociono pasta e verdura nella stessa acqua: l'acqua diventa verde e saporita e la pasta si insaporisce.",
   "conservazione": "In frigo 1 giorno; riscalda in padella.",
   "varianti": [
-   "Senza salsiccia, con più acciughe e un pizzico di peperoncino (se un giorno cambi idea sul piccante).",
+   "Senza salsiccia, con più acciughe e un pizzico di peperoncino: la versione pugliese di magro.",
    "Con pecorino grattugiato al posto del pangrattato."
   ],
   "kcal": 590,
@@ -2817,18 +3050,39 @@
     "id": "melanzane",
     "qta": 350,
     "unita": "g",
-    "note": "una grande, a fette da 5 mm per il lungo"
+    "note": "una grande, a fette da 5 mm per il lungo",
+    "sostituti": [
+     {
+      "id": "zucchine",
+      "nota": "grigliate: parmigiana di zucchine, più leggera"
+     }
+    ]
    },
    {
     "id": "passata",
     "qta": 250,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "pelati",
+      "nota": "schiacciali con la forchetta"
+     }
+    ]
    },
    {
     "id": "mozzarella",
     "qta": 100,
     "unita": "g",
-    "note": "ben sgocciolata"
+    "note": "ben sgocciolata",
+    "sostituti": [
+     {
+      "id": "provola",
+      "nota": "affumicata, alla napoletana"
+     },
+     {
+      "id": "formaggio-fuso"
+     }
+    ]
    },
    {
     "id": "parmigiano",
@@ -2923,23 +3177,50 @@
    {
     "id": "rigatoni",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pasta-corta",
+      "nota": "penne o mezze maniche"
+     }
+    ]
    },
    {
     "id": "salsiccia",
     "qta": 90,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "macinato-misto",
+      "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
+     }
+    ]
    },
    {
     "id": "provola",
     "qta": 60,
     "unita": "g",
-    "note": "scamorza affumicata"
+    "note": "scamorza affumicata",
+    "sostituti": [
+     {
+      "id": "mozzarella",
+      "nota": "scolala bene un'ora prima: rilascia acqua"
+     },
+     {
+      "id": "formaggio-fuso"
+     }
+    ]
    },
    {
     "id": "latte",
     "qta": 200,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "panna-fresca",
+      "nota": "più ricca: dimezza il burro"
+     }
+    ]
    },
    {
     "id": "burro",
@@ -3041,7 +3322,16 @@
     "id": "spaghetti",
     "qta": 100,
     "unita": "g",
-    "note": "o linguine"
+    "note": "o linguine",
+    "sostituti": [
+     {
+      "id": "pasta-corta",
+      "nota": "penne o linguine"
+     },
+     {
+      "id": "bucatini"
+     }
+    ]
    },
    {
     "id": "limone",
@@ -3052,7 +3342,16 @@
    {
     "id": "mascarpone",
     "qta": 50,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "ricotta",
+      "nota": "più leggera: un cucchiaio d'acqua di cottura in più"
+     },
+     {
+      "id": "stracchino"
+     }
+    ]
    },
    {
     "id": "parmigiano",
@@ -3142,12 +3441,30 @@
     "id": "rigatoni",
     "qta": 100,
     "unita": "g",
-    "note": "o mezze maniche"
+    "note": "o mezze maniche",
+    "sostituti": [
+     {
+      "id": "pasta-corta",
+      "nota": "mezze maniche"
+     },
+     {
+      "id": "spaghetti"
+     }
+    ]
    },
    {
     "id": "guanciale",
     "qta": 50,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pancetta"
+     },
+     {
+      "id": "speck",
+      "nota": "affumicato: il piatto cambia carattere, ma regge"
+     }
+    ]
    },
    {
     "id": "pecorino",
@@ -3238,7 +3555,15 @@
     "id": "rigatoni",
     "qta": 90,
     "unita": "g",
-    "note": "o maccheroni"
+    "note": "o maccheroni",
+    "sostituti": [
+     {
+      "id": "pasta-corta"
+     },
+     {
+      "id": "spaghetti"
+     }
+    ]
    },
    {
     "id": "melanzane",
@@ -3249,13 +3574,25 @@
    {
     "id": "passata",
     "qta": 200,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "pelati",
+      "nota": "schiacciali con la forchetta"
+     }
+    ]
    },
    {
     "id": "ricotta-salata",
     "qta": 30,
     "unita": "g",
-    "note": "grattugiata grossa"
+    "note": "grattugiata grossa",
+    "sostituti": [
+     {
+      "id": "pecorino",
+      "nota": "grattugiato grosso"
+     }
+    ]
    },
    {
     "id": "aglio",
@@ -3344,7 +3681,15 @@
     "id": "pasta-corta",
     "qta": 90,
     "unita": "g",
-    "note": "penne o fusilli"
+    "note": "penne o fusilli",
+    "sostituti": [
+     {
+      "id": "spaghetti"
+     },
+     {
+      "id": "rigatoni"
+     }
+    ]
    },
    {
     "id": "zucchine",
@@ -3355,7 +3700,16 @@
     "id": "speck",
     "qta": 40,
     "unita": "g",
-    "note": "a listarelle"
+    "note": "a listarelle",
+    "sostituti": [
+     {
+      "id": "pancetta"
+     },
+     {
+      "id": "prosciutto-crudo",
+      "nota": "a striscioline, aggiunto a fuoco spento"
+     }
+    ]
    },
    {
     "id": "zafferano",
@@ -3448,13 +3802,32 @@
     "id": "pasta-corta",
     "qta": 70,
     "unita": "g",
-    "note": "ditalini o pasta mista"
+    "note": "ditalini o pasta mista",
+    "sostituti": [
+     {
+      "id": "spaghetti",
+      "nota": "spezzati a mano: è la versione romana vera"
+     },
+     {
+      "id": "rigatoni"
+     }
+    ]
    },
    {
     "id": "ceci",
     "qta": 200,
     "unita": "g",
-    "note": "sgocciolati (un barattolo piccolo)"
+    "note": "sgocciolati (un barattolo piccolo)",
+    "sostituti": [
+     {
+      "id": "fagioli-cannellini",
+      "nota": "diventa pasta e fagioli, e va benissimo"
+     },
+     {
+      "id": "lenticchie",
+      "nota": "cotte a parte, senza schiacciarle"
+     }
+    ]
    },
    {
     "id": "acciughe",
@@ -3562,7 +3935,16 @@
     "id": "pasta-corta",
     "qta": 80,
     "unita": "g",
-    "note": "pasta mista o tubetti"
+    "note": "pasta mista o tubetti",
+    "sostituti": [
+     {
+      "id": "spaghetti",
+      "nota": "spezzati a mano"
+     },
+     {
+      "id": "rigatoni"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -3574,7 +3956,16 @@
     "id": "provola",
     "qta": 50,
     "unita": "g",
-    "note": "a cubetti"
+    "note": "a cubetti",
+    "sostituti": [
+     {
+      "id": "mozzarella",
+      "nota": "scolala bene un'ora prima: rilascia acqua"
+     },
+     {
+      "id": "formaggio-fuso"
+     }
+    ]
    },
    {
     "id": "pancetta",
@@ -3996,7 +4387,13 @@
    {
     "id": "macinato-misto",
     "qta": 120,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "salsiccia",
+      "nota": "sbriciolata, senza altro sale"
+     }
+    ]
    },
    {
     "id": "riso-carnaroli",
@@ -4028,7 +4425,13 @@
    {
     "id": "passata",
     "qta": 100,
-    "unita": "ml"
+    "unita": "ml",
+    "sostituti": [
+     {
+      "id": "pelati",
+      "nota": "schiacciali con la forchetta"
+     }
+    ]
    },
    {
     "id": "olio-evo",
@@ -4123,12 +4526,29 @@
    {
     "id": "stracchino",
     "qta": 70,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "stracciatella"
+     },
+     {
+      "id": "ricotta",
+      "nota": "con un filo d'olio e sale"
+     }
+    ]
    },
    {
     "id": "prosciutto-crudo",
     "qta": 3,
-    "unita": "fette"
+    "unita": "fette",
+    "sostituti": [
+     {
+      "id": "speck"
+     },
+     {
+      "id": "prosciutto-cotto"
+     }
+    ]
    },
    {
     "id": "rucola",
@@ -4338,12 +4758,28 @@
    {
     "id": "salsiccia",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "macinato-misto",
+      "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
+     },
+     {
+      "id": "chourico",
+      "nota": "a rondelle: più paprika, meno finocchietto"
+     }
+    ]
    },
    {
     "id": "funghi-champignon",
     "qta": 150,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "porcini-secchi",
+      "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -4450,12 +4886,22 @@
    {
     "id": "pelati",
     "qta": 150,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "passata"
+     }
+    ]
    },
    {
     "id": "olive-nere",
     "qta": 30,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "olive-verdi"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -4669,12 +5115,24 @@
    {
     "id": "macinato-misto",
     "qta": 180,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "salsiccia",
+      "nota": "sbriciolata, senza altro sale"
+     }
+    ]
    },
    {
     "id": "pane-raffermo",
     "qta": 30,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pangrattato",
+      "nota": "ne basta la metà, ammollato nel latte"
+     }
+    ]
    },
    {
     "id": "latte",
@@ -4805,12 +5263,24 @@
    {
     "id": "cavolo-nero",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "verza",
+      "nota": "doppia dose di verza"
+     }
+    ]
    },
    {
     "id": "verza",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "cavolo-nero",
+      "nota": "doppia dose di cavolo nero"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -4943,7 +5413,13 @@
    {
     "id": "porcini-secchi",
     "qta": 15,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "funghi-champignon",
+      "nota": "200 g freschi: meno intenso, salta prima a fuoco vivo"
+     }
+    ]
    },
    {
     "id": "funghi-champignon",
@@ -5182,13 +5658,29 @@
     "id": "zucca",
     "qta": 200,
     "unita": "g",
-    "note": "pulita, a cubetti da 1 cm"
+    "note": "pulita, a cubetti da 1 cm",
+    "sostituti": [
+     {
+      "id": "zucchine",
+      "nota": "con la buccia, a dadini: entrano a metà cottura"
+     }
+    ]
    },
    {
     "id": "salsiccia",
     "qta": 80,
     "unita": "g",
-    "note": "una salsiccia, senza budello"
+    "note": "una salsiccia, senza budello",
+    "sostituti": [
+     {
+      "id": "macinato-misto",
+      "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
+     },
+     {
+      "id": "chourico",
+      "nota": "a dadini, rosolato: più affumicato"
+     }
+    ]
    },
    {
     "id": "cipolla",
@@ -5422,7 +5914,15 @@
    {
     "id": "pistacchi",
     "qta": 20,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "mandorle"
+     },
+     {
+      "id": "noci"
+     }
+    ]
    },
    {
     "id": "pangrattato",
@@ -5524,12 +6024,27 @@
     "id": "fettine-di-vitello",
     "qta": 150,
     "unita": "g",
-    "note": "3 fettine piccole e sottili"
+    "note": "3 fettine piccole e sottili",
+    "sostituti": [
+     {
+      "id": "fettine-di-tacchino"
+     },
+     {
+      "id": "petto-di-pollo",
+      "nota": "battuto sottile: un minuto in più"
+     }
+    ]
    },
    {
     "id": "prosciutto-crudo",
     "qta": 3,
-    "unita": "fette"
+    "unita": "fette",
+    "sostituti": [
+     {
+      "id": "speck",
+      "nota": "affumicato: meno classico, ma buono"
+     }
+    ]
    },
    {
     "id": "salvia",
@@ -5618,7 +6133,16 @@
     "id": "fettine-di-vitello",
     "qta": 150,
     "unita": "g",
-    "note": "2 fettine sottili, battute"
+    "note": "2 fettine sottili, battute",
+    "sostituti": [
+     {
+      "id": "fettine-di-tacchino"
+     },
+     {
+      "id": "petto-di-pollo",
+      "nota": "battuto sottile: un minuto in più"
+     }
+    ]
    },
    {
     "id": "farina-00",
@@ -5721,7 +6245,16 @@
    {
     "id": "spaghetti",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "bucatini"
+     },
+     {
+      "id": "pasta-corta",
+      "nota": "il pangrattato si attacca meno: abbonda con l'olio"
+     }
+    ]
    },
    {
     "id": "aglio",
@@ -5823,7 +6356,16 @@
    {
     "id": "spaghetti",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "rigatoni",
+      "nota": "mezze maniche: la versione \"da cucchiaio\""
+     },
+     {
+      "id": "bucatini"
+     }
+    ]
    },
    {
     "id": "guanciale",
@@ -5941,17 +6483,38 @@
    {
     "id": "spaghetti",
     "qta": 90,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "bucatini"
+     },
+     {
+      "id": "pasta-corta",
+      "nota": "il condimento si lega meno: scola un minuto prima e finisci in padella"
+     }
+    ]
    },
    {
     "id": "macinato-misto",
     "qta": 150,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "salsiccia",
+      "nota": "sbriciolata, senza altro sale"
+     }
+    ]
    },
    {
     "id": "pane-raffermo",
     "qta": 20,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "pangrattato",
+      "nota": "ne basta la metà, ammollato nel latte"
+     }
+    ]
    },
    {
     "id": "latte",
@@ -6077,7 +6640,13 @@
     "id": "manzo-per-spezzatino",
     "qta": 250,
     "unita": "g",
-    "note": "cubi da 3 cm"
+    "note": "cubi da 3 cm",
+    "sostituti": [
+     {
+      "id": "cappello-del-prete",
+      "nota": "a cubi: 20 minuti in più"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -6320,7 +6889,13 @@
    {
     "id": "savoiardi",
     "qta": 6,
-    "unita": "pz"
+    "unita": "pz",
+    "sostituti": [
+     {
+      "id": "biscotti-secchi",
+      "nota": "inzuppali meno: si sfaldano prima"
+     }
+    ]
    },
    {
     "id": "caffe",
@@ -6527,7 +7102,13 @@
    {
     "id": "zucca",
     "qta": 300,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "carote",
+      "nota": "vellutata di carote: stessa tecnica, 5 minuti in più"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -6645,12 +7226,29 @@
    {
     "id": "verza",
     "qta": 250,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "cavolo-nero"
+     }
+    ]
    },
    {
     "id": "pancetta",
     "qta": 40,
-    "unita": "g"
+    "unita": "g",
+    "sostituti": [
+     {
+      "id": "guanciale"
+     },
+     {
+      "id": "speck"
+     },
+     {
+      "id": "chourico",
+      "nota": "a rondelle: più paprika, meno finocchietto"
+     }
+    ]
    },
    {
     "id": "cipolla",
