@@ -61,6 +61,8 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
       .map((i) => i.id);
     const mancanti = richiesti.filter((id) => !posseduti.has(id));
     if (mancanti.length > maxMancanti) continue;
+    // niente in comune con la dispensa (oltre alle basi): non è un suggerimento, è rumore
+    if (richiesti.length && mancanti.length === richiesti.length) continue;
     const copertura = richiesti.length ? (richiesti.length - mancanti.length) / richiesti.length : 1;
     out.push({ ricetta, mancanti, copertura });
   }
@@ -68,6 +70,7 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
   out.sort(
     (a, b) =>
       a.mancanti.length - b.mancanti.length ||
+      b.copertura - a.copertura ||
       tempoTotale(a.ricetta) - tempoTotale(b.ricetta) ||
       a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'),
   );

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cucina · cosa cucino stasera</title>
+  <meta name="description" content="Ricettario personale: scrivi cosa hai in dispensa e sfoglia le ricette che puoi cucinare stasera.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232E2E2E'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial' font-weight='800' font-size='20' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dispensa.css">
+  <link rel="stylesheet" href="css/risultati.css">
+  <link rel="stylesheet" href="css/libro.css">
+</head>
+<body>
+<!--
+THESIS: A cookbook that is a typographic grid before it is a gallery. The screen is a Swiss spread — twelve columns, hairline rules, one grotesque in two widths, black on white — and the plate of food is the single colored object placed on it. It refuses the recipe-app default: a grid of rounded photo cards with colored badges and a pill filter bar.
+OWN-WORLD: paper #FFFFFF, ink #2E2E2E, ash #E8E8E8 rules, mist #F4F4F4 fields; Archivo variable (width 62 for display, 100 for text), tabular numerals; zero radius; buttons are black rectangles; chips are 1px ruled rectangles; photos 4:5 unfiltered. Remove every word and the rules, the fractions and the black bars still read as this book.
+STORY: "I have zucca, salsiccia, riso" → an index ranked by what I already have, missing items named → a spread to cook from, one step per phone screen, screen awake.
+FIRST VIEWPORT (dispensa, desktop): left, columns 1–5: "Cosa cucino stasera?" at 96px condensed black, under it one 20px line about the pantry basics. Right, columns 7–12: a 32px input on a single hairline, chips beneath, then the ingredient index by category as ruled rows. Bottom right, on the grid: the black "Cosa cucino →" bar with the live count. Mobile stacks the same order; the black bar sticks to the bottom.
+FORM: Swiss typographic spread, brief-pinned by the user (reference/ posters and cookbook spreads); no roll. Signature interaction: the page turn — desktop spreads slide as pages, mobile snaps one step per screen with a poster-size step numeral; coverage is a fraction "5/6", never a bar. Motion grammar: one exponential ease-out, 320ms, entrance once.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
+
+<header class="topbar">
+  <a class="wordmark" href="#/" aria-label="Cucina, torna alla dispensa">Cucina</a>
+  <nav class="topbar-nav" aria-label="Sezioni">
+    <a href="#/" data-nav="dispensa">Dispensa</a>
+    <a href="#/risultati" data-nav="risultati">Ricette</a>
+  </nav>
+  <span class="topbar-meta" id="topbar-meta">Bragança · 2026</span>
+</header>
+
+<main id="app">
+  <!-- ===== DISPENSA ===== -->
+  <section class="view view-dispensa" id="view-dispensa" hidden>
+    <div class="dispensa-grid">
+      <div class="dispensa-intro">
+        <h1 class="display">Cosa cucino stasera?</h1>
+        <p class="lede">Scrivi cosa hai in casa. Olio, sale, aglio, cipolla, burro e le altre basi le do per scontate.</p>
+        <p class="basi" id="basi"></p>
+      </div>
+
+      <div class="dispensa-input">
+        <form class="ingresso" id="ingresso" autocomplete="off">
+          <label class="label" for="ingrediente">Ingrediente</label>
+          <div class="ingresso-field">
+            <input id="ingrediente" name="ingrediente" type="text" inputmode="text" enterkeyhint="done"
+                   placeholder="zucca, salsiccia, riso…" aria-autocomplete="list" aria-controls="suggerimenti" aria-expanded="false">
+            <button type="submit" class="ingresso-add" aria-label="Aggiungi ingrediente">+</button>
+          </div>
+          <ul class="suggerimenti" id="suggerimenti" role="listbox" hidden></ul>
+          <p class="ingresso-msg" id="ingresso-msg" aria-live="polite"></p>
+        </form>
+
+        <ul class="chips" id="chips" aria-label="Ingredienti scelti"></ul>
+
+        <div class="indice-ingredienti" id="indice-ingredienti"></div>
+      </div>
+    </div>
+
+    <div class="azione-bar" id="azione-bar">
+      <span class="azione-count" id="azione-count">Nessun ingrediente</span>
+      <button type="button" class="btn-primary" id="btn-cucina" disabled>Cosa cucino <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+
+  <!-- ===== RISULTATI ===== -->
+  <section class="view view-risultati" id="view-risultati" hidden>
+    <div class="risultati-testa">
+      <h1 class="display display-md" id="risultati-titolo">Ricette</h1>
+      <p class="risultati-sotto" id="risultati-sotto"></p>
+    </div>
+
+    <form class="filtri" id="filtri" aria-label="Filtri">
+      <label class="filtro"><span class="label">Portata</span>
+        <select name="cat">
+          <option value="">Tutte</option>
+          <option value="primo">Primi</option>
+          <option value="secondo">Secondi</option>
+          <option value="piatto-unico">Piatti unici</option>
+          <option value="contorno">Contorni</option>
+          <option value="dolce">Dolci</option>
+        </select></label>
+      <label class="filtro"><span class="label">Difficoltà</span>
+        <select name="diff">
+          <option value="">Tutte</option>
+          <option value="molto-facile">Molto facile</option>
+          <option value="facile">Facile</option>
+          <option value="media">Media</option>
+          <option value="difficile">Difficile</option>
+        </select></label>
+      <label class="filtro"><span class="label">Tempo</span>
+        <select name="t">
+          <option value="">Qualsiasi</option>
+          <option value="30">entro 30′</option>
+          <option value="45">entro 45′</option>
+          <option value="60">entro 60′</option>
+          <option value="90">entro 90′</option>
+        </select></label>
+      <label class="filtro"><span class="label">Costo</span>
+        <select name="costo">
+          <option value="">Qualsiasi</option>
+          <option value="basso">Basso (≤ 3 €)</option>
+          <option value="medio">Medio (3–6 €)</option>
+          <option value="alto">Alto (6–10 €)</option>
+        </select></label>
+      <label class="filtro"><span class="label">Dieta</span>
+        <select name="dieta">
+          <option value="">Tutte</option>
+          <option value="vegetariano">Vegetariana</option>
+          <option value="vegano">Vegana</option>
+          <option value="senza-glutine">Senza glutine</option>
+          <option value="senza-lattosio">Senza lattosio</option>
+        </select></label>
+      <label class="filtro"><span class="label">Tag</span>
+        <select name="tag">
+          <option value="">Tutti</option>
+          <option value="veloce">Veloce</option>
+          <option value="one-pan">Una padella</option>
+          <option value="avanzi">Avanzi per domani</option>
+          <option value="da-ospiti">Da ospiti</option>
+          <option value="low-cost">Low cost</option>
+          <option value="weekend">Weekend</option>
+          <option value="portoghese">Portoghese</option>
+          <option value="classico">Classico</option>
+        </select></label>
+      <label class="filtro filtro-check"><input type="checkbox" name="attr" value="1"><span>Solo con la mia attrezzatura</span></label>
+      <label class="filtro filtro-sort"><span class="label">Ordina</span>
+        <select name="sort">
+          <option value="">Per copertura</option>
+          <option value="tempo">Per tempo</option>
+          <option value="costo">Per costo</option>
+          <option value="diff">Per difficoltà</option>
+          <option value="az">A–Z</option>
+        </select></label>
+    </form>
+
+    <ol class="indice" id="indice"></ol>
+    <p class="indice-vuoto" id="indice-vuoto" hidden></p>
+  </section>
+
+  <!-- ===== RICETTA / LIBRO ===== -->
+  <section class="view view-libro" id="view-libro" hidden>
+    <div class="libro" id="libro"></div>
+    <nav class="libro-nav" aria-label="Pagine">
+      <button type="button" class="libro-btn" id="libro-prev" aria-label="Pagina precedente">←</button>
+      <span class="libro-pos" id="libro-pos" aria-live="polite">1 / 1</span>
+      <button type="button" class="libro-btn" id="libro-next" aria-label="Pagina successiva">→</button>
+    </nav>
+  </section>
+
+  <section class="view view-errore" id="view-errore" hidden>
+    <h1 class="display display-md">Pagina non trovata</h1>
+    <p><a href="#/">Torna alla dispensa</a></p>
+  </section>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Cucina — tokens. Swiss: paper, ink, two greys, one grotesque in two widths. */
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/archivo-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/archivo-italic.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --paper: #ffffff;
+  --ink: #2e2e2e;
+  --ink-2: #6b6b6b;      /* secondary text, 5.7:1 on paper */
+  --ash: #e8e8e8;        /* rules */
+  --mist: #f4f4f4;       /* fields, hover */
+  --rule: 1px solid var(--ash);
+  --rule-ink: 1px solid var(--ink);
+
+  --font: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --wdth-text: 100;
+  --wdth-display: 68;
+
+  --u: 8px;
+  --gutter: 24px;
+  --margin: 32px;
+  --topbar: 56px;
+
+  --t-xs: 12px;
+  --t-sm: 14px;
+  --t-md: 16px;
+  --t-lg: 20px;
+  --t-xl: 28px;
+  --t-2xl: 40px;
+  --t-3xl: 64px;
+  --t-poster: clamp(56px, 9vw, 112px);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 320ms;
+}
+
+@media (max-width: 899px) {
+  :root {
+    --margin: 20px;
+    --gutter: 16px;
+    --topbar: 52px;
+  }
+}

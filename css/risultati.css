@@ -1,0 +1,108 @@
+/* Cucina — risultati (the index) */
+.risultati-testa {
+  padding: calc(var(--u) * 5) var(--margin) calc(var(--u) * 3);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  align-items: end;
+}
+.risultati-testa .display { grid-column: 1 / span 8; }
+.risultati-sotto { grid-column: 9 / span 4; font-size: var(--t-sm); color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; }
+.risultati-sotto strong { color: var(--ink); font-weight: 700; }
+.risultati-sotto a { text-decoration: underline; text-underline-offset: 0.18em; }
+
+.filtri {
+  position: sticky;
+  top: var(--topbar);
+  z-index: 10;
+  background: var(--paper);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px var(--gutter);
+  padding: 12px var(--margin);
+  border-top: var(--rule-ink);
+  border-bottom: var(--rule);
+}
+.filtro { display: flex; flex-direction: column; gap: 2px; }
+.filtro .label { font-size: 11px; }
+.filtro-check { flex-direction: row; align-items: center; gap: 8px; align-self: end; padding: 8px 0; font-size: var(--t-sm); font-weight: 600; }
+.filtro-check input { width: 16px; height: 16px; margin: 0; }
+.filtro-sort { margin-left: auto; }
+
+/* index rows */
+.indice { padding: 0 var(--margin); }
+.riga {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  column-gap: var(--gutter);
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: var(--rule);
+  animation: riga-in 480ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 40ms);
+  transition: background var(--dur) var(--ease);
+  margin: 0 calc(var(--margin) * -1);
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+}
+.riga:hover { background: var(--mist); }
+.riga:hover .riga-titolo { text-decoration: underline; text-underline-offset: 0.12em; text-decoration-thickness: 2px; }
+@keyframes riga-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.riga a { display: contents; }
+.riga .foto { width: 96px; aspect-ratio: 4 / 5; container-type: inline-size; }
+.riga .foto-ph { font-size: 18px; padding: 8px; }
+.riga-corpo { min-width: 0; }
+.riga-titolo {
+  font-variation-settings: 'wdth' var(--wdth-display);
+  font-weight: 800;
+  font-size: var(--t-xl);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+  text-wrap: balance;
+}
+.riga-meta { font-size: var(--t-sm); color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 0 12px; font-variant-numeric: tabular-nums; }
+.riga-meta .cat { color: var(--ink); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: var(--t-xs); }
+.riga-meta .attr-manca { color: var(--ink); border: var(--rule-ink); padding: 0 6px; font-size: var(--t-xs); letter-spacing: 0.04em; }
+.riga-cop { text-align: right; min-width: 120px; }
+.riga-cop .frazione {
+  font-variation-settings: 'wdth' var(--wdth-display);
+  font-weight: 800;
+  font-size: var(--t-2xl);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.riga-cop .frazione small { font-size: 0.55em; font-weight: 600; color: var(--ink-2); }
+.riga-cop .manca { font-size: var(--t-sm); color: var(--ink-2); margin-top: 4px; }
+.riga-cop .manca b { color: var(--ink); font-weight: 600; }
+.riga.completa .riga-cop .manca { color: var(--ink); }
+
+.indice-vuoto { padding: calc(var(--u) * 6) var(--margin); font-size: var(--t-lg); max-width: 50ch; }
+.indice-vuoto a { text-decoration: underline; text-underline-offset: 0.18em; }
+
+.indice-sezione {
+  padding: calc(var(--u) * 4) 0 calc(var(--u) * 1);
+  border-bottom: var(--rule-ink);
+}
+.indice-sezione .label { color: var(--ink); }
+
+@media (max-width: 899px) {
+  .risultati-testa { display: block; padding-top: calc(var(--u) * 3); }
+  .risultati-testa .display-md { font-size: var(--t-2xl); }
+  .risultati-sotto { text-align: left; margin-top: 8px; }
+  .filtri { gap: 6px 16px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+  .filtri::-webkit-scrollbar { display: none; }
+  .filtro { flex: 0 0 auto; }
+  .filtro-sort { margin-left: 0; }
+  select { min-width: 0; }
+  .riga { grid-template-columns: 64px 1fr; row-gap: 8px; padding: 14px var(--margin); }
+  .riga .foto { width: 64px; }
+  .riga-titolo { font-size: 22px; }
+  .riga-cop { grid-column: 2; text-align: left; display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+  .riga-cop .frazione { font-size: var(--t-xl); }
+  .riga-cop .manca { margin: 0; }
+}
+
+.riga:focus-within { outline: 2px solid var(--ink); outline-offset: -2px; }
+.riga a:focus-visible { outline: 0; }

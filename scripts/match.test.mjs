@@ -91,8 +91,8 @@ test('abbina: scarta le ricette con più di maxMancanti (default 2)', () => {
 
 test('abbina: ordina per numero di mancanti, poi per tempo totale crescente', () => {
   const out = abbina({ ricette, indice, ingredienti: ['zucca', 'salsiccia', 'riso', 'uova', 'pecorino'] });
-  // tutte a 0 mancanti tranne sugo (passata): carbonara 15′ < risotto 20′ < zucca-forno 35′; sugo (1 mancante) ultimo
-  assert.deepEqual(out.map((x) => x.ricetta.slug), ['carbonara', 'risotto-zucca', 'zucca-forno', 'sugo']);
+  // tutte a 0 mancanti: carbonara 15′ < risotto 20′ < zucca-forno 35′; sugo (0 posseduti) escluso
+  assert.deepEqual(out.map((x) => x.ricetta.slug), ['carbonara', 'risotto-zucca', 'zucca-forno']);
 });
 
 test('abbina: input sconosciuti o vietati vengono ignorati e riportati', () => {
@@ -124,4 +124,19 @@ test('scalaQuantita: q.b. resta null', () => {
 test('scalaQuantita: cucchiai e cucchiaini mantengono il mezzo', () => {
   assert.equal(scalaQuantita({ qta: 0.5, unita: 'cucchiai' }, 1), 0.5);
   assert.equal(scalaQuantita({ qta: 1.5, unita: 'cucchiaini' }, 2), 3);
+});
+
+test('abbina: una ricetta di cui non possiedi nessun ingrediente non compare', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['zucca'] });
+  // "sugo" richiede solo passata (cipolla e olio sono base): 0 posseduti → fuori
+  assert.ok(!out.some((x) => x.ricetta.slug === 'sugo'));
+});
+
+test('abbina: a parità di mancanti, prima la copertura più alta', () => {
+  const r2 = [
+    R('a-due', ['zucca', 'pecorino'], { tempi: { preparazione: 1, cottura: 1, riposo: 0 } }),          // 1/2
+    R('b-quattro', ['zucca', 'salsiccia', 'riso-carnaroli', 'pecorino'], { tempi: { preparazione: 50, cottura: 50, riposo: 0 } }), // 3/4
+  ];
+  const out = abbina({ ricette: r2, indice, ingredienti: ['zucca', 'salsiccia', 'riso'] });
+  assert.deepEqual(out.map((x) => x.ricetta.slug), ['b-quattro', 'a-due']);
 });

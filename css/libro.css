@@ -1,0 +1,185 @@
+/* Cucina — libro (the recipe as a book) */
+.view-libro {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--topbar));
+  height: calc(100dvh - var(--topbar));
+  min-height: 0;
+}
+.libro { flex: 1; min-height: 0; position: relative; overflow: hidden; }
+
+.libro-nav {
+  height: 56px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-top: var(--rule-ink);
+  padding: 0 var(--margin);
+  background: var(--paper);
+}
+.libro-btn {
+  height: 44px;
+  min-width: 44px;
+  padding: 0 16px;
+  font-size: 22px;
+  font-weight: 300;
+  border: var(--rule-ink);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease), opacity var(--dur);
+}
+.libro-btn:hover { background: var(--ink); color: var(--paper); }
+.libro-btn:disabled { opacity: 0.25; cursor: default; }
+.libro-btn:disabled:hover { background: transparent; color: var(--ink); }
+#libro-prev { justify-self: start; }
+#libro-next { justify-self: end; }
+.libro-pos { font-size: var(--t-sm); font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 0.06em; color: var(--ink-2); }
+
+/* ===== desktop spread ===== */
+.spread {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: spread-in var(--dur) var(--ease) both;
+}
+.spread[data-dir="back"] { animation-name: spread-in-back; }
+@keyframes spread-in { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
+@keyframes spread-in-back { from { opacity: 0; transform: translateX(-32px); } to { opacity: 1; transform: none; } }
+
+.pagina {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.pagina + .pagina { border-left: var(--rule); }
+.pagina-vuota { background: var(--mist); }
+
+/* cover */
+.pagina-cover .foto { flex: 1; min-height: 0; container-type: size; }
+.cover-testo { padding: calc(var(--u) * 3) var(--margin); border-top: var(--rule-ink); }
+.cover-testo .display { margin-bottom: 12px; font-size: clamp(32px, 3.4vw, 56px); }
+.cover-testo p.desc { font-size: var(--t-md); color: var(--ink); max-width: 60ch; margin-bottom: calc(var(--u) * 2); }
+.meta {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 12px;
+  border-top: var(--rule);
+  padding-top: 10px;
+}
+.meta div { min-width: 0; }
+.meta .label { font-size: 11px; margin-bottom: 2px; }
+.meta .val { font-size: var(--t-md); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.meta .val small { font-weight: 500; color: var(--ink-2); font-size: var(--t-xs); }
+.attrezzatura { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.attrezzatura span {
+  font-size: var(--t-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: var(--rule);
+  padding: 3px 8px;
+  color: var(--ink-2);
+}
+.attrezzatura span.manca { border-color: var(--ink); color: var(--ink); font-weight: 700; }
+
+/* text page */
+.pagina-testo { padding: calc(var(--u) * 3) var(--margin); gap: calc(var(--u) * 3); }
+.pagina-testo > * { flex: 0 0 auto; }
+
+.blocco-ingredienti { }
+.blocco-testa { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: var(--rule-ink); padding-bottom: 8px; margin-bottom: 4px; }
+.blocco-testa h2 { font-size: var(--t-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.blocco-testa .porzioni { display: flex; align-items: center; gap: 10px; }
+.blocco-testa .porzioni .label { font-size: 11px; }
+.ingredienti { columns: 2; column-gap: var(--gutter); }
+.ingredienti li {
+  break-inside: avoid;
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: var(--rule);
+  font-size: var(--t-sm);
+  line-height: 1.35;
+}
+.ingredienti .q { font-variant-numeric: tabular-nums; font-weight: 700; text-align: right; white-space: nowrap; }
+.ingredienti .q.qb { font-weight: 500; color: var(--ink-2); }
+.ingredienti .n small { display: block; color: var(--ink-2); font-size: var(--t-xs); }
+.ingredienti li.manca .n::after { content: 'manca'; margin-left: 6px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; border: var(--rule-ink); padding: 0 4px; vertical-align: middle; }
+.ingredienti li.opz .n { color: var(--ink-2); }
+.ingredienti .pt { display: block; color: var(--ink-2); font-size: var(--t-xs); font-style: italic; }
+.copia-mancanti { margin-top: 10px; }
+
+.passo { display: grid; grid-template-columns: 72px 1fr; column-gap: 16px; }
+.passo .n {
+  font-variation-settings: 'wdth' 62;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.passo h3 { font-size: var(--t-md); font-weight: 700; margin-bottom: 4px; display: flex; gap: 10px; align-items: baseline; }
+.passo h3 small { font-weight: 500; color: var(--ink-2); font-size: var(--t-xs); letter-spacing: 0.06em; }
+.passo p { font-size: var(--t-md); line-height: 1.5; max-width: 62ch; }
+
+.nota { border-top: var(--rule); padding-top: 10px; }
+.nota h3 { font-size: var(--t-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 4px; }
+.nota p, .nota li { font-size: var(--t-sm); line-height: 1.45; max-width: 62ch; }
+.nota li { padding-left: 14px; position: relative; }
+.nota li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 6px; height: 1px; background: var(--ink); }
+
+.misura { position: absolute; visibility: hidden; pointer-events: none; left: 0; top: 0; }
+
+/* ===== mobile: horizontal pages ===== */
+@media (max-width: 899px) {
+  .libro {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+  .libro::-webkit-scrollbar { display: none; }
+  .pagina-m {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100%;
+    overflow-y: auto;
+    padding: calc(var(--u) * 3) var(--margin) calc(var(--u) * 4);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--u) * 2);
+  }
+  .pagina-m.cover { padding-top: 0; }
+  .pagina-m.cover .foto { aspect-ratio: 4 / 5; max-height: 52vh; margin: 0 calc(var(--margin) * -1); container-type: inline-size; }
+  .pagina-m.cover .display { font-size: 40px; margin-top: 8px; }
+  .pagina-m.cover .desc { font-size: var(--t-md); }
+  .pagina-m .meta { grid-template-columns: repeat(3, 1fr); gap: 10px 12px; }
+
+  .pagina-m.step { justify-content: flex-start; }
+  .pagina-m.step .n {
+    font-variation-settings: 'wdth' 62;
+    font-weight: 900;
+    font-size: 128px;
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    margin-top: 8px;
+  }
+  .pagina-m.step .n small { font-size: 20px; font-weight: 600; color: var(--ink-2); letter-spacing: 0; margin-left: 6px; }
+  .pagina-m.step h3 { font-size: var(--t-lg); font-weight: 700; border-top: var(--rule-ink); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline; }
+  .pagina-m.step h3 small { font-weight: 500; color: var(--ink-2); font-size: var(--t-sm); }
+  .pagina-m.step p { font-size: 21px; line-height: 1.45; }
+
+  .pagina-m .ingredienti { columns: 1; }
+  .pagina-m .copia-mancanti { margin-bottom: 16px; }
+  .pagina-m .ingredienti li { font-size: var(--t-md); padding: 10px 0; grid-template-columns: 84px 1fr; }
+  .pagina-m .blocco-testa { flex-wrap: wrap; }
+  .pagina-m .nota p, .pagina-m .nota li { font-size: var(--t-md); }
+
+  .libro-nav { padding-bottom: max(0px, env(safe-area-inset-bottom)); height: calc(56px + env(safe-area-inset-bottom)); }
+}
