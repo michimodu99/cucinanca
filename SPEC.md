@@ -1,6 +1,6 @@
 # SPEC — Cucina · ricettario intelligente per Bragança
 
-Versione 0.3 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-3-4 concluse; online su https://michimodu99.github.io/cucina/ · manca la Fase 2, foto)
+Versione 0.4 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-2-3-4 concluse; online su https://michimodu99.github.io/cucina/ · 61 ricette, tutte con foto)
 
 ## 1. Obiettivo
 
@@ -214,8 +214,8 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 | Fase | Contenuto | Checkpoint |
 |---|---|---|
 | 0 | Setup: git, skills, MCP Replicate, ricerca, SPEC, DOMANDE, lista ricette | ✅ fatto |
-| 1 | Tassonomia (116 ingredienti), schema, 57 schede per 1 persona, validatore, match.js con 18 test | ✅ fatto |
-| 2 | Generazione e ottimizzazione foto (`scripts/generate_image.py`, `scripts/optimize-images.mjs`) | ⏳ script pronto e testato; serve attivare la fatturazione Gemini (free tier = 0 per i modelli immagine) |
+| 1 | Tassonomia (142 ingredienti), schema, 61 schede per 1 persona, validatore, match.js con 21 test | ✅ fatto |
+| 2 | Generazione e ottimizzazione foto (`scripts/generate_image.py`, `scripts/optimize-images.mjs`) | ✅ fatto — 61/61 foto generate a mano su Gemini (Nano Banana 2, free tier non abilitato per l'API) e ottimizzate |
 | 3 | UI (impeccable → build → review 'ship') + DESIGN.md | ✅ fatto |
 | 4 | Repo pubblico `michimodu99/cucina`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
 | 5 | Aggiornamenti a richiesta | workflow in README.md |
