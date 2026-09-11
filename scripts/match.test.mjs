@@ -12,6 +12,7 @@ const tassonomia = [
   { id: 'riso-carnaroli', nome: 'Riso Carnaroli', alias: ['riso', 'arborio'], categoria: 'cereale' },
   { id: 'pecorino', nome: 'Pecorino romano', alias: ['pecorino'], categoria: 'latticino' },
   { id: 'uova', nome: 'Uova', alias: ['uovo', 'tuorli'], categoria: 'uova' },
+  { id: 'pasta-corta', nome: 'Pasta corta', alias: ['pasta', 'penne', 'fusilli'], categoria: 'pasta' },
 ];
 
 const indice = creaIndice(tassonomia);
@@ -40,6 +41,19 @@ test('risolvi: la passata NON è vietata anche se contiene la parola pomodoro', 
   const r = risolvi(indice, 'passata di pomodoro');
   assert.equal(r.id, 'passata');
   assert.equal(r.vietato, false);
+});
+
+test('risolvi: forme plurali non alias vengono singolarizzate ("pomodori" → pomodoro)', () => {
+  assert.equal(risolvi(indice, 'pomodori').id, 'pomodoro-fresco');
+  assert.equal(risolvi(indice, 'zucche').id, 'zucca');
+});
+
+test('risolvi: plurale con accordo aggettivale a più parole ("pomodori freschi")', () => {
+  assert.equal(risolvi(indice, 'pomodori freschi').id, 'pomodoro-fresco');
+});
+
+test('risolvi: "pasta" generico risolve alla pasta corta', () => {
+  assert.equal(risolvi(indice, 'pasta').id, 'pasta-corta');
 });
 
 // ---------- abbina ----------

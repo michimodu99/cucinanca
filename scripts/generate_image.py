@@ -33,9 +33,10 @@ STILE_DEFAULT = (
     "no cutlery clutter, no garnish overload"
 )
 # Ingredienti che Michele non mangia: non devono comparire nemmeno come decorazione.
+# Pomodoro/pomodorini NON sono più banditi (11/09/2026): compaiono in ricette dedicate (es. polpette-avanzate-in-padella-con-pomodorini).
 # Formato fisso (pagina sinistra del libro): nel prompt, così vale anche fuori dallo script.
 FORMATO = "Vertical 4:5 portrait format."
-ESCLUSIONI = "Do not include any tomatoes, cherry tomatoes, peas, green beans, artichokes, broccoli or cauliflower."
+ESCLUSIONI = "Do not include any peas, green beans, artichokes, broccoli or cauliflower."
 
 
 def read_env_key(path: Path, name: str) -> str | None:

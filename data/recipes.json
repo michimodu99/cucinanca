@@ -4457,6 +4457,102 @@
   "fonte": "Ricetta di famiglia"
  },
  {
+  "slug": "polpette-avanzate-in-padella-con-pomodorini",
+  "titolo": "Polpette avanzate in padella con pomodorini",
+  "descrizione": "Riciclo veloce per le polpette del giorno prima: pomodorini scoppiati in padella con aglio, le polpette scaldate nel loro sugo, basilico fresco alla fine. Pronto in un quarto d'ora.",
+  "categoria": "secondo",
+  "difficolta": "molto-facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 12,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.5
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "avanzi",
+   "veloce",
+   "one-pan",
+   "low-cost"
+  ],
+  "dieta": [],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "polpette-avanzate",
+    "qta": 5,
+    "unita": "pz",
+    "note": "cotte, avanzate dal giorno prima"
+   },
+   {
+    "id": "pomodoro-fresco",
+    "qta": 200,
+    "unita": "g",
+    "note": "pomodorini o ciliegini"
+   },
+   {
+    "id": "basilico",
+    "qta": 8,
+    "unita": "foglie"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "peperoncino",
+    "qta": null,
+    "unita": "qb",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Soffritto",
+    "testo": "Scalda l'olio in padella con l'aglio schiacciato. Aggiungi i pomodorini tagliati a metà e un pizzico di sale, fuoco medio-alto finché iniziano a scoppiare e a fare sughetto.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Polpette",
+    "testo": "Aggiungi le polpette avanzate (intere o a metà se grosse), abbassa il fuoco, copri e scalda 6-7 minuti girandole a metà, finché sono calde dentro e insaporite dal sugo.",
+    "minuti": 7
+   },
+   {
+    "n": 3,
+    "titolo": "Finale",
+    "testo": "Togli dal fuoco, aggiungi il basilico spezzettato a mano e un filo d'olio a crudo. Servi con pane o riso bianco per il sughetto.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Se le polpette sono molto fredde di frigo, scaldale a fuoco bassissimo e coperte: il sugo dei pomodorini le ammorbidisce senza seccarle.",
+  "conservazione": "Da consumare subito: è già un piatto di recupero.",
+  "varianti": [
+   "Con una manciata di olive nere insieme ai pomodorini.",
+   "Su un letto di pasta corta scolata al dente, saltata nel sugo."
+  ],
+  "kcal": 420,
+  "foto": {
+   "copertina": "img/polpette-avanzate-in-padella-con-pomodorini.webp",
+   "prompt": "pan-seared meatballs in a blistered cherry tomato sauce with fresh basil leaves, glossy, white ceramic plate"
+  },
+  "fonte": "Riciclo di famiglia"
+ },
+ {
   "slug": "ribollita",
   "titolo": "Ribollita",
   "descrizione": "Zuppa toscana di cavolo nero, fagioli cannellini, verdure e pane raffermo, che si 'ribolle' il giorno dopo. Fatta la domenica, mangiata fino a martedì. Il cavolo qui è la couve galega.",

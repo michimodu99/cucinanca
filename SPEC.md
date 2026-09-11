@@ -18,7 +18,7 @@ Non è un'app di meal-planning né un social: nessun login, nessun salvataggio d
 |---|---|
 | Luogo / periodo | Bragança (PT), settembre → febbraio (autunno-inverno) |
 | Persone | Michele cucina **per sé** (dosi e costi per 1 persona); altre 3 persone in casa possono accodarsi → moltiplicatore porzioni nella UI. Nessuna intolleranza; cena in casa, pranzo in mensa |
-| Esclusioni fisse | piselli, fagiolini, carciofi, broccoli, cavolfiore (totali) · **pomodoro solo crudo** (passata, pelati, concentrato e sughi cotti sono ammessi) |
+| Esclusioni fisse | piselli, fagiolini, carciofi, broccoli, cavolfiore (totali) · pomodoro/pomodorini ammessi solo cotti in ricetta (es. saltati in padella); niente pomodoro crudo in insalata o come guarnizione |
 | Gusti | niente piccante (peperoncino solo opzionale e mite), niente frattaglie |
 | Cavalli di battaglia già suoi | ragù bianco, pasta tonno e olive nere (non duplicati) |
 | Tempo feriale | 30–45 min → maggioranza di ricette ≤ 45′; le lunghe sono marcate "weekend" |

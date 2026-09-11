@@ -24,9 +24,48 @@ export function creaIndice(tassonomia) {
   return { byKey, byId, base };
 }
 
+/** Ipotesi di singolare per una parola italiana plurale (euristica, non un vero stemmer). */
+function candidatiSingolari(parola) {
+  if (parola.length < 4) return [];
+  if (parola.endsWith('che')) return [parola.slice(0, -3) + 'ca'];
+  if (parola.endsWith('ghe')) return [parola.slice(0, -3) + 'ga'];
+  if (parola.endsWith('chi')) return [parola.slice(0, -3) + 'co'];
+  if (parola.endsWith('ghi')) return [parola.slice(0, -3) + 'go'];
+  if (parola.endsWith('ci')) return [parola.slice(0, -2) + 'co'];
+  if (parola.endsWith('gi')) return [parola.slice(0, -2) + 'go'];
+  if (parola.endsWith('i')) return [parola.slice(0, -1) + 'o', parola.slice(0, -1) + 'e'];
+  if (parola.endsWith('e')) return [parola.slice(0, -1) + 'a'];
+  return [];
+}
+
+/** Varianti singolari dell'intera frase normalizzata, parola per parola (accordo aggettivo-sostantivo). */
+function candidatiFraseSingolare(frase) {
+  const parole = frase.split(' ');
+  const opzioni = parole.map((p) => [p, ...candidatiSingolari(p)]);
+  const risultati = [];
+  const visti = new Set([frase]);
+  (function combina(i, acc) {
+    if (i === opzioni.length) {
+      const f = acc.join(' ');
+      if (!visti.has(f)) { visti.add(f); risultati.push(f); }
+      return;
+    }
+    for (const opt of opzioni[i]) combina(i + 1, [...acc, opt]);
+  })(0, []);
+  return risultati;
+}
+
 /** Risolve un testo digitato dall'utente in un ingrediente canonico. Ritorna null se sconosciuto. */
 export function risolvi(indice, testo) {
-  const id = indice.byKey.get(normalizza(testo));
+  const norm = normalizza(testo);
+  let id = indice.byKey.get(norm);
+  // fallback: l'utente ha digitato al plurale ("pomodori freschi") e non c'è un alias esplicito
+  if (!id) {
+    for (const candidato of candidatiFraseSingolare(norm)) {
+      id = indice.byKey.get(candidato);
+      if (id) break;
+    }
+  }
   if (!id) return null;
   const ing = indice.byId.get(id);
   return { id, nome: ing.nome, vietato: Boolean(ing.vietato), base: Boolean(ing.base) };
