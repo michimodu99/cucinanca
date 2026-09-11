@@ -68,7 +68,7 @@ export function risolvi(indice, testo) {
   }
   if (!id) return null;
   const ing = indice.byId.get(id);
-  return { id, nome: ing.nome, vietato: Boolean(ing.vietato), base: Boolean(ing.base) };
+  return { id, nome: ing.nome, base: Boolean(ing.base) };
 }
 
 /** Tempo totale attivo di una ricetta (preparazione + cottura), in minuti. */
@@ -80,16 +80,14 @@ export function tempoTotale(ricetta) {
 /**
  * Abbina la dispensa alle ricette.
  * @returns array di { ricetta, mancanti: id[], copertura: 0..1 } ordinato per rilevanza,
- *          con proprietà extra `nonRisolti` (testi non riconosciuti) e `vietati` (id vietati digitati).
+ *          con proprietà extra `nonRisolti` (testi non riconosciuti).
  */
 export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
   const posseduti = new Set(indice.base);
   const nonRisolti = [];
-  const vietati = [];
   for (const testo of ingredienti) {
     const r = risolvi(indice, testo);
     if (!r) nonRisolti.push(testo);
-    else if (r.vietato) vietati.push(r.id);
     else posseduti.add(r.id);
   }
 
@@ -114,7 +112,6 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
       a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'),
   );
   out.nonRisolti = nonRisolti;
-  out.vietati = vietati;
   return out;
 }
 

@@ -5,7 +5,7 @@ import { creaIndice, risolvi } from '../js/match.js';
 const tassonomia = [
   { id: 'olio-evo', nome: "Olio extravergine d'oliva", alias: ['olio', 'evo'], categoria: 'condimento', base: true },
   { id: 'cipolla', nome: 'Cipolla', alias: ['cipolle'], categoria: 'verdura', base: true },
-  { id: 'pomodoro-fresco', nome: 'Pomodoro fresco', alias: ['pomodoro', 'pomodorini'], categoria: 'verdura', vietato: true },
+  { id: 'pomodoro-fresco', nome: 'Pomodoro fresco', alias: ['pomodoro', 'pomodorini'], categoria: 'verdura' },
   { id: 'passata', nome: 'Passata di pomodoro', alias: [], categoria: 'condimento' },
   { id: 'zucca', nome: 'Zucca', alias: [], categoria: 'verdura' },
   { id: 'salsiccia', nome: 'Salsiccia', alias: ['salsicce'], categoria: 'carne' },
@@ -31,16 +31,14 @@ test('risolvi: ingrediente sconosciuto → null', () => {
   assert.equal(risolvi(indice, 'unicorno'), null);
 });
 
-test('risolvi: ingrediente vietato è riconosciuto e marcato', () => {
+test('risolvi: "pomodorini" risolve a pomodoro-fresco e non espone flag', () => {
   const r = risolvi(indice, 'pomodorini');
   assert.equal(r.id, 'pomodoro-fresco');
-  assert.equal(r.vietato, true);
+  assert.equal('vietato' in r, false);
 });
 
-test('risolvi: la passata NON è vietata anche se contiene la parola pomodoro', () => {
-  const r = risolvi(indice, 'passata di pomodoro');
-  assert.equal(r.id, 'passata');
-  assert.equal(r.vietato, false);
+test('risolvi: la passata risolve al suo id, non a pomodoro-fresco', () => {
+  assert.equal(risolvi(indice, 'passata di pomodoro').id, 'passata');
 });
 
 test('risolvi: forme plurali non alias vengono singolarizzate ("pomodori" → pomodoro)', () => {
@@ -109,11 +107,11 @@ test('abbina: ordina per numero di mancanti, poi per tempo totale crescente', ()
   assert.deepEqual(out.map((x) => x.ricetta.slug), ['carbonara', 'risotto-zucca', 'zucca-forno']);
 });
 
-test('abbina: input sconosciuti o vietati vengono ignorati e riportati', () => {
+test('abbina: input sconosciuti vengono ignorati e riportati; niente proprietà vietati', () => {
   const out = abbina({ ricette, indice, ingredienti: ['zucca', 'unicorno', 'pomodorini'] });
   assert.ok(out.length > 0);
   assert.deepEqual(out.nonRisolti, ['unicorno']);
-  assert.deepEqual(out.vietati, ['pomodoro-fresco']);
+  assert.equal('vietati' in out, false);
 });
 
 // ---------- scalaQuantita ----------

@@ -61,7 +61,6 @@ for (const r of ricette) {
   for (const ing of r.ingredienti || []) {
     const t = byId.get(ing.id);
     if (!t) { err(`${where}: ingrediente sconosciuto "${ing.id}"`); continue; }
-    if (t.vietato) err(`${where}: ingrediente VIETATO "${ing.id}"`);
     if (ing.unita === 'qb' && ing.qta !== null) err(`${where}: "${ing.id}" con unità qb deve avere qta null`);
     if (ing.unita !== 'qb' && (ing.qta === null || ing.qta === undefined)) err(`${where}: "${ing.id}" senza quantità`);
   }

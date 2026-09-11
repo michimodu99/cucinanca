@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from generate_image import build_prompt, read_env_key, slugify
+from generate_image import FORMATO, build_prompt, read_env_key, slugify
 
 
 class TestReadEnvKey(unittest.TestCase):
@@ -37,12 +37,12 @@ class TestSlugify(unittest.TestCase):
 
 
 class TestBuildPrompt(unittest.TestCase):
-    def test_default_style_contains_dish_style_and_exclusions(self):
+    def test_default_style_contains_dish_and_style_no_exclusions(self):
         p = build_prompt("risotto with pumpkin and sausage")
         self.assertIn("risotto with pumpkin and sausage", p)
         self.assertIn("editorial food photography", p)
-        for veg in ("tomato", "peas", "green beans"):
-            self.assertIn(veg, p)
+        self.assertNotIn("Do not include", p)
+        self.assertTrue(p.endswith(FORMATO))
 
     def test_prompt_always_states_4_5_portrait_format(self):
         for style in (None, "dark moody photography"):
@@ -50,11 +50,11 @@ class TestBuildPrompt(unittest.TestCase):
             self.assertIn("4:5", p)
             self.assertIn("portrait", p)
 
-    def test_custom_style_replaces_default_but_keeps_exclusions(self):
+    def test_custom_style_replaces_default_but_keeps_format(self):
         p = build_prompt("carbonara", style="dark moody photography")
         self.assertIn("dark moody photography", p)
         self.assertNotIn("editorial food photography", p)
-        self.assertIn("tomato", p)
+        self.assertTrue(p.endswith(FORMATO))
 
 
 if __name__ == "__main__":

@@ -37,10 +37,10 @@ function montaUnaVolta() {
   const base = dati.tassonomia.filter((i) => i.base).map((i) => i.nome.toLowerCase());
   el.basi.textContent = 'Dispensa base, sempre presente: ' + base.join(', ') + '.';
 
-  // indice per categoria (esclusi base e vietati), ordinato per quante ricette lo usano
+  // indice per categoria (esclusi i base), ordinato per quante ricette lo usano
   const perCat = new Map();
   for (const i of dati.tassonomia) {
-    if (i.base || i.vietato) continue;
+    if (i.base) continue;
     if (!perCat.has(i.categoria)) perCat.set(i.categoria, []);
     perCat.get(i.categoria).push(i);
   }
@@ -113,7 +113,6 @@ function suggerisci(testo) {
     li.dataset.id = i.id;
     li.setAttribute('role', 'option');
     li.setAttribute('aria-selected', 'false');
-    if (i.vietato) li.classList.add('vietato');
     li.innerHTML = `<span>${i.nome}</span><small>${alias ? `anche: ${alias}` : (ETICHETTE.categoriaIngrediente[i.categoria] || '')}</small>`;
     li.addEventListener('mousedown', (e) => { e.preventDefault(); aggiungi(i.id); });
     el.sugg.appendChild(li);
@@ -150,11 +149,6 @@ function aggiungi(id) {
   const ing = dati.indice.byId.get(id);
   el.input.value = '';
   chiudiSugg();
-  if (ing.vietato) {
-    el.msg.textContent = `${ing.nome}: non è nel menù di questa casa.`;
-    el.msg.classList.add('err');
-    return;
-  }
   if (ing.base) {
     el.msg.textContent = `${ing.nome} è nella dispensa base: lo considero già presente.`;
     el.msg.classList.remove('err');

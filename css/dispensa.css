@@ -74,7 +74,6 @@
 .suggerimenti li:last-child { border-bottom: 0; }
 .suggerimenti li[aria-selected="true"], .suggerimenti li:hover { background: var(--mist); }
 .suggerimenti li small { color: var(--ink-2); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; }
-.suggerimenti li.vietato { color: var(--ink-2); text-decoration: line-through; }
 
 .ingresso-msg { min-height: 24px; font-size: var(--t-sm); color: var(--ink-2); margin-top: 6px; }
 .ingresso-msg.err { color: var(--ink); }

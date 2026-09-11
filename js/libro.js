@@ -29,7 +29,7 @@ export function montaLibro(d, r, params) {
   posseduti = new Set(dati.indice.base);
   for (const s of scelti) {
     const x = risolvi(dati.indice, s);
-    if (x && !x.vietato) posseduti.add(x.id);
+    if (x) posseduti.add(x.id);
   }
   attivo = true;
   document.title = `${r.titolo} · Cucinança`;

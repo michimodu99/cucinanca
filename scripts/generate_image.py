@@ -32,11 +32,8 @@ STILE_DEFAULT = (
     "neutral muted background, shallow depth of field, no text, no hands, "
     "no cutlery clutter, no garnish overload"
 )
-# Ingredienti che Michele non mangia: non devono comparire nemmeno come decorazione.
-# Pomodoro/pomodorini NON sono più banditi (11/09/2026): compaiono in ricette dedicate (es. polpette-avanzate-in-padella-con-pomodorini).
 # Formato fisso (pagina sinistra del libro): nel prompt, così vale anche fuori dallo script.
 FORMATO = "Vertical 4:5 portrait format."
-ESCLUSIONI = "Do not include any peas, green beans, artichokes, broccoli or cauliflower."
 
 
 def read_env_key(path: Path, name: str) -> str | None:
@@ -65,7 +62,7 @@ def slugify(nome: str) -> str:
 
 
 def build_prompt(piatto: str, style: str | None = None) -> str:
-    return f"{style or STILE_DEFAULT}, {piatto}. {FORMATO} {ESCLUSIONI}"
+    return f"{style or STILE_DEFAULT}, {piatto}. {FORMATO}"
 
 
 def genera(client, modello: str, prompt: str) -> bytes:

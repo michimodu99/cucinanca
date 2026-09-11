@@ -15,11 +15,11 @@
   { "id": "rosmarino", "nome": "Rosmarino", "alias": ["rametto di rosmarino", "rametti di rosmarino"], "categoria": "erba", "base": true },
 
   { "id": "pomodoro-fresco", "nome": "Pomodoro fresco", "alias": ["pomodoro", "pomodori", "pomodorini", "ciliegini", "datterini", "pomodoro crudo"], "categoria": "verdura" },
-  { "id": "piselli", "nome": "Piselli", "alias": ["pisello", "piselli surgelati", "piselli in scatola"], "categoria": "legume", "vietato": true },
-  { "id": "fagiolini", "nome": "Fagiolini", "alias": ["fagiolino", "cornetti"], "categoria": "verdura", "vietato": true },
-  { "id": "carciofi", "nome": "Carciofi", "alias": ["carciofo", "carciofini"], "categoria": "verdura", "vietato": true },
-  { "id": "broccoli", "nome": "Broccoli", "alias": ["broccolo", "broccoletti"], "categoria": "verdura", "vietato": true },
-  { "id": "cavolfiore", "nome": "Cavolfiore", "alias": ["cavolfiori"], "categoria": "verdura", "vietato": true },
+  { "id": "piselli", "nome": "Piselli", "alias": ["pisello", "piselli surgelati", "piselli in scatola"], "categoria": "legume" },
+  { "id": "fagiolini", "nome": "Fagiolini", "alias": ["fagiolino", "cornetti"], "categoria": "verdura" },
+  { "id": "carciofi", "nome": "Carciofi", "alias": ["carciofo", "carciofini"], "categoria": "verdura" },
+  { "id": "broccoli", "nome": "Broccoli", "alias": ["broccolo", "broccoletti"], "categoria": "verdura" },
+  { "id": "cavolfiore", "nome": "Cavolfiore", "alias": ["cavolfiori"], "categoria": "verdura" },
 
   { "id": "passata", "nome": "Passata di pomodoro", "alias": ["polpa di pomodoro", "sugo di pomodoro", "salsa di pomodoro"], "categoria": "condimento", "pt": { "reperibilita": "facile", "sostituto": "\"polpa de tomate\" o \"tomate triturado\"" } },
   { "id": "pelati", "nome": "Pomodori pelati", "alias": ["pelati in scatola", "pomodori in scatola"], "categoria": "condimento", "pt": { "reperibilita": "facile", "sostituto": "\"tomate pelado\" in lattina" } },

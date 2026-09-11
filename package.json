@@ -10,6 +10,7 @@
     "test": "node --test scripts/*.test.mjs",
     "images:generate": "python scripts/generate_image.py",
     "images:optimize": "node scripts/optimize-images.mjs",
+    "prompts": "node scripts/prompts-md.mjs",
     "serve": "node scripts/serve.mjs 8080"
   },
   "devDependencies": {
