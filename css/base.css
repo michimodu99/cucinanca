@@ -93,7 +93,7 @@ h1, h2, h3, p { margin: 0; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: calc(var(--u) * 2.5) var(--margin);
+  padding: calc(var(--u) * 4) var(--margin);
   border-top: var(--rule);
   font-size: var(--t-xs);
   color: var(--ink-2);
