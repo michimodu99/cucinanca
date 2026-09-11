@@ -1,6 +1,6 @@
 # Prompt per le foto delle ricette
 
-58 prompt in inglese, uno per ricetta, nello stile editoriale del progetto (SPEC §8). Generati da `scripts/generate_image.py` (`build_prompt`), quindi identici a quelli che userebbe lo script.
+61 prompt in inglese, uno per ricetta, nello stile editoriale del progetto (SPEC §8). Generati da `scripts/generate_image.py` (`build_prompt`), quindi identici a quelli che userebbe lo script.
 Il formato **4:5 verticale** è dichiarato in ogni prompt; se l'interfaccia ha un selettore di aspect ratio, imposta comunque 4:5 (o 3:4 se 4:5 non c'è, poi il crop lo fa `optimize-images`). Salva l'output come `img/raw/<slug>.png`, poi `npm run images:optimize`.
 
 **Stile comune:** editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload
@@ -23,6 +23,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, shaved fennel and orange salad with black olives and fennel fronds, olive oil, bright and fresh, white ceramic plate. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
+### Insalata di patate al coriandolo
+`insalata-di-patate-al-coriandolo`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, warm potato salad with fresh chopped coriander, garlic and olive oil, rustic, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
+### Patate al forno alla paprika
+`patate-al-forno-alla-paprika`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
 
 ### Patate al forno croccanti
@@ -104,6 +118,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese caldo verde soup, pale potato base with thin shredded green kale and chourico slices, olive oil, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
+### Caril de galinha
+`caril-de-galinha`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
 ```
 
 ### Crêpes salate prosciutto e formaggio
@@ -426,6 +447,27 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 ```
 
 ## Da generare ora
+
+### Caril de galinha
+`caril-de-galinha`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
+### Insalata di patate al coriandolo
+`insalata-di-patate-al-coriandolo`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, warm potato salad with fresh chopped coriander, garlic and olive oil, rustic, white ceramic bowl. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
+
+### Patate al forno alla paprika
+`patate-al-forno-alla-paprika`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, crispy roasted potato wedges dusted with sweet paprika, whole garlic cloves, white ceramic plate, overhead. Vertical 4:5 portrait format. Do not include any peas, green beans, artichokes, broccoli or cauliflower.
+```
 
 ### Polpette avanzate in padella con pomodorini
 `polpette-avanzate-in-padella-con-pomodorini`
