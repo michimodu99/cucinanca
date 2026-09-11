@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "patate-al-forno-croccanti",
+    "titolo": "Patate al forno croccanti",
+    "descrizione": "Pre-lessate 8 minuti, scrollate nella pentola per rovinare i bordi, poi in forno caldo con olio: fuori vetrose, dentro morbide. Il contorno che rende tutto una cena.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 10, "cottura": 50, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 0.6 },
+    "attrezzatura": ["pentola", "forno", "teglia"],
+    "tag": ["weekend", "low-cost", "classico"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
+    "origine": "Italia / Regno Unito",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "patate", "qta": 300, "unita": "g", "note": "a tocchi da 4 cm" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "in camicia" },
+      { "id": "sale", "qta": null, "unita": "qb", "note": "grosso" }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Pre-lessatura", "testo": "Forno a 220 °C con la teglia dentro a scaldarsi. Lessa le patate in acqua salata 8 minuti da quando bolle: i bordi devono ammorbidirsi ma il centro restare sodo.", "minuti": 12 },
+      { "n": 2, "titolo": "Scrollare", "testo": "Scola, lascia asciugare 2 minuti nella pentola, poi metti il coperchio e scuoti energicamente: i bordi si sbriciolano. Quella 'rovina' diventa la crosta.", "minuti": 3 },
+      { "n": 3, "titolo": "Forno", "testo": "Versa l'olio nella teglia rovente, aggiungi le patate, aglio e rosmarino, mescola. Un solo strato, spaziate. 25 minuti, gira, altri 15–20 finché sono dorate e croccanti. Sale grosso alla fine.", "minuti": 42 }
+    ],
+    "consigli": "La teglia già calda e le patate spaziate fanno la differenza: ammucchiate cuociono a vapore.",
+    "conservazione": "Perdono croccantezza; il giorno dopo ripassale in padella.",
+    "varianti": ["Con paprika dolce e origano.", "Con zucca a tocchi nella stessa teglia (aggiungila a metà)."],
+    "kcal": 350,
+    "foto": { "copertina": "img/patate-al-forno-croccanti.webp", "prompt": "crispy golden roasted potato chunks with rosemary and flaky salt, white ceramic plate, overhead" },
+    "fonte": "Tecnica classica"
+  },
+  {
+    "slug": "verze-stufate-con-pancetta",
+    "titolo": "Verze stufate con pancetta",
+    "descrizione": "La couve lombarda a strisce, stufata piano con pancetta, cipolla e un goccio di aceto. Contorno d'inverno che accompagna salsiccia, polenta o arrosto.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 10, "cottura": 30, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 1 },
+    "attrezzatura": ["padella"],
+    "tag": ["inverno", "low-cost", "avanzi", "one-pan"],
+    "dieta": ["senza-glutine", "senza-lattosio"],
+    "origine": "Italia · Nord",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "verza", "qta": 250, "unita": "g" },
+      { "id": "pancetta", "qta": 40, "unita": "g" },
+      { "id": "cipolla", "qta": 0.5, "unita": "pz" },
+      { "id": "aceto", "qta": 1, "unita": "cucchiai" },
+      { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
+      { "id": "alloro", "qta": 1, "unita": "foglie" }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Base", "testo": "Rosola la pancetta a cubetti nell'olio 3 minuti, aggiungi la cipolla a fettine e l'alloro, cuoci 4 minuti.", "minuti": 7 },
+      { "n": 2, "titolo": "Verza", "testo": "Aggiungi la verza a strisce da 1 cm (senza la costa dura), sala, mescola, bagna con l'aceto e mezzo bicchiere d'acqua. Copri e cuoci a fuoco basso 20 minuti, mescolando ogni tanto.", "minuti": 22 },
+      { "n": 3, "titolo": "Finire", "testo": "Scopri e alza il fuoco 2 minuti per asciugare. Pepe. Servi calda.", "minuti": 2 }
+    ],
+    "consigli": "L'aceto toglie il sentore di cavolo e dà freschezza: non ometterlo.",
+    "conservazione": "In frigo 3 giorni, riscaldata è migliore.",
+    "varianti": ["Con riso aggiunto a metà cottura e brodo: diventa 'riso e verze'.", "Senza pancetta, con semi di finocchio: vegana."],
+    "kcal": 220,
+    "foto": { "copertina": "img/verze-stufate-con-pancetta.webp", "prompt": "braised savoy cabbage ribbons with pancetta cubes and bay leaf, glossy, white ceramic bowl" },
+    "fonte": "Tradizione del Nord"
+  },
+  {
+    "slug": "zucca-al-forno-con-rosmarino-e-balsamico",
+    "titolo": "Zucca al forno con rosmarino e aceto balsamico",
+    "descrizione": "Fette di zucca arrostite finché caramellano ai bordi, con rosmarino e una riduzione di balsamico. Contorno o, con ricotta e noci, una cena leggera.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 8, "cottura": 30, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 0.9 },
+    "attrezzatura": ["forno", "teglia"],
+    "tag": ["autunno", "inverno", "low-cost", "avanzi"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
+    "origine": "Italia",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "zucca", "qta": 300, "unita": "g", "note": "a fette da 1,5 cm con la buccia, se è sottile" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "aceto-balsamico", "qta": 1, "unita": "cucchiai" },
+      { "id": "rosmarino", "qta": 1, "unita": "rametti" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "noci", "qta": 20, "unita": "g", "opzionale": true }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Condire", "testo": "Forno a 210 °C. Mescola le fette di zucca con olio, sale, pepe, rosmarino e aglio a fettine. Stendile sulla teglia con carta forno senza sovrapporle.", "minuti": 8 },
+      { "n": 2, "titolo": "Forno", "testo": "Cuoci 25–30 minuti, girando a metà, finché sono morbide dentro e bruciacchiate ai bordi.", "minuti": 30 },
+      { "n": 3, "titolo": "Balsamico", "testo": "Appena escono, bagna con il balsamico: sfrigola e si addensa sulla zucca calda. Noci spezzettate sopra.", "minuti": 1 }
+    ],
+    "consigli": "Non serve sbucciarla se la buccia è sottile (butternut, hokkaido): diventa morbida.",
+    "conservazione": "In frigo 3 giorni; fredda in insalata con rucola.",
+    "varianti": ["Con gorgonzola sbriciolato sopra a fine cottura.", "Con miele e semi di zucca."],
+    "kcal": 240,
+    "foto": { "copertina": "img/zucca-al-forno-con-rosmarino-e-balsamico.webp", "prompt": "roasted pumpkin slices with caramelized edges, rosemary and balsamic glaze, walnuts, white ceramic plate" },
+    "fonte": "Classico"
+  },
+  {
+    "slug": "funghi-trifolati",
+    "titolo": "Funghi trifolati",
+    "descrizione": "Champignon a fette, padella molto calda, aglio, prezzemolo. Il trucco: non salarli subito e non mescolarli troppo, così dorano invece di bollire. Contorno, o sopra la bistecca, o dentro la pasta.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 5, "cottura": 12, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 1.2 },
+    "attrezzatura": ["padella"],
+    "tag": ["veloce", "autunno", "low-cost", "one-pan"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
+    "origine": "Italia",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "funghi-champignon", "qta": 250, "unita": "g" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi" },
+      { "id": "prezzemolo", "qta": null, "unita": "qb" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "vino-bianco", "qta": 30, "unita": "ml", "opzionale": true }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Pulizia", "testo": "Pulisci i funghi con un panno umido (non lavarli: assorbono acqua). Tagliali a fette da 4 mm.", "minuti": 5 },
+      { "n": 2, "titolo": "Rosolatura", "testo": "Scalda l'olio con l'aglio schiacciato a fuoco vivo. Aggiungi i funghi in un solo strato e non toccarli per 3 minuti: devono dorare. Poi mescola e cuoci altri 4–5 minuti finché l'acqua è evaporata.", "minuti": 8 },
+      { "n": 3, "titolo": "Finire", "testo": "Solo ora sale e pepe; sfuma col vino se vuoi. Fuoco spento, prezzemolo tritato. Togli l'aglio.", "minuti": 2 }
+    ],
+    "consigli": "Padella larga e funghi non ammucchiati. Se ne hai tanti, fai due volte.",
+    "conservazione": "In frigo 2 giorni.",
+    "varianti": ["Con burro al posto dell'olio e timo: più francese.", "Con funghi misti di bosco in stagione."],
+    "kcal": 180,
+    "foto": { "copertina": "img/funghi-trifolati.webp", "prompt": "golden sauteed mushroom slices with garlic and parsley, glossy olive oil, white ceramic bowl" },
+    "fonte": "Classico"
+  },
+  {
+    "slug": "insalata-di-finocchi-arance-e-olive",
+    "titolo": "Insalata di finocchi, arance e olive",
+    "descrizione": "Siciliana, croccante, fresca: finocchio a fette sottili, arancia a vivo, olive nere, olio buono. Accompagna pesce e fritti, o pulisce la bocca dopo una parmigiana.",
+    "categoria": "contorno",
+    "difficolta": "molto-facile",
+    "tempi": { "preparazione": 12, "cottura": 0, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 1.3 },
+    "attrezzatura": [],
+    "tag": ["veloce", "inverno", "low-cost"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
+    "origine": "Italia · Sicilia",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "finocchi", "qta": 1, "unita": "pz", "note": "piccolo" },
+      { "id": "arance", "qta": 1, "unita": "pz" },
+      { "id": "olive-nere", "qta": 25, "unita": "g" },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "menta", "qta": 3, "unita": "foglie", "opzionale": true },
+      { "id": "noci", "qta": 15, "unita": "g", "opzionale": true }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Finocchio", "testo": "Togli le foglie esterne dure, taglia il finocchio a fette sottilissime (1–2 mm) con un coltello affilato. Tieni le barbe verdi.", "minuti": 4 },
+      { "n": 2, "titolo": "Arancia a vivo", "testo": "Taglia le due calotte dell'arancia, poi la buccia seguendo la curva con il coltello, fino alla polpa. Affetta a rondelle o estrai gli spicchi tra le membrane. Raccogli il succo.", "minuti": 5 },
+      { "n": 3, "titolo": "Condire", "testo": "In un piatto: finocchio, arancia, olive, barbe di finocchio e menta. Emulsiona olio, il succo raccolto, sale e pepe e versa sopra. Noci se vuoi. Servi subito.", "minuti": 3 }
+    ],
+    "consigli": "Il finocchio deve essere tagliato davvero sottile: se hai una mandolina è il momento, altrimenti pazienza e coltello.",
+    "conservazione": "Non si conserva condita; gli ingredienti tagliati reggono qualche ora.",
+    "varianti": ["Con cipolla rossa a fettine sottili.", "Con tonno sott'olio: diventa un secondo."],
+    "kcal": 230,
+    "foto": { "copertina": "img/insalata-di-finocchi-arance-e-olive.webp", "prompt": "shaved fennel and orange salad with black olives and fennel fronds, olive oil, bright and fresh, white ceramic plate" },
+    "fonte": "Tradizione siciliana"
+  }
+]

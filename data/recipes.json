@@ -1,0 +1,6363 @@
+[
+ {
+  "slug": "arrosto-di-maiale-al-latte",
+  "titolo": "Arrosto di maiale al latte",
+  "descrizione": "Lonza rosolata e cotta lentamente nel latte con salvia e aglio: il latte si rapprende in una salsa granulosa e dolce. Tecnica di Marcella Hazan. Un pezzo da 400 g dà 2 cene.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 80,
+   "riposo": 10
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.4
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi",
+   "da-ospiti",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Emilia / Veneto",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "lonza-di-maiale",
+    "qta": 400,
+    "unita": "g",
+    "note": "in un pezzo unico (avanza per il giorno dopo)"
+   },
+   {
+    "id": "latte",
+    "qta": 500,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "salvia",
+    "qta": 5,
+    "unita": "foglie"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "solo la scorza"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Rosolatura",
+    "testo": "Sala e pepa la lonza. In una pentola stretta (la carne deve starci giusta) rosolala in olio e burro a fuoco medio-alto su tutti i lati, 8 minuti, finché è dorata.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Latte",
+    "testo": "Aggiungi aglio schiacciato, salvia, scorza di limone e il latte fino a coprire per due terzi. Porta a leggero bollore, poi coperchio semiaperto e fuoco basso.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Cottura lenta",
+    "testo": "Cuoci 70 minuti girando la carne ogni 20. Il latte si riduce e forma grumi dorati: è normale, è la salsa. Se si asciuga troppo, un po' di latte.",
+    "minuti": 70
+   },
+   {
+    "n": 4,
+    "titolo": "Riposo e salsa",
+    "testo": "Togli la carne e lasciala riposare 10 minuti coperta. Alza il fuoco sotto la salsa 2 minuti raschiando il fondo. Affetta la lonza sottile e servila con la salsa e le sue 'briciole'.",
+    "minuti": 12
+   }
+  ],
+  "consigli": "La pentola stretta è importante: se è larga il latte evapora prima che la carne sia cotta.",
+  "conservazione": "In frigo 3 giorni; a fette fredde nel panino con senape è eccellente.",
+  "varianti": [
+   "Con 1 cucchiaio di senape nel latte.",
+   "Con rosmarino al posto della salvia."
+  ],
+  "kcal": 480,
+  "foto": {
+   "copertina": "img/arrosto-di-maiale-al-latte.webp",
+   "prompt": "sliced pork loin braised in milk with golden curdled milk sauce and sage leaves, white ceramic plate"
+  },
+  "fonte": "Marcella Hazan, Essentials of Classic Italian Cooking"
+ },
+ {
+  "slug": "arroz-de-pato",
+  "titolo": "Arroz de pato",
+  "descrizione": "Anatra lessata con chouriço, poi sfilacciata e cotta con il riso nel suo brodo, gratinata in forno con fette di chouriço sopra. Il piatto delle feste portoghesi, in versione da uno (che avanza).",
+  "categoria": "piatto-unico",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 75,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 4
+  },
+  "attrezzatura": [
+   "pentola",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "portoghese",
+   "weekend",
+   "avanzi",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Portogallo · Braga",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "anatra",
+    "qta": 350,
+    "unita": "g",
+    "note": "una coscia grande"
+   },
+   {
+    "id": "riso-carnaroli",
+    "qta": 90,
+    "unita": "g",
+    "note": "arroz carolino o qualsiasi riso"
+   },
+   {
+    "id": "chourico",
+    "qta": 60,
+    "unita": "g"
+   },
+   {
+    "id": "pancetta",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "carote",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi"
+   },
+   {
+    "id": "alloro",
+    "qta": 1,
+    "unita": "foglie"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 60,
+    "unita": "ml"
+   },
+   {
+    "id": "chiodi-di-garofano",
+    "qta": 2,
+    "unita": "pz"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Lessare l'anatra",
+    "testo": "In pentola copri l'anatra con acqua, aggiungi metà cipolla con i chiodi di garofano infilati, carota, alloro, un pezzo di chouriço, la pancetta e sale. Cuoci coperta a fuoco basso 50 minuti finché la carne si stacca dall'osso.",
+    "minuti": 50
+   },
+   {
+    "n": 2,
+    "titolo": "Sfilacciare",
+    "testo": "Togli anatra e salumi; filtra il brodo e tienine 250 ml. Sfilaccia l'anatra eliminando pelle e ossa; affetta chouriço e pancetta.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Riso",
+    "testo": "Forno a 200 °C. Soffriggi la cipolla rimasta e l'aglio nell'olio, aggiungi il riso e tosta 1 minuto, sfuma col vino, poi il brodo caldo. Cuoci 10 minuti (il riso resta al dente), unisci l'anatra e metà chouriço.",
+    "minuti": 15
+   },
+   {
+    "n": 4,
+    "titolo": "Gratinare",
+    "testo": "Versa in una teglia piccola, disponi sopra le fette di chouriço e pancetta e inforna 15 minuti finché la superficie è dorata e croccante.",
+    "minuti": 15
+   }
+  ],
+  "consigli": "Il brodo dell'anatra è ricco: usa quello, non il dado. Il grasso che affiora va tolto solo in parte.",
+  "conservazione": "In frigo 3 giorni; riscalda in forno per rifare la crosta.",
+  "varianti": [
+   "Con pollo al posto dell'anatra: più economico, meno intenso."
+  ],
+  "kcal": 720,
+  "foto": {
+   "copertina": "img/arroz-de-pato.webp",
+   "prompt": "Portuguese arroz de pato, baked duck rice with crispy chourico slices on top, golden crust, white ceramic baking dish"
+  },
+  "fonte": "Tradizione portoghese"
+ },
+ {
+  "slug": "bacalhau-a-bras",
+  "titolo": "Bacalhau à Brás",
+  "descrizione": "Il piatto portoghese da imparare per primo: baccalà sfilacciato, patate a fiammifero fritte, cipolla e uova strapazzate morbide. Olive nere e prezzemolo sopra.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 25,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.5
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "portoghese",
+   "one-pan"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Portogallo · Lisbona",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "baccala",
+    "qta": 150,
+    "unita": "g",
+    "note": "già dissalato (bacalhau demolhado)"
+   },
+   {
+    "id": "patate",
+    "qta": 200,
+    "unita": "g",
+    "note": "a fiammifero sottile"
+   },
+   {
+    "id": "uova",
+    "qta": 2,
+    "unita": "pz"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "a fettine sottili"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olive-nere",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 80,
+    "unita": "ml",
+    "note": "per friggere le patate + 2 cucchiai"
+   },
+   {
+    "id": "alloro",
+    "qta": 1,
+    "unita": "foglie"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Baccalà",
+    "testo": "Metti il baccalà in acqua fredda con l'alloro, porta a bollore e spegni. Dopo 5 minuti scolalo, togli pelle e lische e sfilaccialo con le mani.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Patate a fiammifero",
+    "testo": "Taglia le patate a bastoncini sottilissimi (2 mm), asciugale bene e friggile nell'olio caldo in padella finché sono dorate e croccanti (6–8 minuti). Scola su carta. (Al Continente vendono le 'batata palha' già fritte: scorciatoia legittima.)",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Cipolla e baccalà",
+    "testo": "In 2 cucchiai d'olio stufa cipolla e aglio a fuoco basso 5 minuti finché sono trasparenti. Aggiungi il baccalà e cuoci 3 minuti.",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Uova",
+    "testo": "Unisci le patate, poi versa le uova sbattute con poco sale e pepe. Mescola a fuoco basso 1–2 minuti: le uova devono restare cremose, non asciutte. Spegni prima che sembrino pronte.",
+    "minuti": 2
+   },
+   {
+    "n": 5,
+    "titolo": "Servi",
+    "testo": "Olive nere e prezzemolo tritato sopra. Subito.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Il segreto è togliere dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
+  "conservazione": "Non si conserva: le patate perdono croccantezza.",
+  "varianti": [
+   "Con tonno sott'olio al posto del baccalà (versione da dispensa)."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/bacalhau-a-bras.webp",
+   "prompt": "bacalhau a bras, shredded cod with matchstick potatoes and soft scrambled eggs, black olives and parsley, white ceramic plate"
+  },
+  "fonte": "Tradizione portoghese"
+ },
+ {
+  "slug": "bistecca-con-burro-alle-erbe-e-patate",
+  "titolo": "Bistecca con burro alle erbe e patate saltate",
+  "descrizione": "Tecnica più che ricetta: carne a temperatura ambiente, padella rovente, 2 minuti per lato, riposo. Il burro con erbe e aglio si scioglie sopra. Patate saltate nel frattempo.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 20,
+   "riposo": 5
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "alto",
+   "stima_eur": 6
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia / Francia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "bistecca",
+    "qta": 220,
+    "unita": "g",
+    "note": "alta 2–2,5 cm"
+   },
+   {
+    "id": "patate",
+    "qta": 200,
+    "unita": "g"
+   },
+   {
+    "id": "burro",
+    "qta": 30,
+    "unita": "g",
+    "note": "morbido"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "timo",
+    "qta": 2,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "limone",
+    "qta": 0.25,
+    "unita": "pz",
+    "note": "solo la scorza"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Burro alle erbe",
+    "testo": "Tira fuori la carne dal frigo 30 minuti prima. Mescola il burro morbido con prezzemolo tritato, mezzo spicchio d'aglio grattugiato, scorza di limone, sale e pepe. Mettilo in frigo a rassodare.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Patate saltate",
+    "testo": "Taglia le patate a cubetti da 1,5 cm, sciacquale e asciugale. Cuocile in padella con olio a fuoco medio, coperte 8 minuti, poi scoperte 8 minuti girando ogni tanto, finché sono dorate. Sala, timo. Tienile da parte.",
+    "minuti": 17
+   },
+   {
+    "n": 3,
+    "titolo": "Bistecca",
+    "testo": "Asciuga la carne, sala. Scalda una padella pulita a fuoco massimo finché fuma. Un filo d'olio e la bistecca: 2 minuti senza toccarla, gira, 2 minuti. Per il bordo di grasso, tienila in verticale 30 secondi.",
+    "minuti": 5
+   },
+   {
+    "n": 4,
+    "titolo": "Riposo",
+    "testo": "Su un piatto, con una fetta di burro alle erbe sopra, 5 minuti coperta. Affetta contro fibra e servi con il burro sciolto e le patate.",
+    "minuti": 5
+   }
+  ],
+  "consigli": "Al sangue: 2 minuti per lato per 2 cm. Media: 3. Il riposo non è opzionale: senza, i succhi finiscono nel piatto.",
+  "conservazione": "Il burro alle erbe in frigo 1 settimana, in freezer 3 mesi: fanne di più.",
+  "varianti": [
+   "Con senape e rosmarino nel burro.",
+   "Con funghi trifolati al posto delle patate."
+  ],
+  "kcal": 700,
+  "foto": {
+   "copertina": "img/bistecca-con-burro-alle-erbe-e-patate.webp",
+   "prompt": "sliced seared steak with melting herb butter and golden sauteed potato cubes, thyme, white ceramic plate"
+  },
+  "fonte": "Tecnica classica"
+ },
+ {
+  "slug": "brasato-al-vino-rosso",
+  "titolo": "Brasato al vino rosso",
+  "descrizione": "Un pezzo di manzo marinato una notte nel Douro con verdure e spezie, poi cotto tre ore. Il sugo si fa dalla marinata. Da domenica di pioggia; avanza per giorni.",
+  "categoria": "secondo",
+  "difficolta": "difficile",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 180,
+   "riposo": 720
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "alto",
+   "stima_eur": 6.5
+  },
+  "attrezzatura": [
+   "pentola",
+   "frullatore"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi",
+   "inverno",
+   "da-ospiti",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Piemonte",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "cappello-del-prete",
+    "qta": 500,
+    "unita": "g",
+    "note": "in un pezzo unico (avanza per 2 cene)"
+   },
+   {
+    "id": "vino-rosso",
+    "qta": 500,
+    "unita": "ml",
+    "note": "corposo"
+   },
+   {
+    "id": "cipolla",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "carote",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "sedano",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "alloro",
+    "qta": 2,
+    "unita": "foglie"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "chiodi-di-garofano",
+    "qta": 2,
+    "unita": "pz"
+   },
+   {
+    "id": "cannella",
+    "qta": 1,
+    "unita": "pizzico"
+   },
+   {
+    "id": "ginepro",
+    "qta": 3,
+    "unita": "pz",
+    "opzionale": true
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "farina-00",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Marinata (la sera prima)",
+    "testo": "Metti la carne in una ciotola con vino, verdure a pezzi grossi, aglio, erbe e spezie. Copri e lascia in frigo 12 ore, girando una volta.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Rosolatura",
+    "testo": "Scola la carne (tieni marinata e verdure), asciugala bene, infarinala. Rosolala nell'olio a fuoco vivo su tutti i lati finché è scura (8 minuti). Toglila.",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Verdure e vino",
+    "testo": "Nella stessa pentola rosola le verdure della marinata 5 minuti. Rimetti la carne, versa la marinata filtrata, sala. Porta a bollore.",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Cottura lenta",
+    "testo": "Coperchio, fuoco al minimo, 3 ore. Gira la carne ogni ora. Deve sobbollire appena: se bolle forte diventa stopposa. È pronta quando una forchetta entra come nel burro.",
+    "minuti": 180
+   },
+   {
+    "n": 5,
+    "titolo": "Salsa",
+    "testo": "Togli la carne e tienila al caldo. Elimina alloro, rosmarino e chiodi, frulla il fondo con le verdure fino a una salsa liscia; se è liquida, riducila a fuoco vivo. Affetta il brasato spesso e nappalo con la salsa.",
+    "minuti": 10
+   }
+  ],
+  "consigli": "Con polenta o purè. Il brasato affettato e riscaldato nella sua salsa il giorno dopo è più buono: cucinalo in anticipo.",
+  "conservazione": "In frigo 4 giorni nella salsa; si congela a fette.",
+  "varianti": [
+   "Senza frullatore: passa le verdure al setaccio o lasciale a pezzi.",
+   "Con 50 ml di Porto nella marinata."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/brasato-al-vino-rosso.webp",
+   "prompt": "thick slices of red wine braised beef with dark glossy sauce and soft polenta, white ceramic plate"
+  },
+  "fonte": "Tradizione piemontese"
+ },
+ {
+  "slug": "bucatini-all-amatriciana",
+  "titolo": "Bucatini all'amatriciana",
+  "descrizione": "Guanciale, pelati, pecorino. Il grasso del guanciale sfumato con vino bianco fa il sugo. Versione senza peperoncino, che ad Amatrice è comunque facoltativo.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.1
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "classico"
+  ],
+  "dieta": [],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "bucatini",
+    "qta": 100,
+    "unita": "g",
+    "note": "o spaghetti/rigatoni"
+   },
+   {
+    "id": "guanciale",
+    "qta": 50,
+    "unita": "g"
+   },
+   {
+    "id": "pelati",
+    "qta": 200,
+    "unita": "g",
+    "note": "schiacciati a mano"
+   },
+   {
+    "id": "pecorino",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 30,
+    "unita": "ml"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Guanciale",
+    "testo": "Rosola il guanciale a listarelle in padella fredda a fuoco medio-basso finché è dorato (8 minuti). Sfuma col vino, fai evaporare. Togli il guanciale con una schiumarola lasciando il grasso.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Sugo",
+    "testo": "Nel grasso versa i pelati schiacciati, sala poco e cuoci 15 minuti a fuoco medio finché si restringe. Rimetti il guanciale gli ultimi 2 minuti.",
+    "minuti": 17
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta",
+    "testo": "Cuoci i bucatini al dente, scolali e saltali nel sugo 1 minuto. Fuoco spento, pecorino, mescola e servi con altro pecorino sopra.",
+    "minuti": 12
+   }
+  ],
+  "consigli": "I bucatini sono lunghi da cuocere (10–12 minuti) e schizzano: se ti danno fastidio, spaghetti o rigatoni sono perfetti.",
+  "conservazione": "Il sugo in frigo 3 giorni.",
+  "varianti": [
+   "Con pancetta affumicata se il guanciale non c'è: sfuma con più vino per bilanciare."
+  ],
+  "kcal": 640,
+  "foto": {
+   "copertina": "img/bucatini-all-amatriciana.webp",
+   "prompt": "bucatini all'amatriciana with red tomato sauce, crispy guanciale and grated pecorino, white ceramic bowl"
+  },
+  "fonte": "Ricetta del Comune di Amatrice; senza peperoncino"
+ },
+ {
+  "slug": "cacio-e-pepe",
+  "titolo": "Cacio e pepe",
+  "descrizione": "Tre ingredienti e una tecnica: la crema di pecorino si fa con l'acqua di cottura tiepida, non bollente, altrimenti fila. Il pepe va tostato.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 15,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.6
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "low-cost"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "spaghetti",
+    "qta": 100,
+    "unita": "g",
+    "note": "o tonnarelli"
+   },
+   {
+    "id": "pecorino",
+    "qta": 50,
+    "unita": "g",
+    "note": "grattugiato finissimo"
+   },
+   {
+    "id": "pepe",
+    "qta": 1,
+    "unita": "cucchiaini",
+    "note": "in grani, da pestare"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pepe tostato",
+    "testo": "Pesta i grani di pepe grossolanamente (fondo di un bicchiere sul tagliere). Tostane metà in padella a fuoco basso 1 minuto finché profuma, poi bagna con un mestolo d'acqua di cottura della pasta.",
+    "minuti": 3
+   },
+   {
+    "n": 2,
+    "titolo": "Pasta",
+    "testo": "Cuoci gli spaghetti in poca acqua (così è più ricca di amido) con poco sale. Scolali 2 minuti prima del tempo e finisci la cottura nella padella col pepe, aggiungendo acqua poco alla volta.",
+    "minuti": 9
+   },
+   {
+    "n": 3,
+    "titolo": "Crema di pecorino",
+    "testo": "Mentre la pasta cuoce, metti il pecorino in una ciotola e aggiungi 2–3 cucchiai di acqua di cottura TIEPIDA (lasciala raffreddare 1 minuto nel mestolo). Mescola con una forchetta fino a una crema liscia, senza grumi.",
+    "minuti": 2
+   },
+   {
+    "n": 4,
+    "titolo": "Mantecatura",
+    "testo": "Spegni il fuoco, aspetta 30 secondi, versa la crema sulla pasta e salta o mescola energicamente. Se si asciuga, un goccio d'acqua. Servi con il pepe rimasto.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Se la crema fila e fa grumi, l'acqua era troppo calda: ricomincia con pecorino nuovo e acqua tiepida. Non risparmiare sul pepe.",
+  "conservazione": "Non si conserva.",
+  "varianti": [
+   "Aggiungi 20 g di guanciale croccante e diventa una gricia."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/cacio-e-pepe.webp",
+   "prompt": "cacio e pepe spaghetti with glossy pecorino cream and cracked black pepper, nest of pasta in a white ceramic bowl"
+  },
+  "fonte": "Tecnica di Luciano Monosilio; dosi per 1"
+ },
+ {
+  "slug": "caldo-verde",
+  "titolo": "Caldo verde",
+  "descrizione": "La zuppa nazionale portoghese: base cremosa di patate frullate, couve galega tagliata a fili sottilissimi, rondelle di chouriço e olio. Da Bragança in giù la mangiano tutti.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.4
+  },
+  "attrezzatura": [
+   "pentola",
+   "frullatore"
+  ],
+  "tag": [
+   "portoghese",
+   "inverno",
+   "low-cost",
+   "avanzi",
+   "one-pan"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Portogallo · Minho",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "patate",
+    "qta": 250,
+    "unita": "g"
+   },
+   {
+    "id": "cavolo-nero",
+    "qta": 80,
+    "unita": "g",
+    "note": "couve galega, a striscioline finissime (al supermercato la vendono già tagliata)"
+   },
+   {
+    "id": "chourico",
+    "qta": 50,
+    "unita": "g",
+    "note": "a rondelle"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 3,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Base",
+    "testo": "In pentola con 500 ml d'acqua salata cuoci patate a pezzi, cipolla e aglio con un cucchiaio d'olio, 20 minuti, finché sono morbidissime.",
+    "minuti": 22
+   },
+   {
+    "n": 2,
+    "titolo": "Frullare",
+    "testo": "Frulla direttamente in pentola fino a una crema liscia e fluida. Se è troppo densa, acqua calda.",
+    "minuti": 2
+   },
+   {
+    "n": 3,
+    "titolo": "Couve",
+    "testo": "Riporta a bollore, aggiungi la couve e il chouriço e cuoci 5 minuti: il cavolo deve restare verde vivo.",
+    "minuti": 6
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Nel piatto fondo con olio crudo abbondante e pepe. Con broa (pane di mais) se la trovi.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "La couve tagliata a fili sottilissimi è ciò che distingue il caldo verde: se la tagli tu, arrotola le foglie strette e affetta sottile come tagliatelle.",
+  "conservazione": "In frigo 2 giorni.",
+  "varianti": [
+   "Senza chouriço: vegano.",
+   "Con un pezzo di chouriço intero cotto nella zuppa e poi affettato: più profumato."
+  ],
+  "kcal": 380,
+  "foto": {
+   "copertina": "img/caldo-verde.webp",
+   "prompt": "Portuguese caldo verde soup, pale potato base with thin shredded green kale and chourico slices, olive oil, white ceramic bowl"
+  },
+  "fonte": "Tradizione portoghese"
+ },
+ {
+  "slug": "cotoletta-alla-milanese",
+  "titolo": "Cotoletta alla milanese",
+  "descrizione": "Con l'osso, alta, impanata due volte e fritta nel burro chiarificato. Non si sala prima, non si usa il pangrattato fine ma il pane raffermo grattato al momento. Una fetta di limone e basta.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 10,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 5
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "da-ospiti"
+  ],
+  "dieta": [],
+  "origine": "Italia · Lombardia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "costoletta-di-vitello",
+    "qta": 250,
+    "unita": "g",
+    "note": "con osso, alta 2 cm"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "pangrattato",
+    "qta": 60,
+    "unita": "g",
+    "note": "meglio da pane raffermo grattato"
+   },
+   {
+    "id": "burro",
+    "qta": 80,
+    "unita": "g",
+    "note": "da chiarificare"
+   },
+   {
+    "id": "limone",
+    "qta": 0.25,
+    "unita": "pz",
+    "note": "uno spicchio per servire"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Burro chiarificato",
+    "testo": "Sciogli il burro in un pentolino a fuoco bassissimo senza mescolare, 8 minuti. Togli la schiuma, versa la parte gialla limpida in una tazza lasciando il fondo bianco. È il tuo grasso di frittura: non brucia.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Impanatura",
+    "testo": "Incidi il bordo della costoletta in 2–3 punti (non si arriccia). Passala nell'uovo sbattuto (senza sale), poi nel pangrattato premendo con il palmo. Ripeti uovo e pangrattato per una crosta doppia.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Frittura",
+    "testo": "Scalda il burro chiarificato in padella a fuoco medio: deve sfrigolare senza fumare. Friggi 4 minuti per lato, bagnando la superficie con il burro con un cucchiaio. Deve essere dorata scura, non bruciata.",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Scola su carta, sala solo ora con sale grosso. Spicchio di limone a parte. Con insalata o patate al forno.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Se la costoletta è alta, dopo la frittura passala 5 minuti in forno a 180 °C per finire il centro senza bruciare la crosta.",
+  "conservazione": "Non si conserva. Fredda il giorno dopo nel panino è però un classico.",
+  "varianti": [
+   "Senza osso e battuta sottile: la 'orecchia d'elefante'.",
+   "Con lonza di maiale a fetta alta: più economica."
+  ],
+  "kcal": 720,
+  "foto": {
+   "copertina": "img/cotoletta-alla-milanese.webp",
+   "prompt": "bone-in veal cotoletta alla milanese with golden breadcrumb crust and a lemon wedge, white ceramic plate"
+  },
+  "fonte": "Tradizione milanese"
+ },
+ {
+  "slug": "crepes-salate-prosciutto-e-formaggio",
+  "titolo": "Crêpes salate prosciutto e formaggio",
+  "descrizione": "Pastella di uovo, latte e farina, riposata mezz'ora, cotta in padella sottile. Farcite con prosciutto cotto e formaggio che fonde, ripiegate e ripassate. Due crêpes per cena, l'impasto avanzato per la colazione dolce.",
+  "categoria": "piatto-unico",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 20,
+   "riposo": 30
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.8
+  },
+  "attrezzatura": [
+   "padella",
+   "frusta"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Francia · Bretagna",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 60,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "latte",
+    "qta": 150,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "prosciutto-cotto",
+    "qta": 60,
+    "unita": "g"
+   },
+   {
+    "id": "formaggio-fuso",
+    "qta": 60,
+    "unita": "g",
+    "note": "emmental o flamengo grattugiato"
+   },
+   {
+    "id": "noce-moscata",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pastella",
+    "testo": "Sbatti l'uovo con il latte, aggiungi la farina setacciata e un pizzico di sale mescolando con la frusta finché non ci sono grumi. Sciogli il burro e uniscilo. Riposo 30 minuti in frigo: le crêpes non si rompono.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Cottura",
+    "testo": "Padella antiaderente da 22 cm calda, un velo di burro. Versa un mestolino scarso di pastella e ruota la padella per coprirla. Cuoci 1 minuto finché i bordi si staccano, gira con una spatola, 30 secondi. Ripeti (vengono 3–4 crêpes).",
+    "minuti": 12
+   },
+   {
+    "n": 3,
+    "titolo": "Farcire",
+    "testo": "Su ogni crêpe metti prosciutto e formaggio, piega in quattro e rimetti in padella 1 minuto per lato finché il formaggio fonde. Noce moscata, pepe.",
+    "minuti": 5
+   }
+  ],
+  "consigli": "La prima crêpe viene sempre male: è la legge. Serve a regolare il fuoco.",
+  "conservazione": "Le crêpes cotte non farcite si conservano impilate in frigo 2 giorni con carta forno tra una e l'altra.",
+  "varianti": [
+   "Con spinaci saltati e ricotta.",
+   "Dolci: zucchero e limone, o marmellata, con la stessa pastella (aggiungi un cucchiaino di zucchero)."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/crepes-salate-prosciutto-e-formaggio.webp",
+   "prompt": "two folded savory crepes with melted cheese and ham, golden lace edges, white ceramic plate, minimal"
+  },
+  "fonte": "Classico francese"
+ },
+ {
+  "slug": "crostata-alla-crema-pasticcera",
+  "titolo": "Crostata alla crema pasticcera",
+  "descrizione": "Due basi da imparare in una: la frolla (burro freddo, poco lavorata) e la crema pasticcera (tuorli, amido, latte, vaniglia). Stampo da 18 cm. Con un pomeriggio libero.",
+  "categoria": "dolce",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 40,
+   "cottura": 35,
+   "riposo": 90
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.8
+  },
+  "attrezzatura": [
+   "forno",
+   "stampo",
+   "mattarello",
+   "pentola",
+   "frusta"
+  ],
+  "tag": [
+   "weekend",
+   "da-ospiti",
+   "classico",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 150,
+    "unita": "g"
+   },
+   {
+    "id": "burro",
+    "qta": 75,
+    "unita": "g",
+    "note": "freddo, a cubetti"
+   },
+   {
+    "id": "zucchero",
+    "qta": 100,
+    "unita": "g",
+    "note": "50 g frolla + 50 g crema"
+   },
+   {
+    "id": "uova",
+    "qta": 3,
+    "unita": "pz",
+    "note": "1 uovo per la frolla, 2 tuorli per la crema"
+   },
+   {
+    "id": "latte",
+    "qta": 250,
+    "unita": "ml"
+   },
+   {
+    "id": "amido-di-mais",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "vaniglia",
+    "qta": 1,
+    "unita": "cucchiaini",
+    "note": "estratto, o mezza bacca"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "scorza"
+   },
+   {
+    "id": "frutti-di-bosco",
+    "qta": 60,
+    "unita": "g",
+    "opzionale": true,
+    "note": "per decorare"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Frolla",
+    "testo": "Sfrega la farina con il burro freddo tra le dita finché sembra sabbia. Aggiungi 50 g di zucchero, la scorza di limone e l'uovo; impasta il minimo per compattare. Avvolgi in pellicola e frigo 1 ora.",
+    "minuti": 12
+   },
+   {
+    "n": 2,
+    "titolo": "Crema pasticcera",
+    "testo": "Scalda il latte con la vaniglia. In un pentolino sbatti 2 tuorli con 50 g di zucchero e l'amido. Versa il latte caldo mescolando, rimetti sul fuoco basso e mescola con la frusta finché si addensa e fa la prima bolla (3–4 minuti). Versa in una ciotola, pellicola a contatto, raffredda.",
+    "minuti": 15
+   },
+   {
+    "n": 3,
+    "titolo": "Guscio",
+    "testo": "Forno a 180 °C. Stendi la frolla a 4 mm tra due fogli di carta forno, fodera lo stampo da 18 cm, bucherella il fondo. Tieni gli avanzi per le strisce.",
+    "minuti": 10
+   },
+   {
+    "n": 4,
+    "titolo": "Riempire e cuocere",
+    "testo": "Versa la crema fredda nel guscio, decora con strisce di frolla a griglia. Cuoci 30–35 minuti finché la frolla è dorata. Raffredda completamente (30 minuti) prima di sformare.",
+    "minuti": 40
+   }
+  ],
+  "consigli": "Burro freddo e mani veloci: la frolla si rovina con il calore. Se la crema fa grumi, frullala o passala al colino.",
+  "conservazione": "In frigo 3 giorni.",
+  "varianti": [
+   "Con marmellata al posto della crema: la crostata classica, 25 minuti di forno.",
+   "Crema e frutti di bosco freschi aggiunti dopo la cottura."
+  ],
+  "kcal": 420,
+  "foto": {
+   "copertina": "img/crostata-alla-crema-pasticcera.webp",
+   "prompt": "small lattice-topped custard crostata, golden shortcrust, one slice cut showing yellow pastry cream, light grey background"
+  },
+  "fonte": "Basi di pasticceria italiana"
+ },
+ {
+  "slug": "filetto-di-maiale-in-crosta-di-pancetta",
+  "titolo": "Filetto di maiale in crosta di pancetta",
+  "descrizione": "Il lombinho avvolto nella pancetta, rosolato in padella e finito in forno: fuori croccante, dentro rosato. Da ristorante, in 45 minuti.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 25,
+   "riposo": 5
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.6
+  },
+  "attrezzatura": [
+   "padella",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "filetto-di-maiale",
+    "qta": 250,
+    "unita": "g",
+    "note": "un pezzo intero"
+   },
+   {
+    "id": "pancetta",
+    "qta": 6,
+    "unita": "fette",
+    "note": "sottili, o bacon"
+   },
+   {
+    "id": "senape",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Avvolgi",
+    "testo": "Forno a 200 °C. Pepa il filetto, spalmalo di senape e rosmarino tritato. Stendi le fette di pancetta sovrapposte su un foglio di carta forno, appoggia il filetto e arrotola stretto usando la carta. Fissa con stecchini se serve.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Rosolatura",
+    "testo": "In padella con l'olio, rosola il filetto a fuoco vivo 1 minuto per lato, con la chiusura sotto per prima, finché la pancetta è dorata.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Trasferisci sulla teglia con l'aglio schiacciato e cuoci 15–18 minuti (62 °C al cuore). Il centro deve restare rosato.",
+    "minuti": 18
+   },
+   {
+    "n": 4,
+    "titolo": "Riposo e salsa",
+    "testo": "Lascia riposare 5 minuti. Intanto deglassa la padella col vino a fuoco vivo 1 minuto. Affetta a medaglioni e servi con la salsa.",
+    "minuti": 6
+   }
+  ],
+  "consigli": "Il filetto di maiale è magro e in 5 minuti di troppo diventa secco: rispetta i tempi e fidati del riposo.",
+  "conservazione": "In frigo 2 giorni; a fette fredde nell'insalata.",
+  "varianti": [
+   "Con prosciutto crudo al posto della pancetta.",
+   "Con salsa di senape e panna."
+  ],
+  "kcal": 520,
+  "foto": {
+   "copertina": "img/filetto-di-maiale-in-crosta-di-pancetta.webp",
+   "prompt": "sliced pork tenderloin wrapped in crispy pancetta, pink center, rosemary, light pan jus, white ceramic plate"
+  },
+  "fonte": "Ricetta moderna"
+ },
+ {
+  "slug": "focaccia-genovese",
+  "titolo": "Focaccia genovese",
+  "descrizione": "Alta un dito, unta, con i buchi pieni di salamoia. Tre ore di lievitazione in tutto, quasi tutte di attesa. Cena con formaggi e salumi, o colazione il giorno dopo.",
+  "categoria": "piatto-unico",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 25,
+   "cottura": 18,
+   "riposo": 180
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.9
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Liguria",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 200,
+    "unita": "g"
+   },
+   {
+    "id": "lievito-di-birra",
+    "qta": 3,
+    "unita": "g",
+    "note": "secco (una bustina piccola)"
+   },
+   {
+    "id": "sale",
+    "qta": 4,
+    "unita": "g"
+   },
+   {
+    "id": "zucchero",
+    "qta": 1,
+    "unita": "cucchiaini"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 4,
+    "unita": "cucchiai",
+    "note": "impasto + teglia + salamoia"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Impasto",
+    "testo": "Sciogli lievito e zucchero in 120 ml di acqua tiepida. Aggiungi farina, 1 cucchiaio d'olio e infine il sale; impasta 8 minuti finché è liscio. Ciotola unta, coperta, 1 ora in un posto tiepido (forno spento con la luce accesa).",
+    "minuti": 15
+   },
+   {
+    "n": 2,
+    "titolo": "In teglia",
+    "testo": "Ungi bene una teglia piccola (20×25 cm), rovescia l'impasto e allargalo con le mani unte. Copri e lascia lievitare 1 ora: deve raddoppiare.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Buchi e salamoia",
+    "testo": "Mescola 2 cucchiai d'olio con 2 cucchiai d'acqua e un cucchiaino raso di sale. Affonda le dita nell'impasto fino al fondo facendo tanti buchi, versa la salamoia sopra: deve riempire i buchi. Rosmarino se vuoi. Altri 30 minuti di riposo.",
+    "minuti": 5
+   },
+   {
+    "n": 4,
+    "titolo": "Forno",
+    "testo": "220 °C, ripiano medio-basso, 15–18 minuti finché è dorata. Appena esce, un filo d'olio. Mangiala tiepida.",
+    "minuti": 18
+   }
+  ],
+  "consigli": "La salamoia (acqua + olio + sale) è ciò che rende la focaccia genovese diversa da tutte le altre: non saltarla.",
+  "conservazione": "Un giorno in un sacchetto di carta. Si congela a pezzi e si rigenera in forno 5 minuti.",
+  "varianti": [
+   "Con cipolle a fettine sottili sopra prima del forno.",
+   "Con olive nere schiacciate nell'impasto."
+  ],
+  "kcal": 820,
+  "foto": {
+   "copertina": "img/focaccia-genovese.webp",
+   "prompt": "golden Genovese focaccia with deep dimples filled with olive oil and flaky salt, cut square, light wooden board"
+  },
+  "fonte": "Tradizione ligure"
+ },
+ {
+  "slug": "frittata-di-patate-e-cipolle-al-forno",
+  "titolo": "Frittata di patate e cipolle al forno",
+  "descrizione": "Alta, morbida, senza girarla: al forno in una teglia piccola. Patate a dadini stufate con la cipolla, uova, parmigiano. Cena di dispensa che vale anche fredda in mensa.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 5
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.2
+  },
+  "attrezzatura": [
+   "padella",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "low-cost",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegetariano",
+   "senza-glutine"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "uova",
+    "qta": 3,
+    "unita": "pz"
+   },
+   {
+    "id": "patate",
+    "qta": 150,
+    "unita": "g",
+    "note": "a dadini da 1 cm"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "latte",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Patate e cipolla",
+    "testo": "In padella scalda l'olio e cuoci patate e cipolla a fettine con rosmarino e sale, coperte, a fuoco medio-basso per 12 minuti finché le patate sono tenere. Forno a 180 °C.",
+    "minuti": 14
+   },
+   {
+    "n": 2,
+    "titolo": "Uova",
+    "testo": "Sbatti le uova con latte, parmigiano, sale e pepe. Unisci le patate tiepide.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Versa in una teglia piccola (o pirofila da 15 cm) unta d'olio. Cuoci 18–20 minuti finché è gonfia e dorata e il centro non trema più.",
+    "minuti": 20
+   },
+   {
+    "n": 4,
+    "titolo": "Riposo",
+    "testo": "Aspetta 5 minuti prima di tagliare. Con insalata.",
+    "minuti": 5
+   }
+  ],
+  "consigli": "Uova a temperatura ambiente e forno non troppo alto: viene soffice invece che gommosa.",
+  "conservazione": "In frigo 3 giorni; fredda è perfetta per il pranzo.",
+  "varianti": [
+   "Con zucchine al posto delle patate.",
+   "Con 50 g di provola a cubetti dentro."
+  ],
+  "kcal": 480,
+  "foto": {
+   "copertina": "img/frittata-di-patate-e-cipolle-al-forno.webp",
+   "prompt": "thick golden baked potato and onion frittata slice on a white ceramic plate, rosemary, minimal styling"
+  },
+  "fonte": "Ricetta di casa"
+ },
+ {
+  "slug": "funghi-trifolati",
+  "titolo": "Funghi trifolati",
+  "descrizione": "Champignon a fette, padella molto calda, aglio, prezzemolo. Il trucco: non salarli subito e non mescolarli troppo, così dorano invece di bollire. Contorno, o sopra la bistecca, o dentro la pasta.",
+  "categoria": "contorno",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 12,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.2
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "autunno",
+   "low-cost",
+   "one-pan"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "funghi-champignon",
+    "qta": 250,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 30,
+    "unita": "ml",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pulizia",
+    "testo": "Pulisci i funghi con un panno umido (non lavarli: assorbono acqua). Tagliali a fette da 4 mm.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Rosolatura",
+    "testo": "Scalda l'olio con l'aglio schiacciato a fuoco vivo. Aggiungi i funghi in un solo strato e non toccarli per 3 minuti: devono dorare. Poi mescola e cuoci altri 4–5 minuti finché l'acqua è evaporata.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Finire",
+    "testo": "Solo ora sale e pepe; sfuma col vino se vuoi. Fuoco spento, prezzemolo tritato. Togli l'aglio.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Padella larga e funghi non ammucchiati. Se ne hai tanti, fai due volte.",
+  "conservazione": "In frigo 2 giorni.",
+  "varianti": [
+   "Con burro al posto dell'olio e timo: più francese.",
+   "Con funghi misti di bosco in stagione."
+  ],
+  "kcal": 180,
+  "foto": {
+   "copertina": "img/funghi-trifolati.webp",
+   "prompt": "golden sauteed mushroom slices with garlic and parsley, glossy olive oil, white ceramic bowl"
+  },
+  "fonte": "Classico"
+ },
+ {
+  "slug": "gnocchi-di-patate-burro-e-salvia",
+  "titolo": "Gnocchi di patate burro e salvia",
+  "descrizione": "Fatti a mano con patate lessate, poca farina e un tuorlo. Il condimento più semplice è il migliore: burro nocciola e salvia croccante.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 40,
+   "cottura": 25,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.4
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Nord",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "patate",
+    "qta": 300,
+    "unita": "g",
+    "note": "vecchie, a pasta gialla/farinosa"
+   },
+   {
+    "id": "farina-00",
+    "qta": 80,
+    "unita": "g",
+    "note": "più un po' per il piano"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "solo il tuorlo"
+   },
+   {
+    "id": "burro",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "salvia",
+    "qta": 6,
+    "unita": "foglie"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "noce-moscata",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Patate",
+    "testo": "Lessa le patate intere con la buccia partendo da acqua fredda salata, 25–30 minuti finché una forchetta entra senza resistenza. Sbucciale calde e schiacciale con una forchetta (o schiacciapatate) sul piano infarinato. Lascia intiepidire 5 minuti.",
+    "minuti": 35
+   },
+   {
+    "n": 2,
+    "titolo": "Impasto",
+    "testo": "Aggiungi il tuorlo, un pizzico di sale, noce moscata e la farina poco alla volta. Impasta il minimo indispensabile: deve stare insieme senza appiccicare. Meno farina = gnocchi più morbidi.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Forma",
+    "testo": "Fai dei cordoni spessi 2 cm, tagliali a pezzi di 2 cm e, se vuoi, rigali sui rebbi di una forchetta. Disponili su un vassoio infarinato senza sovrapporli.",
+    "minuti": 10
+   },
+   {
+    "n": 4,
+    "titolo": "Burro e salvia",
+    "testo": "In padella sciogli il burro con le foglie di salvia a fuoco medio finché il burro profuma di nocciola e la salvia è croccante (3 minuti). Spegni.",
+    "minuti": 3
+   },
+   {
+    "n": 5,
+    "titolo": "Cottura",
+    "testo": "Butta gli gnocchi in acqua bollente salata: appena vengono a galla (1–2 minuti) raccoglili con una schiumarola e passali nella padella. Salta con un cucchiaio d'acqua e servi con parmigiano.",
+    "minuti": 4
+   }
+  ],
+  "consigli": "Patate vecchie e farinose assorbono meno acqua: servirà meno farina. Non impastare a lungo o diventano gommosi.",
+  "conservazione": "Crudi: congelali sul vassoio, poi in sacchetto; cuocili da congelati. Cotti: no.",
+  "varianti": [
+   "Con gorgonzola sciolto nella panna.",
+   "Al forno con mozzarella e passata (alla sorrentina)."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/gnocchi-di-patate-burro-e-salvia.webp",
+   "prompt": "handmade potato gnocchi with brown butter and crispy sage leaves, parmesan shavings, white ceramic plate"
+  },
+  "fonte": "Tradizione del Nord Italia"
+ },
+ {
+  "slug": "insalata-di-finocchi-arance-e-olive",
+  "titolo": "Insalata di finocchi, arance e olive",
+  "descrizione": "Siciliana, croccante, fresca: finocchio a fette sottili, arancia a vivo, olive nere, olio buono. Accompagna pesce e fritti, o pulisce la bocca dopo una parmigiana.",
+  "categoria": "contorno",
+  "difficolta": "molto-facile",
+  "tempi": {
+   "preparazione": 12,
+   "cottura": 0,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.3
+  },
+  "attrezzatura": [],
+  "tag": [
+   "veloce",
+   "inverno",
+   "low-cost"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Sicilia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "finocchi",
+    "qta": 1,
+    "unita": "pz",
+    "note": "piccolo"
+   },
+   {
+    "id": "arance",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "olive-nere",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "menta",
+    "qta": 3,
+    "unita": "foglie",
+    "opzionale": true
+   },
+   {
+    "id": "noci",
+    "qta": 15,
+    "unita": "g",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Finocchio",
+    "testo": "Togli le foglie esterne dure, taglia il finocchio a fette sottilissime (1–2 mm) con un coltello affilato. Tieni le barbe verdi.",
+    "minuti": 4
+   },
+   {
+    "n": 2,
+    "titolo": "Arancia a vivo",
+    "testo": "Taglia le due calotte dell'arancia, poi la buccia seguendo la curva con il coltello, fino alla polpa. Affetta a rondelle o estrai gli spicchi tra le membrane. Raccogli il succo.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Condire",
+    "testo": "In un piatto: finocchio, arancia, olive, barbe di finocchio e menta. Emulsiona olio, il succo raccolto, sale e pepe e versa sopra. Noci se vuoi. Servi subito.",
+    "minuti": 3
+   }
+  ],
+  "consigli": "Il finocchio deve essere tagliato davvero sottile: se hai una mandolina è il momento, altrimenti pazienza e coltello.",
+  "conservazione": "Non si conserva condita; gli ingredienti tagliati reggono qualche ora.",
+  "varianti": [
+   "Con cipolla rossa a fettine sottili.",
+   "Con tonno sott'olio: diventa un secondo."
+  ],
+  "kcal": 230,
+  "foto": {
+   "copertina": "img/insalata-di-finocchi-arance-e-olive.webp",
+   "prompt": "shaved fennel and orange salad with black olives and fennel fronds, olive oil, bright and fresh, white ceramic plate"
+  },
+  "fonte": "Tradizione siciliana"
+ },
+ {
+  "slug": "involtini-di-tacchino-con-speck-e-scamorza",
+  "titolo": "Involtini di tacchino con speck e scamorza",
+  "descrizione": "Fettine di tacchino arrotolate con speck e formaggio, rosolate e sfumate col vino. Formaggio che fila dentro, salsina fuori, 30 minuti.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 12,
+   "cottura": 15,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.9
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Trentino",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "fettine-di-tacchino",
+    "qta": 160,
+    "unita": "g",
+    "note": "3 fettine sottili"
+   },
+   {
+    "id": "speck",
+    "qta": 3,
+    "unita": "fette"
+   },
+   {
+    "id": "provola",
+    "qta": 45,
+    "unita": "g",
+    "note": "scamorza o flamengo, a bastoncini"
+   },
+   {
+    "id": "salvia",
+    "qta": 3,
+    "unita": "foglie"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Involtini",
+    "testo": "Batti le fettine sottili, pepa (niente sale: lo speck basta). Su ognuna metti una fetta di speck, un bastoncino di formaggio e una foglia di salvia. Arrotola stretto e chiudi con uno stecchino.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Rosolatura",
+    "testo": "Scalda olio e burro a fuoco medio-alto e rosola gli involtini su tutti i lati 5 minuti finché sono dorati.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Sfumatura",
+    "testo": "Sfuma col vino, copri e cuoci a fuoco basso 6–8 minuti. Scopri, fai restringere 1 minuto e servi con la salsina.",
+    "minuti": 9
+   }
+  ],
+  "consigli": "Chiudi bene le estremità con lo stecchino o il formaggio scappa. Se scappa comunque, diventa crosticina: non è una tragedia.",
+  "conservazione": "In frigo 2 giorni.",
+  "varianti": [
+   "Con prosciutto cotto e mozzarella.",
+   "Con fettine di vitello."
+  ],
+  "kcal": 470,
+  "foto": {
+   "copertina": "img/involtini-di-tacchino-con-speck-e-scamorza.webp",
+   "prompt": "turkey roulades wrapped with speck, melted smoked cheese oozing, sage, light pan sauce, white ceramic plate"
+  },
+  "fonte": "Ricetta di casa"
+ },
+ {
+  "slug": "lasagne-bianche-funghi-e-prosciutto",
+  "titolo": "Lasagne bianche funghi e prosciutto cotto",
+  "descrizione": "Besciamella fatta a mano, funghi trifolati, prosciutto cotto e formaggio che fila. Una teglia piccola per una persona, o raddoppia e hai pranzo pronto.",
+  "categoria": "primo",
+  "difficolta": "difficile",
+  "tempi": {
+   "preparazione": 40,
+   "cottura": 45,
+   "riposo": 10
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.5
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella",
+   "forno",
+   "teglia",
+   "frusta"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi",
+   "da-ospiti",
+   "inverno"
+  ],
+  "dieta": [],
+  "origine": "Italia · Emilia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "sfoglie-lasagne",
+    "qta": 4,
+    "unita": "pz",
+    "note": "fresche o secche precotte"
+   },
+   {
+    "id": "funghi-champignon",
+    "qta": 200,
+    "unita": "g"
+   },
+   {
+    "id": "prosciutto-cotto",
+    "qta": 60,
+    "unita": "g"
+   },
+   {
+    "id": "mozzarella",
+    "qta": 80,
+    "unita": "g",
+    "note": "o formaggio flamengo"
+   },
+   {
+    "id": "latte",
+    "qta": 300,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "farina-00",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "noce-moscata",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Funghi trifolati",
+    "testo": "Affetta i funghi e saltali in padella a fuoco vivo con olio e aglio finché l'acqua è evaporata e sono dorati (8 minuti). Sala, pepe, prezzemolo. Togli l'aglio.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Besciamella",
+    "testo": "Sciogli il burro in un pentolino, aggiungi la farina e mescola 1 minuto (roux). Versa il latte freddo tutto insieme e mescola con la frusta a fuoco medio finché si addensa (5 minuti). Sale, noce moscata. Deve essere fluida, non colla: se serve, un goccio di latte.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Assemblaggio",
+    "testo": "Scalda il forno a 190 °C. In una teglia piccola (circa 15×20 cm) stendi un velo di besciamella, poi sfoglia, besciamella, funghi, prosciutto, mozzarella a pezzetti, parmigiano. Ripeti per 3–4 strati e chiudi con besciamella e parmigiano.",
+    "minuti": 12
+   },
+   {
+    "n": 4,
+    "titolo": "Forno",
+    "testo": "Cuoci 30–35 minuti finché la superficie è dorata e i bordi sfrigolano. Se le sfoglie sono secche non precotte, copri con alluminio i primi 20 minuti.",
+    "minuti": 35
+   },
+   {
+    "n": 5,
+    "titolo": "Riposo",
+    "testo": "Lascia riposare 10 minuti prima di tagliare: gli strati si compattano e non si sfaldano.",
+    "minuti": 10
+   }
+  ],
+  "consigli": "Con sfoglie secche, immergile 1 minuto in acqua calda prima di stenderle: cuociono uniformi.",
+  "conservazione": "In frigo 3 giorni, si congela benissimo a porzioni. Riscalda in forno a 160 °C coperta.",
+  "varianti": [
+   "Con zucca a cubetti al posto dei funghi e salsiccia al posto del cotto.",
+   "Con spinaci e ricotta, vegetariana."
+  ],
+  "kcal": 780,
+  "foto": {
+   "copertina": "img/lasagne-bianche-funghi-e-prosciutto.webp",
+   "prompt": "single portion of white lasagna with mushrooms, ham and golden bechamel crust, layers visible, white plate"
+  },
+  "fonte": "Adattamento da GialloZafferano"
+ },
+ {
+  "slug": "minestra-di-farro-zucca-e-cavolo-nero",
+  "titolo": "Minestra di farro, zucca e cavolo nero",
+  "descrizione": "Zuppa toscana d'inverno: il farro resta croccante, la zucca dolce, il cavolo nero (couve galega qui) dà carattere. Doppia dose e hai la cena di domani.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 35,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.6
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "one-pan",
+   "low-cost",
+   "inverno",
+   "autunno",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Toscana",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farro",
+    "qta": 60,
+    "unita": "g",
+    "note": "perlato"
+   },
+   {
+    "id": "zucca",
+    "qta": 150,
+    "unita": "g"
+   },
+   {
+    "id": "cavolo-nero",
+    "qta": 80,
+    "unita": "g",
+    "note": "senza la costa centrale"
+   },
+   {
+    "id": "fagioli-cannellini",
+    "qta": 100,
+    "unita": "g",
+    "opzionale": true
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "carote",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "sedano",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "brodo",
+    "qta": 500,
+    "unita": "ml"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Soffritto",
+    "testo": "Trita cipolla, carota e sedano e falli appassire nell'olio con il rosmarino 5 minuti.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Farro e zucca",
+    "testo": "Aggiungi il farro sciacquato e la zucca a cubetti, tosta 2 minuti, poi copri con il brodo caldo. Cuoci 20 minuti a fuoco medio.",
+    "minuti": 22
+   },
+   {
+    "n": 3,
+    "titolo": "Cavolo nero",
+    "testo": "Aggiungi il cavolo nero a striscioline (e i fagioli se li usi) e cuoci altri 10 minuti finché il farro è tenero ma sodo. Regola di sale.",
+    "minuti": 10
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Nel piatto: olio crudo abbondante, pepe, e pane tostato strofinato con aglio.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Il farro perlato non ha bisogno di ammollo. Con l'orzo perlato è identico.",
+  "conservazione": "In frigo 3 giorni, migliora. Si congela.",
+  "varianti": [
+   "Con una crosta di parmigiano nel brodo (non più vegana, ma più buona).",
+   "Con pancetta nel soffritto."
+  ],
+  "kcal": 430,
+  "foto": {
+   "copertina": "img/minestra-di-farro-zucca-e-cavolo-nero.webp",
+   "prompt": "hearty Tuscan farro soup with orange pumpkin cubes and dark kale, olive oil drizzle, white ceramic bowl"
+  },
+  "fonte": "Tradizione toscana"
+ },
+ {
+  "slug": "orata-al-forno-con-patate-e-olive",
+  "titolo": "Orata al forno con patate e olive",
+  "descrizione": "Un'orata intera (la dourada, qui costa poco) su patate a fette sottili, olive, aglio e vino bianco. Mezz'ora di forno e il pesce si sfila da solo.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 35,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 5
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "one-pan",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Liguria",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "orata",
+    "qta": 400,
+    "unita": "g",
+    "note": "una, pulita e squamata dal pescivendolo"
+   },
+   {
+    "id": "patate",
+    "qta": 200,
+    "unita": "g",
+    "note": "a fette da 3 mm"
+   },
+   {
+    "id": "olive-nere",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 60,
+    "unita": "ml"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 3,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Patate",
+    "testo": "Forno a 200 °C. Stendi le patate a fette nella teglia oliata in uno strato solo, condisci con olio, sale, aglio a fettine e rosmarino. Inforna 15 minuti da sole.",
+    "minuti": 18
+   },
+   {
+    "n": 2,
+    "titolo": "Orata",
+    "testo": "Asciuga l'orata, sala dentro e fuori, riempi il ventre con fette di limone e prezzemolo. Appoggiala sulle patate, aggiungi le olive, bagna con vino e olio.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Cuoci 20 minuti. È pronta quando l'occhio è bianco e la pinna dorsale si stacca tirando. Se le patate sono chiare, 3 minuti di grill.",
+    "minuti": 20
+   },
+   {
+    "n": 4,
+    "titolo": "Sfilettatura",
+    "testo": "Incidi lungo la spina dorsale, solleva il filetto con un cucchiaio, togli la lisca intera e prendi il secondo filetto. Servi con patate, olive e il fondo di cottura.",
+    "minuti": 3
+   }
+  ],
+  "consigli": "Chiedi al pescivendolo di pulirla ('limpar e escamar'): lo fanno gratis. Il pesce al forno è pronto quando smette di sembrare traslucido vicino alla lisca.",
+  "conservazione": "In frigo 1 giorno.",
+  "varianti": [
+   "Con branzino (robalo).",
+   "In cartoccio di carta forno, senza patate, in 18 minuti."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/orata-al-forno-con-patate-e-olive.webp",
+   "prompt": "whole roasted sea bream on sliced potatoes with black olives, lemon and rosemary, white ceramic baking dish, overhead light"
+  },
+  "fonte": "Tradizione ligure"
+ },
+ {
+  "slug": "orecchiette-salsiccia-e-cime-di-rapa",
+  "titolo": "Orecchiette salsiccia e cime di rapa",
+  "descrizione": "Pugliese di ottobre. I grelos portoghesi sono le cime di rapa: costano poco e li trovi ovunque. Le orecchiette no, ma i cavatappi vanno benissimo.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 25,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.6
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "autunno",
+   "classico"
+  ],
+  "dieta": [],
+  "origine": "Italia · Puglia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "orecchiette",
+    "qta": 90,
+    "unita": "g"
+   },
+   {
+    "id": "cime-di-rapa",
+    "qta": 200,
+    "unita": "g",
+    "note": "grelos, pulite"
+   },
+   {
+    "id": "salsiccia",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "acciughe",
+    "qta": 2,
+    "unita": "pz",
+    "note": "filetti"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "pangrattato",
+    "qta": 15,
+    "unita": "g",
+    "opzionale": true,
+    "note": "tostato, al posto del formaggio"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pulizia dei grelos",
+    "testo": "Stacca le foglie tenere e le cimette, scarta i gambi grossi. Lava bene. Porta a bollire una pentola d'acqua salata.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Salsiccia",
+    "testo": "In padella scalda l'olio con l'aglio schiacciato e le acciughe: scioglile con il cucchiaio. Aggiungi la salsiccia sbriciolata e rosolala 8 minuti finché è dorata.",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta e cime insieme",
+    "testo": "Cala la pasta; a 5 minuti dalla fine aggiungi i grelos nella stessa pentola. Scola tutto insieme tenendo un po' d'acqua.",
+    "minuti": 12
+   },
+   {
+    "n": 4,
+    "titolo": "Salto in padella",
+    "testo": "Versa pasta e cime nella padella con la salsiccia, salta 1 minuto con un goccio d'acqua. Servi con il pangrattato tostato e pepe.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "In Puglia si cuociono pasta e verdura nella stessa acqua: l'acqua diventa verde e saporita e la pasta si insaporisce.",
+  "conservazione": "In frigo 1 giorno; riscalda in padella.",
+  "varianti": [
+   "Senza salsiccia, con più acciughe e un pizzico di peperoncino (se un giorno cambi idea sul piccante).",
+   "Con pecorino grattugiato al posto del pangrattato."
+  ],
+  "kcal": 590,
+  "foto": {
+   "copertina": "img/orecchiette-salsiccia-e-cime-di-rapa.webp",
+   "prompt": "orecchiette pasta with crumbled sausage and dark green turnip tops, glossy olive oil, white ceramic plate"
+  },
+  "fonte": "Tradizione pugliese"
+ },
+ {
+  "slug": "panna-cotta-ai-frutti-di-bosco",
+  "titolo": "Panna cotta ai frutti di bosco",
+  "descrizione": "Panna, un po' di latte, zucchero, vaniglia e gelatina: 10 minuti di lavoro e 4 ore di frigo. Deve tremare, non essere gommosa. Salsa di frutti di bosco surgelati cotti 5 minuti.",
+  "categoria": "dolce",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 10,
+   "riposo": 240
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.5
+  },
+  "attrezzatura": [
+   "pentola",
+   "stampini"
+  ],
+  "tag": [
+   "veloce",
+   "da-ospiti",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Piemonte",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "panna-fresca",
+    "qta": 150,
+    "unita": "ml"
+   },
+   {
+    "id": "latte",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "zucchero",
+    "qta": 25,
+    "unita": "g",
+    "note": "+ 1 cucchiaio per la salsa"
+   },
+   {
+    "id": "gelatina-in-fogli",
+    "qta": 3,
+    "unita": "g",
+    "note": "un foglio e mezzo"
+   },
+   {
+    "id": "vaniglia",
+    "qta": 1,
+    "unita": "cucchiaini"
+   },
+   {
+    "id": "frutti-di-bosco",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "limone",
+    "qta": 0.25,
+    "unita": "pz",
+    "note": "un po' di succo per la salsa"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Gelatina",
+    "testo": "Metti la gelatina in acqua fredda 10 minuti ad ammorbidire.",
+    "minuti": 1
+   },
+   {
+    "n": 2,
+    "titolo": "Panna",
+    "testo": "Scalda panna, latte, zucchero e vaniglia in un pentolino fino a quasi bollore (non deve bollire). Spegni, strizza la gelatina e scioglila nella panna calda mescolando.",
+    "minuti": 6
+   },
+   {
+    "n": 3,
+    "titolo": "Frigo",
+    "testo": "Versa in uno stampino (o bicchiere, se non vuoi sformarla), raffredda, poi in frigo almeno 4 ore.",
+    "minuti": 3
+   },
+   {
+    "n": 4,
+    "titolo": "Salsa",
+    "testo": "Cuoci i frutti di bosco con un cucchiaio di zucchero e qualche goccia di limone 5 minuti, schiacciandoli un po'. Raffredda.",
+    "minuti": 6
+   },
+   {
+    "n": 5,
+    "titolo": "Servi",
+    "testo": "Per sformarla: immergi lo stampino 5 secondi in acqua calda e capovolgi sul piatto. Salsa sopra.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Poca gelatina è il segreto: deve appena reggersi. Se usi 'natas para culinária' (meno grasse), aggiungi mezzo foglio.",
+  "conservazione": "In frigo 3 giorni, coperta.",
+  "varianti": [
+   "Al caffè: 1 cucchiaino di caffè solubile nella panna.",
+   "Con salsa di caramello o cioccolato fuso."
+  ],
+  "kcal": 480,
+  "foto": {
+   "copertina": "img/panna-cotta-ai-frutti-di-bosco.webp",
+   "prompt": "wobbly white panna cotta unmolded on a white plate with dark berry sauce, minimal light grey background"
+  },
+  "fonte": "Ricetta classica piemontese"
+ },
+ {
+  "slug": "parmigiana-di-melanzane",
+  "titolo": "Parmigiana di melanzane",
+  "descrizione": "Melanzane grigliate (versione leggera) a strati con passata cotta col basilico, mozzarella e parmigiano. In una pirofila piccola per uno; il giorno dopo è più buona.",
+  "categoria": "piatto-unico",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 30,
+   "cottura": 45,
+   "riposo": 15
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.6
+  },
+  "attrezzatura": [
+   "padella",
+   "forno",
+   "teglia",
+   "griglia"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano",
+   "senza-glutine"
+  ],
+  "origine": "Italia · Campania / Sicilia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "melanzane",
+    "qta": 350,
+    "unita": "g",
+    "note": "una grande, a fette da 5 mm per il lungo"
+   },
+   {
+    "id": "passata",
+    "qta": 250,
+    "unita": "ml"
+   },
+   {
+    "id": "mozzarella",
+    "qta": 100,
+    "unita": "g",
+    "note": "ben sgocciolata"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "basilico",
+    "qta": 6,
+    "unita": "foglie"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 3,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Sugo",
+    "testo": "Scalda un cucchiaio d'olio con l'aglio, aggiungi la passata, sale, basilico e cuoci 20 minuti a fuoco basso. Togli l'aglio.",
+    "minuti": 20
+   },
+   {
+    "n": 2,
+    "titolo": "Melanzane",
+    "testo": "Intanto griglia le fette di melanzana su una padella (o griglia) ben calda, 3 minuti per lato, spennellate d'olio, finché hanno le righe e sono morbide. Sala leggermente.",
+    "minuti": 15
+   },
+   {
+    "n": 3,
+    "titolo": "Strati",
+    "testo": "Forno a 190 °C. In una pirofila piccola: velo di sugo, strato di melanzane, sugo, mozzarella a pezzetti, parmigiano, basilico. Ripeti per 3 strati e finisci con sugo e parmigiano (niente mozzarella in cima: brucia).",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Forno e riposo",
+    "testo": "Cuoci 25 minuti finché borbotta ai bordi e la superficie è dorata. Aspetta 15 minuti prima di tagliare, o si sfalda.",
+    "minuti": 40
+   }
+  ],
+  "consigli": "La mozzarella deve essere asciutta: tagliala un'ora prima e lasciala in un colino, altrimenti la parmigiana 'annega'.",
+  "conservazione": "In frigo 3 giorni, si congela. Fredda del giorno dopo è la versione preferita di molti.",
+  "varianti": [
+   "Melanzane fritte invece che grigliate: la versione originale, più ricca.",
+   "Con zucchine grigliate, stesso metodo."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/parmigiana-di-melanzane.webp",
+   "prompt": "single portion of eggplant parmigiana with visible layers, tomato sauce, melted mozzarella, basil leaf, white ceramic plate"
+  },
+  "fonte": "Tradizione del Sud"
+ },
+ {
+  "slug": "pasta-al-forno-bianca-con-salsiccia-e-scamorza",
+  "titolo": "Pasta al forno bianca con salsiccia e scamorza",
+  "descrizione": "Pasta scolata molto al dente, salsiccia rosolata, besciamella veloce e scamorza che fila, gratinata. La pasta al forno del lunedì che diventa pranzo del martedì.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 35,
+   "riposo": 5
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.6
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi"
+  ],
+  "dieta": [],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "rigatoni",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "salsiccia",
+    "qta": 90,
+    "unita": "g"
+   },
+   {
+    "id": "provola",
+    "qta": 60,
+    "unita": "g",
+    "note": "scamorza affumicata"
+   },
+   {
+    "id": "latte",
+    "qta": 200,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "farina-00",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "noce-moscata",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "spinaci",
+    "qta": 80,
+    "unita": "g",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Salsiccia",
+    "testo": "Rosola la salsiccia sbriciolata in padella 6 minuti finché è dorata. Se usi gli spinaci, aggiungili e falli appassire 2 minuti. Forno a 200 °C.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Besciamella",
+    "testo": "Sciogli il burro, aggiungi la farina, mescola 1 minuto, versa il latte freddo e cuoci mescolando finché si addensa (4 minuti). Sale, noce moscata, metà parmigiano.",
+    "minuti": 6
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta",
+    "testo": "Cuoci la pasta 3 minuti meno del tempo indicato (finisce in forno). Scola e mescola con besciamella, salsiccia e scamorza a cubetti.",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Forno",
+    "testo": "In una pirofila piccola, parmigiano sopra, 20 minuti finché è dorata e croccante in superficie. 5 minuti di riposo.",
+    "minuti": 25
+   }
+  ],
+  "consigli": "Il segreto della pasta al forno è che deve entrare in forno un po' 'bagnata': la pasta assorbe. Se sembra asciutta, aggiungi 3 cucchiai di latte.",
+  "conservazione": "In frigo 3 giorni; si congela a porzioni. Riscalda in forno per la crosta, o microonde per la fretta.",
+  "varianti": [
+   "Con funghi al posto degli spinaci.",
+   "Rossa: passata al posto della besciamella, con mozzarella."
+  ],
+  "kcal": 760,
+  "foto": {
+   "copertina": "img/pasta-al-forno-bianca-con-salsiccia-e-scamorza.webp",
+   "prompt": "baked rigatoni with sausage and smoked scamorza, golden gratin crust, single portion in a white ceramic dish"
+  },
+  "fonte": "Ricetta di casa"
+ },
+ {
+  "slug": "pasta-al-limone-e-mascarpone",
+  "titolo": "Pasta al limone e mascarpone",
+  "descrizione": "Venti minuti, cremosa e fresca. Il mascarpone sostituisce la panna e regge il limone senza impazzire. Il piatto della sera in cui non hai voglia.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 15,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.7
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Costiera",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "spaghetti",
+    "qta": 100,
+    "unita": "g",
+    "note": "o linguine"
+   },
+   {
+    "id": "limone",
+    "qta": 1,
+    "unita": "pz",
+    "note": "scorza grattugiata + 1 cucchiaio di succo"
+   },
+   {
+    "id": "mascarpone",
+    "qta": 50,
+    "unita": "g"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "burro",
+    "qta": 10,
+    "unita": "g"
+   },
+   {
+    "id": "basilico",
+    "qta": 4,
+    "unita": "foglie",
+    "opzionale": true
+   },
+   {
+    "id": "pepe",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pasta",
+    "testo": "Cuoci la pasta in acqua salata, scolala al dente tenendo una tazza d'acqua.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Crema",
+    "testo": "In padella a fuoco basso sciogli il burro con la scorza di limone. Aggiungi il mascarpone e 3 cucchiai d'acqua di cottura, mescola finché è una crema liscia. Spegni.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Mantecatura",
+    "testo": "Unisci la pasta, il parmigiano, il succo di limone e pepe. Mescola con altra acqua se serve: deve avvolgere senza essere liquida. Basilico spezzettato e servi.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Il succo va aggiunto a fuoco spento: a caldo il mascarpone potrebbe separarsi.",
+  "conservazione": "Non si conserva.",
+  "varianti": [
+   "Con 30 g di pistacchi tritati sopra.",
+   "Con gamberi saltati 2 minuti in padella."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/pasta-al-limone-e-mascarpone.webp",
+   "prompt": "creamy lemon mascarpone spaghetti with lemon zest and basil leaf, bright and fresh, white ceramic bowl"
+  },
+  "fonte": "Ricetta moderna"
+ },
+ {
+  "slug": "pasta-alla-gricia",
+  "titolo": "Pasta alla gricia",
+  "descrizione": "La 'carbonara senza uovo' o 'amatriciana senza pomodoro': guanciale croccante, pecorino e pepe. Dispensa quasi vuota, risultato da trattoria.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 15,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "low-cost"
+  ],
+  "dieta": [],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "rigatoni",
+    "qta": 100,
+    "unita": "g",
+    "note": "o mezze maniche"
+   },
+   {
+    "id": "guanciale",
+    "qta": 50,
+    "unita": "g"
+   },
+   {
+    "id": "pecorino",
+    "qta": 35,
+    "unita": "g"
+   },
+   {
+    "id": "pepe",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 30,
+    "unita": "ml",
+    "opzionale": true,
+    "note": "per sfumare il guanciale"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Guanciale",
+    "testo": "Taglia il guanciale a listarelle e rosolalo in padella fredda a fuoco medio-basso finché è dorato e croccante. Se vuoi, sfuma col vino bianco e lascialo evaporare.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Pasta",
+    "testo": "Cuoci la pasta in acqua poco salata e scolala 2 minuti prima, tenendo l'acqua.",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Risottatura",
+    "testo": "Trasferisci la pasta nella padella col guanciale, aggiungi mezzo mestolo d'acqua e finisci la cottura mescolando: l'amido lega il grasso in una salsa lucida.",
+    "minuti": 2
+   },
+   {
+    "n": 4,
+    "titolo": "Pecorino",
+    "testo": "Fuoco spento, aggiungi il pecorino e il pepe, mescola con un goccio d'acqua finché è cremosa. Servi subito.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Il grasso del guanciale è il condimento: non buttarlo e non aggiungere olio.",
+  "conservazione": "Non si conserva.",
+  "varianti": [
+   "Con una cipolla dorata stufata nel grasso diventa più dolce."
+  ],
+  "kcal": 600,
+  "foto": {
+   "copertina": "img/pasta-alla-gricia.webp",
+   "prompt": "rigatoni alla gricia with golden crispy guanciale, pecorino cream and black pepper, white ceramic plate"
+  },
+  "fonte": "Tradizione laziale"
+ },
+ {
+  "slug": "pasta-alla-norma",
+  "titolo": "Pasta alla norma",
+  "descrizione": "Siciliana: melanzane fritte, sugo di passata con basilico e ricotta salata grattugiata. Friggi le melanzane a pezzi grossi, così restano cremose dentro.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.2
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Sicilia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "rigatoni",
+    "qta": 90,
+    "unita": "g",
+    "note": "o maccheroni"
+   },
+   {
+    "id": "melanzane",
+    "qta": 200,
+    "unita": "g",
+    "note": "una piccola"
+   },
+   {
+    "id": "passata",
+    "qta": 200,
+    "unita": "ml"
+   },
+   {
+    "id": "ricotta-salata",
+    "qta": 30,
+    "unita": "g",
+    "note": "grattugiata grossa"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "basilico",
+    "qta": 5,
+    "unita": "foglie"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 60,
+    "unita": "ml",
+    "note": "per friggere + 1 cucchiaio per il sugo"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Sugo",
+    "testo": "In un pentolino scalda un cucchiaio d'olio con l'aglio schiacciato, aggiungi la passata, sala, e cuoci a fuoco basso 20 minuti con 2 foglie di basilico. Togli l'aglio.",
+    "minuti": 20
+   },
+   {
+    "n": 2,
+    "titolo": "Melanzane fritte",
+    "testo": "Taglia la melanzana a cubotti da 2 cm. Scalda l'olio in padella e friggili a fuoco medio-alto finché sono dorati e morbidi (6–8 minuti), pochi alla volta. Scolali su carta e sala.",
+    "minuti": 12
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta",
+    "testo": "Cuoci la pasta al dente, scolala e saltala nel sugo con due terzi delle melanzane.",
+    "minuti": 12
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Impiatta con le melanzane rimaste sopra, ricotta salata grattugiata e basilico fresco.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Non salare le melanzane prima: quelle moderne non sono amare. Friggile in olio ben caldo così assorbono meno.",
+  "conservazione": "Sugo e melanzane si conservano 2 giorni; cuoci la pasta al momento.",
+  "varianti": [
+   "Melanzane al forno con poco olio a 220 °C per 20 minuti: versione leggera.",
+   "Pecorino al posto della ricotta salata."
+  ],
+  "kcal": 650,
+  "foto": {
+   "copertina": "img/pasta-alla-norma.webp",
+   "prompt": "rigatoni alla norma with fried eggplant cubes, tomato sauce, grated salted ricotta and basil, white ceramic plate"
+  },
+  "fonte": "Tradizione siciliana"
+ },
+ {
+  "slug": "pasta-con-crema-di-zucchine-speck-e-zafferano",
+  "titolo": "Pasta con crema di zucchine, speck e zafferano",
+  "descrizione": "Le zucchine stufate si schiacciano con la forchetta e diventano crema, lo zafferano colora, lo speck croccante dà il contrasto. Senza frullatore, senza panna.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 20,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.4
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce"
+  ],
+  "dieta": [],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pasta-corta",
+    "qta": 90,
+    "unita": "g",
+    "note": "penne o fusilli"
+   },
+   {
+    "id": "zucchine",
+    "qta": 200,
+    "unita": "g"
+   },
+   {
+    "id": "speck",
+    "qta": 40,
+    "unita": "g",
+    "note": "a listarelle"
+   },
+   {
+    "id": "zafferano",
+    "qta": 1,
+    "unita": "bustina"
+   },
+   {
+    "id": "scalogno",
+    "qta": 1,
+    "unita": "pz",
+    "note": "o mezza cipolla"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Speck croccante",
+    "testo": "In padella senza olio rosola lo speck 3 minuti finché è croccante. Toglilo e tienilo da parte.",
+    "minuti": 3
+   },
+   {
+    "n": 2,
+    "titolo": "Zucchine",
+    "testo": "Nella stessa padella scalda l'olio, appassisci lo scalogno tritato, aggiungi le zucchine a rondelle sottili, sala e cuoci coperto a fuoco medio 10 minuti finché sono morbidissime. Schiacciale con la forchetta fino a una crema rustica; sciogli lo zafferano in 2 cucchiai d'acqua calda e uniscilo.",
+    "minuti": 12
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta e salto",
+    "testo": "Cuoci la pasta, scolala al dente e saltala nella crema con un po' d'acqua di cottura e il parmigiano. Servi con lo speck sopra.",
+    "minuti": 12
+   }
+  ],
+  "consigli": "Con il frullatore (quando l'avrai) la crema viene vellutata: frulla le zucchine con 2 cucchiai d'acqua di cottura.",
+  "conservazione": "In frigo 1 giorno.",
+  "varianti": [
+   "Con gamberetti al posto dello speck.",
+   "Con menta fresca invece dello zafferano: più estivo."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/pasta-con-crema-di-zucchine-speck-e-zafferano.webp",
+   "prompt": "penne pasta in pale green zucchini cream tinted with saffron, crispy speck strips on top, white ceramic bowl"
+  },
+  "fonte": "Ricetta moderna"
+ },
+ {
+  "slug": "pasta-e-ceci-alla-romana",
+  "titolo": "Pasta e ceci alla romana",
+  "descrizione": "Rosmarino, aglio, acciughe sciolte nell'olio e un cucchiaio di concentrato: il segreto romano. Con i ceci in barattolo è pronta in mezz'ora.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.3
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "one-pan",
+   "low-cost",
+   "inverno",
+   "avanzi",
+   "classico"
+  ],
+  "dieta": [
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pasta-corta",
+    "qta": 70,
+    "unita": "g",
+    "note": "ditalini o pasta mista"
+   },
+   {
+    "id": "ceci",
+    "qta": 200,
+    "unita": "g",
+    "note": "sgocciolati (un barattolo piccolo)"
+   },
+   {
+    "id": "acciughe",
+    "qta": 2,
+    "unita": "pz"
+   },
+   {
+    "id": "concentrato-di-pomodoro",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "brodo",
+    "qta": 400,
+    "unita": "ml"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Base",
+    "testo": "Scalda l'olio con aglio schiacciato e rosmarino a fuoco basso 2 minuti; aggiungi le acciughe e scioglile con il cucchiaio. Unisci il concentrato e tostalo 1 minuto.",
+    "minuti": 4
+   },
+   {
+    "n": 2,
+    "titolo": "Ceci",
+    "testo": "Aggiungi i ceci e il brodo caldo. Cuoci 10 minuti, poi schiaccia un terzo dei ceci con la forchetta contro il bordo: rende il fondo cremoso.",
+    "minuti": 12
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta nella pentola",
+    "testo": "Aggiungi la pasta cruda e cuoci mescolando, aggiungendo acqua calda se si asciuga, finché è al dente. Togli aglio e rosmarino.",
+    "minuti": 12
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Lascia riposare 2 minuti: si addensa. Un filo d'olio crudo e pepe.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Deve essere 'brodosa ma densa': se la lasci troppo, la pasta assorbe tutto. Aggiungi acqua calda prima di servire se serve.",
+  "conservazione": "In frigo 2 giorni; riscalda con un po' d'acqua.",
+  "varianti": [
+   "Senza acciughe: vegana, con più rosmarino.",
+   "Con fagioli cannellini e una crosta di parmigiano: pasta e fagioli."
+  ],
+  "kcal": 520,
+  "foto": {
+   "copertina": "img/pasta-e-ceci-alla-romana.webp",
+   "prompt": "rustic pasta e ceci soup with ditalini, chickpeas, rosemary sprig and olive oil, dense and creamy, white ceramic bowl"
+  },
+  "fonte": "Tradizione romana"
+ },
+ {
+  "slug": "pasta-e-patate-con-provola",
+  "titolo": "Pasta e patate con provola",
+  "descrizione": "Napoletana, cremosa, 'azzeccata': le patate si sfaldano, la pasta cuoce nella stessa pentola e la provola fila. Piatto povero da giornata fredda.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 35,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.8
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "one-pan",
+   "low-cost",
+   "inverno",
+   "avanzi",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Campania",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pasta-corta",
+    "qta": 80,
+    "unita": "g",
+    "note": "pasta mista o tubetti"
+   },
+   {
+    "id": "patate",
+    "qta": 200,
+    "unita": "g",
+    "note": "a cubetti da 1,5 cm"
+   },
+   {
+    "id": "provola",
+    "qta": 50,
+    "unita": "g",
+    "note": "a cubetti"
+   },
+   {
+    "id": "pancetta",
+    "qta": 30,
+    "unita": "g",
+    "opzionale": true
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "sedano",
+    "qta": 0.5,
+    "unita": "pz",
+    "opzionale": true
+   },
+   {
+    "id": "carote",
+    "qta": 0.5,
+    "unita": "pz",
+    "opzionale": true
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g",
+    "note": "meglio con una crosta di parmigiano nel brodo"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Soffritto",
+    "testo": "In una pentola scalda l'olio e soffriggi cipolla, sedano e carota tritati (e la pancetta se la usi) 5 minuti a fuoco medio.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Patate",
+    "testo": "Aggiungi le patate, il rosmarino e, se ce l'hai, una crosta di parmigiano. Copri d'acqua calda a filo (circa 400 ml), sala e cuoci 15 minuti a fuoco medio, schiacciando qualche cubetto con il cucchiaio per fare la crema.",
+    "minuti": 15
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta nella stessa pentola",
+    "testo": "Aggiungi la pasta cruda e cuoci mescolando spesso, aggiungendo acqua calda poco alla volta come un risotto, finché è al dente. Deve restare molto cremoso, non brodoso.",
+    "minuti": 12
+   },
+   {
+    "n": 4,
+    "titolo": "Provola",
+    "testo": "Fuoco spento: unisci la provola a cubetti e il parmigiano, mescola, copri 2 minuti perché fili. Pepe e servi.",
+    "minuti": 3
+   }
+  ],
+  "consigli": "Il tipo di pasta conta: mista o tubetti tengono la crema. Se ti sembra troppo denso, un goccio d'acqua calda.",
+  "conservazione": "In frigo 2 giorni: si rassoda, riscaldala con un po' d'acqua. Oppure friggila a fette come una frittata di pasta.",
+  "varianti": [
+   "Con la crosta di parmigiano tagliata a pezzetti che si sciolgono: da napoletani veri."
+  ],
+  "kcal": 640,
+  "foto": {
+   "copertina": "img/pasta-e-patate-con-provola.webp",
+   "prompt": "creamy Neapolitan pasta e patate with melted smoked provola strings and rosemary, rustic white bowl"
+  },
+  "fonte": "Tradizione napoletana"
+ },
+ {
+  "slug": "pasteis-de-nata",
+  "titolo": "Pastéis de nata",
+  "descrizione": "Il dolce portoghese per eccellenza, con sfoglia comprata (lecito: lo fanno anche molte pastelarias). Crema di tuorli, latte, zucchero e cannella, forno al massimo finché la superficie si brucia a macchie. Servono stampini da muffin.",
+  "categoria": "dolce",
+  "difficolta": "difficile",
+  "tempi": {
+   "preparazione": 30,
+   "cottura": 15,
+   "riposo": 30
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.6
+  },
+  "attrezzatura": [
+   "forno",
+   "stampini",
+   "pentola",
+   "frusta"
+  ],
+  "tag": [
+   "weekend",
+   "portoghese",
+   "da-ospiti",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Portogallo · Belém",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pasta-sfoglia",
+    "qta": 1,
+    "unita": "pz",
+    "note": "un rotolo rettangolare (ne vengono 6)"
+   },
+   {
+    "id": "latte",
+    "qta": 200,
+    "unita": "ml"
+   },
+   {
+    "id": "zucchero",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 3,
+    "unita": "pz",
+    "note": "solo i tuorli"
+   },
+   {
+    "id": "farina-00",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "cannella",
+    "qta": 1,
+    "unita": "pz",
+    "note": "una stecca + polvere per servire"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "scorza a pezzi grandi"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Sciroppo",
+    "testo": "Fai bollire 50 ml d'acqua con lo zucchero, la stecca di cannella e la scorza di limone per 3 minuti dal bollore (sciroppo leggero). Togli dal fuoco.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Crema",
+    "testo": "Stempera la farina in 50 ml di latte freddo. Scalda il resto del latte, uniscilo alla farina e cuoci mescolando finché si addensa leggermente. Fuori dal fuoco versa lo sciroppo filtrato a filo, poi i tuorli sbattuti. Deve restare fluida: non cuocere oltre. Raffredda 30 minuti.",
+    "minuti": 12
+   },
+   {
+    "n": 3,
+    "titolo": "Sfoglia",
+    "testo": "Forno al massimo (250 °C). Arrotola la sfoglia stretta sul lato corto, taglia 6 rondelle da 2 cm. Metti ogni rondella in uno stampino da muffin e, con il pollice bagnato, spingi dal centro verso l'alto per foderare le pareti: la spirale deve essere visibile sul fondo.",
+    "minuti": 10
+   },
+   {
+    "n": 4,
+    "titolo": "Forno",
+    "testo": "Riempi con la crema fino a 3/4. Cuoci nel ripiano più alto 12–15 minuti: la sfoglia è dorata e la crema ha macchie scure sulla superficie. Se non si macchia, 1 minuto di grill guardandola.",
+    "minuti": 15
+   },
+   {
+    "n": 5,
+    "titolo": "Servi",
+    "testo": "Tiepidi, con cannella in polvere. Con un caffè, come al Continente ma migliori.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Il forno deve essere davvero al massimo e preriscaldato bene: la crema deve cuocere in fretta e bruciacchiare, non rassodarsi lentamente.",
+  "conservazione": "Un giorno; riscaldali 3 minuti in forno. Non in frigo.",
+  "varianti": [
+   "Con la sfoglia fatta in casa quando avrai pazienza.",
+   "Con mezza bacca di vaniglia nel latte."
+  ],
+  "kcal": 290,
+  "foto": {
+   "copertina": "img/pasteis-de-nata.webp",
+   "prompt": "three Portuguese pasteis de nata custard tarts with blistered caramelized tops and flaky spiral pastry, cinnamon dust, light grey background"
+  },
+  "fonte": "Tradizione portoghese, versione domestica"
+ },
+ {
+  "slug": "patate-al-forno-croccanti",
+  "titolo": "Patate al forno croccanti",
+  "descrizione": "Pre-lessate 8 minuti, scrollate nella pentola per rovinare i bordi, poi in forno caldo con olio: fuori vetrose, dentro morbide. Il contorno che rende tutto una cena.",
+  "categoria": "contorno",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 50,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.6
+  },
+  "attrezzatura": [
+   "pentola",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "classico"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia / Regno Unito",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "patate",
+    "qta": 300,
+    "unita": "g",
+    "note": "a tocchi da 4 cm"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi",
+    "note": "in camicia"
+   },
+   {
+    "id": "sale",
+    "qta": null,
+    "unita": "qb",
+    "note": "grosso"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pre-lessatura",
+    "testo": "Forno a 220 °C con la teglia dentro a scaldarsi. Lessa le patate in acqua salata 8 minuti da quando bolle: i bordi devono ammorbidirsi ma il centro restare sodo.",
+    "minuti": 12
+   },
+   {
+    "n": 2,
+    "titolo": "Scrollare",
+    "testo": "Scola, lascia asciugare 2 minuti nella pentola, poi metti il coperchio e scuoti energicamente: i bordi si sbriciolano. Quella 'rovina' diventa la crosta.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Versa l'olio nella teglia rovente, aggiungi le patate, aglio e rosmarino, mescola. Un solo strato, spaziate. 25 minuti, gira, altri 15–20 finché sono dorate e croccanti. Sale grosso alla fine.",
+    "minuti": 42
+   }
+  ],
+  "consigli": "La teglia già calda e le patate spaziate fanno la differenza: ammucchiate cuociono a vapore.",
+  "conservazione": "Perdono croccantezza; il giorno dopo ripassale in padella.",
+  "varianti": [
+   "Con paprika dolce e origano.",
+   "Con zucca a tocchi nella stessa teglia (aggiungila a metà)."
+  ],
+  "kcal": 350,
+  "foto": {
+   "copertina": "img/patate-al-forno-croccanti.webp",
+   "prompt": "crispy golden roasted potato chunks with rosemary and flaky salt, white ceramic plate, overhead"
+  },
+  "fonte": "Tecnica classica"
+ },
+ {
+  "slug": "peperoni-ripieni-di-carne-e-riso",
+  "titolo": "Peperoni ripieni di carne e riso",
+  "descrizione": "Un peperone grande, ripieno di macinato, riso, parmigiano e erbe, cotto in forno finché la buccia si arriccia. Piatto completo. Due peperoni e il giorno dopo è risolto.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 50,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.5
+  },
+  "attrezzatura": [
+   "pentola",
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "avanzi"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Sud",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "peperoni",
+    "qta": 1,
+    "unita": "pz",
+    "note": "grande, rosso o giallo"
+   },
+   {
+    "id": "macinato-misto",
+    "qta": 120,
+    "unita": "g"
+   },
+   {
+    "id": "riso-carnaroli",
+    "qta": 40,
+    "unita": "g",
+    "note": "qualsiasi riso"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "piccolo"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.25,
+    "unita": "pz"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "passata",
+    "qta": 100,
+    "unita": "ml"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Riso",
+    "testo": "Lessa il riso in acqua salata 10 minuti (deve restare molto al dente) e scolalo. Forno a 190 °C.",
+    "minuti": 12
+   },
+   {
+    "n": 2,
+    "titolo": "Ripieno",
+    "testo": "Rosola la cipolla tritata nell'olio, aggiungi il macinato e cuoci 5 minuti sbriciolando. Fuori dal fuoco unisci riso, uovo, parmigiano, prezzemolo, sale e pepe.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Peperone",
+    "testo": "Taglia la calotta del peperone e svuotalo dai semi. Riempilo con il ripieno senza pressare troppo, rimetti la calotta.",
+    "minuti": 4
+   },
+   {
+    "n": 4,
+    "titolo": "Forno",
+    "testo": "In una teglia piccola versa la passata con mezzo bicchiere d'acqua e un filo d'olio, appoggia il peperone e cuoci 45 minuti coperto con alluminio, poi 5 minuti scoperto. Il peperone deve essere morbido e un po' bruciacchiato.",
+    "minuti": 50
+   }
+  ],
+  "consigli": "Il riso deve entrare mezzo crudo: finisce di cuocere nel peperone assorbendo i succhi.",
+  "conservazione": "In frigo 3 giorni; riscalda in forno o microonde.",
+  "varianti": [
+   "Vegetariano: con feta, olive e riso.",
+   "Con tonno e capperi al posto della carne."
+  ],
+  "kcal": 540,
+  "foto": {
+   "copertina": "img/peperoni-ripieni-di-carne-e-riso.webp",
+   "prompt": "one roasted red bell pepper stuffed with meat and rice, slightly charred, tomato sauce underneath, white ceramic plate"
+  },
+  "fonte": "Tradizione del Sud"
+ },
+ {
+  "slug": "piadina-con-squacquerone-e-rucola",
+  "titolo": "Piadina con squacquerone e rucola",
+  "descrizione": "Impasto senza lievito, cotto in padella in 3 minuti: farina, acqua, olio (o strutto), sale. Farcita con formaggio cremoso, prosciutto crudo e rucola. Non serve trovare le piadine pronte.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 10,
+   "riposo": 30
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.2
+  },
+  "attrezzatura": [
+   "padella",
+   "mattarello"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost"
+  ],
+  "dieta": [],
+  "origine": "Italia · Romagna",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 120,
+    "unita": "g"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "lievito-per-dolci",
+    "qta": 0.5,
+    "unita": "cucchiaini",
+    "opzionale": true,
+    "note": "per una piada più soffice"
+   },
+   {
+    "id": "stracchino",
+    "qta": 70,
+    "unita": "g"
+   },
+   {
+    "id": "prosciutto-crudo",
+    "qta": 3,
+    "unita": "fette"
+   },
+   {
+    "id": "rucola",
+    "qta": 30,
+    "unita": "g"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Impasto",
+    "testo": "Mescola farina, un pizzico abbondante di sale, lievito, olio e 55 ml di acqua tiepida. Impasta 5 minuti finché è liscio, copri e lascia riposare 30 minuti.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Stendere",
+    "testo": "Dividi in 2 palline e stendile col mattarello (o bottiglia) a dischi sottili da 20 cm.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Cottura",
+    "testo": "Padella antiaderente ben calda, senza grasso: 1,5–2 minuti per lato, bucando le bolle con la forchetta. Devono avere macchie dorate.",
+    "minuti": 8
+   },
+   {
+    "n": 4,
+    "titolo": "Farcire",
+    "testo": "Ancora calde: spalma lo stracchino, prosciutto, rucola. Piega a metà.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Con lo strutto (banha) al posto dell'olio è la ricetta originale ed è più friabile.",
+  "conservazione": "Le piadine cotte in frigo 2 giorni: riscaldale in padella 1 minuto.",
+  "varianti": [
+   "Con salsiccia e cipolle stufate.",
+   "Con mozzarella e mortadella."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/piadina-con-squacquerone-e-rucola.webp",
+   "prompt": "folded piadina flatbread filled with creamy cheese, prosciutto and rocket, golden spots, light wooden board"
+  },
+  "fonte": "Tradizione romagnola"
+ },
+ {
+  "slug": "pizza-bianca-a-lunga-lievitazione",
+  "titolo": "Pizza bianca a lunga lievitazione",
+  "descrizione": "Impasto con pochissimo lievito e 24 ore in frigo: si digerisce e sa di pane vero. In teglia, con patate e rosmarino oppure mortadella e stracciatella dopo la cottura. Fai l'impasto il sabato, mangi la domenica.",
+  "categoria": "piatto-unico",
+  "difficolta": "difficile",
+  "tempi": {
+   "preparazione": 30,
+   "cottura": 20,
+   "riposo": 1440
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.8
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Roma",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 200,
+    "unita": "g",
+    "note": "meglio Manitoba o tipo 65 portoghese"
+   },
+   {
+    "id": "lievito-di-birra",
+    "qta": 1,
+    "unita": "g",
+    "note": "secco (un terzo di cucchiaino)"
+   },
+   {
+    "id": "sale",
+    "qta": 4,
+    "unita": "g"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "patate",
+    "qta": 1,
+    "unita": "pz",
+    "note": "piccola, a fette sottilissime"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "mortadella",
+    "qta": 60,
+    "unita": "g",
+    "opzionale": true,
+    "note": "per la variante bianca a crudo"
+   },
+   {
+    "id": "stracciatella",
+    "qta": 60,
+    "unita": "g",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Impasto (giorno 1)",
+    "testo": "Sciogli il lievito in 140 ml di acqua tiepida. Mescola con la farina in una ciotola fino a quando non c'è più farina asciutta, copri e aspetta 20 minuti. Aggiungi sale e un cucchiaio d'olio, impasta 8–10 minuti sul piano finché è liscio ed elastico (è molto morbido: bagna le mani invece di aggiungere farina).",
+    "minuti": 25
+   },
+   {
+    "n": 2,
+    "titolo": "Frigo 24 ore",
+    "testo": "Metti l'impasto in una ciotola unta, copri con pellicola e lascia in frigo 18–24 ore. Crescerà lentamente e farà bolle.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Stesura (giorno 2)",
+    "testo": "Tira fuori l'impasto 2 ore prima. Ungi una teglia piccola (25×20 cm), rovescia l'impasto e allargalo con le dita unte spingendo dal centro ai bordi, senza schiacciare le bolle. Se si ritira, aspetta 10 minuti e riprova. Lascia riposare 30 minuti.",
+    "minuti": 15
+   },
+   {
+    "n": 4,
+    "titolo": "Condimento e forno",
+    "testo": "Scalda il forno al massimo (250 °C) per 15 minuti. Condisci con patate a fette sottili condite con olio, sale e rosmarino (oppure solo olio e sale grosso). Cuoci nel ripiano più basso 15–18 minuti finché il fondo è dorato.",
+    "minuti": 20
+   },
+   {
+    "n": 5,
+    "titolo": "Variante a crudo",
+    "testo": "Per la versione mortadella: cuoci la pizza solo con olio e sale; appena esce, mortadella a fette e stracciatella sopra. Il calore le scalda appena.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "L'impasto molto idratato fa paura ma dà la pizza migliore: non aggiungere farina, usa acqua sulle mani. Il forno di casa va al massimo, ripiano basso.",
+  "conservazione": "L'impasto in frigo regge fino a 48 ore. La pizza cotta si riscalda in padella coperta 3 minuti.",
+  "varianti": [
+   "Focaccia: più olio, sale grosso e rosmarino, senza patate.",
+   "Con passata e mozzarella: la margherita, cotta 12 minuti."
+  ],
+  "kcal": 780,
+  "foto": {
+   "copertina": "img/pizza-bianca-a-lunga-lievitazione.webp",
+   "prompt": "rectangular pan pizza bianca with thin potato slices and rosemary, airy golden crumb visible on a cut edge, light wooden board"
+  },
+  "fonte": "Metodo pizza in teglia romana, adattato"
+ },
+ {
+  "slug": "polenta-con-funghi-e-salsiccia",
+  "titolo": "Polenta con funghi e salsiccia",
+  "descrizione": "Polenta morbida (istantanea o farinha de milho) con un intingolo di salsiccia, funghi e vino bianco. Piatto di montagna, perfetto per Bragança a gennaio.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 35,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.4
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "inverno",
+   "autunno",
+   "avanzi",
+   "low-cost"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Alpi",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "polenta",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "salsiccia",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "funghi-champignon",
+    "qta": 150,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "burro",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Intingolo",
+    "testo": "Rosola la salsiccia sbriciolata nell'olio 5 minuti. Aggiungi cipolla tritata e rosmarino, poi i funghi a fette; cuoci a fuoco vivo finché i funghi sono dorati (8 minuti). Sfuma col vino, sala, e lascia sobbollire 10 minuti con mezzo bicchiere d'acqua: deve restare un fondo cremoso.",
+    "minuti": 25
+   },
+   {
+    "n": 2,
+    "titolo": "Polenta",
+    "testo": "Porta a bollore 350 ml di acqua salata, versa la polenta a pioggia mescolando con la frusta. Istantanea: 5 minuti; farina di mais tradizionale: 35–40 minuti mescolando spesso. Alla fine burro e parmigiano.",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Servi",
+    "testo": "Polenta nel piatto fondo, intingolo sopra, pepe. Se avanza polenta, versala in un contenitore: domani a fette in padella.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "La farinha de milho portoghese è più grossa: cuocila almeno 35 minuti e sarà ottima. Con l'istantanea sei a tavola in 20 minuti.",
+  "conservazione": "La polenta fredda si taglia a fette e si griglia; l'intingolo in frigo 2 giorni.",
+  "varianti": [
+   "Con gorgonzola fuso sulla polenta al posto dell'intingolo.",
+   "Con spezzatino avanzato."
+  ],
+  "kcal": 640,
+  "foto": {
+   "copertina": "img/polenta-con-funghi-e-salsiccia.webp",
+   "prompt": "soft yellow polenta topped with sausage and mushroom ragout, rosemary, white ceramic bowl, warm light"
+  },
+  "fonte": "Tradizione alpina"
+ },
+ {
+  "slug": "pollo-alla-cacciatora",
+  "titolo": "Pollo alla cacciatora",
+  "descrizione": "Sovracosce rosolate e stufate con pelati, olive, rosmarino e vino bianco. Un'ora in tutto, quasi tutta senza fare niente. Con pane per il sugo.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 50,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.8
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "weekend",
+   "one-pan",
+   "avanzi",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Toscana",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pollo-intero",
+    "qta": 300,
+    "unita": "g",
+    "note": "2 sovracosce con pelle, o 1 coscia intera"
+   },
+   {
+    "id": "pelati",
+    "qta": 150,
+    "unita": "g"
+   },
+   {
+    "id": "olive-nere",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "carote",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 60,
+    "unita": "ml"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "farina-00",
+    "qta": 1,
+    "unita": "cucchiai",
+    "note": "per infarinare"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Rosolatura",
+    "testo": "Asciuga il pollo, sala, pepa e infarinalo leggermente. Rosolalo nell'olio a fuoco medio-alto partendo dalla pelle, 4 minuti per lato, finché è dorato. Toglilo.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Fondo",
+    "testo": "Nella stessa padella appassisci cipolla e carota tritate con aglio e rosmarino 4 minuti. Rimetti il pollo, sfuma col vino e lascia evaporare 2 minuti.",
+    "minuti": 6
+   },
+   {
+    "n": 3,
+    "titolo": "Stufatura",
+    "testo": "Aggiungi i pelati schiacciati, le olive e mezzo bicchiere d'acqua. Copri e cuoci a fuoco basso 35 minuti, girando il pollo a metà. Scopri gli ultimi 10 minuti per restringere il sugo.",
+    "minuti": 35
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Il pollo deve staccarsi dall'osso. Regola di sale e servi con il sugo e pane, o con polenta.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Le sovracosce con osso e pelle restano succose; il petto in questa ricetta diventa stopposo.",
+  "conservazione": "In frigo 3 giorni, meglio il giorno dopo. Si congela.",
+  "varianti": [
+   "Con funghi champignon aggiunti a metà cottura.",
+   "In bianco: senza pelati, con più vino e brodo."
+  ],
+  "kcal": 520,
+  "foto": {
+   "copertina": "img/pollo-alla-cacciatora.webp",
+   "prompt": "chicken thighs braised in tomato sauce with black olives and rosemary, glossy, rustic white ceramic plate"
+  },
+  "fonte": "Tradizione toscana"
+ },
+ {
+  "slug": "pollo-arrosto-con-patate",
+  "titolo": "Pollo arrosto con patate al forno",
+  "descrizione": "Mezzo pollo (o due cosce) sopra un letto di patate che cuociono nel suo grasso. Il forno fa tutto. Rosmarino, aglio, limone.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 65,
+   "riposo": 5
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.9
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "weekend",
+   "one-pan",
+   "avanzi",
+   "classico"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "pollo-intero",
+    "qta": 400,
+    "unita": "g",
+    "note": "2 cosce intere con pelle, o mezzo pollo piccolo"
+   },
+   {
+    "id": "patate",
+    "qta": 250,
+    "unita": "g"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 2,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi",
+    "note": "in camicia, schiacciati"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "paprika-dolce",
+    "qta": 1,
+    "unita": "cucchiaini",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Preparazione",
+    "testo": "Forno a 200 °C. Taglia le patate a spicchi, condiscile con olio, sale, un rametto di rosmarino e l'aglio e stendile nella teglia. Massaggia il pollo con olio, sale, pepe, paprika e succo di limone; infila la mezza scorza e il rosmarino sotto la pelle o accanto.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Forno",
+    "testo": "Appoggia il pollo sulle patate, pelle in su. Cuoci 60–65 minuti; a metà gira le patate senza spostare il pollo. La pelle deve essere croccante e i succhi trasparenti pungendo la coscia.",
+    "minuti": 65
+   },
+   {
+    "n": 3,
+    "titolo": "Riposo",
+    "testo": "Lascia riposare 5 minuti fuori dal forno prima di servire: la carne resta succosa.",
+    "minuti": 5
+   }
+  ],
+  "consigli": "Patate a contatto con la teglia e non ammucchiate: così diventano croccanti. Se restano pallide, ultimi 5 minuti col grill.",
+  "conservazione": "In frigo 3 giorni. Il pollo freddo sfilacciato è la base di un'insalata o di un panino.",
+  "varianti": [
+   "Con cipolle a spicchi e zucca tra le patate.",
+   "Con limone e origano alla greca."
+  ],
+  "kcal": 650,
+  "foto": {
+   "copertina": "img/pollo-arrosto-con-patate.webp",
+   "prompt": "roast chicken leg with crispy golden skin over roasted potato wedges, rosemary and lemon, white ceramic plate"
+  },
+  "fonte": "Classico"
+ },
+ {
+  "slug": "polpette-al-forno-con-salsa-allo-yogurt",
+  "titolo": "Polpette al forno con salsa allo yogurt",
+  "descrizione": "Macinato, pane ammollato nel latte, parmigiano e prezzemolo. Al forno, senza frittura, con una salsa fresca di yogurt greco e menta. Raddoppia e le porti in mensa.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 25,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.4
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "avanzi",
+   "low-cost"
+  ],
+  "dieta": [],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "macinato-misto",
+    "qta": 180,
+    "unita": "g"
+   },
+   {
+    "id": "pane-raffermo",
+    "qta": 30,
+    "unita": "g"
+   },
+   {
+    "id": "latte",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "piccolo, o mezzo sbattuto"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "aglio",
+    "qta": 0.5,
+    "unita": "spicchi"
+   },
+   {
+    "id": "yogurt-greco",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "menta",
+    "qta": 4,
+    "unita": "foglie"
+   },
+   {
+    "id": "limone",
+    "qta": 0.25,
+    "unita": "pz"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Impasto",
+    "testo": "Ammolla il pane nel latte 5 minuti e strizzalo. Mescola con macinato, uovo, parmigiano, prezzemolo e aglio tritati, sale e pepe. Impasta poco, giusto per amalgamare.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Forma",
+    "testo": "Forma 6 polpette da noce grande con le mani unte. Disponile sulla teglia con carta forno, un filo d'olio sopra.",
+    "minuti": 4
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Cuoci a 200 °C per 20–25 minuti girandole a metà, finché sono dorate.",
+    "minuti": 25
+   },
+   {
+    "n": 4,
+    "titolo": "Salsa",
+    "testo": "Mescola yogurt, menta tritata, succo di limone, un filo d'olio, sale. Servi le polpette con la salsa e insalata o pane.",
+    "minuti": 3
+   }
+  ],
+  "consigli": "Il pane ammollato è ciò che le tiene morbide: non saltarlo e non usare pangrattato secco.",
+  "conservazione": "Cotte in frigo 3 giorni; crude si congelano. Ottime fredde.",
+  "varianti": [
+   "In padella con 200 ml di passata: polpette al sugo.",
+   "Con macinato di pollo e scorza di limone nell'impasto."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/polpette-al-forno-con-salsa-allo-yogurt.webp",
+   "prompt": "golden baked meatballs with a bowl of white yogurt mint sauce, parsley, white ceramic plate, minimal"
+  },
+  "fonte": "Ricetta di famiglia"
+ },
+ {
+  "slug": "ribollita",
+  "titolo": "Ribollita",
+  "descrizione": "Zuppa toscana di cavolo nero, fagioli cannellini, verdure e pane raffermo, che si 'ribolle' il giorno dopo. Fatta la domenica, mangiata fino a martedì. Il cavolo qui è la couve galega.",
+  "categoria": "piatto-unico",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 70,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.5
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "weekend",
+   "inverno",
+   "avanzi",
+   "low-cost",
+   "one-pan",
+   "classico"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Toscana",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "fagioli-cannellini",
+    "qta": 200,
+    "unita": "g",
+    "note": "lessati"
+   },
+   {
+    "id": "cavolo-nero",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "verza",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "patate",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "carote",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "sedano",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "concentrato-di-pomodoro",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "pane-raffermo",
+    "qta": 60,
+    "unita": "g",
+    "note": "toscano o casereccio"
+   },
+   {
+    "id": "timo",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 3,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "brodo",
+    "qta": 500,
+    "unita": "ml"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Crema di fagioli",
+    "testo": "Schiaccia metà dei fagioli con la forchetta (o frullali) con un po' di brodo: dà corpo alla zuppa.",
+    "minuti": 4
+   },
+   {
+    "n": 2,
+    "titolo": "Soffritto",
+    "testo": "Appassisci cipolla, carota e sedano tritati nell'olio 6 minuti. Aggiungi il concentrato e tostalo 1 minuto.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Verdure",
+    "testo": "Aggiungi patate a cubetti, verza e cavolo nero a strisce, timo, i fagioli interi e la crema. Copri con il brodo e cuoci a fuoco basso 50 minuti, coperto. Sala.",
+    "minuti": 52
+   },
+   {
+    "n": 4,
+    "titolo": "Pane",
+    "testo": "Aggiungi il pane a pezzi e mescola finché si sfalda e la zuppa diventa densa (5 minuti). Spegni. Olio crudo e pepe.",
+    "minuti": 6
+   },
+   {
+    "n": 5,
+    "titolo": "Ribollire (domani)",
+    "testo": "Il giorno dopo riscalda a fuoco basso in padella con un filo d'olio finché fa la crosticina sul fondo: quella è la ribollita vera.",
+    "minuti": 10
+   }
+  ],
+  "consigli": "Deve essere densa da mangiare con la forchetta. Il cavolo nero va bene anche se un po' duro: la cottura lunga lo ammorbidisce.",
+  "conservazione": "In frigo 3 giorni, migliora ogni giorno. Si congela senza il pane.",
+  "varianti": [
+   "Con una crosta di parmigiano nel brodo.",
+   "Con pancetta nel soffritto."
+  ],
+  "kcal": 480,
+  "foto": {
+   "copertina": "img/ribollita.webp",
+   "prompt": "thick Tuscan ribollita with dark kale, white beans and bread, olive oil drizzle, rustic white ceramic bowl"
+  },
+  "fonte": "Tradizione toscana"
+ },
+ {
+  "slug": "risotto-ai-funghi-porcini",
+  "titolo": "Risotto ai funghi porcini",
+  "descrizione": "Con i porcini secchi (che si conservano mesi) e la loro acqua di ammollo, che è il vero concentrato di sapore. In autunno a Trás-os-Montes puoi usare anche funghi freschi del mercato.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 20
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.2
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "autunno",
+   "da-ospiti",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano",
+   "senza-glutine"
+  ],
+  "origine": "Italia · Nord",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "riso-carnaroli",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "porcini-secchi",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "funghi-champignon",
+    "qta": 100,
+    "unita": "g",
+    "opzionale": true,
+    "note": "freschi, per dare corpo"
+   },
+   {
+    "id": "scalogno",
+    "qta": 1,
+    "unita": "pz",
+    "note": "o mezza cipolla"
+   },
+   {
+    "id": "brodo",
+    "qta": 450,
+    "unita": "ml"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 40,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Ammollo",
+    "testo": "Metti i porcini secchi in 150 ml di acqua tiepida per 20 minuti. Scolali strizzandoli e tritali grossolanamente; filtra l'acqua con un colino fine (o un tovagliolo di carta) e uniscila al brodo caldo.",
+    "minuti": 20
+   },
+   {
+    "n": 2,
+    "titolo": "Funghi freschi",
+    "testo": "Se li usi, affetta gli champignon e saltali a fuoco vivo con metà burro e l'aglio schiacciato finché sono dorati; sala e tieni da parte.",
+    "minuti": 6
+   },
+   {
+    "n": 3,
+    "titolo": "Tostatura",
+    "testo": "Nella pentola sciogli il burro rimasto, appassisci lo scalogno tritato, aggiungi il riso e tostalo 2 minuti. Sfuma col vino.",
+    "minuti": 4
+   },
+   {
+    "n": 4,
+    "titolo": "Cottura",
+    "testo": "Aggiungi i porcini tritati e poi il brodo un mestolo alla volta per 16–18 minuti, mescolando. A 5 minuti dalla fine unisci i funghi freschi.",
+    "minuti": 18
+   },
+   {
+    "n": 5,
+    "titolo": "Mantecatura",
+    "testo": "Fuoco spento: parmigiano, una noce di burro, prezzemolo tritato. Mescola e copri 1 minuto. Pepe a piacere.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "L'acqua dei porcini è il cuore del piatto: non buttarla mai, filtrala solo dalla sabbia.",
+  "conservazione": "In frigo 2 giorni; ottimo per un riso al salto in padella con burro.",
+  "varianti": [
+   "Con funghi freschi di bosco (boletus) al posto degli champignon, in stagione."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/risotto-ai-funghi-porcini.webp",
+   "prompt": "porcini mushroom risotto with parsley and shaved parmesan, creamy texture, white ceramic bowl"
+  },
+  "fonte": "Classico del Nord Italia"
+ },
+ {
+  "slug": "risotto-alla-milanese",
+  "titolo": "Risotto alla milanese",
+  "descrizione": "Giallo zafferano, burro e parmigiano. Il midollo è la versione ricca; senza è il 'risotto allo zafferano' ed è comunque perfetto. Attenzione a comprare açafrão vero, non curcuma.",
+  "categoria": "primo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.4
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "classico",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "vegetariano",
+   "senza-glutine"
+  ],
+  "origine": "Italia · Lombardia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "riso-carnaroli",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "zafferano",
+    "qta": 1,
+    "unita": "bustina",
+    "note": "o 10 pistilli in infusione"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.25,
+    "unita": "pz",
+    "note": "tritata finissima"
+   },
+   {
+    "id": "brodo",
+    "qta": 450,
+    "unita": "ml",
+    "note": "di carne o vegetale"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 40,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 25,
+    "unita": "g"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Soffritto",
+    "testo": "Scalda il brodo. Sciogli metà burro nella pentola e appassisci la cipolla a fuoco basso 5 minuti senza colorirla.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Tostatura",
+    "testo": "Alza il fuoco, aggiungi il riso e tosta 2 minuti mescolando. Sfuma col vino.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Cottura",
+    "testo": "Brodo un mestolo alla volta per 16 minuti. Sciogli lo zafferano in mezzo mestolo di brodo caldo e aggiungilo a 3 minuti dalla fine, così il colore e l'aroma restano vivi.",
+    "minuti": 17
+   },
+   {
+    "n": 4,
+    "titolo": "Mantecatura",
+    "testo": "Spegni, aggiungi burro freddo e parmigiano, mescola con vigore e copri 1 minuto. Deve essere morbido e lucido.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Con i pistilli: mettili in infusione in 2 cucchiai di brodo caldo mentre cuoci il riso. Il colore è più vero e il sapore più delicato.",
+  "conservazione": "In frigo 2 giorni. L'avanzo è nato per il 'riso al salto': schiaccialo in padella con burro finché fa la crosta.",
+  "varianti": [
+   "Con 15 g di midollo di vitello sciolto nel soffritto: la versione milanese storica.",
+   "Accompagna l'ossobuco o una salsiccia alla griglia."
+  ],
+  "kcal": 520,
+  "foto": {
+   "copertina": "img/risotto-alla-milanese.webp",
+   "prompt": "saffron risotto alla milanese, bright golden yellow, creamy, in a shallow white ceramic bowl, minimal styling"
+  },
+  "fonte": "Cucchiaio d'Argento"
+ },
+ {
+  "slug": "risotto-zucca-e-salsiccia",
+  "titolo": "Risotto zucca e salsiccia",
+  "descrizione": "Il risotto d'autunno: la zucca si sfalda e fa la crema, la salsiccia dà sapore. A Bragança la zucca costa niente e la trovi già a tocchi.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.3
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "autunno",
+   "one-pan",
+   "avanzi",
+   "low-cost"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Nord",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "riso-carnaroli",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "zucca",
+    "qta": 200,
+    "unita": "g",
+    "note": "pulita, a cubetti da 1 cm"
+   },
+   {
+    "id": "salsiccia",
+    "qta": 80,
+    "unita": "g",
+    "note": "una salsiccia, senza budello"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "piccola"
+   },
+   {
+    "id": "brodo",
+    "qta": 500,
+    "unita": "ml",
+    "note": "vegetale, caldo"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 40,
+    "unita": "ml"
+   },
+   {
+    "id": "burro",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti",
+    "opzionale": true
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Salsiccia e zucca",
+    "testo": "Scalda il brodo. In una pentola larga rosola la salsiccia sbriciolata nell'olio finché è dorata; toglila e mettila da parte. Nello stesso grasso soffriggi la cipolla tritata 3 minuti, poi aggiungi la zucca e cuoci 5 minuti mescolando.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Tostatura",
+    "testo": "Aggiungi il riso e tostalo 2 minuti mescolando finché i chicchi sono traslucidi. Sfuma col vino e lascialo evaporare.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Cottura",
+    "testo": "Aggiungi brodo caldo un mestolo alla volta, mescolando spesso, per 16–18 minuti. La zucca si disfa e crea la crema. A metà cottura rimetti la salsiccia. Assaggia il riso: deve restare al dente.",
+    "minuti": 17
+   },
+   {
+    "n": 4,
+    "titolo": "Mantecatura",
+    "testo": "Spegni il fuoco, aggiungi burro e parmigiano, mescola energicamente e copri 1 minuto. Servi con il rosmarino tritato e pepe.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Il risotto deve essere 'all'onda': se inclini il piatto si muove. Se è compatto, aggiungi un goccio di brodo prima di mantecare.",
+  "conservazione": "In frigo 2 giorni: il giorno dopo diventano ottime polpette di riso (arancini) passate nel pangrattato e fritte.",
+  "varianti": [
+   "Con gorgonzola al posto del parmigiano nella mantecatura.",
+   "Vegetariano: senza salsiccia, con 30 g di noci tostate."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/risotto-zucca-e-salsiccia.webp",
+   "prompt": "creamy orange pumpkin risotto with crumbled sausage and rosemary, shallow white bowl, top light"
+  },
+  "fonte": "Classico del Nord Italia"
+ },
+ {
+  "slug": "salame-di-cioccolato",
+  "titolo": "Salame di cioccolato",
+  "descrizione": "Senza forno: cioccolato fuso, burro, zucchero, un tuorlo, biscotti secchi spezzati. Si arrotola nella carta forno, due ore in frigo, si affetta. Lo conoscono anche i portoghesi (salame de chocolate).",
+  "categoria": "dolce",
+  "difficolta": "molto-facile",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 0,
+   "riposo": 120
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.6
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia / Portogallo",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "cioccolato-fondente",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "burro",
+    "qta": 50,
+    "unita": "g",
+    "note": "morbido"
+   },
+   {
+    "id": "zucchero",
+    "qta": 40,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "solo il tuorlo"
+   },
+   {
+    "id": "biscotti-secchi",
+    "qta": 80,
+    "unita": "g"
+   },
+   {
+    "id": "cacao",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "noci",
+    "qta": 20,
+    "unita": "g",
+    "opzionale": true
+   },
+   {
+    "id": "zucchero-a-velo",
+    "qta": null,
+    "unita": "qb",
+    "opzionale": true,
+    "note": "per la 'muffa' del salame"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Cioccolato",
+    "testo": "Sciogli il cioccolato a bagnomaria (ciotola su un pentolino d'acqua che sobbolle, senza toccarla) o al microonde a 30 secondi alla volta. Lascia intiepidire.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Impasto",
+    "testo": "Monta il burro con lo zucchero fino a crema, aggiungi il tuorlo, poi il cioccolato e il cacao. Spezza i biscotti a pezzi grossi con le mani (non polvere) e uniscili con le noci.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Forma",
+    "testo": "Versa su un foglio di carta forno, arrotola stringendo a formare un salame da 4–5 cm di diametro, chiudi le estremità come una caramella. Frigo 2 ore (o 30 minuti in freezer).",
+    "minuti": 5
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Rotola nello zucchero a velo, affetta a 1 cm con un coltello caldo. Tienilo in frigo.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Biscotti a pezzi grossi: a fette deve sembrare un salame con il grasso. Le bolacha Maria portoghesi sono perfette.",
+  "conservazione": "In frigo 1 settimana; in freezer 1 mese, si affetta da congelato.",
+  "varianti": [
+   "Con pistacchi e scorza d'arancia.",
+   "Con un cucchiaio di Porto nell'impasto."
+  ],
+  "kcal": 450,
+  "foto": {
+   "copertina": "img/salame-di-cioccolato.webp",
+   "prompt": "chocolate salami log dusted with powdered sugar, three slices cut showing biscuit pieces, light grey background, minimal"
+  },
+  "fonte": "Ricetta classica"
+ },
+ {
+  "slug": "salmone-in-crosta-di-erbe-e-pistacchi",
+  "titolo": "Salmone al forno in crosta di erbe e pistacchi",
+  "descrizione": "Filetto con una crosta di pangrattato, pistacchi tritati, scorza di limone e prezzemolo, 12 minuti in forno. Elegante, quasi zero fatica.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 14,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 4.5
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "veloce",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "salmone",
+    "qta": 180,
+    "unita": "g",
+    "note": "un filetto con pelle"
+   },
+   {
+    "id": "pistacchi",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "pangrattato",
+    "qta": 15,
+    "unita": "g"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "scorza + spicchio"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "senape",
+    "qta": 1,
+    "unita": "cucchiaini"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Crosta",
+    "testo": "Forno a 200 °C. Trita i pistacchi grossolanamente e mescolali con pangrattato, scorza di limone, prezzemolo tritato, olio, sale e pepe.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Salmone",
+    "testo": "Asciuga il filetto, sala leggermente, spalma la senape sul lato senza pelle e premi sopra la crosta di pistacchi.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Su teglia con carta forno, pelle in giù, 12–14 minuti: la crosta è dorata e il centro appena rosato. Non cuocerlo di più.",
+    "minuti": 14
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Con lo spicchio di limone e una verdura al forno o insalata di finocchi.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Il salmone è cotto quando le lamelle si separano appena con la forchetta. 50 °C al cuore se hai un termometro.",
+  "conservazione": "In frigo 1 giorno; freddo in insalata.",
+  "varianti": [
+   "Con mandorle al posto dei pistacchi.",
+   "Con orata o merluzzo."
+  ],
+  "kcal": 520,
+  "foto": {
+   "copertina": "img/salmone-in-crosta-di-erbe-e-pistacchi.webp",
+   "prompt": "baked salmon fillet with green pistachio herb crust and a lemon wedge, white ceramic plate, minimal"
+  },
+  "fonte": "Ricetta moderna"
+ },
+ {
+  "slug": "saltimbocca-alla-romana",
+  "titolo": "Saltimbocca alla romana",
+  "descrizione": "Fettina, prosciutto crudo e salvia fissati con uno stecchino, cotti nel burro e sfumati col vino. Il presunto portoghese è perfetto.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 10,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.6
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "senza-glutine"
+  ],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "fettine-di-vitello",
+    "qta": 150,
+    "unita": "g",
+    "note": "3 fettine piccole e sottili"
+   },
+   {
+    "id": "prosciutto-crudo",
+    "qta": 3,
+    "unita": "fette"
+   },
+   {
+    "id": "salvia",
+    "qta": 3,
+    "unita": "foglie"
+   },
+   {
+    "id": "burro",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 60,
+    "unita": "ml"
+   },
+   {
+    "id": "farina-00",
+    "qta": 1,
+    "unita": "cucchiai",
+    "opzionale": true,
+    "note": "solo sul lato senza prosciutto"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Montaggio",
+    "testo": "Batti le fettine sottili. Su ognuna appoggia una fetta di prosciutto e una foglia di salvia, fissa con uno stecchino attraversando i tre strati. Niente sale: il prosciutto basta.",
+    "minuti": 6
+   },
+   {
+    "n": 2,
+    "titolo": "Cottura",
+    "testo": "Sciogli il burro a fuoco medio-alto. Cuoci i saltimbocca prima dal lato della carne 2 minuti, poi dal lato del prosciutto 1 minuto.",
+    "minuti": 4
+   },
+   {
+    "n": 3,
+    "titolo": "Sfumatura",
+    "testo": "Sfuma col vino, lascia ridurre 1 minuto agitando la padella finché la salsa si lega. Servi subito con la salsa sopra.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Tieni la padella ben calda e la cottura breve: la fettina è sottile e in 3 minuti è pronta.",
+  "conservazione": "Non si conserva.",
+  "varianti": [
+   "Con fettine di tacchino: più economico, stessa resa.",
+   "Arrotolati a involtino invece che piatti."
+  ],
+  "kcal": 400,
+  "foto": {
+   "copertina": "img/saltimbocca-alla-romana.webp",
+   "prompt": "saltimbocca alla romana, veal with prosciutto and sage leaf pinned with toothpick, buttery wine sauce, white plate"
+  },
+  "fonte": "Tradizione romana"
+ },
+ {
+  "slug": "scaloppine-al-limone",
+  "titolo": "Scaloppine al limone",
+  "descrizione": "Fettine sottili infarinate, burro, limone e un cucchiaio d'acqua per fare la salsina. Venti minuti. Con il tacchino portoghese costa la metà.",
+  "categoria": "secondo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 5,
+   "cottura": 12,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico"
+  ],
+  "dieta": [],
+  "origine": "Italia · Lombardia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "fettine-di-vitello",
+    "qta": 150,
+    "unita": "g",
+    "note": "2 fettine sottili, battute"
+   },
+   {
+    "id": "farina-00",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "burro",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "succo + scorza"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Infarina",
+    "testo": "Batti le fettine sottili (con il fondo di una padella), sala e infarinale scuotendo via l'eccesso.",
+    "minuti": 4
+   },
+   {
+    "n": 2,
+    "titolo": "Cottura",
+    "testo": "Scalda olio e metà burro a fuoco medio-alto. Cuoci le fettine 1,5 minuti per lato finché sono dorate. Toglile su un piatto.",
+    "minuti": 4
+   },
+   {
+    "n": 3,
+    "titolo": "Salsa",
+    "testo": "Nella padella versa il succo di limone e 3 cucchiai d'acqua, raschia il fondo, aggiungi il burro rimasto e mescola finché la salsa è cremosa (1 minuto). Rimetti le fettine 30 secondi per napparle.",
+    "minuti": 2
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Prezzemolo, scorza di limone, pepe. Con patate saltate o insalata.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Non affollare la padella: la carne deve friggere, non bollire. Due fettine alla volta.",
+  "conservazione": "Non si conserva bene: la salsa si rapprende.",
+  "varianti": [
+   "Al marsala (o Porto): sostituisci il limone con 50 ml di vino liquoroso.",
+   "Con capperi nella salsa."
+  ],
+  "kcal": 420,
+  "foto": {
+   "copertina": "img/scaloppine-al-limone.webp",
+   "prompt": "veal scaloppine in glossy lemon butter sauce with parsley and lemon zest, white ceramic plate"
+  },
+  "fonte": "Classico italiano"
+ },
+ {
+  "slug": "spaghetti-aglio-olio-e-pangrattato",
+  "titolo": "Spaghetti aglio, olio e pangrattato tostato",
+  "descrizione": "Il piatto delle 23:00 con la dispensa vuota, fatto bene: aglio dorato lentamente, emulsione con l'acqua di cottura e pangrattato croccante al posto del formaggio.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 3,
+   "cottura": 12,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.6
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "low-cost",
+   "classico"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Campania",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "spaghetti",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 2,
+    "unita": "spicchi",
+    "note": "a fettine sottili"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 3,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "pangrattato",
+    "qta": 20,
+    "unita": "g"
+   },
+   {
+    "id": "prezzemolo",
+    "qta": null,
+    "unita": "qb"
+   },
+   {
+    "id": "peperoncino",
+    "qta": null,
+    "unita": "qb",
+    "opzionale": true,
+    "note": "un pizzico, solo se un giorno lo vorrai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Pangrattato",
+    "testo": "Tosta il pangrattato in padella asciutta a fuoco medio con un filo d'olio e un pizzico di sale finché è dorato (3 minuti). Mettilo da parte.",
+    "minuti": 3
+   },
+   {
+    "n": 2,
+    "titolo": "Aglio",
+    "testo": "Nella stessa padella scalda l'olio a fuoco BASSO con l'aglio a fettine: deve dorarsi lentamente in 4–5 minuti senza bruciare, o diventa amaro.",
+    "minuti": 5
+   },
+   {
+    "n": 3,
+    "titolo": "Emulsione",
+    "testo": "Cuoci gli spaghetti; scolali 2 minuti prima e passali in padella con un mestolo d'acqua. Mescola a fuoco vivo finché l'acqua e l'olio formano una salsina cremosa e la pasta è al dente.",
+    "minuti": 10
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Prezzemolo tritato, pangrattato tostato sopra. Mangia subito.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "L'emulsione è tutto: agita la padella con decisione, l'amido lega l'olio e l'acqua.",
+  "conservazione": "Non si conserva.",
+  "varianti": [
+   "Con 3 filetti di acciuga sciolti nell'olio.",
+   "Con la scorza di limone grattugiata alla fine."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/spaghetti-aglio-olio-e-pangrattato.webp",
+   "prompt": "spaghetti aglio e olio with golden garlic slices, toasted breadcrumbs and parsley, glossy, white ceramic bowl"
+  },
+  "fonte": "Tradizione napoletana"
+ },
+ {
+  "slug": "spaghetti-alla-carbonara",
+  "titolo": "Spaghetti alla carbonara",
+  "descrizione": "La romana vera: tuorlo, pecorino, guanciale croccante e pepe. Niente panna. Il segreto è mantecare fuori dal fuoco con un po' d'acqua di cottura.",
+  "categoria": "primo",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 15,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 2.2
+  },
+  "attrezzatura": [
+   "pentola",
+   "padella"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "low-cost"
+  ],
+  "dieta": [],
+  "origine": "Italia · Lazio",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "spaghetti",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "guanciale",
+    "qta": 50,
+    "unita": "g",
+    "note": "a listarelle spesse 1 cm"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)"
+   },
+   {
+    "id": "pecorino",
+    "qta": 30,
+    "unita": "g",
+    "note": "grattugiato fine"
+   },
+   {
+    "id": "pepe",
+    "qta": null,
+    "unita": "qb",
+    "note": "macinato al momento, abbondante"
+   },
+   {
+    "id": "sale",
+    "qta": null,
+    "unita": "qb",
+    "note": "poco: guanciale e pecorino sono già sapidi"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Acqua e guanciale",
+    "testo": "Metti a bollire l'acqua con poco sale. Taglia il guanciale a listarelle e mettilo in padella fredda, senza olio, a fuoco medio-basso: deve sciogliere il grasso e diventare croccante in 8–10 minuti. Spegni e tienilo da parte nel suo grasso.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "La crema",
+    "testo": "In una ciotola mescola con una forchetta il tuorlo, l'uovo intero, il pecorino e una macinata generosa di pepe fino a ottenere una crema densa.",
+    "minuti": 3
+   },
+   {
+    "n": 3,
+    "titolo": "Pasta",
+    "testo": "Cala gli spaghetti e scolali 1 minuto prima del tempo indicato, tenendo da parte una tazza di acqua di cottura.",
+    "minuti": 9
+   },
+   {
+    "n": 4,
+    "titolo": "Mantecatura fuori dal fuoco",
+    "testo": "Versa gli spaghetti nella padella col guanciale (fuoco spento), aggiungi la crema e mescola energicamente; allunga con un cucchiaio di acqua di cottura alla volta finché la crema è lucida e avvolge la pasta. Se la padella è troppo calda, l'uovo straccia: aspetta 30 secondi prima di unire la crema.",
+    "minuti": 2
+   },
+   {
+    "n": 5,
+    "titolo": "Servi",
+    "testo": "Impiatta subito con altro pecorino e pepe. Va mangiata immediatamente: la carbonara non aspetta.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Con il toucinho portoghese al posto del guanciale, rosolalo un po' più a lungo: ha più carne e meno grasso.",
+  "conservazione": "Non si conserva. Fai solo la dose che mangi.",
+  "varianti": [
+   "Con pancetta affumicata se non trovi il guanciale.",
+   "Metà pecorino e metà parmigiano se il pecorino ti sembra troppo forte."
+  ],
+  "kcal": 650,
+  "foto": {
+   "copertina": "img/spaghetti-alla-carbonara.webp",
+   "prompt": "spaghetti carbonara with crispy guanciale cubes, creamy egg and pecorino sauce, coarse black pepper, twirled in a shallow white ceramic bowl"
+  },
+  "fonte": "GialloZafferano, ricetta romana; dosi ridotte a 1 persona"
+ },
+ {
+  "slug": "spezzatino-di-manzo-con-patate",
+  "titolo": "Spezzatino di manzo con patate in bianco",
+  "descrizione": "Due ore a fuoco basso: la carne da stufato diventa morbida, le patate assorbono il fondo di vino e rosmarino. Fallo la domenica, in doppia dose, e ringraziati il martedì.",
+  "categoria": "secondo",
+  "difficolta": "media",
+  "tempi": {
+   "preparazione": 15,
+   "cottura": 110,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "medio",
+   "stima_eur": 3.8
+  },
+  "attrezzatura": [
+   "pentola"
+  ],
+  "tag": [
+   "weekend",
+   "one-pan",
+   "avanzi",
+   "inverno",
+   "classico"
+  ],
+  "dieta": [
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "manzo-per-spezzatino",
+    "qta": 250,
+    "unita": "g",
+    "note": "cubi da 3 cm"
+   },
+   {
+    "id": "patate",
+    "qta": 200,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "carote",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "sedano",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "vino-bianco",
+    "qta": 80,
+    "unita": "ml"
+   },
+   {
+    "id": "brodo",
+    "qta": 400,
+    "unita": "ml"
+   },
+   {
+    "id": "farina-00",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "alloro",
+    "qta": 1,
+    "unita": "foglie"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Rosolatura",
+    "testo": "Asciuga la carne, infarinala leggermente e rosolala nell'olio a fuoco vivo, pochi pezzi alla volta, finché è scura su tutti i lati (5 minuti). Toglila.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Soffritto e sfumatura",
+    "testo": "Nella stessa pentola appassisci cipolla, carota e sedano a dadini 5 minuti. Rimetti la carne, sfuma col vino raschiando il fondo.",
+    "minuti": 7
+   },
+   {
+    "n": 3,
+    "titolo": "Cottura lenta",
+    "testo": "Copri con il brodo, aggiungi rosmarino e alloro, sale. Coperchio, fuoco al minimo, 1 ora e 15 minuti. Deve sobbollire appena.",
+    "minuti": 75
+   },
+   {
+    "n": 4,
+    "titolo": "Patate",
+    "testo": "Aggiungi le patate a tocchi e cuoci altri 30 minuti scoperto, finché sono tenere e il fondo si è addensato. Se serve, un po' d'acqua.",
+    "minuti": 30
+   },
+   {
+    "n": 5,
+    "titolo": "Servi",
+    "testo": "Togli alloro e rosmarino, pepe, e servi con pane. Meglio se aspetta 10 minuti.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Se dopo 75 minuti la carne è ancora dura, continua: non è un errore, è solo che serve più tempo. La forchetta deve entrare senza sforzo.",
+  "conservazione": "In frigo 3 giorni, migliora. Si congela.",
+  "varianti": [
+   "Con 100 g di funghi negli ultimi 20 minuti.",
+   "Rosso: con 2 cucchiai di concentrato di pomodoro e vino rosso."
+  ],
+  "kcal": 560,
+  "foto": {
+   "copertina": "img/spezzatino-di-manzo-con-patate.webp",
+   "prompt": "beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl"
+  },
+  "fonte": "Classico italiano"
+ },
+ {
+  "slug": "tagliatelle-fresche-all-uovo",
+  "titolo": "Tagliatelle fresche all'uovo",
+  "descrizione": "Un uovo e cento grammi di farina: la regola della sfoglia emiliana. Serve un mattarello (o una bottiglia di vino) e mezz'ora di pazienza. Condiscile col tuo ragù bianco o burro e salvia.",
+  "categoria": "primo",
+  "difficolta": "difficile",
+  "tempi": {
+   "preparazione": 45,
+   "cottura": 5,
+   "riposo": 30
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.7
+  },
+  "attrezzatura": [
+   "pentola",
+   "mattarello"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Emilia-Romagna",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "farina-00",
+    "qta": 100,
+    "unita": "g",
+    "note": "più semola per spolverare"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "medio-grande"
+   },
+   {
+    "id": "semola",
+    "qta": 10,
+    "unita": "g",
+    "opzionale": true,
+    "note": "per non far attaccare"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Fontana",
+    "testo": "Fai una fontana con la farina sul tagliere, rompi l'uovo al centro e sbattilo con una forchetta incorporando la farina dai bordi poco alla volta.",
+    "minuti": 5
+   },
+   {
+    "n": 2,
+    "titolo": "Impasto",
+    "testo": "Impasta con il palmo della mano per 10 minuti finché è liscio ed elastico. Se è troppo secco, bagna le mani; se appiccica, poca farina. Avvolgi nella pellicola e lascia riposare 30 minuti.",
+    "minuti": 10
+   },
+   {
+    "n": 3,
+    "titolo": "Sfoglia",
+    "testo": "Stendi col mattarello su piano infarinato, ruotando la sfoglia di un quarto ogni passata, fino a 1 mm (devi quasi vedere il tagliere attraverso). Lasciala asciugare 5–10 minuti.",
+    "minuti": 15
+   },
+   {
+    "n": 4,
+    "titolo": "Taglio",
+    "testo": "Spolvera di semola, arrotola la sfoglia su sé stessa senza stringere e taglia a strisce di 7 mm. Apri i nidi con le dita e spolvera ancora.",
+    "minuti": 5
+   },
+   {
+    "n": 5,
+    "titolo": "Cottura",
+    "testo": "In acqua bollente salata cuociono in 2–3 minuti. Scola e condisci subito.",
+    "minuti": 3
+   }
+  ],
+  "consigli": "La bottiglia di vino piena funziona come mattarello. La sfoglia sottile è più importante della forma delle tagliatelle.",
+  "conservazione": "Crude: falle asciugare in nidi 1 ora, poi in frigo 2 giorni o congelate. Cotte: no.",
+  "varianti": [
+   "Tagliale larghe 2 cm: pappardelle per il ragù.",
+   "Con 1 tuorlo in più diventa più gialla e ricca."
+  ],
+  "kcal": 460,
+  "foto": {
+   "copertina": "img/tagliatelle-fresche-all-uovo.webp",
+   "prompt": "nests of fresh handmade egg tagliatelle dusted with semolina on a light wooden board, one nest with butter and sage, minimal"
+  },
+  "fonte": "Tradizione emiliana"
+ },
+ {
+  "slug": "tiramisu",
+  "titolo": "Tiramisù",
+  "descrizione": "Un bicchiere o una piccola pirofila: tuorlo montato con lo zucchero, mascarpone, savoiardi bagnati nel caffè, cacao. Senza panna, senza albumi. Quattro ore in frigo.",
+  "categoria": "dolce",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 25,
+   "cottura": 0,
+   "riposo": 240
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.9
+  },
+  "attrezzatura": [
+   "frusta"
+  ],
+  "tag": [
+   "veloce",
+   "classico",
+   "da-ospiti"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia · Veneto / Friuli",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "mascarpone",
+    "qta": 125,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz",
+    "note": "solo il tuorlo, freschissimo"
+   },
+   {
+    "id": "zucchero",
+    "qta": 25,
+    "unita": "g"
+   },
+   {
+    "id": "savoiardi",
+    "qta": 6,
+    "unita": "pz"
+   },
+   {
+    "id": "caffe",
+    "qta": 80,
+    "unita": "ml",
+    "note": "2 tazzine, freddo, senza zucchero"
+   },
+   {
+    "id": "cacao",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Crema",
+    "testo": "Monta il tuorlo con lo zucchero con la frusta (a mano: 4–5 minuti di energia) finché è chiaro e spumoso. Aggiungi il mascarpone freddo e mescola delicatamente fino a una crema liscia, senza smontare.",
+    "minuti": 10
+   },
+   {
+    "n": 2,
+    "titolo": "Strati",
+    "testo": "Inzuppa i savoiardi nel caffè 1 secondo per lato (non di più: si sfaldano). Nel bicchiere o pirofila: savoiardi, metà crema, savoiardi, crema.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Frigo",
+    "testo": "Copri e lascia in frigo almeno 4 ore, meglio una notte. Cacao setacciato sopra solo al momento di servire.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "Uova freschissime perché restano crude. Per pastorizzare: versa sul tuorlo uno sciroppo di zucchero e 1 cucchiaio d'acqua cotto a 121 °C mentre monti.",
+  "conservazione": "In frigo 2 giorni, coperto.",
+  "varianti": [
+   "Con un cucchiaio di Porto o Marsala nel caffè.",
+   "Alle fragole o ai frutti di bosco, con succo d'arancia al posto del caffè."
+  ],
+  "kcal": 620,
+  "foto": {
+   "copertina": "img/tiramisu.webp",
+   "prompt": "single-serving tiramisu in a glass, visible layers of mascarpone cream and coffee-soaked ladyfingers, cocoa dusting, minimal light grey background"
+  },
+  "fonte": "Ricetta classica"
+ },
+ {
+  "slug": "torta-di-mele",
+  "titolo": "Torta di mele della nonna",
+  "descrizione": "Impasto semplice a cucchiaio, mele a fettine dentro e sopra, zucchero e cannella. Stampo da 18 cm: 6 fette, cioè colazione per una settimana. Serve uno stampo.",
+  "categoria": "dolce",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 20,
+   "cottura": 45,
+   "riposo": 20
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.4
+  },
+  "attrezzatura": [
+   "forno",
+   "stampo",
+   "frusta"
+  ],
+  "tag": [
+   "weekend",
+   "low-cost",
+   "avanzi",
+   "autunno",
+   "classico"
+  ],
+  "dieta": [
+   "vegetariano"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "mele",
+    "qta": 2,
+    "unita": "pz",
+    "note": "golden o renette"
+   },
+   {
+    "id": "farina-00",
+    "qta": 130,
+    "unita": "g"
+   },
+   {
+    "id": "zucchero",
+    "qta": 90,
+    "unita": "g"
+   },
+   {
+    "id": "uova",
+    "qta": 1,
+    "unita": "pz"
+   },
+   {
+    "id": "burro",
+    "qta": 60,
+    "unita": "g",
+    "note": "fuso e intiepidito"
+   },
+   {
+    "id": "latte",
+    "qta": 50,
+    "unita": "ml"
+   },
+   {
+    "id": "lievito-per-dolci",
+    "qta": 8,
+    "unita": "g",
+    "note": "mezza bustina"
+   },
+   {
+    "id": "limone",
+    "qta": 0.5,
+    "unita": "pz",
+    "note": "scorza + un po' di succo per le mele"
+   },
+   {
+    "id": "cannella",
+    "qta": 1,
+    "unita": "cucchiaini"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Mele",
+    "testo": "Forno a 180 °C. Sbuccia le mele, tagliale a fettine sottili e bagnale con succo di limone. Imburra e infarina uno stampo da 18 cm (o rivestilo di carta forno).",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Impasto",
+    "testo": "Sbatti l'uovo con lo zucchero 2 minuti, aggiungi burro fuso, latte e scorza di limone. Unisci farina e lievito setacciati, mescola giusto finché è liscio. Incorpora due terzi delle mele.",
+    "minuti": 8
+   },
+   {
+    "n": 3,
+    "titolo": "Forno",
+    "testo": "Versa nello stampo, disponi le mele rimaste a raggiera sopra, spolvera con zucchero e cannella. Cuoci 40–45 minuti: uno stecchino al centro deve uscire asciutto. Se scurisce troppo, copri con alluminio.",
+    "minuti": 45
+   },
+   {
+    "n": 4,
+    "titolo": "Raffreddare",
+    "testo": "20 minuti nello stampo, poi sforma. Buona tiepida e il giorno dopo.",
+    "minuti": 20
+   }
+  ],
+  "consigli": "Non mescolare troppo l'impasto dopo aver messo la farina: diventa gommoso. Tante mele, poco impasto.",
+  "conservazione": "3 giorni sotto una campana o coperta; si congela a fette.",
+  "varianti": [
+   "Con uvetta ammollata nel Porto.",
+   "Con pere e cioccolato fondente a pezzetti."
+  ],
+  "kcal": 380,
+  "foto": {
+   "copertina": "img/torta-di-mele.webp",
+   "prompt": "rustic apple cake with fanned apple slices on top, cinnamon sugar crust, one slice cut, light grey background, minimal"
+  },
+  "fonte": "Ricetta di famiglia"
+ },
+ {
+  "slug": "vellutata-di-zucca-con-crostini",
+  "titolo": "Vellutata di zucca con crostini",
+  "descrizione": "Zucca, patata, cipolla e brodo, frullati fino a seta. Crostini di pane tostato all'aglio e un filo d'olio. La prova del nuovo frullatore.",
+  "categoria": "piatto-unico",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1.3
+  },
+  "attrezzatura": [
+   "pentola",
+   "frullatore"
+  ],
+  "tag": [
+   "autunno",
+   "inverno",
+   "low-cost",
+   "avanzi",
+   "one-pan"
+  ],
+  "dieta": [
+   "vegetariano",
+   "senza-glutine"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "zucca",
+    "qta": 300,
+    "unita": "g"
+   },
+   {
+    "id": "patate",
+    "qta": 100,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "brodo",
+    "qta": 400,
+    "unita": "ml"
+   },
+   {
+    "id": "pane-raffermo",
+    "qta": 40,
+    "unita": "g"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "parmigiano",
+    "qta": 15,
+    "unita": "g",
+    "opzionale": true
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "noce-moscata",
+    "qta": null,
+    "unita": "qb"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Stufatura",
+    "testo": "Appassisci la cipolla nell'olio 3 minuti, aggiungi zucca e patate a cubetti, copri con il brodo caldo e cuoci 20 minuti finché tutto è morbidissimo.",
+    "minuti": 23
+   },
+   {
+    "n": 2,
+    "titolo": "Crostini",
+    "testo": "Intanto taglia il pane a cubetti, mescolalo con un filo d'olio e l'aglio schiacciato e tostalo in padella (o forno a 200 °C) finché è dorato, 6 minuti.",
+    "minuti": 6
+   },
+   {
+    "n": 3,
+    "titolo": "Frullare",
+    "testo": "Frulla la zuppa fino a renderla liscia (con il minipimer direttamente nella pentola). Regola di sale, noce moscata, pepe; se è densa, un po' di brodo.",
+    "minuti": 3
+   },
+   {
+    "n": 4,
+    "titolo": "Servi",
+    "testo": "Nel piatto con crostini, olio crudo e parmigiano. Con il frullatore a bicchiere: mai riempirlo oltre metà con liquidi caldi.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "La patata dà corpo senza panna. Per una versione più dolce, arrostisci la zucca in forno prima di frullarla.",
+  "conservazione": "In frigo 3 giorni; si congela perfettamente.",
+  "varianti": [
+   "Con zenzero fresco grattugiato e latte di cocco.",
+   "Con salsiccia sbriciolata croccante sopra."
+  ],
+  "kcal": 380,
+  "foto": {
+   "copertina": "img/vellutata-di-zucca-con-crostini.webp",
+   "prompt": "smooth orange pumpkin veloute with golden croutons and olive oil swirl, white ceramic bowl, minimal"
+  },
+  "fonte": "Classico"
+ },
+ {
+  "slug": "verze-stufate-con-pancetta",
+  "titolo": "Verze stufate con pancetta",
+  "descrizione": "La couve lombarda a strisce, stufata piano con pancetta, cipolla e un goccio di aceto. Contorno d'inverno che accompagna salsiccia, polenta o arrosto.",
+  "categoria": "contorno",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 10,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 1
+  },
+  "attrezzatura": [
+   "padella"
+  ],
+  "tag": [
+   "inverno",
+   "low-cost",
+   "avanzi",
+   "one-pan"
+  ],
+  "dieta": [
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia · Nord",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "verza",
+    "qta": 250,
+    "unita": "g"
+   },
+   {
+    "id": "pancetta",
+    "qta": 40,
+    "unita": "g"
+   },
+   {
+    "id": "cipolla",
+    "qta": 0.5,
+    "unita": "pz"
+   },
+   {
+    "id": "aceto",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "alloro",
+    "qta": 1,
+    "unita": "foglie"
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Base",
+    "testo": "Rosola la pancetta a cubetti nell'olio 3 minuti, aggiungi la cipolla a fettine e l'alloro, cuoci 4 minuti.",
+    "minuti": 7
+   },
+   {
+    "n": 2,
+    "titolo": "Verza",
+    "testo": "Aggiungi la verza a strisce da 1 cm (senza la costa dura), sala, mescola, bagna con l'aceto e mezzo bicchiere d'acqua. Copri e cuoci a fuoco basso 20 minuti, mescolando ogni tanto.",
+    "minuti": 22
+   },
+   {
+    "n": 3,
+    "titolo": "Finire",
+    "testo": "Scopri e alza il fuoco 2 minuti per asciugare. Pepe. Servi calda.",
+    "minuti": 2
+   }
+  ],
+  "consigli": "L'aceto toglie il sentore di cavolo e dà freschezza: non ometterlo.",
+  "conservazione": "In frigo 3 giorni, riscaldata è migliore.",
+  "varianti": [
+   "Con riso aggiunto a metà cottura e brodo: diventa 'riso e verze'.",
+   "Senza pancetta, con semi di finocchio: vegana."
+  ],
+  "kcal": 220,
+  "foto": {
+   "copertina": "img/verze-stufate-con-pancetta.webp",
+   "prompt": "braised savoy cabbage ribbons with pancetta cubes and bay leaf, glossy, white ceramic bowl"
+  },
+  "fonte": "Tradizione del Nord"
+ },
+ {
+  "slug": "zucca-al-forno-con-rosmarino-e-balsamico",
+  "titolo": "Zucca al forno con rosmarino e aceto balsamico",
+  "descrizione": "Fette di zucca arrostite finché caramellano ai bordi, con rosmarino e una riduzione di balsamico. Contorno o, con ricotta e noci, una cena leggera.",
+  "categoria": "contorno",
+  "difficolta": "facile",
+  "tempi": {
+   "preparazione": 8,
+   "cottura": 30,
+   "riposo": 0
+  },
+  "porzioni": 1,
+  "costo": {
+   "fascia": "basso",
+   "stima_eur": 0.9
+  },
+  "attrezzatura": [
+   "forno",
+   "teglia"
+  ],
+  "tag": [
+   "autunno",
+   "inverno",
+   "low-cost",
+   "avanzi"
+  ],
+  "dieta": [
+   "vegano",
+   "senza-glutine",
+   "senza-lattosio"
+  ],
+  "origine": "Italia",
+  "reinventata": null,
+  "ingredienti": [
+   {
+    "id": "zucca",
+    "qta": 300,
+    "unita": "g",
+    "note": "a fette da 1,5 cm con la buccia, se è sottile"
+   },
+   {
+    "id": "olio-evo",
+    "qta": 2,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "aceto-balsamico",
+    "qta": 1,
+    "unita": "cucchiai"
+   },
+   {
+    "id": "rosmarino",
+    "qta": 1,
+    "unita": "rametti"
+   },
+   {
+    "id": "aglio",
+    "qta": 1,
+    "unita": "spicchi"
+   },
+   {
+    "id": "noci",
+    "qta": 20,
+    "unita": "g",
+    "opzionale": true
+   }
+  ],
+  "procedimento": [
+   {
+    "n": 1,
+    "titolo": "Condire",
+    "testo": "Forno a 210 °C. Mescola le fette di zucca con olio, sale, pepe, rosmarino e aglio a fettine. Stendile sulla teglia con carta forno senza sovrapporle.",
+    "minuti": 8
+   },
+   {
+    "n": 2,
+    "titolo": "Forno",
+    "testo": "Cuoci 25–30 minuti, girando a metà, finché sono morbide dentro e bruciacchiate ai bordi.",
+    "minuti": 30
+   },
+   {
+    "n": 3,
+    "titolo": "Balsamico",
+    "testo": "Appena escono, bagna con il balsamico: sfrigola e si addensa sulla zucca calda. Noci spezzettate sopra.",
+    "minuti": 1
+   }
+  ],
+  "consigli": "Non serve sbucciarla se la buccia è sottile (butternut, hokkaido): diventa morbida.",
+  "conservazione": "In frigo 3 giorni; fredda in insalata con rucola.",
+  "varianti": [
+   "Con gorgonzola sbriciolato sopra a fine cottura.",
+   "Con miele e semi di zucca."
+  ],
+  "kcal": 240,
+  "foto": {
+   "copertina": "img/zucca-al-forno-con-rosmarino-e-balsamico.webp",
+   "prompt": "roasted pumpkin slices with caramelized edges, rosemary and balsamic glaze, walnuts, white ceramic plate"
+  },
+  "fonte": "Classico"
+ }
+]
