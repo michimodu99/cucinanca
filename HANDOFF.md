@@ -5,7 +5,7 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 ## Stato attuale
 
 - **100 ricette** (30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci; 12 portoghesi). Le prime 61 hanno la foto; **le 39 nuove no** (vedi sotto: si fanno a mano da `prompts.md`).
-- Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). L'ultimo push di questa sessione è da fare/verificare: guarda `git status` e `git log origin/main..main`.
+- Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). Tutto pushato a fine sessione: le 100 ricette sono online, le 39 nuove col segnaposto tipografico finché non arrivano le foto.
 - **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
 - **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. 157 ingredienti con sostituti su 100 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
 - **i18n pronto, UI in italiano**: `js/i18n.js` (`LINGUA`, `STRINGHE.it`, `t()`, `applicaTesti()`); `ETICHETTE` in `data.js` legge da lì; il testo statico di `index.html` ha `data-i18n`. Tradurre l'interfaccia = aggiungere `STRINGHE.en` e cambiare `LINGUA`. I contenuti (ricette) restano un progetto a parte.
@@ -13,6 +13,14 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 - `npm run prompts` rigenera `prompts.md` da `recipes.json` (100 prompt, senza più la frase di esclusione).
 - Tassonomia: nuove voci `alheira`, `porchetta`, `panini`, `tahina`, `fagioli-borlotti`; alias `bacon`, `natas`, `grelos`, `riso carolino`, `piri-piri`. Mai usati direttamente: ricotta, gorgonzola, miele (piadina e porchetta compaiono solo come sostituti).
 - I file `data/ricette/*.json` sono ora tutti nello stile compatto (una riga per ingrediente/passo).
+- Le ricette nuove sono state scritte da 4 subagent in parallelo con il brief del piano contenuti (lotti A–D), rilette una a una prima del commit: il metodo ha funzionato bene, riusabile per la riserva.
+
+## Ambiente Claude Code (da /doctor, 11/09/2026)
+
+- `.claude/settings.local.json` (ignorato da git) disattiva le due skill di progetto `design-taste-frontend` e `minimalist-ui`: mai usate, il design è chiuso. Per riattivarle togli le righe da `skillOverrides`.
+- Le connessioni MCP `canva` e `replicate` sono disattivate in questo progetto (`/mcp enable <nome>` per riattivarle).
+- Il plugin `humanizer` è abilitato ma il suo agent non compariva nella lista di sessione: da controllare con `/plugin`.
+- Gli screenshot del browser costano ~2k token l'uno: per verificare la UI preferire letture via `javascript_tool` e screenshot con `scale` basso.
 
 ## Da fare subito: le 39 foto
 
