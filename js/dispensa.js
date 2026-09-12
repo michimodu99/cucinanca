@@ -36,13 +36,14 @@ export function montaDispensa(d, params) {
 
 /** Ferma o riprende la clip della hero: chiamata dal router quando la dispensa esce/entra in scena (un video nascosto continua a decodificare). */
 export function videoDispensa(acceso) {
+  if (!el.video) return; // HTML e JS possono arrivare da cache diverse subito dopo un deploy: mai bloccare le ricette per il video
   if (acceso) { if (el.video.hasAttribute('autoplay')) el.video.play().catch(() => {}); }
   else el.video.pause();
 }
 
 function montaUnaVolta() {
   // chi ha "riduci movimento" vede solo il poster (il CSS nasconde il video, qui evitiamo pure di scaricarlo)
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (el.video && matchMedia('(prefers-reduced-motion: reduce)').matches) {
     el.video.removeAttribute('autoplay');
     el.video.pause();
   }
