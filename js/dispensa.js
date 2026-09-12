@@ -16,6 +16,7 @@ const el = {
   count: document.getElementById('azione-count'),
   btn: document.getElementById('btn-cucina'),
   basi: document.getElementById('basi'),
+  video: document.getElementById('intro-video'),
 };
 
 let dati;
@@ -34,6 +35,12 @@ export function montaDispensa(d, params) {
 }
 
 function montaUnaVolta() {
+  // chi ha "riduci movimento" vede solo il poster (il CSS nasconde il video, qui evitiamo pure di scaricarlo)
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.video.removeAttribute('autoplay');
+    el.video.pause();
+  }
+
   // dispensa base
   const base = dati.tassonomia.filter((i) => i.base).map((i) => i.nome.toLowerCase());
   el.basi.textContent = t('dispensa.basi', { elenco: base.join(', ') });

@@ -7,18 +7,54 @@
   column-gap: var(--gutter);
   padding: calc(var(--u) * 6) var(--margin) 0;
 }
-.dispensa-intro { grid-column: 1 / span 5; }
+/* pannello scuro con la clip di cucina dietro al testo: sborda fino al bordo della finestra (in alto e a sinistra)
+   e riempie il primo viewport; è l'unica superficie del sito con testo paper su fondo scuro */
+.dispensa-intro {
+  grid-column: 1 / span 5;
+  align-self: start; /* non si allunga con l'indice a destra: è alto quanto il primo viewport */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100dvh - var(--topbar) - 96px);
+  margin: calc(var(--u) * -6) 0 0 calc(-1 * var(--margin));
+  padding: calc(var(--u) * 6) calc(var(--u) * 4) calc(var(--u) * 6) var(--margin);
+  background: var(--ink);
+  color: var(--paper);
+}
+.intro-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+/* velo: più scuro in basso dove sta il testo, aperto in alto dove si vede la clip */
+.dispensa-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.3) 100%);
+}
+.intro-testo { position: relative; z-index: 2; }
 .dispensa-input { grid-column: 7 / span 6; padding-top: calc(var(--u) * 2); }
 
 .dispensa-intro .display { margin-bottom: calc(var(--u) * 4); }
-.dispensa-intro .lede { margin-bottom: calc(var(--u) * 3); color: var(--ink); }
+.dispensa-intro .lede { margin-bottom: calc(var(--u) * 3); color: inherit; }
 .basi {
   font-size: var(--t-sm);
-  color: var(--ink-2);
+  color: rgba(255, 255, 255, 0.78);
   max-width: 40ch;
   line-height: 1.5;
-  border-top: var(--rule);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   padding-top: calc(var(--u) * 2);
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-video { display: none; }
+  .dispensa-intro { background: var(--ink) url('../img/hero-poster.webp') center / cover no-repeat; }
 }
 
 /* input on a hairline */
@@ -152,6 +188,12 @@ body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: cal
 
 @media (max-width: 899px) {
   .dispensa-grid { display: block; padding-top: calc(var(--u) * 4); }
+  .dispensa-intro {
+    min-height: 60vh;
+    min-height: 60dvh;
+    margin: calc(var(--u) * -4) calc(-1 * var(--margin)) 0;
+    padding: calc(var(--u) * 4) var(--margin);
+  }
   .dispensa-intro .display { margin-bottom: calc(var(--u) * 2); }
   .dispensa-intro .lede { font-size: var(--t-md); }
   .basi { display: none; }

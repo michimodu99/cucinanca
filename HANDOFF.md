@@ -1,6 +1,12 @@
-# HANDOFF — stato al 11/09/2026, fine sessione (seconda)
+# HANDOFF — stato al 12/09/2026, fine sessione (terza)
 
 Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
+
+## Fatto il 12/09/2026 (terza sessione)
+
+- **Ingrediente principale**: `ingredienti[].principale: true` su 1 o 2 ingredienti per ricetta (validato: mai base, mai opzionale). `abbina()` scarta la ricetta se un principale manca e nessun suo sostituto è posseduto: patate+uova+prezzemolo+olive non propongono più il bacalhau à brás. Il principale coperto da sostituto resta proposto con avviso (carbonara con porchetta). Criterio e tabella in `SPEC.md` §5.1 e nel piano `~/.claude/plans/punto-della-situazione-ordine-synthetic-platypus.md`; casi scelti da Claude e da rivedere con calma: carbonara (guanciale+uova, non pecorino), puttanesca (pelati+olive), minestrone (cannellini+patate), feijoada (borlotti+chouriço), risotto zucca e salsiccia (zucca+salsiccia, non riso).
+- **Video nella hero della dispensa**: pannello scuro a sinistra, clip in loop muta con velo e testo bianco; anche su mobile; poster fisso con `prefers-reduced-motion`; in pausa quando si cambia vista. `npm run video:optimize` comprime una clip da `video/raw/` (ffmpeg-static, nessuna installazione). **Il video in repo è un segnaposto** (zoomata sulla foto del risotto): Michele deve scegliere una clip vera (istruzioni e fonti gratuite nel README, "Video di sfondo").
+- Verifica in locale limitata: nel browser pilotato da Claude la scheda è in background e Edge non decodifica i video nelle schede nascoste (`readyState 0`), quindi layout e logica sono verificati ma la riproduzione va vista a occhio da Michele (`npm run serve` → http://localhost:8080). Il server di sviluppo ora serve i `.mp4` con il MIME giusto e con Range (206), altrimenti Chrome resta in caricamento.
 
 ## Stato attuale
 

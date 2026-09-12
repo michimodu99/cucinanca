@@ -42,6 +42,12 @@ export function ingredientiDaParams(params) {
 
 function mostra(nome) {
   for (const [k, el] of Object.entries(viste)) el.hidden = k !== nome;
+  // la clip della dispensa continua a decodificare anche nascosta: in pausa fuori dalla sua vista
+  const video = document.getElementById('intro-video');
+  if (video) {
+    if (nome === 'dispensa') { if (video.hasAttribute('autoplay')) video.play().catch(() => {}); }
+    else video.pause();
+  }
   for (const a of document.querySelectorAll('[data-nav]')) {
     const attivo = a.dataset.nav === nome || (nome === 'libro' && a.dataset.nav === 'risultati');
     if (attivo) a.setAttribute('aria-current', 'page');

@@ -5,5 +5,6 @@ Thumbs.db
 .env
 .impeccable/review/
 img/raw/
+video/raw/
 __pycache__/
 .claude/settings.local.json
