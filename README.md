@@ -12,7 +12,7 @@ npm run serve        # http://localhost:8080
 npm test             # test del matching (js/match.js)
 npm run validate     # controlla le ricette senza riscrivere recipes.json
 npm run prompts      # rigenera prompts.md dai foto.prompt di recipes.json
-npm run video:optimize -- --file nome.mp4   # video/raw/nome.mp4 → video/hero-nome.mp4 (+ poster con --poster)
+npm run video:optimize -- --file a.mp4,b.mp4   # monta le clip di video/raw/ in video/hero.mp4 (+ poster con --poster)
 ```
 
 Il sito legge `data/recipes.json`: aprire `index.html` dal disco non funziona (i moduli e i JSON vanno serviti via HTTP).
@@ -40,15 +40,14 @@ L'ingrediente `principale` è quello senza cui il piatto sarebbe un altro piatto
 
 ## Video di sfondo (dispensa)
 
-La fascia scura in testa alla dispensa manda in sequenza le clip elencate in `CLIP` (`js/dispensa.js`), mute, con `img/hero-poster.webp` come fotogramma fisso (primo paint, `prefers-reduced-motion`, o se le clip mancano). Due `<video>` alternati: mentre uno suona l'altro ha già caricato la clip successiva, così il cambio è senza frame nero. Per aggiungere o cambiare una clip:
+La fascia scura in testa alla dispensa manda in loop `video/hero.mp4`: le clip scelte, mute, già montate in sequenza in un unico file (da telefono una staffetta fra più `<video>` mostrava fotogrammi spuri). `img/hero-poster.webp` è il fotogramma fisso (primo paint, `prefers-reduced-motion`, o se il video manca). Per cambiare le clip:
 
 1. Scarica una clip di cucina gratuita (Pexels Videos, Pixabay, Coverr, Mixkit — anche per uso commerciale, senza attribuzione): 10–20 s senza stacchi di camera, soggetto al centro (il pannello è quasi quadrato su desktop e verticale su mobile: `object-fit: cover` taglia i bordi), toni scuri o caldi perché il testo sopra è bianco, niente scritte, meglio senza volti. 1080p basta.
 2. Mettila in `video/raw/` (ignorata da git).
-3. `npm run video:optimize -- --file nome.mp4` (opzioni `--start`, `--durata` default 15, `--crf` default 28, `--poster` per rigenerare il poster da questa clip) → `video/hero-nome.mp4`: H.264 con il lato corto a 720 px, 24 fps, senza audio, ≤ 4 MB, `+faststart`. Usa `ffmpeg-static` da `node_modules`, niente da installare.
-4. Aggiungi `'video/hero-nome.mp4'` a `CLIP` in `js/dispensa.js` (l'ordine è l'ordine di riproduzione; con una sola clip va in loop).
-5. Commit e push di `video/hero-*.mp4` e, se rigenerato, `img/hero-poster.webp`.
+3. `npm run video:optimize -- --file a.mp4,b.mp4,c.mp4 --poster c.mp4` (nell'ordine di riproduzione; `--durata` = secondi massimi per clip, default 15; `--crf` default 28; `--poster` rigenera il poster dall'ultimo secondo della clip indicata) → `video/hero.mp4`: ogni clip ritagliata a 1280×720, 24 fps, tagli netti, senza audio, ≤ 5 MB, `+faststart`. Usa `ffmpeg-static` da `node_modules`, niente da installare.
+4. Commit e push di `video/hero.mp4` e, se rigenerato, `img/hero-poster.webp`.
 
-In repo oggi quattro clip Mixkit, tutte 16:9: `frigorifero` (6,6″) → `pancetta` (8,3″) → `omelette` (10″) → `polpette` (13,5″); poster dalle polpette. Le clip verticali non vanno bene: nella fascia 2:1 se ne vede solo una banda, sgranata.
+In repo oggi quattro clip Mixkit, tutte 16:9: `frigorifero` (6,6″) → `pancetta` (8,3″) → `omelette` (10″) → `polpette` (13,5″), 38″ in tutto; poster dalle polpette. Le clip verticali non vanno bene: nella fascia 2:1 se ne vede solo una banda, sgranata.
 
 ## Struttura
 
@@ -58,7 +57,7 @@ css/                  tokens (palette, tipografia) · base · dispensa · risult
 js/match.js           logica pura: alias → id, copertura, mancanti, scala porzioni (testata)
 js/libro.js           doppia pagina desktop con impaginazione automatica; pagine a swipe su mobile; Wake Lock
 js/i18n.js            tutte le stringhe dell'interfaccia (solo `it` per ora): t(), applicaTesti(), etichette di dominio
-video/                hero-<nome>.mp4 (clip della fascia in testa alla dispensa); raw/ le sorgenti, ignorate da git
+video/                hero.mp4 (le clip della fascia in testa alla dispensa, montate in un file); raw/ le sorgenti, ignorate da git
 data/ricette/*.json   sorgente delle ricette per categoria → data/recipes.json (generato)
 data/ingredienti.json tassonomia: alias, dispensa base, reperibilità a Bragança
 scripts/              build-data (validazione), match.test, generate_image (+test), gen-images, optimize-images, optimize-video, prompts-md, serve

@@ -46,11 +46,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <main id="app">
   <!-- ===== DISPENSA ===== -->
   <section class="view view-dispensa" id="view-dispensa" hidden>
-    <!-- fascia a tutta larghezza: clip di cucina mute in sequenza (playlist in js/dispensa.js), due <video> alternati
-         così la clip successiva è già caricata al cambio; senza clip resta il poster -->
+    <!-- fascia a tutta larghezza: le clip di cucina, mute, già montate in un unico file (npm run video:optimize) in loop;
+         senza il file resta il poster -->
     <div class="hero" id="hero">
-      <video class="hero-video" muted playsinline preload="auto" poster="img/hero-poster.webp" aria-hidden="true" tabindex="-1"></video>
-      <video class="hero-video" muted playsinline preload="auto" aria-hidden="true" tabindex="-1" hidden></video>
+      <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.webp" aria-hidden="true" tabindex="-1">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
       <div class="hero-testo">
         <h1 class="display" data-i18n="dispensa.hero">Cosa c'è in frigo?</h1>
         <p class="lede" data-i18n="dispensa.lede">Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri.</p>
