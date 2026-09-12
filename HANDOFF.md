@@ -35,6 +35,10 @@ Le foto le fa Michele **a mano**: prompt incollato in Gemini (Nano Banana 2), im
 
 Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0.
 
+## Report ricerca (13/09/2026)
+
+`docs/2026-09-13-ricerca-ricette-e-app.md`: piatti più attesi dai siti italiani che mancano (ragù rosso, cotoletta di pollo, polpette al sugo, purè, omelette, riso saltato, crêpes dolci/pancakes, torta al cioccolato, posta mirandesa, bacalhau com broa, sopa de castanhas…), confronto con SuperCook/Svuotafrigo/Cucinalo e proposte (memoria dispensa, lista spesa, "scegli tu", stagione/mercato). Da decidere con Michele.
+
 ## Cose aperte non urgenti
 
 - **Preferenze personali per utente** ("non mangio…") e **dispensa base personalizzabile** (oggi curry, coriandolo, basilico, paprika sono "sempre presenti" perché sono di Michele): stesso problema dei vietati, da fare quando l'app viene davvero condivisa. Idea: preferenze salvate nel browser (localStorage), non nei dati.
