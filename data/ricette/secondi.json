@@ -325,7 +325,7 @@
       { "n": 4, "titolo": "Uova", "testo": "Unisci le patate, poi versa le uova sbattute con poco sale e pepe. Mescola a fuoco basso 1–2 minuti: le uova devono restare cremose, non asciutte. Spegni prima che sembrino pronte.", "minuti": 2 },
       { "n": 5, "titolo": "Servi", "testo": "Olive nere e prezzemolo tritato sopra. Subito.", "minuti": 1 }
     ],
-    "consigli": "Il segreto è togliere dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
+    "consigli": "Togli dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
     "conservazione": "Non si conserva: le patate perdono croccantezza.",
     "varianti": ["Con tonno sott'olio al posto del baccalà (versione da dispensa)."],
     "kcal": 620,
@@ -821,7 +821,7 @@
   {
     "slug": "insalata-caprese",
     "titolo": "Insalata caprese",
-    "descrizione": "Tre ingredienti, quindi contano tutti: pomodoro maturo, mozzarella buona, basilico fresco. Il segreto è il pomodoro fuori dal frigo, a temperatura ambiente.",
+    "descrizione": "Tre ingredienti, quindi contano tutti: pomodoro maturo, mozzarella buona, basilico fresco. Il pomodoro va tenuto fuori dal frigo, a temperatura ambiente.",
     "categoria": "secondo",
     "difficolta": "molto-facile",
     "tempi": { "preparazione": 10, "cottura": 0, "riposo": 0 },

@@ -635,7 +635,7 @@
     "minuti": 1
    }
   ],
-  "consigli": "Il segreto è togliere dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
+  "consigli": "Togli dal fuoco un attimo prima: l'uovo continua a cuocere nel piatto.",
   "conservazione": "Non si conserva: le patate perdono croccantezza.",
   "varianti": [
    "Con tonno sott'olio al posto del baccalà (versione da dispensa)."
@@ -2304,7 +2304,7 @@
  {
   "slug": "curry-di-ceci-e-spinaci",
   "titolo": "Curry di ceci e spinaci",
-  "descrizione": "Il curry da studente per eccellenza: un barattolo di ceci, una lattina di latte di cocco, un po' di pomodoro e spinaci, venti minuti. Cremoso, speziato quanto vuoi, costa meno di due euro e il giorno dopo è più buono.",
+  "descrizione": "Il curry da studente: un barattolo di ceci, una lattina di latte di cocco, un po' di pomodoro e spinaci, venti minuti. Cremoso, speziato quanto vuoi, costa meno di due euro e il giorno dopo è più buono.",
   "categoria": "piatto-unico",
   "difficolta": "facile",
   "tempi": {
@@ -3795,7 +3795,7 @@
  {
   "slug": "insalata-caprese",
   "titolo": "Insalata caprese",
-  "descrizione": "Tre ingredienti, quindi contano tutti: pomodoro maturo, mozzarella buona, basilico fresco. Il segreto è il pomodoro fuori dal frigo, a temperatura ambiente.",
+  "descrizione": "Tre ingredienti, quindi contano tutti: pomodoro maturo, mozzarella buona, basilico fresco. Il pomodoro va tenuto fuori dal frigo, a temperatura ambiente.",
   "categoria": "secondo",
   "difficolta": "molto-facile",
   "tempi": {
@@ -4892,7 +4892,7 @@
  {
   "slug": "minestrone",
   "titolo": "Minestrone",
-  "descrizione": "La ricetta svuotafrigo per eccellenza: quello che c'è, tagliato tutto della stessa misura, in pentola nell'ordine giusto. La lista qui sotto è un'indicazione, non un obbligo; l'ordine invece sì.",
+  "descrizione": "La ricetta svuotafrigo: quello che c'è, tagliato tutto della stessa misura, in pentola nell'ordine giusto. La lista qui sotto è un'indicazione, non un obbligo; l'ordine invece sì.",
   "categoria": "piatto-unico",
   "difficolta": "facile",
   "tempi": {
@@ -5687,7 +5687,7 @@
     "minuti": 2
    }
   ],
-  "consigli": "Poca gelatina è il segreto: deve appena reggersi. Se usi 'natas para culinária' (meno grasse), aggiungi mezzo foglio.",
+  "consigli": "Poca gelatina: deve appena reggersi. Se usi 'natas para culinária' (meno grasse), aggiungi mezzo foglio.",
   "conservazione": "In frigo 3 giorni, coperta.",
   "varianti": [
    "Al caffè: 1 cucchiaino di caffè solubile nella panna.",
@@ -5967,7 +5967,7 @@
     "minuti": 25
    }
   ],
-  "consigli": "Il segreto della pasta al forno è che deve entrare in forno un po' 'bagnata': la pasta assorbe. Se sembra asciutta, aggiungi 3 cucchiai di latte.",
+  "consigli": "Deve entrare in forno un po' 'bagnata': la pasta assorbe. Se sembra asciutta, aggiungi 3 cucchiai di latte.",
   "conservazione": "In frigo 3 giorni; si congela a porzioni. Riscalda in forno per la crosta, o microonde per la fretta.",
   "varianti": [
    "Con funghi al posto degli spinaci.",
@@ -6502,7 +6502,7 @@
  {
   "slug": "pasta-con-carciofi-e-pancetta",
   "titolo": "Pasta con carciofi e pancetta",
-  "descrizione": "Carciofi stufati col vino, pancetta croccante e pecorino: un primo romano d'inverno. Pulire i carciofi è metà del lavoro, e qui è spiegato passo passo.",
+  "descrizione": "Carciofi stufati col vino, pancetta croccante e pecorino: un primo romano d'inverno. Pulire i carciofi è metà del lavoro; se hai fretta, quelli sott'olio (vedi consiglio).",
   "categoria": "primo",
   "difficolta": "media",
   "tempi": {
@@ -6932,7 +6932,7 @@
  {
   "slug": "pasta-e-ceci-alla-romana",
   "titolo": "Pasta e ceci alla romana",
-  "descrizione": "Rosmarino, aglio, acciughe sciolte nell'olio e un cucchiaio di concentrato: il segreto romano. Con i ceci in barattolo è pronta in mezz'ora.",
+  "descrizione": "Rosmarino, aglio, acciughe sciolte nell'olio e un cucchiaio di concentrato: la base romana. Con i ceci in barattolo è pronta in mezz'ora.",
   "categoria": "primo",
   "difficolta": "facile",
   "tempi": {
@@ -11043,7 +11043,7 @@
  {
   "slug": "spaghetti-alla-carbonara",
   "titolo": "Spaghetti alla carbonara",
-  "descrizione": "La romana vera: tuorlo, pecorino, guanciale croccante e pepe. Niente panna. Il segreto è mantecare fuori dal fuoco con un po' d'acqua di cottura.",
+  "descrizione": "La romana vera: tuorlo, pecorino, guanciale croccante e pepe. Niente panna. Si manteca fuori dal fuoco, con un po' d'acqua di cottura.",
   "categoria": "primo",
   "difficolta": "facile",
   "tempi": {

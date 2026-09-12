@@ -366,7 +366,7 @@
       { "n": 3, "titolo": "Pasta", "testo": "Cuoci la pasta 3 minuti meno del tempo indicato (finisce in forno). Scola e mescola con besciamella, salsiccia e scamorza a cubetti.", "minuti": 8 },
       { "n": 4, "titolo": "Forno", "testo": "In una pirofila piccola, parmigiano sopra, 20 minuti finché è dorata e croccante in superficie. 5 minuti di riposo.", "minuti": 25 }
     ],
-    "consigli": "Il segreto della pasta al forno è che deve entrare in forno un po' 'bagnata': la pasta assorbe. Se sembra asciutta, aggiungi 3 cucchiai di latte.",
+    "consigli": "Deve entrare in forno un po' 'bagnata': la pasta assorbe. Se sembra asciutta, aggiungi 3 cucchiai di latte.",
     "conservazione": "In frigo 3 giorni; si congela a porzioni. Riscalda in forno per la crosta, o microonde per la fretta.",
     "varianti": ["Con funghi al posto degli spinaci.", "Rossa: passata al posto della besciamella, con mozzarella."],
     "kcal": 760,
@@ -529,7 +529,7 @@
   {
     "slug": "minestrone",
     "titolo": "Minestrone",
-    "descrizione": "La ricetta svuotafrigo per eccellenza: quello che c'è, tagliato tutto della stessa misura, in pentola nell'ordine giusto. La lista qui sotto è un'indicazione, non un obbligo; l'ordine invece sì.",
+    "descrizione": "La ricetta svuotafrigo: quello che c'è, tagliato tutto della stessa misura, in pentola nell'ordine giusto. La lista qui sotto è un'indicazione, non un obbligo; l'ordine invece sì.",
     "categoria": "piatto-unico",
     "difficolta": "facile",
     "tempi": { "preparazione": 10, "cottura": 35, "riposo": 0 },
@@ -615,7 +615,7 @@
   {
     "slug": "curry-di-ceci-e-spinaci",
     "titolo": "Curry di ceci e spinaci",
-    "descrizione": "Il curry da studente per eccellenza: un barattolo di ceci, una lattina di latte di cocco, un po' di pomodoro e spinaci, venti minuti. Cremoso, speziato quanto vuoi, costa meno di due euro e il giorno dopo è più buono.",
+    "descrizione": "Il curry da studente: un barattolo di ceci, una lattina di latte di cocco, un po' di pomodoro e spinaci, venti minuti. Cremoso, speziato quanto vuoi, costa meno di due euro e il giorno dopo è più buono.",
     "categoria": "piatto-unico",
     "difficolta": "facile",
     "tempi": { "preparazione": 10, "cottura": 20, "riposo": 0 },

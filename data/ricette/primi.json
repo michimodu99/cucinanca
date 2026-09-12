@@ -2,7 +2,7 @@
   {
     "slug": "spaghetti-alla-carbonara",
     "titolo": "Spaghetti alla carbonara",
-    "descrizione": "La romana vera: tuorlo, pecorino, guanciale croccante e pepe. Niente panna. Il segreto è mantecare fuori dal fuoco con un po' d'acqua di cottura.",
+    "descrizione": "La romana vera: tuorlo, pecorino, guanciale croccante e pepe. Niente panna. Si manteca fuori dal fuoco, con un po' d'acqua di cottura.",
     "categoria": "primo",
     "difficolta": "facile",
     "tempi": { "preparazione": 10, "cottura": 15, "riposo": 0 },
@@ -580,7 +580,7 @@
   {
     "slug": "pasta-e-ceci-alla-romana",
     "titolo": "Pasta e ceci alla romana",
-    "descrizione": "Rosmarino, aglio, acciughe sciolte nell'olio e un cucchiaio di concentrato: il segreto romano. Con i ceci in barattolo è pronta in mezz'ora.",
+    "descrizione": "Rosmarino, aglio, acciughe sciolte nell'olio e un cucchiaio di concentrato: la base romana. Con i ceci in barattolo è pronta in mezz'ora.",
     "categoria": "primo",
     "difficolta": "facile",
     "tempi": { "preparazione": 5, "cottura": 30, "riposo": 0 },
@@ -928,7 +928,7 @@
   {
     "slug": "pasta-con-carciofi-e-pancetta",
     "titolo": "Pasta con carciofi e pancetta",
-    "descrizione": "Carciofi stufati col vino, pancetta croccante e pecorino: un primo romano d'inverno. Pulire i carciofi è metà del lavoro, e qui è spiegato passo passo.",
+    "descrizione": "Carciofi stufati col vino, pancetta croccante e pecorino: un primo romano d'inverno. Pulire i carciofi è metà del lavoro; se hai fretta, quelli sott'olio (vedi consiglio).",
     "categoria": "primo",
     "difficolta": "media",
     "tempi": { "preparazione": 20, "cottura": 20, "riposo": 0 },
