@@ -29,7 +29,7 @@
 THESIS: A cookbook that is a typographic grid before it is a gallery. The screen is a Swiss spread — twelve columns, hairline rules, one grotesque in two widths, black on white — and the plate of food is the single colored object placed on it. It refuses the recipe-app default: a grid of rounded photo cards with colored badges and a pill filter bar.
 OWN-WORLD: paper #FFFFFF, ink #2E2E2E, ash #E8E8E8 rules, mist #F4F4F4 fields; Archivo variable (width 62 for display, 100 for text), tabular numerals; zero radius; buttons are black rectangles; chips are 1px ruled rectangles; photos 4:5 unfiltered. Remove every word and the rules, the fractions and the black bars still read as this book.
 STORY: "I have zucca, salsiccia, riso" → an index ranked by what I already have, missing items named → a spread to cook from, one step per phone screen, screen awake.
-FIRST VIEWPORT (dispensa, desktop): left, columns 1–5: a dark panel bleeding to the window edge with a muted cooking clip looping behind a black-to-transparent veil, "Cosa c'è in frigo?" at 96px condensed in paper white on top, under it one 20px line about the pantry basics (the one deliberate exception to black-on-white). Right, columns 7–12: a 32px input on a single hairline, chips beneath, then the ingredient index by category as ruled rows. Bottom right, on the grid: the black "Cosa cucino →" bar with the live count. Mobile stacks the same order; the black bar sticks to the bottom.
+FIRST VIEWPORT (dispensa, desktop): a full-width dark band (≈2:1, max 620px) with muted cooking clips playing in sequence behind a black-to-transparent veil, "Cosa c'è in frigo?" at 96px condensed in paper white bottom-left with the 20px lede (the one deliberate exception to black-on-white). Below it, on the full 12 columns: a 32px input on a single hairline, the pantry-basics line in small grey, chips, then the ingredient index by category as ruled rows. Bottom right, on the grid: the black "Cosa cucino →" bar with the live count. Mobile stacks the same order; the black bar sticks to the bottom.
 FORM: Swiss typographic spread, brief-pinned by the user (reference/ posters and cookbook spreads); no roll. Signature interaction: the page turn — desktop spreads slide as pages, mobile snaps one step per screen with a poster-size step numeral; coverage is a fraction "5/6", never a bar. Motion grammar: one exponential ease-out, 320ms, entrance once.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
@@ -46,21 +46,18 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <main id="app">
   <!-- ===== DISPENSA ===== -->
   <section class="view view-dispensa" id="view-dispensa" hidden>
-    <div class="dispensa-grid">
-      <div class="dispensa-intro">
-        <!-- sfondo: clip di cucina in loop, muta; senza video/hero.mp4 resta il poster -->
-        <video class="intro-video" id="intro-video" autoplay muted loop playsinline preload="metadata"
-               poster="img/hero-poster.webp" aria-hidden="true" tabindex="-1">
-          <source src="video/hero.mp4" type="video/mp4">
-        </video>
-        <div class="intro-testo">
-          <h1 class="display" data-i18n="dispensa.hero">Cosa c'è in frigo?</h1>
-          <p class="lede" data-i18n="dispensa.lede">Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri.</p>
-          <p class="basi" id="basi"></p>
-        </div>
+    <!-- fascia a tutta larghezza: clip di cucina mute in sequenza (playlist in js/dispensa.js), due <video> alternati
+         così la clip successiva è già caricata al cambio; senza clip resta il poster -->
+    <div class="hero" id="hero">
+      <video class="hero-video" muted playsinline preload="auto" poster="img/hero-poster.webp" aria-hidden="true" tabindex="-1"></video>
+      <video class="hero-video" muted playsinline preload="auto" aria-hidden="true" tabindex="-1" hidden></video>
+      <div class="hero-testo">
+        <h1 class="display" data-i18n="dispensa.hero">Cosa c'è in frigo?</h1>
+        <p class="lede" data-i18n="dispensa.lede">Dimmi cosa ti avanza e ti consiglio una pietanza. Piccola guida culinaria per erasmus avventurieri.</p>
       </div>
+    </div>
 
-      <div class="dispensa-input">
+    <div class="dispensa-corpo">
         <form class="ingresso" id="ingresso" autocomplete="off">
           <label class="label" for="ingrediente" data-i18n="dispensa.labelIngrediente">Ingrediente</label>
           <div class="ingresso-field">
@@ -71,11 +68,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <ul class="suggerimenti" id="suggerimenti" role="listbox" hidden></ul>
           <p class="ingresso-msg" id="ingresso-msg" aria-live="polite"></p>
         </form>
+        <p class="basi" id="basi"></p>
 
         <ul class="chips" id="chips" aria-label="Ingredienti scelti" data-i18n-attr="aria-label:dispensa.scelti"></ul>
 
         <div class="indice-ingredienti" id="indice-ingredienti"></div>
-      </div>
     </div>
 
     <div class="azione-bar" id="azione-bar">

@@ -5,6 +5,8 @@ import { t } from './i18n.js';
 import { vai, ingredientiDaParams } from './app.js';
 
 const ORDINE_CATEGORIE = ['verdura', 'carne', 'pesce', 'salume', 'latticino', 'uova', 'pasta', 'cereale', 'legume', 'frutta', 'condimento', 'erba', 'spezia', 'dolce', 'altro'];
+// clip della hero, in sequenza e da capo (npm run video:optimize -- --file <nome>.mp4 → video/hero-<nome>.mp4)
+const CLIP = ['video/hero-chop.mp4', 'video/hero-frigo.mp4'];
 
 const el = {
   form: document.getElementById('ingresso'),
@@ -16,7 +18,7 @@ const el = {
   count: document.getElementById('azione-count'),
   btn: document.getElementById('btn-cucina'),
   basi: document.getElementById('basi'),
-  video: document.getElementById('intro-video'),
+  video: [...document.querySelectorAll('.hero-video')],
 };
 
 let dati;
@@ -34,12 +36,39 @@ export function montaDispensa(d, params) {
   render();
 }
 
-function montaUnaVolta() {
-  // chi ha "riduci movimento" vede solo il poster (il CSS nasconde il video, qui evitiamo pure di scaricarlo)
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    el.video.removeAttribute('autoplay');
-    el.video.pause();
+/** Playlist della hero su due <video> alternati: mentre uno suona, l'altro ha già caricato la clip successiva. */
+function montaVideo() {
+  const [a, b] = el.video;
+  // chi ha "riduci movimento" vede solo il poster (il CSS nasconde i video, qui evitiamo pure di scaricarli)
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !CLIP.length) return;
+  a.src = CLIP[0];
+  if (CLIP.length === 1) { a.loop = true; a.play().catch(() => {}); return; }
+  let prossima = 1;
+  b.src = CLIP[prossima];
+  a.play().catch(() => {});
+  for (const v of el.video) {
+    v.addEventListener('ended', () => {
+      const altro = v === a ? b : a;
+      altro.hidden = false;
+      altro.play().catch(() => {});
+      v.hidden = true;
+      prossima = (prossima + 1) % CLIP.length;
+      v.src = CLIP[prossima];
+      v.load();
+    });
   }
+}
+
+/** Ferma o riprende la clip visibile: chiamata dal router quando la dispensa esce/entra in scena (un video nascosto continua a decodificare). */
+export function videoDispensa(acceso) {
+  for (const v of el.video) {
+    if (acceso && !v.hidden && v.src) v.play().catch(() => {});
+    else v.pause();
+  }
+}
+
+function montaUnaVolta() {
+  montaVideo();
 
   // dispensa base
   const base = dati.tassonomia.filter((i) => i.base).map((i) => i.nome.toLowerCase());

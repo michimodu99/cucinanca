@@ -1,29 +1,19 @@
 /* Cucina — dispensa (pantry input) */
 .view-dispensa { padding-bottom: 96px; }
 
-.dispensa-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: var(--gutter);
-  padding: calc(var(--u) * 6) var(--margin) 0;
-}
-/* pannello scuro con la clip di cucina dietro al testo: sborda fino al bordo della finestra (in alto e a sinistra)
-   e riempie il primo viewport; è l'unica superficie del sito con testo paper su fondo scuro */
-.dispensa-intro {
-  grid-column: 1 / span 5;
-  align-self: start; /* non si allunga con l'indice a destra: è alto quanto il primo viewport */
+/* fascia a tutta larghezza con le clip di cucina dietro al titolo: l'unica superficie del sito con testo paper su fondo scuro */
+.hero {
   position: relative;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100dvh - var(--topbar) - 96px);
-  margin: calc(var(--u) * -6) 0 0 calc(-1 * var(--margin));
-  padding: calc(var(--u) * 6) calc(var(--u) * 4) calc(var(--u) * 6) var(--margin);
+  align-items: flex-end;
+  /* ≈ 2:1, ma mai più alta del primo schermo meno topbar e barra azione: il testo in basso resta visibile */
+  height: min(clamp(400px, 46vw, 620px), calc(100dvh - var(--topbar) - 96px));
+  padding: 0 var(--margin) calc(var(--u) * 6);
   background: var(--ink);
   color: var(--paper);
 }
-.intro-video {
+.hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -32,29 +22,28 @@
   z-index: 0;
 }
 /* velo: più scuro in basso dove sta il testo, aperto in alto dove si vede la clip */
-.dispensa-intro::after {
+.hero::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.2) 100%);
 }
-.intro-testo { position: relative; z-index: 2; }
-.dispensa-input { grid-column: 7 / span 6; padding-top: calc(var(--u) * 2); }
+.hero-testo { position: relative; z-index: 2; max-width: 60ch; }
+.hero .display { margin-bottom: calc(var(--u) * 3); }
+.hero .lede { color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .hero { background: var(--ink) url('../img/hero-poster.webp') center / cover no-repeat; }
+}
 
-.dispensa-intro .display { margin-bottom: calc(var(--u) * 4); }
-.dispensa-intro .lede { margin-bottom: calc(var(--u) * 3); color: inherit; }
+.dispensa-corpo { padding: calc(var(--u) * 5) var(--margin) 0; }
 .basi {
   font-size: var(--t-sm);
-  color: rgba(255, 255, 255, 0.78);
-  max-width: 40ch;
+  color: var(--ink-2);
+  max-width: 80ch;
   line-height: 1.5;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  padding-top: calc(var(--u) * 2);
-}
-@media (prefers-reduced-motion: reduce) {
-  .intro-video { display: none; }
-  .dispensa-intro { background: var(--ink) url('../img/hero-poster.webp') center / cover no-repeat; }
+  margin-top: 2px;
 }
 
 /* input on a hairline */
@@ -187,17 +176,11 @@ body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: cal
 }
 
 @media (max-width: 899px) {
-  .dispensa-grid { display: block; padding-top: calc(var(--u) * 4); }
-  .dispensa-intro {
-    min-height: 60vh;
-    min-height: 60dvh;
-    margin: calc(var(--u) * -4) calc(-1 * var(--margin)) 0;
-    padding: calc(var(--u) * 4) var(--margin);
-  }
-  .dispensa-intro .display { margin-bottom: calc(var(--u) * 2); }
-  .dispensa-intro .lede { font-size: var(--t-md); }
+  .hero { height: 60vh; height: 60dvh; padding: 0 var(--margin) calc(var(--u) * 4); }
+  .hero .display { margin-bottom: calc(var(--u) * 2); }
+  .hero .lede { font-size: var(--t-md); }
   .basi { display: none; }
-  .dispensa-input { padding-top: calc(var(--u) * 4); }
+  .dispensa-corpo { padding-top: calc(var(--u) * 4); }
   .ingresso-field input { font-size: 22px; }
   .indice-riga { grid-template-columns: 1fr; gap: 6px; }
   .azione-bar { display: flex; justify-content: space-between; gap: 12px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
