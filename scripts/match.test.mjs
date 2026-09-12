@@ -51,6 +51,14 @@ test('risolvi: plurale con accordo aggettivale a più parole ("pomodori freschi"
   assert.equal(risolvi(indice, 'pomodori freschi').id, 'pomodoro-fresco');
 });
 
+test('risolvi: singolare di un nome al plurale in tassonomia ("cece" → ceci, "acciuga" → acciughe)', () => {
+  assert.equal(risolvi(indice, 'pomodorino').id, 'pomodoro-fresco');
+  assert.equal(risolvi(indice, 'salsiccia').id, 'salsiccia');
+  assert.equal(risolvi(indice, 'tuorlo').id, 'uova');
+  assert.equal(risolvi(indice, 'pomodorino').id, 'pomodoro-fresco');
+  assert.equal(risolvi(indice, 'penna rigata'), null, 'non inventa: "penne rigate" non è un alias');
+});
+
 test('risolvi: "pasta" generico risolve alla pasta corta', () => {
   assert.equal(risolvi(indice, 'pasta').id, 'pasta-corta');
 });
@@ -192,10 +200,15 @@ test('scalaQuantita: moltiplica i grammi e arrotonda ai 5 g', () => {
   assert.equal(scalaQuantita({ qta: 33, unita: 'g' }, 4), 130);
 });
 
-test('scalaQuantita: i pezzi (uova, spicchi) restano interi', () => {
+test('scalaQuantita: i pezzi (uova, spicchi) vanno a quarti, mai sotto un quarto', () => {
   assert.equal(scalaQuantita({ qta: 1, unita: 'pz' }, 2), 2);
-  assert.equal(scalaQuantita({ qta: 0.5, unita: 'pz' }, 1), 1);
   assert.equal(scalaQuantita({ qta: 0.5, unita: 'spicchi' }, 4), 2);
+  // mezza cipolla a ×1 resta mezza: arrotondare a 1 raddoppiava la dose (e a ×1 il mezzo pollo diventava intero)
+  assert.equal(scalaQuantita({ qta: 0.5, unita: 'pz' }, 1), 0.5);
+  assert.equal(scalaQuantita({ qta: 0.25, unita: 'pz' }, 1), 0.25);
+  assert.equal(scalaQuantita({ qta: 0.25, unita: 'pz' }, 2), 0.5);
+  assert.equal(scalaQuantita({ qta: 0.5, unita: 'bustina' }, 2), 1);
+  assert.equal(scalaQuantita({ qta: 0.1, unita: 'pz' }, 1), 0.25);
 });
 
 test('scalaQuantita: q.b. resta null', () => {

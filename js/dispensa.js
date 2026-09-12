@@ -1,6 +1,6 @@
 // Vista dispensa: input con suggerimenti, chip, indice per categoria, barra azione.
 import { normalizza, risolvi } from './match.js';
-import { ETICHETTE } from './data.js';
+import { ETICHETTE, escapeHtml } from './data.js';
 import { t } from './i18n.js';
 import { vai, ingredientiDaParams } from './app.js';
 
@@ -103,7 +103,9 @@ function montaUnaVolta() {
   el.form.addEventListener('submit', (e) => {
     e.preventDefault();
     const items = [...el.sugg.querySelectorAll('li')];
+    const esatto = risolvi(dati.indice, el.input.value);
     if (cursore >= 0 && items[cursore]) aggiungi(items[cursore].dataset.id);
+    else if (esatto) aggiungi(esatto.id); // "sale" è sale, non l'unico suggerimento che lo contiene (capperi sotto sale)
     else if (items.length === 1) aggiungi(items[0].dataset.id);
     else aggiungiTesto(el.input.value);
   });
@@ -193,7 +195,7 @@ function render() {
     const r = risolvi(dati.indice, s);
     const li = document.createElement('li');
     li.className = 'chip' + (r ? '' : ' sconosciuto');
-    li.innerHTML = `<span>${r ? r.nome : s}</span>`;
+    li.innerHTML = `<span>${r ? r.nome : escapeHtml(s)}</span>`;
     const b = document.createElement('button');
     b.type = 'button';
     b.setAttribute('aria-label', t('dispensa.togli', { nome: r ? r.nome : s }));

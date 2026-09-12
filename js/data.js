@@ -26,6 +26,11 @@ export const ETICHETTE = STRINGHE[LINGUA].etichette;
 /** Attrezzatura posseduta da Michele (SPEC §2). */
 export const STACK = new Set(['padella', 'pentola', 'forno', 'microonde', 'teglia', 'frullatore', 'frusta', 'griglia']);
 
+/** Testo dell'utente (chip, URL) dentro innerHTML: mai come HTML. */
+export function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 export function euro(n) {
   return n.toLocaleString('it-IT', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €';
 }

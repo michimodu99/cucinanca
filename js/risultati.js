@@ -1,6 +1,6 @@
 // Vista risultati: l'indice delle ricette ordinato per copertura, con filtri.
 import { abbina, tempoTotale, risolvi } from './match.js';
-import { ETICHETTE, STACK, euro, minuti } from './data.js';
+import { ETICHETTE, STACK, euro, minuti, escapeHtml } from './data.js';
 import { t } from './i18n.js';
 import { vai, ingredientiDaParams, costruisciHash, leggiHash } from './app.js';
 
@@ -107,7 +107,7 @@ function render(ingredienti, f) {
   const complete = lista.filter((x) => x.mancanti.length === 0).length;
   const linkDispensa = costruisciHash('', { i: ingredienti });
   const avviso = nonRisolti.length
-    ? t(nonRisolti.length > 1 ? 'risultati.nonRiconosciuti' : 'risultati.nonRiconosciuto', { elenco: nonRisolti.join(', ') })
+    ? t(nonRisolti.length > 1 ? 'risultati.nonRiconosciuti' : 'risultati.nonRiconosciuto', { elenco: nonRisolti.map(escapeHtml).join(', ') })
     : '';
   el.sotto.innerHTML = (conDispensa
     ? t('risultati.sottoDispensa', { n: lista.length, c: complete, link: linkDispensa })

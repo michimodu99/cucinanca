@@ -231,7 +231,7 @@ function bloccoIngredienti() {
   if (copia) copia.addEventListener('click', async () => {
     const testo = mancanti.map((i) => {
       const q = scalaQuantita(i, moltiplicatore);
-      return `${dati.indice.byId.get(i.id).nome}${q !== null ? ` — ${q} ${ETICHETTE.unita[i.unita]}` : ''}`;
+      return `${dati.indice.byId.get(i.id).nome}${q !== null ? ` — ${formatta(q)} ${ETICHETTE.unita[i.unita]}` : ''}`;
     }).join('\n');
     try {
       await navigator.clipboard.writeText(testo);
@@ -328,11 +328,16 @@ function rilasciaWakeLock() {
 /* ---------- util ---------- */
 
 function unita(u, q) {
-  return q === 1 && ETICHETTE.unitaSingolare[u] ? ETICHETTE.unitaSingolare[u] : ETICHETTE.unita[u];
+  return q !== null && q <= 1 && ETICHETTE.unitaSingolare[u] ? ETICHETTE.unitaSingolare[u] : ETICHETTE.unita[u];
 }
+/** 0,5 → ½, 1,25 → 1¼; le altre frazioni con la virgola italiana. */
 function formatta(n) {
   if (n === null) return '';
-  return Number.isInteger(n) ? String(n) : String(n).replace('.', ',');
+  if (Number.isInteger(n)) return String(n);
+  const intero = Math.floor(n);
+  const fraz = { 0.25: '¼', 0.5: '½', 0.75: '¾' }[Math.round((n - intero) * 100) / 100];
+  if (fraz) return (intero ? intero : '') + fraz;
+  return String(n).replace('.', ',');
 }
 function debounce(fn, ms) {
   let t;

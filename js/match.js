@@ -24,18 +24,29 @@ export function creaIndice(tassonomia) {
   return { byKey, byId, base };
 }
 
-/** Ipotesi di singolare per una parola italiana plurale (euristica, non un vero stemmer). */
+/** Ipotesi di singolare e di plurale per una parola italiana (euristica, non un vero stemmer): l'utente scrive
+ *  "pomodori" ma l'alias è "pomodoro", oppure "cece" quando la voce è "ceci". */
 function candidatiSingolari(parola) {
   if (parola.length < 4) return [];
-  if (parola.endsWith('che')) return [parola.slice(0, -3) + 'ca'];
-  if (parola.endsWith('ghe')) return [parola.slice(0, -3) + 'ga'];
-  if (parola.endsWith('chi')) return [parola.slice(0, -3) + 'co'];
-  if (parola.endsWith('ghi')) return [parola.slice(0, -3) + 'go'];
-  if (parola.endsWith('ci')) return [parola.slice(0, -2) + 'co'];
-  if (parola.endsWith('gi')) return [parola.slice(0, -2) + 'go'];
-  if (parola.endsWith('i')) return [parola.slice(0, -1) + 'o', parola.slice(0, -1) + 'e'];
-  if (parola.endsWith('e')) return [parola.slice(0, -1) + 'a'];
-  return [];
+  const out = [];
+  // plurale → singolare
+  if (parola.endsWith('che')) out.push(parola.slice(0, -3) + 'ca');
+  else if (parola.endsWith('ghe')) out.push(parola.slice(0, -3) + 'ga');
+  else if (parola.endsWith('chi')) out.push(parola.slice(0, -3) + 'co');
+  else if (parola.endsWith('ghi')) out.push(parola.slice(0, -3) + 'go');
+  else if (parola.endsWith('ci')) out.push(parola.slice(0, -2) + 'co');
+  else if (parola.endsWith('gi')) out.push(parola.slice(0, -2) + 'go');
+  else if (parola.endsWith('i')) out.push(parola.slice(0, -1) + 'o', parola.slice(0, -1) + 'e');
+  else if (parola.endsWith('e')) out.push(parola.slice(0, -1) + 'a');
+  // singolare → plurale
+  if (parola.endsWith('ca')) out.push(parola.slice(0, -2) + 'che');
+  else if (parola.endsWith('ga')) out.push(parola.slice(0, -2) + 'ghe');
+  else if (parola.endsWith('io')) out.push(parola.slice(0, -2) + 'i'); // pistacchio, spinacio
+  else if (parola.endsWith('co')) out.push(parola.slice(0, -2) + 'chi', parola.slice(0, -2) + 'ci');
+  else if (parola.endsWith('go')) out.push(parola.slice(0, -2) + 'ghi');
+  else if (parola.endsWith('a')) out.push(parola.slice(0, -1) + 'e');
+  else if (parola.endsWith('o') || parola.endsWith('e')) out.push(parola.slice(0, -1) + 'i');
+  return out;
 }
 
 /** Varianti singolari dell'intera frase normalizzata, parola per parola (accordo aggettivo-sostantivo). */
@@ -137,7 +148,8 @@ export function scalaQuantita(ing, moltiplicatore) {
     case 'spicchi':
     case 'fette':
     case 'bustina':
-      return Math.max(1, Math.round(v));
+      // a quarti: mezza cipolla e un quarto di limone sono dosi vere, arrotondarle a 1 le raddoppia
+      return Math.max(0.25, Math.round(v * 4) / 4);
     case 'cucchiai':
     case 'cucchiaini':
       return Math.round(v * 2) / 2;
