@@ -67,6 +67,8 @@ async function route() {
   if (vista === 'dispensa') {
     mostra('dispensa');
     montaDispensa(dati, params);
+    // la home resta pulita (senza "#/"); con ingredienti nell'URL l'hash serve, è un link condivisibile
+    if (/^#\/?$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
   } else if (vista === 'risultati') {
     mostra('risultati');
     montaRisultati(dati, params);
