@@ -3,7 +3,7 @@
 100 prompt in inglese, uno per ricetta, nello stile editoriale del progetto (SPEC §8). Generati da `scripts/prompts-md.mjs` (`npm run prompts`) dal campo `foto.prompt` di ogni ricetta, con lo stesso template di `scripts/generate_image.py`.
 Il formato **4:5 verticale** è dichiarato in ogni prompt; se l'interfaccia ha un selettore di aspect ratio, imposta comunque 4:5 (o 3:4 se 4:5 non c'è, poi il crop lo fa `optimize-images`). Salva l'output come `img/raw/<slug>.png` (o .jpg), poi `npm run images:optimize`.
 
-Due parti: **99 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, in fondo, **1 ricette da generare**. Rilanciando `npm run prompts` dopo aver ottimizzato le foto, la lista in fondo si svuota da sola.
+Due parti: **100 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, in fondo, **0 ricette da generare**. Rilanciando `npm run prompts` dopo aver ottimizzato le foto, la lista in fondo si svuota da sola.
 
 **Stile comune:** editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload
 
@@ -11,7 +11,7 @@ Due parti: **99 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, i
 
 ---
 
-# Foto già fatte (99)
+# Foto già fatte (100)
 
 ## Contorno
 
@@ -504,6 +504,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti aglio e olio with golden garlic slices, toasted breadcrumbs and parsley, glossy, white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
+### Spaghetti al pomodoro e basilico
+`spaghetti-al-pomodoro-e-basilico`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti in a bright, glossy tomato sauce with fresh basil leaves, twirled in a shallow white ceramic bowl. Vertical 4:5 portrait format.
+```
+
 ### Spaghetti alla carbonara
 `spaghetti-alla-carbonara`
 
@@ -714,17 +721,4 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
----
-
-# Da generare (1)
-
-## Primo
-
-### Spaghetti al pomodoro e basilico
-`spaghetti-al-pomodoro-e-basilico`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti in a bright, glossy tomato sauce with fresh basil leaves, twirled in a shallow white ceramic bowl. Vertical 4:5 portrait format.
 ```
