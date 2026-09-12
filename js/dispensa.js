@@ -6,7 +6,7 @@ import { vai, ingredientiDaParams } from './app.js';
 
 const ORDINE_CATEGORIE = ['verdura', 'carne', 'pesce', 'salume', 'latticino', 'uova', 'pasta', 'cereale', 'legume', 'frutta', 'condimento', 'erba', 'spezia', 'dolce', 'altro'];
 // clip della hero, in sequenza e da capo (npm run video:optimize -- --file <nome>.mp4 → video/hero-<nome>.mp4)
-const CLIP = ['video/hero-chop.mp4', 'video/hero-frigo.mp4'];
+const CLIP = ['video/hero-frigorifero.mp4', 'video/hero-pancetta.mp4', 'video/hero-omelette.mp4', 'video/hero-polpette.mp4'];
 
 const el = {
   form: document.getElementById('ingresso'),

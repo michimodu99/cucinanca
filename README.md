@@ -48,7 +48,7 @@ La fascia scura in testa alla dispensa manda in sequenza le clip elencate in `CL
 4. Aggiungi `'video/hero-nome.mp4'` a `CLIP` in `js/dispensa.js` (l'ordine è l'ordine di riproduzione; con una sola clip va in loop).
 5. Commit e push di `video/hero-*.mp4` e, se rigenerato, `img/hero-poster.webp`.
 
-In repo oggi: `chop` (taglio di un ortaggio, 13″) → `frigo` (apertura di un frigo, 2″: da sola scatterebbe ogni 2 secondi, in sequenza è un cambio di scena).
+In repo oggi quattro clip Mixkit, tutte 16:9: `frigorifero` (6,6″) → `pancetta` (8,3″) → `omelette` (10″) → `polpette` (13,5″); poster dalle polpette. Le clip verticali non vanno bene: nella fascia 2:1 se ne vede solo una banda, sgranata.
 
 ## Struttura
 
