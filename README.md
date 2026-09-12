@@ -24,9 +24,11 @@ Il sito legge `data/recipes.json`: aprire `index.html` dal disco non funziona (i
 4. Foto: `python scripts/generate_image.py --slug nuova-ricetta` (chiave `GEMINI_API_KEY` in `.env`) poi `npm run images:optimize`.
 5. `git add -A && git commit -m "…" && git push` → online in un minuto.
 
-Regole imposte dal validatore: `q.b.` senza quantità; tag `veloce` se ≤ 30′, `weekend` se > 45′; foto in `img/<slug>.webp`; un ingrediente può avere `sostituti` (id esistenti in tassonomia, non della dispensa base, non duplicati, mai su ingredienti facoltativi). Regola editoriale, non di codice: niente frattaglie; peperoncino sempre dosabile.
+Regole imposte dal validatore: `q.b.` senza quantità; tag `veloce` se ≤ 30′, `weekend` se > 45′; foto in `img/<slug>.webp`; 1 o 2 ingredienti `principale: true` per ricetta (mai della dispensa base, mai facoltativi); un ingrediente può avere `sostituti` (id esistenti in tassonomia, non della dispensa base, non duplicati, mai su ingredienti facoltativi). Regola editoriale, non di codice: niente frattaglie; peperoncino sempre dosabile.
 
 Un sostituto è una scelta culinaria per quella ricetta (porchetta al posto del guanciale nella carbonara), non una regola generale: se hai il sostituto, la ricetta compare con l'avviso "con X al posto di Y" e il libro mostra un riquadro *Modifica* con la nota.
+
+L'ingrediente `principale` è quello senza cui il piatto sarebbe un altro piatto (il baccalà del bacalhau, guanciale e uova della carbonara): se manca e non hai un suo sostituto, la ricetta non viene proposta, anche se mancherebbe solo quello. Il supporto (pasta, riso, farina) non è principale, salvo quando il piatto *è* il supporto (cacio e pepe, risotto alla milanese).
 
 ## Foto
 

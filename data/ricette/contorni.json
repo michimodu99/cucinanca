@@ -14,7 +14,7 @@
     "origine": "Italia / Regno Unito",
     "reinventata": null,
     "ingredienti": [
-      { "id": "patate", "qta": 300, "unita": "g", "note": "a tocchi da 4 cm" },
+      { "id": "patate", "qta": 300, "unita": "g", "note": "a tocchi da 4 cm", "principale": true },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "rosmarino", "qta": 1, "unita": "rametti" },
       { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "in camicia" },
@@ -47,8 +47,8 @@
     "origine": "Italia · Nord",
     "reinventata": null,
     "ingredienti": [
-      { "id": "verza", "qta": 250, "unita": "g", "sostituti": [{ "id": "cavolo-nero" }] },
-      { "id": "pancetta", "qta": 40, "unita": "g", "sostituti": [{ "id": "guanciale" }, { "id": "speck" }, { "id": "chourico", "nota": "a rondelle: più paprika, meno finocchietto" }] },
+      { "id": "verza", "qta": 250, "unita": "g", "sostituti": [{ "id": "cavolo-nero" }], "principale": true },
+      { "id": "pancetta", "qta": 40, "unita": "g", "sostituti": [{ "id": "guanciale" }, { "id": "speck" }, { "id": "chourico", "nota": "a rondelle: più paprika, meno finocchietto" }], "principale": true },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "aceto", "qta": 1, "unita": "cucchiai" },
       { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
@@ -81,7 +81,7 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "zucca", "qta": 300, "unita": "g", "note": "a fette da 1,5 cm con la buccia, se è sottile" },
+      { "id": "zucca", "qta": 300, "unita": "g", "note": "a fette da 1,5 cm con la buccia, se è sottile", "principale": true },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "aceto-balsamico", "qta": 1, "unita": "cucchiai" },
       { "id": "rosmarino", "qta": 1, "unita": "rametti" },
@@ -115,7 +115,7 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "funghi-champignon", "qta": 250, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }] },
+      { "id": "funghi-champignon", "qta": 250, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }], "principale": true },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "prezzemolo", "qta": null, "unita": "qb" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
@@ -148,8 +148,8 @@
     "origine": "Italia · Sicilia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "finocchi", "qta": 1, "unita": "pz", "note": "piccolo" },
-      { "id": "arance", "qta": 1, "unita": "pz" },
+      { "id": "finocchi", "qta": 1, "unita": "pz", "note": "piccolo", "principale": true },
+      { "id": "arance", "qta": 1, "unita": "pz", "principale": true },
       { "id": "olive-nere", "qta": 25, "unita": "g", "sostituti": [{ "id": "olive-verdi" }] },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "menta", "qta": 3, "unita": "foglie", "opzionale": true },
@@ -182,7 +182,7 @@
     "origine": "Italia (variante)",
     "reinventata": "Patate al forno croccanti, con paprika al posto del rosmarino",
     "ingredienti": [
-      { "id": "patate", "qta": 350, "unita": "g", "note": "con la buccia, a spicchi" },
+      { "id": "patate", "qta": 350, "unita": "g", "note": "con la buccia, a spicchi", "principale": true },
       { "id": "paprika-dolce", "qta": 2, "unita": "cucchiaini" },
       { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "in camicia" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
@@ -214,7 +214,7 @@
     "origine": "Portogallo",
     "reinventata": null,
     "ingredienti": [
-      { "id": "patate", "qta": 250, "unita": "g" },
+      { "id": "patate", "qta": 250, "unita": "g", "principale": true },
       { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "tritato finissimo" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "limone", "qta": 0.5, "unita": "pz", "note": "il succo" },
@@ -247,7 +247,7 @@
     "origine": "Italia · Lazio",
     "reinventata": null,
     "ingredienti": [
-      { "id": "carciofi", "qta": 2, "unita": "pz", "note": "romaneschi o violetti; freschi nov–feb" },
+      { "id": "carciofi", "qta": 2, "unita": "pz", "note": "romaneschi o violetti; freschi nov–feb", "principale": true },
       { "id": "menta", "qta": 1, "unita": "rametti", "note": "mentuccia, se la trovi", "sostituti": [{ "id": "prezzemolo", "nota": "raddoppia il prezzemolo: manca il profumo, ma il piatto regge" }] },
       { "id": "prezzemolo", "qta": 1, "unita": "cucchiai", "note": "tritato" },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
@@ -285,8 +285,8 @@
     "origine": "Italia · Campania",
     "reinventata": null,
     "ingredienti": [
-      { "id": "fagiolini", "qta": 200, "unita": "g", "note": "spuntati" },
-      { "id": "patate", "qta": 150, "unita": "g", "note": "a spicchi" },
+      { "id": "fagiolini", "qta": 200, "unita": "g", "note": "spuntati", "principale": true },
+      { "id": "patate", "qta": 150, "unita": "g", "note": "a spicchi", "principale": true },
       { "id": "pelati", "qta": 200, "unita": "g", "sostituti": [{ "id": "passata" }] },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
@@ -323,7 +323,7 @@
     "origine": "Italia / Francia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "cavolfiore", "qta": 350, "unita": "g", "note": "a cimette", "sostituti": [{ "id": "broccoli", "nota": "più teneri: 4 minuti di bollitura invece di 6" }] },
+      { "id": "cavolfiore", "qta": 350, "unita": "g", "note": "a cimette", "sostituti": [{ "id": "broccoli", "nota": "più teneri: 4 minuti di bollitura invece di 6" }], "principale": true },
       { "id": "latte", "qta": 200, "unita": "ml" },
       { "id": "farina-00", "qta": 20, "unita": "g" },
       { "id": "burro", "qta": 20, "unita": "g", "note": "più un po' per la teglia" },
@@ -362,7 +362,7 @@
     "origine": "Spagna",
     "reinventata": null,
     "ingredienti": [
-      { "id": "patate", "qta": 300, "unita": "g", "note": "a cubi di 3 cm" },
+      { "id": "patate", "qta": 300, "unita": "g", "note": "a cubi di 3 cm", "principale": true },
       { "id": "passata", "qta": 100, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciati bene: la salsa deve essere liscia" }] },
       { "id": "paprika-dolce", "qta": 1, "unita": "cucchiaini" },
       { "id": "peperoncino", "qta": 1, "unita": "pz", "note": "dosabile: le bravas devono pizzicare" },
@@ -400,7 +400,7 @@
     "origine": "Medio Oriente",
     "reinventata": null,
     "ingredienti": [
-      { "id": "ceci", "qta": 250, "unita": "g", "note": "cotti, sciacquati; tieni 3 cucchiai del liquido", "sostituti": [{ "id": "fagioli-cannellini", "nota": "hummus bianco, più delicato" }, { "id": "lenticchie", "nota": "cotte e ben scolate" }] },
+      { "id": "ceci", "qta": 250, "unita": "g", "note": "cotti, sciacquati; tieni 3 cucchiai del liquido", "sostituti": [{ "id": "fagioli-cannellini", "nota": "hummus bianco, più delicato" }, { "id": "lenticchie", "nota": "cotte e ben scolate" }], "principale": true },
       { "id": "tahina", "qta": 2, "unita": "cucchiai", "sostituti": [{ "id": "yogurt-greco", "nota": "1 cucchiaio e più olio: non è più vegano" }] },
       { "id": "limone", "qta": 0.5, "unita": "pz", "note": "il succo" },
       { "id": "aglio", "qta": 0.5, "unita": "spicchi" },

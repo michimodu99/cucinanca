@@ -58,9 +58,15 @@ for (const r of ricette) {
   if (slugs.has(r.slug)) err(`${where}: slug duplicato`);
   slugs.add(r.slug);
 
+  // principali: 1 o 2 per ricetta, ciò senza cui il piatto sarebbe un altro piatto (il matcher non la propone se mancano)
+  const principali = (r.ingredienti || []).filter((i) => i.principale === true);
+  if (principali.length === 0) err(`${where}: nessun ingrediente "principale" (ne servono 1 o 2)`);
+  if (principali.length > 2) err(`${where}: ${principali.length} ingredienti "principale", massimo 2`);
   for (const ing of r.ingredienti || []) {
     const t = byId.get(ing.id);
     if (!t) { err(`${where}: ingrediente sconosciuto "${ing.id}"`); continue; }
+    if (ing.principale && ing.opzionale) err(`${where}: "${ing.id}" non può essere insieme principale e opzionale`);
+    if (ing.principale && t.base) err(`${where}: "${ing.id}" è nella dispensa base, non può essere principale`);
     if (ing.unita === 'qb' && ing.qta !== null) err(`${where}: "${ing.id}" con unità qb deve avere qta null`);
     if (ing.unita !== 'qb' && (ing.qta === null || ing.qta === undefined)) err(`${where}: "${ing.id}" senza quantità`);
     const sost = ing.sostituti || [];

@@ -61,6 +61,7 @@
           "unita": { "enum": ["g", "ml", "pz", "cucchiai", "cucchiaini", "qb", "bustina", "spicchi", "foglie", "rametti", "fette", "pizzico"] },
           "note": { "type": "string" },
           "opzionale": { "type": "boolean" },
+          "principale": { "type": "boolean" },
           "sostituti": {
             "type": "array",
             "minItems": 1,

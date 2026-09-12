@@ -78,7 +78,8 @@ export function tempoTotale(ricetta) {
 }
 
 /**
- * Abbina la dispensa alle ricette.
+ * Abbina la dispensa alle ricette. Una ricetta esce dai risultati se manca un ingrediente `principale`
+ * senza sostituto posseduto, oppure se mancano più di `maxMancanti` ingredienti.
  * @returns array di { ricetta, mancanti: id[], copertura: 0..1, sostituzioni: {richiesto, usato, nota}[] } ordinato per rilevanza,
  *          con proprietà extra `nonRisolti` (testi non riconosciuti).
  */
@@ -102,6 +103,9 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
       if (s) sostituzioni.push({ richiesto: i.id, usato: s.id, nota: s.nota || null });
       else mancanti.push(i.id);
     }
+    // manca l'ingrediente che dà identità al piatto (e nessun suo sostituto): non è cucinabile né
+    // reinterpretabile (un bacalhau senza baccalà è un altro piatto), quindi non lo proponiamo
+    if (richiesti.some((i) => i.principale && mancanti.includes(i.id))) continue;
     if (mancanti.length > maxMancanti) continue;
     // niente in comune con la dispensa (oltre alle basi): non è un suggerimento, è rumore
     if (richiesti.length && mancanti.length === richiesti.length) continue;

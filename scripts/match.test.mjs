@@ -150,6 +150,39 @@ test('abbina: input sconosciuti vengono ignorati e riportati; niente proprietà 
   assert.equal('vietati' in out, false);
 });
 
+// ---------- ingrediente principale ----------
+// baccalà è il principale del bacalhau: senza, il piatto non esiste; senza prezzemolo sì
+const ricettePrinc = [
+  R('bacalhau', [{ id: 'zucca', principale: true }, 'uova', 'pecorino', 'salsiccia'], { tempi: { preparazione: 5, cottura: 5, riposo: 0 } }),
+  R('carbonara-p', [{ id: 'salsiccia', principale: true, sostituti: [{ id: 'pancetta' }] }, { id: 'uova', principale: true }, 'pecorino']),
+  R('senza-principale', ['uova', 'pecorino', 'salsiccia']),
+];
+
+test('abbina: se manca il principale la ricetta non compare, anche entro maxMancanti', () => {
+  const out = abbina({ ricette: ricettePrinc, indice, ingredienti: ['uova', 'pecorino', 'salsiccia'], maxMancanti: 3 });
+  assert.ok(!out.some((x) => x.ricetta.slug === 'bacalhau'), 'manca solo zucca (principale): fuori');
+  assert.ok(out.some((x) => x.ricetta.slug === 'senza-principale'), 'senza flag il comportamento non cambia');
+});
+
+test('abbina: principale presente e un non-principale mancante → proposta come oggi', () => {
+  const out = abbina({ ricette: ricettePrinc, indice, ingredienti: ['zucca', 'uova', 'pecorino'] });
+  const r = out.find((x) => x.ricetta.slug === 'bacalhau');
+  assert.deepEqual(r.mancanti, ['salsiccia']);
+});
+
+test('abbina: principale coperto da un sostituto conta come presente', () => {
+  const out = abbina({ ricette: ricettePrinc, indice, ingredienti: ['uova', 'pecorino', 'bacon'] });
+  const r = out.find((x) => x.ricetta.slug === 'carbonara-p');
+  assert.ok(r, 'carbonara con pancetta al posto della salsiccia');
+  assert.deepEqual(r.mancanti, []);
+  assert.deepEqual(r.sostituzioni, [{ richiesto: 'salsiccia', usato: 'pancetta', nota: null }]);
+});
+
+test('abbina: con due principali basta che ne manchi uno per escludere la ricetta', () => {
+  const out = abbina({ ricette: ricettePrinc, indice, ingredienti: ['salsiccia', 'pecorino'] });
+  assert.ok(!out.some((x) => x.ricetta.slug === 'carbonara-p'), 'mancano le uova (principale)');
+});
+
 // ---------- scalaQuantita ----------
 import { scalaQuantita } from '../js/match.js';
 

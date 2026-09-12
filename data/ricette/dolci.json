@@ -14,10 +14,10 @@
     "origine": "Italia · Veneto / Friuli",
     "reinventata": null,
     "ingredienti": [
-      { "id": "mascarpone", "qta": 125, "unita": "g" },
+      { "id": "mascarpone", "qta": 125, "unita": "g", "principale": true },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "solo il tuorlo, freschissimo" },
       { "id": "zucchero", "qta": 25, "unita": "g" },
-      { "id": "savoiardi", "qta": 6, "unita": "pz", "sostituti": [{ "id": "biscotti-secchi", "nota": "inzuppali meno: si sfaldano prima" }] },
+      { "id": "savoiardi", "qta": 6, "unita": "pz", "sostituti": [{ "id": "biscotti-secchi", "nota": "inzuppali meno: si sfaldano prima" }], "principale": true },
       { "id": "caffe", "qta": 80, "unita": "ml", "note": "2 tazzine, freddo, senza zucchero" },
       { "id": "cacao", "qta": null, "unita": "qb" }
     ],
@@ -48,10 +48,10 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "mele", "qta": 2, "unita": "pz", "note": "golden o renette" },
+      { "id": "mele", "qta": 2, "unita": "pz", "note": "golden o renette", "principale": true },
       { "id": "farina-00", "qta": 130, "unita": "g" },
       { "id": "zucchero", "qta": 90, "unita": "g" },
-      { "id": "uova", "qta": 1, "unita": "pz" },
+      { "id": "uova", "qta": 1, "unita": "pz", "principale": true },
       { "id": "burro", "qta": 60, "unita": "g", "note": "fuso e intiepidito" },
       { "id": "latte", "qta": 50, "unita": "ml" },
       { "id": "lievito-per-dolci", "qta": 8, "unita": "g", "note": "mezza bustina" },
@@ -89,8 +89,8 @@
       { "id": "farina-00", "qta": 150, "unita": "g" },
       { "id": "burro", "qta": 75, "unita": "g", "note": "freddo, a cubetti" },
       { "id": "zucchero", "qta": 100, "unita": "g", "note": "50 g frolla + 50 g crema" },
-      { "id": "uova", "qta": 3, "unita": "pz", "note": "1 uovo per la frolla, 2 tuorli per la crema" },
-      { "id": "latte", "qta": 250, "unita": "ml" },
+      { "id": "uova", "qta": 3, "unita": "pz", "note": "1 uovo per la frolla, 2 tuorli per la crema", "principale": true },
+      { "id": "latte", "qta": 250, "unita": "ml", "principale": true },
       { "id": "amido-di-mais", "qta": 20, "unita": "g" },
       { "id": "vaniglia", "qta": 1, "unita": "cucchiaini", "note": "estratto, o mezza bacca" },
       { "id": "limone", "qta": 0.5, "unita": "pz", "note": "scorza" },
@@ -124,10 +124,10 @@
     "origine": "Portogallo · Belém",
     "reinventata": null,
     "ingredienti": [
-      { "id": "pasta-sfoglia", "qta": 1, "unita": "pz", "note": "un rotolo rettangolare (ne vengono 6)" },
+      { "id": "pasta-sfoglia", "qta": 1, "unita": "pz", "note": "un rotolo rettangolare (ne vengono 6)", "principale": true },
       { "id": "latte", "qta": 200, "unita": "ml" },
       { "id": "zucchero", "qta": 100, "unita": "g" },
-      { "id": "uova", "qta": 3, "unita": "pz", "note": "solo i tuorli" },
+      { "id": "uova", "qta": 3, "unita": "pz", "note": "solo i tuorli", "principale": true },
       { "id": "farina-00", "qta": 15, "unita": "g" },
       { "id": "cannella", "qta": 1, "unita": "pz", "note": "una stecca + polvere per servire" },
       { "id": "limone", "qta": 0.5, "unita": "pz", "note": "scorza a pezzi grandi" }
@@ -161,10 +161,10 @@
     "origine": "Italia · Piemonte",
     "reinventata": null,
     "ingredienti": [
-      { "id": "panna-fresca", "qta": 150, "unita": "ml" },
+      { "id": "panna-fresca", "qta": 150, "unita": "ml", "principale": true },
       { "id": "latte", "qta": 50, "unita": "ml" },
       { "id": "zucchero", "qta": 25, "unita": "g", "note": "+ 1 cucchiaio per la salsa" },
-      { "id": "gelatina-in-fogli", "qta": 3, "unita": "g", "note": "un foglio e mezzo" },
+      { "id": "gelatina-in-fogli", "qta": 3, "unita": "g", "note": "un foglio e mezzo", "principale": true },
       { "id": "vaniglia", "qta": 1, "unita": "cucchiaini" },
       { "id": "frutti-di-bosco", "qta": 80, "unita": "g" },
       { "id": "limone", "qta": 0.25, "unita": "pz", "note": "un po' di succo per la salsa" }
@@ -198,11 +198,11 @@
     "origine": "Italia / Portogallo",
     "reinventata": null,
     "ingredienti": [
-      { "id": "cioccolato-fondente", "qta": 100, "unita": "g" },
+      { "id": "cioccolato-fondente", "qta": 100, "unita": "g", "principale": true },
       { "id": "burro", "qta": 50, "unita": "g", "note": "morbido" },
       { "id": "zucchero", "qta": 40, "unita": "g" },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "solo il tuorlo" },
-      { "id": "biscotti-secchi", "qta": 80, "unita": "g" },
+      { "id": "biscotti-secchi", "qta": 80, "unita": "g", "principale": true },
       { "id": "cacao", "qta": 1, "unita": "cucchiai" },
       { "id": "noci", "qta": 20, "unita": "g", "opzionale": true },
       { "id": "zucchero-a-velo", "qta": null, "unita": "qb", "opzionale": true, "note": "per la 'muffa' del salame" }
@@ -235,8 +235,8 @@
     "origine": "Italia · Campania (Capri)",
     "reinventata": null,
     "ingredienti": [
-      { "id": "mandorle", "qta": 100, "unita": "g", "note": "pelate, tritate fini", "sostituti": [{ "id": "pistacchi", "nota": "non salati: verde e meno dolce" }] },
-      { "id": "cioccolato-fondente", "qta": 100, "unita": "g", "note": "almeno 60%" },
+      { "id": "mandorle", "qta": 100, "unita": "g", "note": "pelate, tritate fini", "sostituti": [{ "id": "pistacchi", "nota": "non salati: verde e meno dolce" }], "principale": true },
+      { "id": "cioccolato-fondente", "qta": 100, "unita": "g", "note": "almeno 60%", "principale": true },
       { "id": "burro", "qta": 80, "unita": "g", "note": "più un po' per lo stampo" },
       { "id": "uova", "qta": 2, "unita": "pz", "note": "separati" },
       { "id": "zucchero", "qta": 80, "unita": "g" },
@@ -272,8 +272,8 @@
     "origine": "Portogallo",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 50, "unita": "g", "note": "carolino, se lo trovi" },
-      { "id": "latte", "qta": 300, "unita": "ml" },
+      { "id": "riso-carnaroli", "qta": 50, "unita": "g", "note": "carolino, se lo trovi", "principale": true },
+      { "id": "latte", "qta": 300, "unita": "ml", "principale": true },
       { "id": "zucchero", "qta": 40, "unita": "g" },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "solo il tuorlo" },
       { "id": "limone", "qta": 1, "unita": "pz", "note": "solo la scorza, a strisce" },
@@ -309,8 +309,8 @@
     "origine": "Francia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "cioccolato-fondente", "qta": 70, "unita": "g", "note": "almeno 60%" },
-      { "id": "uova", "qta": 1, "unita": "pz", "note": "freschissimo: si mangia crudo; separato" },
+      { "id": "cioccolato-fondente", "qta": 70, "unita": "g", "note": "almeno 60%", "principale": true },
+      { "id": "uova", "qta": 1, "unita": "pz", "note": "freschissimo: si mangia crudo; separato", "principale": true },
       { "id": "zucchero", "qta": 15, "unita": "g" },
       { "id": "burro", "qta": 10, "unita": "g" },
       { "id": "sale", "qta": 1, "unita": "pizzico" }
@@ -344,8 +344,8 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "yogurt-greco", "qta": 125, "unita": "g", "note": "un vasetto: è anche il misurino", "sostituti": [{ "id": "ricotta", "nota": "più umida, 5 minuti in più" }] },
-      { "id": "uova", "qta": 1, "unita": "pz" },
+      { "id": "yogurt-greco", "qta": 125, "unita": "g", "note": "un vasetto: è anche il misurino", "sostituti": [{ "id": "ricotta", "nota": "più umida, 5 minuti in più" }], "principale": true },
+      { "id": "uova", "qta": 1, "unita": "pz", "principale": true },
       { "id": "farina-00", "qta": 120, "unita": "g" },
       { "id": "zucchero", "qta": 90, "unita": "g" },
       { "id": "burro", "qta": 40, "unita": "g", "note": "fuso" },

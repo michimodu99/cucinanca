@@ -20,6 +20,7 @@ Non è un'app di meal-planning né un social: nessun login, nessun salvataggio d
 | Persone | Michele cucina **per sé** (dosi e costi per 1 persona); altre 3 persone in casa possono accodarsi → moltiplicatore porzioni nella UI. Nessuna intolleranza; cena in casa, pranzo in mensa |
 | Esclusioni | nessuna in tassonomia (dal 11/09/2026 il sito è pensato per essere condiviso). Regola editoriale: niente frattaglie; peperoncino sempre dosabile |
 | Sostituzioni | un ingrediente di ricetta può avere `sostituti` curati per quel piatto: se ne possiedi uno, la ricetta conta come coperta e mostra l'avviso |
+| Ingrediente principale | ogni ricetta marca 1 o 2 ingredienti `principale` (il baccalà del bacalhau): se manca e non hai un suo sostituto, la ricetta non viene proposta, qualunque sia il numero di mancanti |
 | Cavalli di battaglia già suoi | ragù bianco, pasta tonno e olive nere (non duplicati) |
 | Tempo feriale | 30–45 min → maggioranza di ricette ≤ 45′; le lunghe sono marcate "weekend" |
 | Budget | ≤ 10 € a persona a cena |
@@ -73,7 +74,7 @@ Campi **specifici di questo progetto**, assenti nei canali:
 
 ### 4.2 Risultati
 - Card: foto, titolo, categoria, difficoltà, tempo totale, costo, **copertura** ("hai tutto" / "manca: pecorino").
-- Ordine: copertura 100 % → 1 mancante → 2 mancanti; a parità, tempo totale crescente. Oltre 2 mancanti non compare (soglia in `config`).
+- Ordine: copertura 100 % → 1 mancante → 2 mancanti; a parità, tempo totale crescente. Oltre 2 mancanti non compare (soglia in `config`). Se manca un ingrediente `principale` (senza sostituto posseduto) la ricetta non compare mai: senza baccalà il bacalhau è un altro piatto, senza prezzemolo no.
 - Filtri (barra sticky): categoria · difficoltà · tempo massimo (30/45/60/90+) · costo · dieta · "solo con la mia attrezzatura" · tag (veloce, one-pan, avanzi, da-ospiti). Su mobile la barra mostra solo [Filtri +] [Ordina]; il tocco apre gli altri in una griglia a due colonne.
 - Ordinamento alternativo: tempo, costo, difficoltà.
 - Se nessun risultato: mostra le 5 ricette più vicine con l'elenco dei mancanti.
@@ -133,10 +134,11 @@ Le schede si scrivono in `data/ricette/<categoria>.json` (primi, secondi, piatti
 
 Regole:
 - `ingredienti[].id` deve esistere in `ingredienti.json`.
+- `ingredienti[].principale` (booleano): 1 o 2 per ricetta, obbligatorio. È ciò che dà identità al piatto, ciò senza cui *sarebbe un altro piatto* (di norma sta nel nome). Il supporto (pasta, riso, farina, pane) non è principale, tranne quando il piatto *è* il supporto (cacio e pepe, risotto alla milanese, arroz doce, tagliatelle fresche). Mai `base` (sarebbe sempre posseduto) né `opzionale`. Il matcher scarta la ricetta se un principale manca e nessun suo sostituto è posseduto; con il sostituto la ricetta compare con l'avviso (carbonara con porchetta).
 - `ingredienti[].sostituti` (opzionale): `[{ "id", "nota"? }]`, curati per la ricetta. Ogni id esiste in tassonomia, non è `base`, non è l'ingrediente stesso, non si ripete; un ingrediente `opzionale` non ha sostituti. Il matcher usa il primo sostituto posseduto nell'ordine dell'array; a parità di mancanti e copertura, prima le ricette senza sostituzioni.
 
 ```jsonc
-{ "id": "guanciale", "qta": 50, "unita": "g",
+{ "id": "guanciale", "qta": 50, "unita": "g", "principale": true,
   "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }] }
 ```
 - `porzioni` è sempre 1; il moltiplicatore è solo in UI. Per gli ingredienti non divisibili (uova) si indica la quantità per 1 e, se serve, una `note` ("1 uovo; con ×2 usa 2").
@@ -160,7 +162,7 @@ Regole:
 
 ### 5.3 Validazione (`scripts/validate.mjs`)
 1. Ogni ricetta rispetta `schema/recipe.schema.json`.
-2. I `sostituti` rispettano le regole di §5.1.
+2. I `sostituti` e i `principale` rispettano le regole di §5.1 (1 o 2 principali, mai base né opzionali).
 3. Ogni `ingredienti[].id` esiste nella tassonomia.
 4. Ogni `foto.copertina` esiste su disco.
 5. Slug unici; `procedimento[].n` consecutivi da 1.
@@ -175,7 +177,7 @@ input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 3}
      richiesti = ingredienti.filter(!opzionale).map(id) − base
      mancanti  = richiesti − posseduti
      copertura = 1 − |mancanti| / |richiesti|
-4. scarta se |mancanti| > maxMancanti, e scarta se non possiedi nessun ingrediente richiesto (copertura 0: rumore, non suggerimento)
+4. scarta se un ingrediente `principale` è tra i mancanti (nessun suo sostituto posseduto); scarta se |mancanti| > maxMancanti, e scarta se non possiedi nessun ingrediente richiesto (copertura 0: rumore, non suggerimento)
 5. ordina per |mancanti| asc, poi copertura desc, poi tempo totale asc, poi titolo
 output: [{ ricetta, mancanti: id[], copertura }]
 ```

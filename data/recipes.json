@@ -41,12 +41,14 @@
       "id": "chourico",
       "nota": "più grassa: bucala con la forchetta"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "uova",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "cime-di-rapa",
@@ -168,12 +170,14 @@
       "id": "filetto-di-maiale",
       "nota": "30 minuti in meno: si asciuga"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "latte",
     "qta": 500,
-    "unita": "ml"
+    "unita": "ml",
+    "principale": true
    },
    {
     "id": "burro",
@@ -285,13 +289,15 @@
       "id": "pollo-intero",
       "nota": "cosce: diventa arroz de frango, 20 minuti in meno"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "riso-carnaroli",
     "qta": 90,
     "unita": "g",
-    "note": "arroz carolino o qualsiasi riso"
+    "note": "arroz carolino o qualsiasi riso",
+    "principale": true
    },
    {
     "id": "chourico",
@@ -427,12 +433,14 @@
     "id": "riso-carnaroli",
     "qta": 50,
     "unita": "g",
-    "note": "carolino, se lo trovi"
+    "note": "carolino, se lo trovi",
+    "principale": true
    },
    {
     "id": "latte",
     "qta": 300,
-    "unita": "ml"
+    "unita": "ml",
+    "principale": true
    },
    {
     "id": "zucchero",
@@ -542,13 +550,15 @@
     "id": "baccala",
     "qta": 150,
     "unita": "g",
-    "note": "già dissalato (bacalhau demolhado)"
+    "note": "già dissalato (bacalhau demolhado)",
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 200,
     "unita": "g",
-    "note": "a fiammifero sottile"
+    "note": "a fiammifero sottile",
+    "principale": true
    },
    {
     "id": "uova",
@@ -672,7 +682,8 @@
     "id": "baccala",
     "qta": 200,
     "unita": "g",
-    "note": "dissalato, a scaglie"
+    "note": "dissalato, a scaglie",
+    "principale": true
    },
    {
     "id": "patate",
@@ -684,7 +695,8 @@
     "id": "panna-fresca",
     "qta": 150,
     "unita": "ml",
-    "note": "natas"
+    "note": "natas",
+    "principale": true
    },
    {
     "id": "latte",
@@ -823,7 +835,8 @@
     "id": "bistecca",
     "qta": 220,
     "unita": "g",
-    "note": "alta 2–2,5 cm"
+    "note": "alta 2–2,5 cm",
+    "principale": true
    },
    {
     "id": "patate",
@@ -947,12 +960,14 @@
       "id": "petto-di-pollo",
       "nota": "battuto"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "uova",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "riso-carnaroli",
@@ -1097,13 +1112,15 @@
       "id": "manzo-per-spezzatino",
       "nota": "a pezzi grossi: 30 minuti in meno"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "vino-rosso",
     "qta": 500,
     "unita": "ml",
-    "note": "corposo"
+    "note": "corposo",
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -1257,7 +1274,8 @@
      {
       "id": "pancetta"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pelati",
@@ -1268,7 +1286,8 @@
      {
       "id": "passata"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pecorino",
@@ -1357,13 +1376,15 @@
      {
       "id": "bucatini"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pecorino",
     "qta": 50,
     "unita": "g",
-    "note": "grattugiato finissimo"
+    "note": "grattugiato finissimo",
+    "principale": true
    },
    {
     "id": "pepe",
@@ -1447,7 +1468,8 @@
    {
     "id": "patate",
     "qta": 250,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "cavolo-nero",
@@ -1462,7 +1484,8 @@
      {
       "id": "cime-di-rapa"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "chourico",
@@ -1567,7 +1590,8 @@
     "id": "carciofi",
     "qta": 2,
     "unita": "pz",
-    "note": "romaneschi o violetti; freschi nov–feb"
+    "note": "romaneschi o violetti; freschi nov–feb",
+    "principale": true
    },
    {
     "id": "menta",
@@ -1698,7 +1722,8 @@
       "id": "pollo-intero",
       "nota": "cosce disossate: più saporite, 10 minuti in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -1731,7 +1756,8 @@
       "id": "yogurt-greco",
       "nota": "a fuoco spento, altrimenti impazzisce"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "riso-carnaroli",
@@ -1837,7 +1863,8 @@
       "id": "broccoli",
       "nota": "più teneri: 4 minuti di bollitura invece di 6"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "latte",
@@ -1968,7 +1995,8 @@
      {
       "id": "fettine-di-tacchino"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "uova",
@@ -1979,7 +2007,8 @@
     "id": "pangrattato",
     "qta": 60,
     "unita": "g",
-    "note": "meglio da pane raffermo grattato"
+    "note": "meglio da pane raffermo grattato",
+    "principale": true
    },
    {
     "id": "burro",
@@ -2071,7 +2100,8 @@
    {
     "id": "uova",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "latte",
@@ -2094,7 +2124,8 @@
      {
       "id": "prosciutto-crudo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "formaggio-fuso",
@@ -2197,12 +2228,14 @@
     "id": "uova",
     "qta": 3,
     "unita": "pz",
-    "note": "1 uovo per la frolla, 2 tuorli per la crema"
+    "note": "1 uovo per la frolla, 2 tuorli per la crema",
+    "principale": true
    },
    {
     "id": "latte",
     "qta": 250,
-    "unita": "ml"
+    "unita": "ml",
+    "principale": true
    },
    {
     "id": "amido-di-mais",
@@ -2315,7 +2348,8 @@
      {
       "id": "fagioli-cannellini"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "spinaci",
@@ -2330,7 +2364,8 @@
      {
       "id": "verza"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "latte-di-cocco",
@@ -2478,13 +2513,15 @@
     "id": "fagiolini",
     "qta": 200,
     "unita": "g",
-    "note": "spuntati"
+    "note": "spuntati",
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 150,
     "unita": "g",
-    "note": "a spicchi"
+    "note": "a spicchi",
+    "principale": true
    },
    {
     "id": "pelati",
@@ -2609,7 +2646,8 @@
       "id": "fagioli-cannellini",
       "nota": "feijão branco, la versione chiara"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "chourico",
@@ -2619,7 +2657,8 @@
      {
       "id": "salsiccia"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -2804,7 +2843,8 @@
       "id": "lonza-di-maiale",
       "nota": "20 minuti in più: è più spessa"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -2819,7 +2859,8 @@
      {
       "id": "prosciutto-crudo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "senape",
@@ -2927,7 +2968,8 @@
     "id": "lievito-di-birra",
     "qta": 3,
     "unita": "g",
-    "note": "secco (una bustina piccola)"
+    "note": "secco (una bustina piccola)",
+    "principale": true
    },
    {
     "id": "sale",
@@ -3033,13 +3075,15 @@
       "id": "petto-di-pollo",
       "nota": "si asciuga: 15 minuti in meno e coperto"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "peperoncino",
     "qta": 2,
     "unita": "pz",
-    "note": "piri-piri freschi o secchi, dosabile: con uno è saporito, con tre è piri-piri vero"
+    "note": "piri-piri freschi o secchi, dosabile: con uno è saporito, con tre è piri-piri vero",
+    "principale": true
    },
    {
     "id": "aglio",
@@ -3160,13 +3204,15 @@
    {
     "id": "uova",
     "qta": 3,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 150,
     "unita": "g",
-    "note": "a dadini da 1 cm"
+    "note": "a dadini da 1 cm",
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -3276,7 +3322,8 @@
       "id": "porcini-secchi",
       "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -3368,7 +3415,8 @@
     "id": "patate",
     "qta": 300,
     "unita": "g",
-    "note": "vecchie, a pasta gialla/farinosa"
+    "note": "vecchie, a pasta gialla/farinosa",
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -3485,13 +3533,15 @@
       "id": "salsiccia",
       "nota": "sbriciolata: si sfalda meno se la impasti con un tuorlo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "panini",
     "qta": 1,
     "unita": "pz",
-    "note": "papo-seco o pane per hamburger, tostato in padella"
+    "note": "papo-seco o pane per hamburger, tostato in padella",
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -3658,7 +3708,8 @@
       "id": "lenticchie",
       "nota": "cotte e ben scolate"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "tahina",
@@ -3774,7 +3825,8 @@
     "id": "pomodoro-fresco",
     "qta": 250,
     "unita": "g",
-    "note": "2 pomodori maturi, a temperatura ambiente: dal frigo non sa di niente"
+    "note": "2 pomodori maturi, a temperatura ambiente: dal frigo non sa di niente",
+    "principale": true
    },
    {
     "id": "mozzarella",
@@ -3790,7 +3842,8 @@
       "id": "provola",
       "nota": "più sapida e asciutta"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "basilico",
@@ -3880,12 +3933,14 @@
     "id": "finocchi",
     "qta": 1,
     "unita": "pz",
-    "note": "piccolo"
+    "note": "piccolo",
+    "principale": true
    },
    {
     "id": "arance",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "olive-nere",
@@ -3984,7 +4039,8 @@
    {
     "id": "patate",
     "qta": 250,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "aglio",
@@ -4076,7 +4132,8 @@
     "id": "riso-carnaroli",
     "qta": 80,
     "unita": "g",
-    "note": "meglio un riso che resti sgranato: parboiled o carolino"
+    "note": "meglio un riso che resti sgranato: parboiled o carolino",
+    "principale": true
    },
    {
     "id": "tonno",
@@ -4088,7 +4145,8 @@
       "id": "prosciutto-cotto",
       "nota": "a dadini"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "piselli",
@@ -4248,7 +4306,8 @@
       "id": "petto-di-pollo",
       "nota": "aperto a libro e battuto sottile"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "speck",
@@ -4261,7 +4320,8 @@
      {
       "id": "prosciutto-crudo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "provola",
@@ -4368,7 +4428,8 @@
     "id": "sfoglie-lasagne",
     "qta": 5,
     "unita": "pz",
-    "note": "quelle che non vanno pre-lessate"
+    "note": "quelle che non vanno pre-lessate",
+    "principale": true
    },
    {
     "id": "macinato-misto",
@@ -4379,7 +4440,8 @@
       "id": "salsiccia",
       "nota": "sbriciolata, senza altro sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "passata",
@@ -4550,7 +4612,8 @@
     "id": "sfoglie-lasagne",
     "qta": 4,
     "unita": "pz",
-    "note": "fresche o secche precotte"
+    "note": "fresche o secche precotte",
+    "principale": true
    },
    {
     "id": "funghi-champignon",
@@ -4561,7 +4624,8 @@
       "id": "porcini-secchi",
       "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "prosciutto-cotto",
@@ -4726,12 +4790,14 @@
       "id": "riso-carnaroli",
       "nota": "20 minuti invece di 30"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "zucca",
     "qta": 150,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "cavolo-nero",
@@ -4858,7 +4924,8 @@
    {
     "id": "patate",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "carote",
@@ -4910,7 +4977,8 @@
      {
       "id": "ceci"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "verza",
@@ -5037,13 +5105,15 @@
     "id": "cioccolato-fondente",
     "qta": 70,
     "unita": "g",
-    "note": "almeno 60%"
+    "note": "almeno 60%",
+    "principale": true
    },
    {
     "id": "uova",
     "qta": 1,
     "unita": "pz",
-    "note": "freschissimo: si mangia crudo; separato"
+    "note": "freschissimo: si mangia crudo; separato",
+    "principale": true
    },
    {
     "id": "zucchero",
@@ -5148,13 +5218,15 @@
       "id": "salmone",
       "nota": "un trancio: 20 minuti bastano"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 200,
     "unita": "g",
-    "note": "a fette da 3 mm"
+    "note": "a fette da 3 mm",
+    "principale": true
    },
    {
     "id": "olive-nere",
@@ -5292,13 +5364,15 @@
       "id": "cavolfiore",
       "nota": "più dolce: 2 minuti in più nell'acqua"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "acciughe",
     "qta": 3,
     "unita": "pz",
-    "note": "filetti sott'olio"
+    "note": "filetti sott'olio",
+    "principale": true
    },
    {
     "id": "aglio",
@@ -5431,7 +5505,8 @@
       "id": "broccoli",
       "nota": "solo le cime: più dolce, meno amaro"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "salsiccia",
@@ -5442,7 +5517,8 @@
       "id": "macinato-misto",
       "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -5541,7 +5617,8 @@
    {
     "id": "panna-fresca",
     "qta": 150,
-    "unita": "ml"
+    "unita": "ml",
+    "principale": true
    },
    {
     "id": "latte",
@@ -5558,7 +5635,8 @@
     "id": "gelatina-in-fogli",
     "qta": 3,
     "unita": "g",
-    "note": "un foglio e mezzo"
+    "note": "un foglio e mezzo",
+    "principale": true
    },
    {
     "id": "vaniglia",
@@ -5666,7 +5744,8 @@
       "id": "zucchine",
       "nota": "grigliate: parmigiana di zucchine, più leggera"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "passata",
@@ -5692,7 +5771,8 @@
      {
       "id": "formaggio-fuso"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "parmigiano",
@@ -5804,7 +5884,8 @@
       "id": "macinato-misto",
       "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "provola",
@@ -5819,7 +5900,8 @@
      {
       "id": "formaggio-fuso"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "latte",
@@ -5961,7 +6043,8 @@
      {
       "id": "stracchino"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "parmigiano",
@@ -6080,7 +6163,8 @@
       "id": "noci",
       "nota": "più amare: dimezza"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "parmigiano",
@@ -6225,12 +6309,14 @@
       "id": "speck",
       "nota": "affumicato: il piatto cambia carattere, ma regge"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pecorino",
     "qta": 35,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "pepe",
@@ -6330,7 +6416,8 @@
     "id": "melanzane",
     "qta": 200,
     "unita": "g",
-    "note": "una piccola"
+    "note": "una piccola",
+    "principale": true
    },
    {
     "id": "passata",
@@ -6353,7 +6440,8 @@
       "id": "pecorino",
       "nota": "grattugiato grosso"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -6457,7 +6545,8 @@
     "id": "carciofi",
     "qta": 2,
     "unita": "pz",
-    "note": "freschi da novembre a febbraio (spagnoli); in vasetto sott'olio: sciacquali e saltali 5 minuti"
+    "note": "freschi da novembre a febbraio (spagnoli); in vasetto sott'olio: sciacquali e saltali 5 minuti",
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -6473,7 +6562,8 @@
       "id": "speck",
       "nota": "affumicato: cambia carattere, ma regge"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "limone",
@@ -6613,13 +6703,15 @@
       "id": "broccoli",
       "nota": "verde e più erbaceo: 2 minuti in meno"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "acciughe",
     "qta": 3,
     "unita": "pz",
-    "note": "filetti sott'olio"
+    "note": "filetti sott'olio",
+    "principale": true
    },
    {
     "id": "uvetta",
@@ -6763,7 +6855,8 @@
    {
     "id": "zucchine",
     "qta": 200,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "speck",
@@ -6778,7 +6871,8 @@
       "id": "prosciutto-crudo",
       "nota": "a striscioline, aggiunto a fuoco spento"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "zafferano",
@@ -6896,7 +6990,8 @@
       "id": "lenticchie",
       "nota": "cotte a parte, senza schiacciarle"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "acciughe",
@@ -7020,7 +7115,8 @@
       "id": "ceci",
       "nota": "diventa pasta e ceci, e va benissimo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "sedano",
@@ -7176,7 +7272,8 @@
     "id": "patate",
     "qta": 200,
     "unita": "g",
-    "note": "a cubetti da 1,5 cm"
+    "note": "a cubetti da 1,5 cm",
+    "principale": true
    },
    {
     "id": "provola",
@@ -7191,7 +7288,8 @@
      {
       "id": "formaggio-fuso"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -7309,7 +7407,8 @@
     "id": "pasta-sfoglia",
     "qta": 1,
     "unita": "pz",
-    "note": "un rotolo rettangolare (ne vengono 6)"
+    "note": "un rotolo rettangolare (ne vengono 6)",
+    "principale": true
    },
    {
     "id": "latte",
@@ -7325,7 +7424,8 @@
     "id": "uova",
     "qta": 3,
     "unita": "pz",
-    "note": "solo i tuorli"
+    "note": "solo i tuorli",
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -7428,7 +7528,8 @@
     "id": "patate",
     "qta": 300,
     "unita": "g",
-    "note": "a cubi di 3 cm"
+    "note": "a cubi di 3 cm",
+    "principale": true
    },
    {
     "id": "passata",
@@ -7555,7 +7656,8 @@
     "id": "patate",
     "qta": 350,
     "unita": "g",
-    "note": "con la buccia, a spicchi"
+    "note": "con la buccia, a spicchi",
+    "principale": true
    },
    {
     "id": "paprika-dolce",
@@ -7644,7 +7746,8 @@
     "id": "patate",
     "qta": 300,
     "unita": "g",
-    "note": "a tocchi da 4 cm"
+    "note": "a tocchi da 4 cm",
+    "principale": true
    },
    {
     "id": "olio-evo",
@@ -7759,7 +7862,8 @@
       "id": "passata",
       "nota": "più liscia: 2 minuti in meno di cottura"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -7771,7 +7875,8 @@
     "id": "peperoncino",
     "qta": 1,
     "unita": "pz",
-    "note": "secco, sbriciolato: dosabile"
+    "note": "secco, sbriciolato: dosabile",
+    "principale": true
    },
    {
     "id": "olio-evo",
@@ -7876,7 +7981,8 @@
     "id": "peperoni",
     "qta": 1,
     "unita": "pz",
-    "note": "grande, rosso o giallo"
+    "note": "grande, rosso o giallo",
+    "principale": true
    },
    {
     "id": "macinato-misto",
@@ -7887,7 +7993,8 @@
       "id": "salsiccia",
       "nota": "sbriciolata, senza altro sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "riso-carnaroli",
@@ -8029,7 +8136,8 @@
       "id": "ricotta",
       "nota": "con un filo d'olio e sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "prosciutto-crudo",
@@ -8042,7 +8150,8 @@
      {
       "id": "prosciutto-cotto"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "rucola",
@@ -8130,7 +8239,8 @@
     "id": "lievito-di-birra",
     "qta": 1,
     "unita": "g",
-    "note": "secco (un terzo di cucchiaino)"
+    "note": "secco (un terzo di cucchiaino)",
+    "principale": true
    },
    {
     "id": "sale",
@@ -8146,7 +8256,8 @@
     "id": "patate",
     "qta": 1,
     "unita": "pz",
-    "note": "piccola, a fette sottilissime"
+    "note": "piccola, a fette sottilissime",
+    "principale": true
    },
    {
     "id": "rosmarino",
@@ -8254,7 +8365,8 @@
     "id": "lievito-di-birra",
     "qta": 1,
     "unita": "g",
-    "note": "secco; fresco: 3 g"
+    "note": "secco; fresco: 3 g",
+    "principale": true
    },
    {
     "id": "passata",
@@ -8277,7 +8389,8 @@
       "id": "provola",
       "nota": "affumicata: diventa 'provola e pepe'"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "basilico",
@@ -8380,7 +8493,8 @@
    {
     "id": "polenta",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "salsiccia",
@@ -8395,7 +8509,8 @@
       "id": "chourico",
       "nota": "a rondelle: più paprika, meno finocchietto"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "funghi-champignon",
@@ -8508,7 +8623,8 @@
     "id": "pollo-intero",
     "qta": 300,
     "unita": "g",
-    "note": "2 sovracosce con pelle, o 1 coscia intera"
+    "note": "2 sovracosce con pelle, o 1 coscia intera",
+    "principale": true
    },
    {
     "id": "pelati",
@@ -8518,7 +8634,8 @@
      {
       "id": "passata"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "olive-nere",
@@ -8649,7 +8766,8 @@
       "id": "fettine-di-vitello",
       "nota": "la pizzaiola originale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "passata",
@@ -8660,7 +8778,8 @@
       "id": "pelati",
       "nota": "schiacciali con la forchetta in padella"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "origano",
@@ -8777,12 +8896,14 @@
     "id": "pollo-intero",
     "qta": 400,
     "unita": "g",
-    "note": "2 cosce intere con pelle, o mezzo pollo piccolo"
+    "note": "2 cosce intere con pelle, o mezzo pollo piccolo",
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 250,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "rosmarino",
@@ -8882,7 +9003,8 @@
       "id": "salsiccia",
       "nota": "sbriciolata, senza altro sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pane-raffermo",
@@ -8924,7 +9046,8 @@
    {
     "id": "yogurt-greco",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "menta",
@@ -9019,7 +9142,8 @@
     "id": "fagioli-cannellini",
     "qta": 200,
     "unita": "g",
-    "note": "lessati"
+    "note": "lessati",
+    "principale": true
    },
    {
     "id": "cavolo-nero",
@@ -9030,7 +9154,8 @@
       "id": "verza",
       "nota": "doppia dose di verza"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "verza",
@@ -9168,13 +9293,15 @@
     "id": "riso-carnaroli",
     "qta": 80,
     "unita": "g",
-    "note": "vialone nano se lo trovi"
+    "note": "vialone nano se lo trovi",
+    "principale": true
    },
    {
     "id": "piselli",
     "qta": 120,
     "unita": "g",
-    "note": "surgelati vanno benissimo"
+    "note": "surgelati vanno benissimo",
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -9295,7 +9422,8 @@
    {
     "id": "riso-carnaroli",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "porcini-secchi",
@@ -9306,7 +9434,8 @@
       "id": "funghi-champignon",
       "nota": "200 g freschi: meno intenso, salta prima a fuoco vivo"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "funghi-champignon",
@@ -9429,13 +9558,15 @@
    {
     "id": "riso-carnaroli",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "zafferano",
     "qta": 1,
     "unita": "bustina",
-    "note": "o 10 pistilli in infusione"
+    "note": "o 10 pistilli in infusione",
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -9551,7 +9682,8 @@
       "id": "zucchine",
       "nota": "con la buccia, a dadini: entrano a metà cottura"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "salsiccia",
@@ -9567,7 +9699,8 @@
       "id": "chourico",
       "nota": "a dadini, rosolato: più affumicato"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -9680,7 +9813,8 @@
    {
     "id": "cioccolato-fondente",
     "qta": 100,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "burro",
@@ -9702,7 +9836,8 @@
    {
     "id": "biscotti-secchi",
     "qta": 80,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "cacao",
@@ -9796,7 +9931,8 @@
     "id": "salmone",
     "qta": 180,
     "unita": "g",
-    "note": "un filetto con pelle"
+    "note": "un filetto con pelle",
+    "principale": true
    },
    {
     "id": "pistacchi",
@@ -9809,7 +9945,8 @@
      {
       "id": "noci"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pangrattato",
@@ -9916,7 +10053,8 @@
       "id": "orata",
       "nota": "filetti sottili: 3 minuti per lato"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "yogurt-greco",
@@ -9927,7 +10065,8 @@
       "id": "panna-fresca",
       "nota": "scaldala appena, non deve bollire"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "erba-cipollina",
@@ -10050,7 +10189,8 @@
       "id": "chourico",
       "nota": "più paprika: tagliato a rondelle"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "broccoli",
@@ -10065,7 +10205,8 @@
      {
       "id": "cavolfiore"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -10184,7 +10325,8 @@
       "id": "petto-di-pollo",
       "nota": "battuto sottile: un minuto in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "prosciutto-crudo",
@@ -10195,7 +10337,8 @@
       "id": "speck",
       "nota": "affumicato: meno classico, ma buono"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "salvia",
@@ -10293,7 +10436,8 @@
       "id": "petto-di-pollo",
       "nota": "battuto sottile: un minuto in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -10402,7 +10546,8 @@
       "id": "petto-di-pollo",
       "nota": "battuto sottile"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "marsala",
@@ -10414,7 +10559,8 @@
       "id": "vino-bianco",
       "nota": "meno dolce: aggiungi mezzo cucchiaino di zucchero"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -10523,7 +10669,8 @@
    {
     "id": "uova",
     "qta": 2,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "pelati",
@@ -10537,7 +10684,8 @@
       "id": "pomodoro-fresco",
       "nota": "400 g maturi, a pezzi"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "peperoni",
@@ -10682,7 +10830,8 @@
       "id": "pasta-corta",
       "nota": "il pangrattato si attacca meno: abbonda con l'olio"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -10698,7 +10847,8 @@
    {
     "id": "pangrattato",
     "qta": 20,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "prezzemolo",
@@ -10797,7 +10947,8 @@
       "id": "pasta-corta",
       "nota": "il sugo si lega meno: scolala un minuto prima e finiscila in padella"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "passata",
@@ -10812,7 +10963,8 @@
       "id": "pomodoro-fresco",
       "nota": "400 g di pomodori maturi, sbollentati e pelati: 10 minuti in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "aglio",
@@ -10948,13 +11100,15 @@
       "id": "speck",
       "nota": "affumicato: il piatto cambia carattere, ma regge"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "uova",
     "qta": 1,
     "unita": "pz",
-    "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)"
+    "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)",
+    "principale": true
    },
    {
     "id": "pecorino",
@@ -11074,7 +11228,8 @@
       "id": "passata",
       "nota": "più liscia: 2 minuti in meno"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "olive-nere",
@@ -11086,7 +11241,8 @@
       "id": "olive-verdi",
       "nota": "più acide: dimezza i capperi"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "capperi",
@@ -11209,7 +11365,8 @@
       "id": "pasta-corta",
       "nota": "il condimento si lega meno: scola un minuto prima e finisci in padella"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "macinato-misto",
@@ -11220,7 +11377,8 @@
       "id": "salsiccia",
       "nota": "sbriciolata, senza altro sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pane-raffermo",
@@ -11369,7 +11527,8 @@
     "id": "tonno",
     "qta": 80,
     "unita": "g",
-    "note": "una scatoletta sott'olio, sgocciolata"
+    "note": "una scatoletta sott'olio, sgocciolata",
+    "principale": true
    },
    {
     "id": "olive-nere",
@@ -11380,7 +11539,8 @@
      {
       "id": "olive-verdi"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "capperi",
@@ -11513,12 +11673,14 @@
       "id": "cappello-del-prete",
       "nota": "a cubi: 20 minuti in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "patate",
     "qta": 200,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -11653,7 +11815,8 @@
      {
       "id": "rigatoni"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "macinato-misto",
@@ -11664,7 +11827,8 @@
       "id": "salsiccia",
       "nota": "sbriciolata, senza altro sale"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "sedano",
@@ -11820,7 +11984,8 @@
     "id": "uova",
     "qta": 1,
     "unita": "pz",
-    "note": "medio-grande"
+    "note": "medio-grande",
+    "principale": true
    },
    {
     "id": "semola",
@@ -11908,7 +12073,8 @@
    {
     "id": "mascarpone",
     "qta": 125,
-    "unita": "g"
+    "unita": "g",
+    "principale": true
    },
    {
     "id": "uova",
@@ -11930,7 +12096,8 @@
       "id": "biscotti-secchi",
       "nota": "inzuppali meno: si sfaldano prima"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "caffe",
@@ -12019,12 +12186,14 @@
       "id": "ricotta",
       "nota": "più umida, 5 minuti in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "uova",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -12144,13 +12313,15 @@
       "id": "pistacchi",
       "nota": "non salati: verde e meno dolce"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "cioccolato-fondente",
     "qta": 100,
     "unita": "g",
-    "note": "almeno 60%"
+    "note": "almeno 60%",
+    "principale": true
    },
    {
     "id": "burro",
@@ -12264,7 +12435,8 @@
     "id": "mele",
     "qta": 2,
     "unita": "pz",
-    "note": "golden o renette"
+    "note": "golden o renette",
+    "principale": true
    },
    {
     "id": "farina-00",
@@ -12279,7 +12451,8 @@
    {
     "id": "uova",
     "qta": 1,
-    "unita": "pz"
+    "unita": "pz",
+    "principale": true
    },
    {
     "id": "burro",
@@ -12394,7 +12567,8 @@
      {
       "id": "zucca"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "porro",
@@ -12406,7 +12580,8 @@
       "id": "scalogno",
       "nota": "2, tritati"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "patate",
@@ -12539,7 +12714,8 @@
       "id": "carote",
       "nota": "vellutata di carote: stessa tecnica, 5 minuti in più"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "patate",
@@ -12662,7 +12838,8 @@
      {
       "id": "cavolo-nero"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "pancetta",
@@ -12679,7 +12856,8 @@
       "id": "chourico",
       "nota": "a rondelle: più paprika, meno finocchietto"
      }
-    ]
+    ],
+    "principale": true
    },
    {
     "id": "cipolla",
@@ -12773,7 +12951,8 @@
     "id": "zucca",
     "qta": 300,
     "unita": "g",
-    "note": "a fette da 1,5 cm con la buccia, se è sottile"
+    "note": "a fette da 1,5 cm con la buccia, se è sottile",
+    "principale": true
    },
    {
     "id": "olio-evo",
@@ -12873,7 +13052,8 @@
     "id": "lenticchie",
     "qta": 100,
     "unita": "g",
-    "note": "secche, piccole: non serve ammollo"
+    "note": "secche, piccole: non serve ammollo",
+    "principale": true
    },
    {
     "id": "carote",

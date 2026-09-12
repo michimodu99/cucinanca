@@ -15,8 +15,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "rigatoni", "nota": "mezze maniche: la versione \"da cucchiaio\"" }, { "id": "bucatini" }] },
-      { "id": "guanciale", "qta": 50, "unita": "g", "note": "a listarelle spesse 1 cm", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
-      { "id": "uova", "qta": 1, "unita": "pz", "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)" },
+      { "id": "guanciale", "qta": 50, "unita": "g", "note": "a listarelle spesse 1 cm", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }], "principale": true },
+      { "id": "uova", "qta": 1, "unita": "pz", "note": "1 tuorlo + 1 uovo intero per 1 persona (con ×2: 3 tuorli + 1 intero)", "principale": true },
       { "id": "pecorino", "qta": 30, "unita": "g", "note": "grattugiato fine" },
       { "id": "pepe", "qta": null, "unita": "qb", "note": "macinato al momento, abbondante" },
       { "id": "sale", "qta": null, "unita": "qb", "note": "poco: guanciale e pecorino sono già sapidi" }
@@ -50,8 +50,8 @@
     "origine": "Italia · Lazio",
     "reinventata": null,
     "ingredienti": [
-      { "id": "spaghetti", "qta": 100, "unita": "g", "note": "o tonnarelli", "sostituti": [{ "id": "rigatoni", "nota": "mezze maniche o tonnarelli: le altre versioni romane" }, { "id": "bucatini" }] },
-      { "id": "pecorino", "qta": 50, "unita": "g", "note": "grattugiato finissimo" },
+      { "id": "spaghetti", "qta": 100, "unita": "g", "note": "o tonnarelli", "sostituti": [{ "id": "rigatoni", "nota": "mezze maniche o tonnarelli: le altre versioni romane" }, { "id": "bucatini" }], "principale": true },
+      { "id": "pecorino", "qta": 50, "unita": "g", "note": "grattugiato finissimo", "principale": true },
       { "id": "pepe", "qta": 1, "unita": "cucchiaini", "note": "in grani, da pestare" }
     ],
     "procedimento": [
@@ -83,8 +83,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "rigatoni", "qta": 100, "unita": "g", "note": "o mezze maniche", "sostituti": [{ "id": "pasta-corta", "nota": "mezze maniche" }, { "id": "spaghetti" }] },
-      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }] },
-      { "id": "pecorino", "qta": 35, "unita": "g" },
+      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }, { "id": "porchetta", "nota": "più grassa e speziata: dadini piccoli, rosolala meno" }, { "id": "speck", "nota": "affumicato: il piatto cambia carattere, ma regge" }], "principale": true },
+      { "id": "pecorino", "qta": 35, "unita": "g", "principale": true },
       { "id": "pepe", "qta": null, "unita": "qb" },
       { "id": "vino-bianco", "qta": 30, "unita": "ml", "opzionale": true, "note": "per sfumare il guanciale" }
     ],
@@ -117,8 +117,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "riso-carnaroli", "qta": 80, "unita": "g" },
-      { "id": "zucca", "qta": 200, "unita": "g", "note": "pulita, a cubetti da 1 cm", "sostituti": [{ "id": "zucchine", "nota": "con la buccia, a dadini: entrano a metà cottura" }] },
-      { "id": "salsiccia", "qta": 80, "unita": "g", "note": "una salsiccia, senza budello", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }, { "id": "chourico", "nota": "a dadini, rosolato: più affumicato" }] },
+      { "id": "zucca", "qta": 200, "unita": "g", "note": "pulita, a cubetti da 1 cm", "sostituti": [{ "id": "zucchine", "nota": "con la buccia, a dadini: entrano a metà cottura" }], "principale": true },
+      { "id": "salsiccia", "qta": 80, "unita": "g", "note": "una salsiccia, senza budello", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }, { "id": "chourico", "nota": "a dadini, rosolato: più affumicato" }], "principale": true },
       { "id": "cipolla", "qta": 0.5, "unita": "pz", "note": "piccola" },
       { "id": "brodo", "qta": 500, "unita": "ml", "note": "vegetale, caldo" },
       { "id": "vino-bianco", "qta": 40, "unita": "ml" },
@@ -155,8 +155,8 @@
     "origine": "Italia · Nord",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g" },
-      { "id": "porcini-secchi", "qta": 15, "unita": "g", "sostituti": [{ "id": "funghi-champignon", "nota": "200 g freschi: meno intenso, salta prima a fuoco vivo" }] },
+      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "principale": true },
+      { "id": "porcini-secchi", "qta": 15, "unita": "g", "sostituti": [{ "id": "funghi-champignon", "nota": "200 g freschi: meno intenso, salta prima a fuoco vivo" }], "principale": true },
       { "id": "funghi-champignon", "qta": 100, "unita": "g", "opzionale": true, "note": "freschi, per dare corpo" },
       { "id": "scalogno", "qta": 1, "unita": "pz", "note": "o mezza cipolla" },
       { "id": "brodo", "qta": 450, "unita": "ml" },
@@ -195,8 +195,8 @@
     "origine": "Italia · Lombardia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g" },
-      { "id": "zafferano", "qta": 1, "unita": "bustina", "note": "o 10 pistilli in infusione" },
+      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "principale": true },
+      { "id": "zafferano", "qta": 1, "unita": "bustina", "note": "o 10 pistilli in infusione", "principale": true },
       { "id": "cipolla", "qta": 0.25, "unita": "pz", "note": "tritata finissima" },
       { "id": "brodo", "qta": 450, "unita": "ml", "note": "di carne o vegetale" },
       { "id": "vino-bianco", "qta": 40, "unita": "ml" },
@@ -232,8 +232,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 80, "unita": "g", "note": "pasta mista o tubetti", "sostituti": [{ "id": "spaghetti", "nota": "spezzati a mano" }, { "id": "rigatoni" }] },
-      { "id": "patate", "qta": 200, "unita": "g", "note": "a cubetti da 1,5 cm" },
-      { "id": "provola", "qta": 50, "unita": "g", "note": "a cubetti", "sostituti": [{ "id": "mozzarella", "nota": "scolala bene un'ora prima: rilascia acqua" }, { "id": "formaggio-fuso" }] },
+      { "id": "patate", "qta": 200, "unita": "g", "note": "a cubetti da 1,5 cm", "principale": true },
+      { "id": "provola", "qta": 50, "unita": "g", "note": "a cubetti", "sostituti": [{ "id": "mozzarella", "nota": "scolala bene un'ora prima: rilascia acqua" }, { "id": "formaggio-fuso" }], "principale": true },
       { "id": "pancetta", "qta": 30, "unita": "g", "opzionale": true },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
       { "id": "sedano", "qta": 0.5, "unita": "pz", "opzionale": true },
@@ -271,8 +271,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "orecchiette", "qta": 90, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "cavatelli o fusilli" }] },
-      { "id": "cime-di-rapa", "qta": 200, "unita": "g", "note": "grelos, pulite", "sostituti": [{ "id": "broccoli", "nota": "solo le cime: più dolce, meno amaro" }] },
-      { "id": "salsiccia", "qta": 80, "unita": "g", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }] },
+      { "id": "cime-di-rapa", "qta": 200, "unita": "g", "note": "grelos, pulite", "sostituti": [{ "id": "broccoli", "nota": "solo le cime: più dolce, meno amaro" }], "principale": true },
+      { "id": "salsiccia", "qta": 80, "unita": "g", "sostituti": [{ "id": "macinato-misto", "nota": "condiscilo con sale, pepe e un pizzico di finocchietto o paprika" }], "principale": true },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "acciughe", "qta": 2, "unita": "pz", "note": "filetti" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
@@ -306,8 +306,8 @@
     "origine": "Italia · Emilia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "sfoglie-lasagne", "qta": 4, "unita": "pz", "note": "fresche o secche precotte" },
-      { "id": "funghi-champignon", "qta": 200, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }] },
+      { "id": "sfoglie-lasagne", "qta": 4, "unita": "pz", "note": "fresche o secche precotte", "principale": true },
+      { "id": "funghi-champignon", "qta": 200, "unita": "g", "sostituti": [{ "id": "porcini-secchi", "nota": "30 g ammollati 20 minuti, con la loro acqua filtrata" }], "principale": true },
       { "id": "prosciutto-cotto", "qta": 60, "unita": "g", "sostituti": [{ "id": "mortadella" }, { "id": "speck" }] },
       { "id": "mozzarella", "qta": 80, "unita": "g", "note": "o formaggio flamengo", "sostituti": [{ "id": "provola", "nota": "affumicata: più decisa" }, { "id": "formaggio-fuso" }] },
       { "id": "latte", "qta": 300, "unita": "ml", "sostituti": [{ "id": "panna-fresca", "nota": "più ricca: dimezza il burro" }] },
@@ -348,7 +348,7 @@
     "origine": "Italia · Nord",
     "reinventata": null,
     "ingredienti": [
-      { "id": "patate", "qta": 300, "unita": "g", "note": "vecchie, a pasta gialla/farinosa" },
+      { "id": "patate", "qta": 300, "unita": "g", "note": "vecchie, a pasta gialla/farinosa", "principale": true },
       { "id": "farina-00", "qta": 80, "unita": "g", "note": "più un po' per il piano" },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "solo il tuorlo" },
       { "id": "burro", "qta": 30, "unita": "g" },
@@ -387,7 +387,7 @@
     "ingredienti": [
       { "id": "spaghetti", "qta": 100, "unita": "g", "note": "o linguine", "sostituti": [{ "id": "pasta-corta", "nota": "penne o linguine" }, { "id": "bucatini" }] },
       { "id": "limone", "qta": 1, "unita": "pz", "note": "scorza grattugiata + 1 cucchiaio di succo" },
-      { "id": "mascarpone", "qta": 50, "unita": "g", "sostituti": [{ "id": "ricotta", "nota": "più leggera: un cucchiaio d'acqua di cottura in più" }, { "id": "stracchino" }] },
+      { "id": "mascarpone", "qta": 50, "unita": "g", "sostituti": [{ "id": "ricotta", "nota": "più leggera: un cucchiaio d'acqua di cottura in più" }, { "id": "stracchino" }], "principale": true },
       { "id": "parmigiano", "qta": 25, "unita": "g" },
       { "id": "burro", "qta": 10, "unita": "g" },
       { "id": "basilico", "qta": 4, "unita": "foglie", "opzionale": true },
@@ -421,8 +421,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 90, "unita": "g", "note": "penne o fusilli", "sostituti": [{ "id": "spaghetti" }, { "id": "rigatoni" }] },
-      { "id": "zucchine", "qta": 200, "unita": "g" },
-      { "id": "speck", "qta": 40, "unita": "g", "note": "a listarelle", "sostituti": [{ "id": "pancetta" }, { "id": "prosciutto-crudo", "nota": "a striscioline, aggiunto a fuoco spento" }] },
+      { "id": "zucchine", "qta": 200, "unita": "g", "principale": true },
+      { "id": "speck", "qta": 40, "unita": "g", "note": "a listarelle", "sostituti": [{ "id": "pancetta" }, { "id": "prosciutto-crudo", "nota": "a striscioline, aggiunto a fuoco spento" }], "principale": true },
       { "id": "zafferano", "qta": 1, "unita": "bustina" },
       { "id": "scalogno", "qta": 1, "unita": "pz", "note": "o mezza cipolla" },
       { "id": "parmigiano", "qta": 20, "unita": "g" },
@@ -456,9 +456,9 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "rigatoni", "qta": 90, "unita": "g", "note": "o maccheroni", "sostituti": [{ "id": "pasta-corta" }, { "id": "spaghetti" }] },
-      { "id": "melanzane", "qta": 200, "unita": "g", "note": "una piccola" },
+      { "id": "melanzane", "qta": 200, "unita": "g", "note": "una piccola", "principale": true },
       { "id": "passata", "qta": 200, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciali con la forchetta" }] },
-      { "id": "ricotta-salata", "qta": 30, "unita": "g", "note": "grattugiata grossa", "sostituti": [{ "id": "pecorino", "nota": "grattugiato grosso" }] },
+      { "id": "ricotta-salata", "qta": 30, "unita": "g", "note": "grattugiata grossa", "sostituti": [{ "id": "pecorino", "nota": "grattugiato grosso" }], "principale": true },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "basilico", "qta": 5, "unita": "foglie" },
       { "id": "olio-evo", "qta": 60, "unita": "ml", "note": "per friggere + 1 cucchiaio per il sugo" }
@@ -491,10 +491,10 @@
     "origine": "Italia · Campania",
     "reinventata": null,
     "ingredienti": [
-      { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "il pangrattato si attacca meno: abbonda con l'olio" }] },
+      { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "il pangrattato si attacca meno: abbonda con l'olio" }], "principale": true },
       { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "a fettine sottili" },
       { "id": "olio-evo", "qta": 3, "unita": "cucchiai" },
-      { "id": "pangrattato", "qta": 20, "unita": "g" },
+      { "id": "pangrattato", "qta": 20, "unita": "g", "principale": true },
       { "id": "prezzemolo", "qta": null, "unita": "qb" },
       { "id": "peperoncino", "qta": null, "unita": "qb", "opzionale": true, "note": "un pizzico, solo se un giorno lo vorrai" }
     ],
@@ -527,8 +527,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "bucatini", "qta": 100, "unita": "g", "note": "o spaghetti/rigatoni", "sostituti": [{ "id": "spaghetti" }, { "id": "rigatoni", "nota": "mezze maniche: l'altra versione ufficiale" }] },
-      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }] },
-      { "id": "pelati", "qta": 200, "unita": "g", "note": "schiacciati a mano", "sostituti": [{ "id": "passata" }] },
+      { "id": "guanciale", "qta": 50, "unita": "g", "sostituti": [{ "id": "pancetta" }], "principale": true },
+      { "id": "pelati", "qta": 200, "unita": "g", "note": "schiacciati a mano", "sostituti": [{ "id": "passata" }], "principale": true },
       { "id": "pecorino", "qta": 30, "unita": "g" },
       { "id": "vino-bianco", "qta": 30, "unita": "ml" }
     ],
@@ -560,7 +560,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "farina-00", "qta": 100, "unita": "g", "note": "più semola per spolverare" },
-      { "id": "uova", "qta": 1, "unita": "pz", "note": "medio-grande" },
+      { "id": "uova", "qta": 1, "unita": "pz", "note": "medio-grande", "principale": true },
       { "id": "semola", "qta": 10, "unita": "g", "opzionale": true, "note": "per non far attaccare" }
     ],
     "procedimento": [
@@ -593,7 +593,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 70, "unita": "g", "note": "ditalini o pasta mista", "sostituti": [{ "id": "spaghetti", "nota": "spezzati a mano: è la versione romana vera" }, { "id": "rigatoni" }] },
-      { "id": "ceci", "qta": 200, "unita": "g", "note": "sgocciolati (un barattolo piccolo)", "sostituti": [{ "id": "fagioli-cannellini", "nota": "diventa pasta e fagioli, e va benissimo" }, { "id": "lenticchie", "nota": "cotte a parte, senza schiacciarle" }] },
+      { "id": "ceci", "qta": 200, "unita": "g", "note": "sgocciolati (un barattolo piccolo)", "sostituti": [{ "id": "fagioli-cannellini", "nota": "diventa pasta e fagioli, e va benissimo" }, { "id": "lenticchie", "nota": "cotte a parte, senza schiacciarle" }], "principale": true },
       { "id": "acciughe", "qta": 2, "unita": "pz" },
       { "id": "concentrato-di-pomodoro", "qta": 1, "unita": "cucchiai" },
       { "id": "rosmarino", "qta": 1, "unita": "rametti" },
@@ -629,8 +629,8 @@
     "origine": "Italia · Toscana",
     "reinventata": null,
     "ingredienti": [
-      { "id": "farro", "qta": 60, "unita": "g", "note": "perlato", "sostituti": [{ "id": "riso-carnaroli", "nota": "20 minuti invece di 30" }] },
-      { "id": "zucca", "qta": 150, "unita": "g" },
+      { "id": "farro", "qta": 60, "unita": "g", "note": "perlato", "sostituti": [{ "id": "riso-carnaroli", "nota": "20 minuti invece di 30" }], "principale": true },
+      { "id": "zucca", "qta": 150, "unita": "g", "principale": true },
       { "id": "cavolo-nero", "qta": 80, "unita": "g", "note": "senza la costa centrale", "sostituti": [{ "id": "verza" }, { "id": "cime-di-rapa" }] },
       { "id": "fagioli-cannellini", "qta": 100, "unita": "g", "opzionale": true },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
@@ -668,8 +668,8 @@
     "origine": "Italia · Campania",
     "reinventata": null,
     "ingredienti": [
-      { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "il sugo si lega meno: scolala un minuto prima e finiscila in padella" }] },
-      { "id": "passata", "qta": 200, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciali con la forchetta direttamente in padella" }, { "id": "pomodoro-fresco", "nota": "400 g di pomodori maturi, sbollentati e pelati: 10 minuti in più" }] },
+      { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "il sugo si lega meno: scolala un minuto prima e finiscila in padella" }], "principale": true },
+      { "id": "passata", "qta": 200, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciali con la forchetta direttamente in padella" }, { "id": "pomodoro-fresco", "nota": "400 g di pomodori maturi, sbollentati e pelati: 10 minuti in più" }], "principale": true },
       { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "intero, schiacciato" },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "basilico", "qta": 6, "unita": "foglie", "note": "spezzate con le mani, alla fine" },
@@ -706,9 +706,9 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 100, "unita": "g", "note": "penne rigate", "sostituti": [{ "id": "rigatoni" }, { "id": "spaghetti", "nota": "meno canonico, ma il sugo lo regge" }] },
-      { "id": "pelati", "qta": 200, "unita": "g", "sostituti": [{ "id": "passata", "nota": "più liscia: 2 minuti in meno di cottura" }] },
+      { "id": "pelati", "qta": 200, "unita": "g", "sostituti": [{ "id": "passata", "nota": "più liscia: 2 minuti in meno di cottura" }], "principale": true },
       { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "a fettine sottili" },
-      { "id": "peperoncino", "qta": 1, "unita": "pz", "note": "secco, sbriciolato: dosabile" },
+      { "id": "peperoncino", "qta": 1, "unita": "pz", "note": "secco, sbriciolato: dosabile", "principale": true },
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "prezzemolo", "qta": 1, "unita": "cucchiai", "note": "tritato, alla fine" },
       { "id": "sale", "qta": null, "unita": "qb" },
@@ -744,8 +744,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "bucatini" }, { "id": "pasta-corta", "nota": "penne o mezze maniche: raccolgono olive e capperi" }] },
-      { "id": "pelati", "qta": 200, "unita": "g", "sostituti": [{ "id": "passata", "nota": "più liscia: 2 minuti in meno" }] },
-      { "id": "olive-nere", "qta": 40, "unita": "g", "note": "snocciolate, in salamoia", "sostituti": [{ "id": "olive-verdi", "nota": "più acide: dimezza i capperi" }] },
+      { "id": "pelati", "qta": 200, "unita": "g", "sostituti": [{ "id": "passata", "nota": "più liscia: 2 minuti in meno" }], "principale": true },
+      { "id": "olive-nere", "qta": 40, "unita": "g", "note": "snocciolate, in salamoia", "sostituti": [{ "id": "olive-verdi", "nota": "più acide: dimezza i capperi" }], "principale": true },
       { "id": "capperi", "qta": 1, "unita": "cucchiai", "note": "dissalati o sciacquati" },
       { "id": "acciughe", "qta": 3, "unita": "pz", "note": "filetti sott'olio" },
       { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "a fettine" },
@@ -784,7 +784,7 @@
     "ingredienti": [
       { "id": "pasta-corta", "qta": 100, "unita": "g", "note": "trofie o fusilli", "sostituti": [{ "id": "spaghetti", "nota": "linguine, se le trovi" }] },
       { "id": "basilico", "qta": 30, "unita": "g", "note": "un mazzo intero: quello del vaso non basta" },
-      { "id": "mandorle", "qta": 15, "unita": "g", "note": "al posto dei pinoli, introvabili a prezzo umano", "sostituti": [{ "id": "pistacchi", "nota": "sgusciati, non salati" }, { "id": "noci", "nota": "più amare: dimezza" }] },
+      { "id": "mandorle", "qta": 15, "unita": "g", "note": "al posto dei pinoli, introvabili a prezzo umano", "sostituti": [{ "id": "pistacchi", "nota": "sgusciati, non salati" }, { "id": "noci", "nota": "più amare: dimezza" }], "principale": true },
       { "id": "parmigiano", "qta": 30, "unita": "g", "note": "grattugiato" },
       { "id": "pecorino", "qta": 10, "unita": "g", "opzionale": true },
       { "id": "aglio", "qta": 0.5, "unita": "spicchi", "note": "senza l'anima verde" },
@@ -822,8 +822,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "orecchiette", "qta": 100, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "fusilli o mezze maniche: raccolgono la crema" }] },
-      { "id": "broccoli", "qta": 200, "unita": "g", "note": "solo le cime", "sostituti": [{ "id": "cime-di-rapa", "nota": "è l'orecchiette originale; i grelos qui costano niente" }, { "id": "cavolfiore", "nota": "più dolce: 2 minuti in più nell'acqua" }] },
-      { "id": "acciughe", "qta": 3, "unita": "pz", "note": "filetti sott'olio" },
+      { "id": "broccoli", "qta": 200, "unita": "g", "note": "solo le cime", "sostituti": [{ "id": "cime-di-rapa", "nota": "è l'orecchiette originale; i grelos qui costano niente" }, { "id": "cavolfiore", "nota": "più dolce: 2 minuti in più nell'acqua" }], "principale": true },
+      { "id": "acciughe", "qta": 3, "unita": "pz", "note": "filetti sott'olio", "principale": true },
       { "id": "aglio", "qta": 2, "unita": "spicchi", "note": "a fettine" },
       { "id": "peperoncino", "qta": 1, "unita": "pz", "opzionale": true, "note": "dosabile" },
       { "id": "pangrattato", "qta": 1, "unita": "cucchiai", "opzionale": true, "note": "tostato, al posto del formaggio" },
@@ -861,8 +861,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "bucatini", "qta": 100, "unita": "g", "sostituti": [{ "id": "spaghetti" }, { "id": "pasta-corta", "nota": "mezze maniche o penne: la crema entra dentro" }] },
-      { "id": "cavolfiore", "qta": 250, "unita": "g", "note": "a cimette", "sostituti": [{ "id": "broccoli", "nota": "verde e più erbaceo: 2 minuti in meno" }] },
-      { "id": "acciughe", "qta": 3, "unita": "pz", "note": "filetti sott'olio" },
+      { "id": "cavolfiore", "qta": 250, "unita": "g", "note": "a cimette", "sostituti": [{ "id": "broccoli", "nota": "verde e più erbaceo: 2 minuti in meno" }], "principale": true },
+      { "id": "acciughe", "qta": 3, "unita": "pz", "note": "filetti sott'olio", "principale": true },
       { "id": "uvetta", "qta": 15, "unita": "g", "note": "ammollata 10 minuti" },
       { "id": "mandorle", "qta": 15, "unita": "g", "note": "tostate e tritate grosse", "sostituti": [{ "id": "pistacchi", "nota": "non salati: più verde, più siciliano" }] },
       { "id": "zafferano", "qta": 1, "unita": "bustina", "note": "sciolto in poca acqua calda" },
@@ -901,8 +901,8 @@
     "origine": "Italia · Veneto",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "vialone nano se lo trovi" },
-      { "id": "piselli", "qta": 120, "unita": "g", "note": "surgelati vanno benissimo" },
+      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "vialone nano se lo trovi", "principale": true },
+      { "id": "piselli", "qta": 120, "unita": "g", "note": "surgelati vanno benissimo", "principale": true },
       { "id": "pancetta", "qta": 30, "unita": "g", "opzionale": true, "note": "a dadini, nel soffritto" },
       { "id": "cipolla", "qta": 0.5, "unita": "pz", "note": "tritata fine" },
       { "id": "burro", "qta": 20, "unita": "g" },
@@ -941,8 +941,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 100, "unita": "g", "note": "penne o mezze maniche", "sostituti": [{ "id": "rigatoni" }, { "id": "spaghetti" }] },
-      { "id": "carciofi", "qta": 2, "unita": "pz", "note": "freschi da novembre a febbraio (spagnoli); in vasetto sott'olio: sciacquali e saltali 5 minuti" },
-      { "id": "pancetta", "qta": 40, "unita": "g", "note": "a dadini", "sostituti": [{ "id": "guanciale", "nota": "più grasso: niente olio" }, { "id": "speck", "nota": "affumicato: cambia carattere, ma regge" }] },
+      { "id": "carciofi", "qta": 2, "unita": "pz", "note": "freschi da novembre a febbraio (spagnoli); in vasetto sott'olio: sciacquali e saltali 5 minuti", "principale": true },
+      { "id": "pancetta", "qta": 40, "unita": "g", "note": "a dadini", "sostituti": [{ "id": "guanciale", "nota": "più grasso: niente olio" }, { "id": "speck", "nota": "affumicato: cambia carattere, ma regge" }], "principale": true },
       { "id": "limone", "qta": 0.5, "unita": "pz", "note": "per l'acqua acidulata" },
       { "id": "vino-bianco", "qta": 50, "unita": "ml" },
       { "id": "pecorino", "qta": 20, "unita": "g", "note": "grattugiato" },
@@ -981,7 +981,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "pasta-corta", "qta": 80, "unita": "g", "note": "pasta mista o ditalini" },
-      { "id": "fagioli-cannellini", "qta": 200, "unita": "g", "note": "cotti, in barattolo, con metà del loro liquido", "sostituti": [{ "id": "fagioli-borlotti", "nota": "la versione veneta, più saporita" }, { "id": "ceci", "nota": "diventa pasta e ceci, e va benissimo" }] },
+      { "id": "fagioli-cannellini", "qta": 200, "unita": "g", "note": "cotti, in barattolo, con metà del loro liquido", "sostituti": [{ "id": "fagioli-borlotti", "nota": "la versione veneta, più saporita" }, { "id": "ceci", "nota": "diventa pasta e ceci, e va benissimo" }], "principale": true },
       { "id": "sedano", "qta": 0.5, "unita": "pz", "note": "una costa" },
       { "id": "carote", "qta": 0.5, "unita": "pz" },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
@@ -1021,8 +1021,8 @@
     "origine": "Italia · Emilia-Romagna",
     "reinventata": null,
     "ingredienti": [
-      { "id": "tagliatelle", "qta": 100, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "penne o fusilli: il ragù ci entra dentro" }, { "id": "rigatoni" }] },
-      { "id": "macinato-misto", "qta": 120, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }] },
+      { "id": "tagliatelle", "qta": 100, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "penne o fusilli: il ragù ci entra dentro" }, { "id": "rigatoni" }], "principale": true },
+      { "id": "macinato-misto", "qta": 120, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }], "principale": true },
       { "id": "sedano", "qta": 0.5, "unita": "pz", "note": "una costa" },
       { "id": "carote", "qta": 0.5, "unita": "pz" },
       { "id": "cipolla", "qta": 0.5, "unita": "pz" },
@@ -1066,8 +1066,8 @@
     "origine": "Italia · Emilia-Romagna",
     "reinventata": null,
     "ingredienti": [
-      { "id": "sfoglie-lasagne", "qta": 5, "unita": "pz", "note": "quelle che non vanno pre-lessate" },
-      { "id": "macinato-misto", "qta": 150, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }] },
+      { "id": "sfoglie-lasagne", "qta": 5, "unita": "pz", "note": "quelle che non vanno pre-lessate", "principale": true },
+      { "id": "macinato-misto", "qta": 150, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }], "principale": true },
       { "id": "passata", "qta": 250, "unita": "ml", "sostituti": [{ "id": "pelati", "nota": "schiacciati con la forchetta" }] },
       { "id": "sedano", "qta": 0.5, "unita": "pz", "note": "una costa" },
       { "id": "carote", "qta": 0.5, "unita": "pz" },
@@ -1113,8 +1113,8 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "spaghetti", "qta": 100, "unita": "g", "sostituti": [{ "id": "pasta-corta" }, { "id": "bucatini" }] },
-      { "id": "tonno", "qta": 80, "unita": "g", "note": "una scatoletta sott'olio, sgocciolata" },
-      { "id": "olive-nere", "qta": 30, "unita": "g", "note": "snocciolate", "sostituti": [{ "id": "olive-verdi" }] },
+      { "id": "tonno", "qta": 80, "unita": "g", "note": "una scatoletta sott'olio, sgocciolata", "principale": true },
+      { "id": "olive-nere", "qta": 30, "unita": "g", "note": "snocciolate", "sostituti": [{ "id": "olive-verdi" }], "principale": true },
       { "id": "capperi", "qta": 1, "unita": "cucchiaini", "note": "sciacquati" },
       { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "a fettine" },
       { "id": "prezzemolo", "qta": 1, "unita": "cucchiai", "note": "tritato" },
