@@ -44,10 +44,10 @@ Il pannello scuro della dispensa gira in loop `video/hero.mp4` (muto) con `img/h
 
 1. Scarica una clip di cucina gratuita (Pexels Videos, Pixabay, Coverr, Mixkit — anche per uso commerciale, senza attribuzione): 10–20 s senza stacchi di camera, soggetto al centro (il pannello è quasi quadrato su desktop e verticale su mobile: `object-fit: cover` taglia i bordi), toni scuri o caldi perché il testo sopra è bianco, niente scritte, meglio senza volti. 1080p basta.
 2. Mettila in `video/raw/` (ignorata da git).
-3. `npm run video:optimize` (opzioni `--file`, `--start`, `--durata` default 15, `--crf` default 28) → H.264 720p 24 fps senza audio, ≤ 4 MB, `+faststart`, e il poster in WebP. Usa `ffmpeg-static` da `node_modules`, niente da installare.
+3. `npm run video:optimize` (opzioni `--file`, `--start`, `--durata` default 15, `--crf` default 28) → H.264 con il lato corto a 720 px, 24 fps, senza audio, ≤ 4 MB, `+faststart`, e il poster in WebP. Usa `ffmpeg-static` da `node_modules`, niente da installare.
 4. Commit e push di `video/hero.mp4` e `img/hero-poster.webp`.
 
-Quello in repo oggi è un **segnaposto** (lenta zoomata sulla foto del risotto), da sostituire con una clip vera.
+In repo oggi c'è `chop` (taglio di un ortaggio, 13″, verticale); in `video/raw/` (non versionata) c'è anche `frigo` (apertura di un frigo, 2″: troppo corta per un loop).
 
 ## Struttura
 

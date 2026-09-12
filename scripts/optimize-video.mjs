@@ -1,4 +1,4 @@
-// video/raw/<clip> → video/hero.mp4 (H.264 720p 24 fps, muto, ≤ 4 MB) + img/hero-poster.webp (fotogramma fisso).
+// video/raw/<clip> → video/hero.mp4 (H.264, lato corto 720 px, 24 fps, muto, ≤ 4 MB) + img/hero-poster.webp (fotogramma fisso).
 // Uso: node scripts/optimize-video.mjs [--file nome.mp4] [--start 0] [--durata 15] [--crf 28]
 //   --file    clip in video/raw/ (default: la prima trovata)
 //   --start   secondo da cui partire (default 0)
@@ -38,10 +38,11 @@ const run = (args) => {
   if (r.status !== 0) { console.error(`✗ ffmpeg è uscito con ${r.status}`); process.exit(1); }
 };
 
-// 1. video: taglio, 720p (larghezza pari), 24 fps, niente audio, faststart per partire prima che sia tutto scaricato
+// 1. video: taglio, lato corto a 720 px (vale per clip verticali e orizzontali, dimensioni pari), 24 fps, niente audio,
+//    faststart per partire prima che sia tutto scaricato
 run([
   '-ss', String(start), '-t', String(durata), '-i', src,
-  '-an', '-vf', 'scale=-2:720,fps=24', '-c:v', 'libx264', '-crf', String(crf), '-preset', 'slow',
+  '-an', '-vf', "scale='if(gt(iw,ih),-2,720)':'if(gt(iw,ih),720,-2)',fps=24", '-c:v', 'libx264', '-crf', String(crf), '-preset', 'slow',
   '-pix_fmt', 'yuv420p', '-movflags', '+faststart', dest,
 ]);
 
