@@ -1,6 +1,6 @@
 # SPEC — Cucinança · ricettario intelligente per Bragança
 
-Versione 0.4 · 11 settembre 2026 · stato: **implementata** (Fasi 0-1-2-3-4 concluse; online su https://michimodu99.github.io/cucinanca/ · 61 ricette, tutte con foto)
+Versione 0.5 · 13 settembre 2026 · stato: **implementata** (Fasi 0-7 concluse; online su https://michimodu99.github.io/cucinanca/ · 126 ricette, 100 con foto)
 
 ## 1. Obiettivo
 
@@ -71,6 +71,8 @@ Campi **specifici di questo progetto**, assenti nei canali:
 - Gli ingredienti **base** (§5.2) sono considerati sempre presenti e mostrati come nota "consideriamo che tu abbia: olio, sale…".
 - Un ingrediente posseduto che è sostituto curato di un ingrediente richiesto copre quell'ingrediente; la riga dei risultati mostra "con X al posto di Y" e il libro un riquadro *Modifica* con la nota culinaria.
 - Pulsante "Cosa cucino?" → risultati. Lo stato vive nell'URL (`#/risultati?i=zucca,salsiccia,riso`), così si può ricaricare o passare il link al telefono.
+- **La dispensa si ricorda** (`localStorage`, chiavi `cucinanca:dispensa` e `cucinanca:esclusi`, nessun account). Il link con `?i=` vince sulla memoria ma non la sovrascrive finché non si modifica nulla; "Svuota" salva il vuoto. Sotto le chip: da quando è lì, Svuota, e "Copia il link" — la memoria vive in un solo browser di un solo dispositivo, e l'URL è il ponte verso gli altri.
+- **"Non mangio"**: lista personale di ingredienti (pannello a scomparsa, stesso autocomplete, pesca anche fra i base). Quello che escludi esce dalla dispensa ed è barrato nell'indice; le ricette che lo richiedono spariscono, sia dai risultati sia sfogliando tutte le ricette, e il sottotitolo dice quante ne ha nascoste.
 
 ### 4.2 Risultati
 - Card: foto, titolo, categoria, difficoltà, tempo totale, costo, **copertura** ("hai tutto" / "manca: pecorino").
@@ -92,7 +94,7 @@ Campi **specifici di questo progetto**, assenti nei canali:
 - Lista mancanti copiabile negli appunti.
 
 ### 4.4 Fuori scope v1
-Timer, persistenza dispensa, preferiti, note personali, valori nutrizionali completi, API esterne, PWA offline (valutabile in v2: è quasi gratis con un service worker).
+Timer, preferiti, note personali, valori nutrizionali completi, API esterne, PWA offline (valutabile in v2: è quasi gratis con un service worker). *(La persistenza della dispensa era qui: fatta il 13/09/2026, §4.1.)*
 
 ## 5. Dati
 
@@ -172,16 +174,17 @@ Regole:
 ```
 input: ingredientiUtente: string[], ricette, tassonomia, config {maxMancanti: 3}
 1. normalizza(s) = minuscole, senza accenti, trim → cerca in id | nome | alias → id canonico; se fallisce, fallback di singolarizzazione plurale (o null)
-2. posseduti = set(id risolti) ∪ set(base)
+2. posseduti = (set(id risolti) ∪ set(base)) − esclusi   // "non mangio": non lo possiedi mai, nemmeno se te lo passa un link
 3. per ogni ricetta:
-     richiesti = ingredienti.filter(!opzionale).map(id) − base
+     richiesti = ingredienti.filter(!opzionale).map(id) − (base − esclusi)   // se non mangi l'aglio, l'aglio torna a contare
      mancanti  = richiesti − posseduti
      copertura = 1 − |mancanti| / |richiesti|
 4. scarta se un ingrediente `principale` è tra i mancanti (nessun suo sostituto posseduto); scarta se |mancanti| > maxMancanti, e scarta se non possiedi nessun ingrediente richiesto (copertura 0: rumore, non suggerimento)
+4b. scarta se richiede un ingrediente escluso che nessun sostituto posseduto rimpiazza, e conta la ricetta in `esclusi` — il controllo viene per ultimo apposta, perché il numero mostrato deve contare le ricette che avresti visto davvero
 5. ordina per |mancanti| asc, poi copertura desc, poi tempo totale asc, poi titolo
-output: [{ ricetta, mancanti: id[], copertura }]
+output: [{ ricetta, mancanti: id[], richiesti: n, copertura, sostituzioni }] + .nonRisolti + .esclusi
 ```
-Test unitari coprono: alias → id, base ignorato, opzionale ignorato, sostituzioni (copertura, precedenza dell'originale, ordinamento), ordinamento, soglia.
+Test unitari coprono: alias → id, base ignorato, opzionale ignorato, sostituzioni (copertura, precedenza dell'originale, ordinamento), ordinamento, soglia, esclusioni (richiesto / opzionale / coperto da sostituto / passato dall'URL / base) e la memoria (`scripts/memoria.test.mjs`: formato, dati corrotti, storage che lancia, giorni di calendario). 48 in tutto.
 
 ## 7. Design
 
@@ -202,7 +205,8 @@ Test unitari coprono: alias → id, base ignorato, opzionale ignorato, sostituzi
 
 - Sito statico, **HTML/CSS/JS vanilla, senza build**. Hosting **GitHub Pages**, repo `michimodu99/cucinanca` pubblico (con GitHub Student/Pro si può rendere privato in qualsiasi momento senza perdere Pages).
 - Single-page con router hash: `#/` dispensa · `#/risultati?i=…&f=…` · `#/ricetta/<slug>`.
-- Struttura: `css/tokens.css base.css dispensa.css risultati.css libro.css`, `js/app.js data.js match.js dispensa.js risultati.js libro.js`, `data/`, `schema/`, `scripts/`, `img/`, `reference/`.
+- Struttura: `css/tokens.css base.css dispensa.css risultati.css libro.css`, `js/app.js data.js match.js memoria.js dispensa.js risultati.js libro.js i18n.js`, `data/`, `schema/`, `scripts/`, `img/`, `video/`, `reference/`.
+- Stato locale: `js/memoria.js` è **l'unico** punto che tocca `localStorage` (prefisso `cucinanca:`, formato versionato `{v:1,…}`, ogni accesso in `try/catch` perché in navigazione privata il solo tocco lancia). Lo store è iniettabile, così i test girano in node senza browser.
 - Dipendenze runtime: nessuna. Dipendenze dev (solo per gli script): `sharp` (ottimizzazione immagini), `ajv` (validazione schema).
 - Test: `node --test scripts/` (match), `node scripts/validate.mjs` (dati), screenshot Playwright a 1440×900 e 390×844.
 
@@ -227,7 +231,8 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 | 4 | Repo pubblico `michimodu99/cucinanca`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
 | 5 | Aggiornamenti a richiesta | workflow in README.md |
 | 6 | 11–13/09: sito condivisibile (via i "vietati"), sostituzioni, i18n pronto, 100 → 126 ricette, ingrediente principale, hero video, home senza `#/`, dosi a quarti, singolari, escape, test funzionali | ✅ fatto — vedi `HANDOFF.md` |
-| 7 | Memoria della dispensa + preferenze (localStorage), "scegli tu stasera", PWA, lista della spesa | da decidere con Michele (ordine proposto in `HANDOFF.md`, analisi in `docs/2026-09-13-ricerca-ricette-e-app.md`) |
+| 7 | Memoria della dispensa + preferenze "non mangio" (localStorage) | ✅ fatto il 13/09/2026 — §4.1 |
+| 8 | "Scegli tu stasera", PWA (icona in Home + offline), lista della spesa | nell'ordine, da fare (analisi in `docs/2026-09-13-ricerca-ricette-e-app.md`) |
 
 ### Aperto
 - Vino bianco e prezzemolo contano come "mancanti": se sono sempre in casa, vanno marcati `base: true` in `data/ingredienti.json`.

@@ -1,13 +1,28 @@
-# HANDOFF — stato al 13/09/2026, fine sessione (quarta)
+# HANDOFF — stato al 13/09/2026, fine sessione (quinta)
 
 Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
 
 ## Prossima sessione: da dove ripartire
 
-Michele ha letto le spiegazioni sulle funzioni (memoria della dispensa senza account, lista della spesa che si accumula, "scegli tu stasera", PWA, preferenze) e vuole decidere da quale partire. Ordine proposto da Claude, non ancora confermato: **1) memoria della dispensa + preferenze personali** (stessa tecnica: `localStorage` con prefisso `cucinanca:`, un pannello; con `?i=` nell'URL vince il link; bottone "Svuota" e riga "Dispensa di martedì"), **2) "scegli tu stasera"** (funzione pura in `match.js`, pesca fra le ricette a 0 mancanti, pesi: stagione, giorno, non fatta di recente, caso; bottoni "Un'altra" e "Apri il libro"), **3) PWA** (manifest + service worker minimo: icona in Home, offline, e Safari smette di cancellare la memoria dopo 7 giorni), **4) lista della spesa** (vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share). Le spiegazioni complete sono nella conversazione del 13/09 e, in sintesi, in `docs/2026-09-13-ricerca-ricette-e-app.md` §2. Da non inseguire: foto del frigo, migliaia di ricette, account. Limite da dire chiaro: `localStorage` vive in quel browser di quel dispositivo, quattro coinquilini = quattro dispense; il ponte è il link con `?i=`.
+Delle cinque funzioni discusse il 13/09, **memoria della dispensa e preferenze «non mangio» sono fatte** (sezione sotto). Restano, nell'ordine proposto:
 
-Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (b) da quale funzione partire; (c) se vuole nascondere l'email dai commit (vedi "Repo GitHub" sotto).
+1. **«Scegli tu stasera»** — funzione pura in `match.js`, pesca fra le ricette a 0 mancanti con pesi (stagione, giorno, non fatta di recente, caso), bottoni «Un'altra» e «Apri il libro». È la più corta e ora ha la memoria su cui appoggiarsi («non fatta di recente» vuole una chiave `cucinanca:fatte` in `js/memoria.js`).
+2. **PWA** — manifest + service worker minimo: icona in Home, offline in cucina, e Safari smette di cancellare `localStorage` dopo 7 giorni (oggi la memoria della dispensa è esposta a questo).
+3. **Lista della spesa** — vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share.
 
+Da non inseguire: foto del frigo, migliaia di ricette, account.
+
+Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (al 13/09 no: `node scripts/build-data.mjs` stampa ancora 26 avvisi); (b) da quale delle tre partire.
+
+## Fatto il 13/09/2026 (quinta sessione)
+
+- **La dispensa si ricorda** (`localStorage`, nessun account). Regole: il link con `?i=` vince sulla memoria ma **non la sovrascrive** finché non tocchi niente (guardi la dispensa di un coinquilino, torni alla home, ritrovi la tua); si salva solo sulle modifiche vere, mai dentro `render()`; «Svuota» salva il vuoto. Sotto le chip: da quando è lì («Dispensa di venerdì»), «Svuota» e «Copia il link».
+- **Il limite è scritto nella pagina**, non solo nei documenti: «La ricordo solo in questo browser. Per ritrovarla sul telefono, copia il link e aprilo lì.» Quattro coinquilini = quattro dispense; il ponte è l'URL.
+- **«Non mangio»**: pannello a scomparsa sotto le chip. Quello che escludi esce dalla dispensa, è barrato nell'indice, e le ricette che lo richiedono spariscono — dai risultati e anche sfogliando tutte le ricette. Resta il piatto se lì l'ingrediente è facoltativo (pasta al forno al ragù coi piselli) o se un sostituto posseduto lo rimpiazza (orecchiette coi broccoli salvate dalle cime di rapa). Escludere un ingrediente **base** lo rimette in conto: chi non mangia aglio non lo considera «sempre presente».
+- **Il numero delle nascoste si dice** («6 nascoste da «non mangio»»): far sparire ricette in silenzio sembra un bug. Conta solo quelle che avresti visto davvero — il controllo in `abbina()` sta in fondo al ciclo apposta, dopo la soglia dei mancanti.
+- **`js/memoria.js`**: l'unico punto che tocca `localStorage` (prefisso `cucinanca:`, formato `{v:1,…}` versionato, ogni accesso in `try/catch` — in navigazione privata il solo tocco lancia). Store iniettabile: i test girano in node. Verificato dal vivo che col browser che blocca lo storage il sito funziona, semplicemente non ricorda.
+- **Refactor**: l'autocomplete (frecce, Invio, corrispondenza esatta che batte i contenuti) è ora `creaCampoIngrediente()` in `dispensa.js`, usato due volte invece di duplicare 40 righe già collaudate. Il conteggio degli ingredienti richiesti viene da `ingredientiRichiesti()` in `match.js`: prima `risultati.js` lo ricalcolava per conto suo e sarebbe andato fuori sincrono con le esclusioni.
+- **Test: 48** (erano 30). 18 nuovi fra esclusioni e memoria. Verifica nel browser: memoria fra ricariche, link altrui che non sovrascrive, Svuota, copia negli appunti con un click vero (quella via script fallisce sempre: serve il gesto utente), 120 + 6 = 126, minestrone nascosto dai piselli.
 ## Fatto il 13/09/2026 (quarta sessione)
 
 - **Foto 100/100** (arrivate 38 il 12/09 + spaghetti al pomodoro il 13/09; tre file rinominati allo slug esatto). Poi **+26 ricette** senza foto (vedi "Lotto del 13/09").
@@ -59,7 +74,9 @@ Scelte da Michele fra le 41 del report (le "25 più attese", che contando le dop
 
 ## Cose aperte non urgenti
 
-- **Preferenze personali**, **memoria della dispensa**, **"scegli tu"**, **PWA**, **lista della spesa**: vedi "Prossima sessione" in testa. Con 126 ricette entrano piatti con piselli, fagiolini, pomodori, broccoli, cavolfiore: il filtro "non mangio" serve a Michele. La dispensa base (curry, coriandolo, basilico, paprika "sempre presenti") è di Michele: personalizzabile nello stesso pannello.
+- **"Scegli tu"**, **PWA**, **lista della spesa**: vedi "Prossima sessione" in testa.
+- **Dispensa base personalizzabile**: rimandata di proposito il 13/09 per non incastrare tre meccanismi in una sessione. Oggi curry, coriandolo, basilico e paprika sono "sempre presenti" per tutti, ma sono la dispensa di Michele, non quella dei coinquilini. Il pannello "Non mangio" è il posto naturale dove metterla; `abbina()` parte dai `base` della tassonomia e sa già gestirne l'assenza (le esclusioni rimettono in conto un base), quindi metà del lavoro è fatta.
+- **Le preferenze non seguono il link**: `?i=` passa la dispensa, non le esclusioni. Chi apre il tuo link vede le ricette senza i tuoi "non mangio". Voluto (le preferenze sono personali), da rivedere se dà fastidio.
 - **Ritmo di crescita**: dopo il lotto del 13/09 conviene fissare "N ricette al mese" e una lista d'attesa (le 15 rimaste del report + `RICETTE-LISTA.md`) invece di rincorrere le mancanze.
 - `cous cous + ceci` non propone il cous cous di verdure (mancano 4 ingredienti: 3 verdure e cumino, soglia 3): non è un bug, ma le ricette con molti ingredienti richiesti escono facilmente dal matching; da tenere d'occhio con "scegli tu".
 - **Inglese dei contenuti** (126 ricette × procedimento) e selettore lingua.

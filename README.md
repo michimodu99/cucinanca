@@ -49,12 +49,33 @@ La fascia scura in testa alla dispensa manda in loop `video/hero.mp4`: le clip s
 
 In repo oggi quattro clip Mixkit, tutte 16:9: `frigorifero` (6,6″) → `pancetta` (8,3″) → `omelette` (10″) → `polpette` (13,5″), 38″ in tutto; poster dalle polpette. Le clip verticali non vanno bene: nella fascia 2:1 se ne vede solo una banda, sgranata.
 
+## La dispensa ricordata e «non mangio»
+
+La dispensa resta fra una visita e l'altra: vive in `localStorage` (chiavi `cucinanca:dispensa` e
+`cucinanca:esclusi`), quindi **in quel browser di quel dispositivo e basta** — niente account, niente
+server. Quattro coinquilini sono quattro dispense, e il telefono non sa nulla del PC: il ponte è il link
+con `?i=`, che il bottone "Copia il link" mette negli appunti.
+
+Regole, se qualcosa sembra strano:
+
+- un link con `?i=` vince sulla memoria, ma **non la sovrascrive** finché non tocchi niente: guardi la
+  dispensa di un altro, torni alla home e ritrovi la tua;
+- "Svuota" salva il vuoto (domani non ripesca la dispensa di oggi);
+- in navigazione privata o con i cookie bloccati il sito funziona, semplicemente non ricorda;
+- "Non mangio" toglie l'ingrediente dalla dispensa, lo barra nell'indice e nasconde le ricette che lo
+  richiedono davvero — se lì è facoltativo, o se un sostituto che hai lo rimpiazza, il piatto resta.
+  Il sottotitolo dei risultati dice quante ne ha nascoste.
+
+Tutto il codice che tocca `localStorage` sta in `js/memoria.js`: ha lo store iniettabile, così
+`npm test` lo prova senza browser.
+
 ## Struttura
 
 ```
 index.html            tre viste: dispensa, risultati, libro (router hash in js/app.js)
 css/                  tokens (palette, tipografia) · base · dispensa · risultati · libro
-js/match.js           logica pura: alias → id, copertura, mancanti, scala porzioni (testata)
+js/match.js           logica pura: alias → id, copertura, mancanti, esclusioni, scala porzioni (testata)
+js/memoria.js         l'unico punto che tocca localStorage: dispensa ricordata e "non mangio" (testata)
 js/libro.js           doppia pagina desktop con impaginazione automatica; pagine a swipe su mobile; Wake Lock
 js/i18n.js            tutte le stringhe dell'interfaccia (solo `it` per ora): t(), applicaTesti(), etichette di dominio
 video/                hero.mp4 (le clip della fascia in testa alla dispensa, montate in un file); raw/ le sorgenti, ignorate da git
