@@ -11,7 +11,7 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 
 ## Stato attuale
 
-- **100 ricette** (30 primi, 25 secondi, 23 piatti unici, 12 contorni, 10 dolci; 12 portoghesi). **99 hanno la foto**; manca solo `spaghetti-al-pomodoro-e-basilico` (prompt in fondo a `prompts.md`, sezione "Da generare (1)").
+- **126 ricette** (36 primi, 33 secondi, 28 piatti unici, 14 contorni, 15 dolci; 16 portoghesi). Le prime 100 hanno la foto; **le 26 del 13/09 no**: prompt in fondo a `prompts.md`, sezione "Da generare (26)", stesso flusso a mano (Gemini → `img/raw/<slug>.jpg` → `npm run images:optimize` → `npm run prompts`).
 - Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). Tutto pushato a fine sessione: le 100 ricette sono online, le 39 nuove col segnaposto tipografico finché non arrivano le foto.
 - **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
 - **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. 157 ingredienti con sostituti su 100 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
@@ -29,11 +29,15 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 - Il plugin `humanizer` è abilitato ma il suo agent non compariva nella lista di sessione: da controllare con `/plugin`.
 - Gli screenshot del browser costano ~2k token l'uno: per verificare la UI preferire letture via `javascript_tool` e screenshot con `scale` basso.
 
-## Da fare subito: l'ultima foto
+## Da fare subito: le 26 foto nuove
 
-Le foto le fa Michele **a mano**: prompt incollato in Gemini (Nano Banana 2), immagine salvata in `img/raw/<slug>.jpg`, poi `npm run images:optimize` → `npm run prompts` (la sezione "Da generare" di `prompts.md` si aggiorna da sola) → commit e push. Lo script `generate_image.py --all` con la chiave in `.env` non funziona (429: progetto senza fatturazione) e non è la strada usata. Il 12/09 sono arrivate 38 delle 39: manca **`spaghetti-al-pomodoro-e-basilico`**. Occhio al nome del file: deve essere lo slug esatto (tre erano arrivate con nomi accorciati o con l'accento e le ho rinominate).
+Le foto le fa Michele **a mano**: prompt incollato in Gemini (Nano Banana 2), immagine salvata in `img/raw/<slug>.jpg`, poi `npm run images:optimize` → `npm run prompts` (la sezione "Da generare" di `prompts.md` si aggiorna da sola) → commit e push. Lo script `generate_image.py --all` con la chiave in `.env` non funziona (429: progetto senza fatturazione) e non è la strada usata. Il 12/09 sono arrivate tutte le 100; il 13/09 si sono aggiunte 26 ricette senza foto. Occhio al nome del file: deve essere lo slug esatto (tre erano arrivate con nomi accorciati o con l'accento e le ho rinominate).
 
 Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0.
+
+## Lotto del 13/09/2026: 26 ricette dal report
+
+Scelte da Michele fra le 41 del report (le "25 più attese", che contando le doppie sono 26). Metodo: brief comune (`scratchpad/brief-ricette.md`, ricostruibile da `docs/superpowers/plans/2026-09-11-ricette-100.md` + regola dei principali) → 4 subagent in parallelo su file `_lotto-*.json` → rilettura una a una → fusione nei file di categoria. Tassonomia: +12 voci (merluzzo, salmone-affumicato, gnocchi, cous-cous, broa, fagioli-rossi, mais, castagne, formaggio-spalmabile, salsa-di-soia, cumino, crema-di-nocciole). Restano fuori dal report, per un altro giro: 4 formaggi, panna e prosciutto, pasta e piselli, vongole, pollo al limone, zucchine trifolate, spinaci al burro, peperonata, frollini, noodles, wrap, arroz de tomate, sopa de legumes, peixinhos da horta, bolo de bolacha.
 
 ## Report ricerca (13/09/2026)
 

@@ -419,5 +419,75 @@
     "kcal": 550,
     "foto": { "copertina": "img/hummus-con-pane-tostato.webp", "prompt": "smooth creamy hummus swirled in a white ceramic bowl with a pool of olive oil and a sprinkle of paprika, toasted bread wedges on the side" },
     "fonte": "Ricetta levantina, dosi per 1 persona"
+  },
+{
+    "slug": "pure-di-patate",
+    "titolo": "Purè di patate",
+    "descrizione": "Patate lessate con la buccia, schiacciate calde, burro e latte caldo a filo. Il contorno che sta sotto spezzatino, polpette e salsicce e raccoglie il sugo di tutti.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 5, "cottura": 25, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 0.6 },
+    "attrezzatura": ["pentola"],
+    "tag": ["veloce", "classico", "low-cost"],
+    "dieta": ["vegetariano", "senza-glutine"],
+    "origine": "Italia / Francia",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "patate", "qta": 250, "unita": "g", "note": "farinose: 'batata para puré' o le rosse grandi, non quelle novelle", "principale": true },
+      { "id": "latte", "qta": 80, "unita": "ml", "note": "caldo", "sostituti": [{ "id": "panna-fresca", "nota": "più ricco, ne basta un po' meno" }] },
+      { "id": "burro", "qta": 25, "unita": "g" },
+      { "id": "noce-moscata", "qta": null, "unita": "qb" },
+      { "id": "sale", "qta": null, "unita": "qb" },
+      { "id": "parmigiano", "qta": 15, "unita": "g", "opzionale": true, "note": "grattugiato" }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Lessatura", "testo": "Lava le patate e mettile intere, con la buccia, in acqua fredda salata. Porta a bollore e cuoci 20–25 minuti: la forchetta deve entrare senza resistenza fino al centro. Con la buccia assorbono meno acqua e il purè non viene slavato.", "minuti": 25 },
+      { "n": 2, "titolo": "Schiacciare", "testo": "Scola e sbucciale subito, calde, aiutandoti con un canovaccio: la buccia viene via con le dita. Schiacciale con lo schiacciapatate o con una forchetta nella pentola vuota. Mai il frullatore: l'amido si scalda e diventa colla.", "minuti": 3 },
+      { "n": 3, "titolo": "Burro e latte", "testo": "Pentola a fuoco basso, burro a pezzetti, mescola finché è sciolto. Poi il latte caldo a filo, poco per volta, girando: fermati quando è morbido ma sta ancora su nel cucchiaio. Noce moscata grattata, sale, parmigiano se ti va.", "minuti": 2 }
+    ],
+    "consigli": "Il latte va caldo (30 secondi al microonde): freddo raffredda le patate e il purè si fa gommoso. Se avanzano patate lesse del giorno prima, scaldale a vapore o al microonde e parti dal passo 2.",
+    "conservazione": "In frigo 2 giorni, coperto. Si riscalda a fuoco basso con un goccio di latte; il giorno dopo, con un uovo e pangrattato, diventa crocchette.",
+    "varianti": ["Con un tuorlo aggiunto a fuoco spento: più giallo e più cremoso.", "Con un cucchiaio di senape al posto della noce moscata, sotto le salsicce."],
+    "kcal": 350,
+    "foto": { "copertina": "img/pure-di-patate.webp", "prompt": "smooth creamy mashed potatoes in a white bowl, small pool of melted butter on top, light dusting of nutmeg, soft natural light" },
+    "fonte": "Tecnica classica; dosi per 1 persona"
+  },
+{
+    "slug": "verdure-grigliate",
+    "titolo": "Verdure grigliate",
+    "descrizione": "Zucchine, melanzane e peperoni a fette sulla bistecchiera rovente, senza olio, finché hanno le righe. Condite a crudo con olio, aglio e basilico: meglio il giorno dopo.",
+    "categoria": "contorno",
+    "difficolta": "facile",
+    "tempi": { "preparazione": 10, "cottura": 20, "riposo": 0 },
+    "porzioni": 1,
+    "costo": { "fascia": "basso", "stima_eur": 1.1 },
+    "attrezzatura": ["griglia"],
+    "tag": ["veloce", "avanzi", "classico", "low-cost"],
+    "dieta": ["vegano", "senza-glutine", "senza-lattosio"],
+    "origine": "Italia",
+    "reinventata": null,
+    "ingredienti": [
+      { "id": "zucchine", "qta": 1, "unita": "pz", "note": "a fette lunghe da 5 mm", "principale": true },
+      { "id": "melanzane", "qta": 0.5, "unita": "pz", "note": "a fette da 5 mm", "sostituti": [{ "id": "peperoni" }], "principale": true },
+      { "id": "peperoni", "qta": 0.5, "unita": "pz", "note": "a falde larghe, senza semi", "sostituti": [{ "id": "zucca", "nota": "a fette da 1 cm, 2 minuti in più" }] },
+      { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
+      { "id": "aglio", "qta": 1, "unita": "spicchi", "note": "a fettine sottili" },
+      { "id": "sale", "qta": null, "unita": "qb" },
+      { "id": "basilico", "qta": 4, "unita": "foglie", "sostituti": [{ "id": "menta" }] },
+      { "id": "aceto-balsamico", "qta": 1, "unita": "cucchiaini", "opzionale": true }
+    ],
+    "procedimento": [
+      { "n": 1, "titolo": "Taglio", "testo": "Zucchine e melanzane a fette per il lungo, 5 mm: più spesse restano crude al centro, più sottili si bruciano. Peperone a falde larghe, tolti semi e filamenti bianchi. Asciuga tutto con carta da cucina.", "minuti": 8 },
+      { "n": 2, "titolo": "Griglia", "testo": "Bistecchiera a fuoco alto finché una goccia d'acqua ci sfrigola sopra. Niente olio: sulla griglia fuma e basta. Fette in un solo strato, 2–3 minuti per lato senza muoverle: si staccano da sole quando hanno le righe. Il peperone vuole un minuto in più, con la pelle che si scurisce.", "minuti": 18 },
+      { "n": 3, "titolo": "Condimento", "testo": "Verdure in un piatto fondo. Olio, aglio a fettine, sale, basilico spezzettato con le mani, il balsamico se ti va. Mescola e lascia riposare 10 minuti, o fino a domani.", "minuti": 4 }
+    ],
+    "consigli": "Senza bistecchiera: forno a 220 °C, fette in un solo strato su una teglia con un filo d'olio, 15–20 minuti girando a metà. Niente righe, ma stesso risultato. Le prime fette di melanzana assorbono il calore: se la griglia perde temperatura aspetta un minuto tra un giro e l'altro.",
+    "conservazione": "In frigo 3 giorni, coperte d'olio: il giorno dopo sono meglio. Fredde riempiono un panino con formaggio, o vanno tagliate a strisce in una pasta.",
+    "varianti": ["Con aceto normale e origano al posto di balsamico e basilico, alla pugliese.", "Con una fetta di provola fusa sopra, 2 minuti in forno."],
+    "kcal": 200,
+    "foto": { "copertina": "img/verdure-grigliate.webp", "prompt": "grilled zucchini, eggplant and red pepper slices with dark char marks, glossy with olive oil, torn basil leaves, white ceramic plate, overhead" },
+    "fonte": "Tecnica classica; dosi per 1 persona"
   }
 ]

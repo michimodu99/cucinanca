@@ -158,5 +158,17 @@
   { "id": "gelatina-in-fogli", "nome": "Gelatina in fogli", "alias": ["colla di pesce", "gelatina"], "categoria": "dolce", "pt": { "reperibilita": "facile", "sostituto": "\"folhas de gelatina\" (Continente)" } },
   { "id": "amido-di-mais", "nome": "Amido di mais", "alias": ["maizena", "fecola"], "categoria": "dolce", "pt": { "reperibilita": "facile", "sostituto": "\"Maizena\"" } },
   { "id": "zucchero-a-velo", "nome": "Zucchero a velo", "alias": [], "categoria": "dolce", "pt": { "reperibilita": "facile", "sostituto": "\"açúcar em pó\"" } },
-  { "id": "tonno", "nome": "Tonno sott'olio", "alias": ["tonno", "tonno in scatola"], "categoria": "pesce" }
+  { "id": "tonno", "nome": "Tonno sott'olio", "alias": ["tonno", "tonno in scatola"], "categoria": "pesce" },
+  { "id": "merluzzo", "nome": "Filetto di merluzzo", "alias": ["merluzzo", "pescada", "nasello", "filetti di merluzzo"], "categoria": "pesce", "pt": { "reperibilita": "facile", "sostituto": "\"pescada\" fresca al banco o filetti surgelati" } },
+  { "id": "salmone-affumicato", "nome": "Salmone affumicato", "alias": ["salmone fumé"], "categoria": "pesce", "pt": { "reperibilita": "facile", "sostituto": "\"salmão fumado\" in busta" } },
+  { "id": "gnocchi", "nome": "Gnocchi di patate pronti", "alias": ["gnocchi", "gnocchi pronti"], "categoria": "pasta", "pt": { "reperibilita": "facile", "sostituto": "\"nhoque\" fresco al banco frigo" } },
+  { "id": "cous-cous", "nome": "Cous cous", "alias": ["couscous", "cuscus"], "categoria": "cereale", "pt": { "reperibilita": "facile", "sostituto": "\"cuscuz\" precotto" } },
+  { "id": "broa", "nome": "Broa (pane di mais)", "alias": ["pane di mais", "broa de milho"], "categoria": "cereale", "pt": { "reperibilita": "facile", "sostituto": "in ogni panificio e supermercato" } },
+  { "id": "fagioli-rossi", "nome": "Fagioli kidney", "alias": ["fagioli kidney", "red kidney", "fagioli messicani", "kidney"], "categoria": "legume", "pt": { "reperibilita": "facile", "sostituto": "\"feijão encarnado\" o \"feijão vermelho\" cotto in vaso" } },
+  { "id": "mais", "nome": "Mais in scatola", "alias": ["mais", "mais dolce"], "categoria": "legume" },
+  { "id": "castagne", "nome": "Castagne", "alias": ["castagna", "marroni"], "categoria": "frutta", "pt": { "reperibilita": "media", "sostituto": "fresche da ottobre a dicembre (Vinhais e Bragança sono terra di castagne); \"castanhas cozidas\" in vaso tutto l'anno" } },
+  { "id": "formaggio-spalmabile", "nome": "Formaggio spalmabile", "alias": ["philadelphia", "formaggio cremoso", "cream cheese"], "categoria": "latticino", "pt": { "reperibilita": "facile", "sostituto": "\"queijo creme\" (Philadelphia o marca del supermercato)" } },
+  { "id": "salsa-di-soia", "nome": "Salsa di soia", "alias": ["soia", "soy sauce"], "categoria": "condimento", "pt": { "reperibilita": "facile", "sostituto": "\"molho de soja\", scaffale asiatico" } },
+  { "id": "cumino", "nome": "Cumino", "alias": ["cumino in polvere", "cumin"], "categoria": "spezia", "pt": { "reperibilita": "facile", "sostituto": "\"cominhos\" in polvere" } },
+  { "id": "crema-di-nocciole", "nome": "Crema di nocciole", "alias": ["nutella", "crema spalmabile"], "categoria": "dolce" }
 ]
