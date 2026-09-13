@@ -165,8 +165,9 @@
   align-items: center;
   z-index: 15;
 }
-.azione-count { grid-column: 1 / span 6; font-size: var(--t-sm); color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.azione-bar .btn-primary { grid-column: 7 / span 6; justify-content: space-between; }
+.azione-count { grid-column: 1 / span 4; font-size: var(--t-sm); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.azione-bar .btn-ghost { grid-column: 5 / span 3; height: 56px; justify-content: center; }
+.azione-bar .btn-primary { grid-column: 8 / span 5; justify-content: space-between; }
 
 /* la barra fissa della dispensa coprirebbe il footer sottostante: gli riservo lo spazio */
 /* barra azione: 56px bottone + 24px padding verticale = 80px reali (52px + 24px = 76px su mobile) */
@@ -185,7 +186,8 @@ body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: cal
   .dispensa-corpo { padding-top: calc(var(--u) * 4); }
   .ingresso-field input { font-size: 22px; }
   .indice-riga { grid-template-columns: 1fr; gap: 6px; }
-  .azione-bar { display: flex; justify-content: space-between; gap: 12px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .azione-bar { display: flex; justify-content: space-between; gap: 10px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .azione-bar .btn-ghost { height: 52px; padding: 0 12px; flex: 0 0 auto; }
   .azione-bar .btn-primary { flex: 1; }
   .azione-count { display: none; }
   .btn-primary { height: 52px; }

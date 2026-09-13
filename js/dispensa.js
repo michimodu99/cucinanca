@@ -1,6 +1,6 @@
 // Vista dispensa: input con suggerimenti, chip, indice per categoria, barra azione,
 // memoria locale (la dispensa si ricorda) e preferenze ("non mangio").
-import { normalizza, risolvi } from './match.js';
+import { normalizza, risolvi, abbina } from './match.js';
 import { ETICHETTE, escapeHtml } from './data.js';
 import { t } from './i18n.js';
 import { vai, ingredientiDaParams } from './app.js';
@@ -17,6 +17,7 @@ const el = {
   indice: document.getElementById('indice-ingredienti'),
   count: document.getElementById('azione-count'),
   btn: document.getElementById('btn-cucina'),
+  scegli: document.getElementById('btn-scegli'),
   basi: document.getElementById('basi'),
   video: document.getElementById('hero-video'),
   memoria: document.getElementById('memoria'),
@@ -158,6 +159,7 @@ function montaUnaVolta() {
   });
 
   el.btn.addEventListener('click', () => vai('risultati', { i: scelti }));
+  el.scegli.addEventListener('click', () => vai('scegli', { i: scelti }));
 }
 
 /** Testo temporaneo su un bottone, poi torna quello di prima (come la copia della spesa nel libro). */
@@ -359,6 +361,9 @@ function render() {
   const n = [...ids].filter((id) => !esclusi.includes(id)).length;
   el.count.textContent = n === 0 ? t('dispensa.nessuno') : n === 1 ? t('dispensa.uno') : t('dispensa.molti', { n });
   el.btn.disabled = n === 0;
+  // "Scegli tu" si accende solo se c'è davvero qualcosa da scegliere: senza una ricetta a zero mancanti
+  // il bottone prometterebbe un piatto per stasera e poi ti manderebbe a fare la spesa
+  el.scegli.disabled = !n || !abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti: scelti, maxMancanti: 0, esclusi: new Set(esclusi) }).length;
 
   // riga della memoria: compare quando c'è qualcosa da ricordare o da passare a un altro dispositivo
   el.memoria.hidden = !scelti.length;

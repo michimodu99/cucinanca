@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/dispensa.css">
   <link rel="stylesheet" href="css/risultati.css">
+  <link rel="stylesheet" href="css/scegli.css">
   <link rel="stylesheet" href="css/libro.css">
 </head>
 <body>
@@ -109,6 +110,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
     <div class="azione-bar" id="azione-bar">
       <span class="azione-count" id="azione-count" data-i18n="dispensa.nessuno">Nessun ingrediente scelto</span>
+      <button type="button" class="btn-ghost" id="btn-scegli" disabled
+              title="Scegli tu per me una ricetta che posso fare adesso" data-i18n-attr="title:dispensa.scegliAiuto"><span data-i18n="dispensa.scegli">Scegli tu</span></button>
       <button type="button" class="btn-primary" id="btn-cucina" disabled><span data-i18n="dispensa.cucina">Cosa cucino</span> <span aria-hidden="true">→</span></button>
     </div>
   </section>
@@ -193,6 +196,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
     <ol class="indice" id="indice"></ol>
     <p class="indice-vuoto" id="indice-vuoto" hidden></p>
+  </section>
+
+  <!-- ===== SCEGLI TU ===== -->
+  <!-- una ricetta sola, pescata fra quelle a zero mancanti: se devi comprare qualcosa non è un consiglio per stasera -->
+  <section class="view view-scegli" id="view-scegli" hidden>
+    <div class="scelta" id="scelta"></div>
   </section>
 
   <!-- ===== RICETTA / LIBRO ===== -->

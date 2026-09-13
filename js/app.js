@@ -2,12 +2,14 @@
 import { caricaDati } from './data.js';
 import { montaDispensa, videoDispensa } from './dispensa.js';
 import { montaRisultati } from './risultati.js';
+import { montaScegli } from './scegli.js';
 import { montaLibro, smontaLibro } from './libro.js';
 import { t, applicaTesti } from './i18n.js';
 
 const viste = {
   dispensa: document.getElementById('view-dispensa'),
   risultati: document.getElementById('view-risultati'),
+  scegli: document.getElementById('view-scegli'),
   libro: document.getElementById('view-libro'),
   errore: document.getElementById('view-errore'),
 };
@@ -44,7 +46,7 @@ function mostra(nome) {
   for (const [k, el] of Object.entries(viste)) el.hidden = k !== nome;
   videoDispensa(nome === 'dispensa');
   for (const a of document.querySelectorAll('[data-nav]')) {
-    const attivo = a.dataset.nav === nome || (nome === 'libro' && a.dataset.nav === 'risultati');
+    const attivo = a.dataset.nav === nome || (nome === 'libro' && a.dataset.nav === 'risultati') || (nome === 'scegli' && a.dataset.nav === 'dispensa');
     if (attivo) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
@@ -67,6 +69,9 @@ async function route() {
   } else if (vista === 'risultati') {
     mostra('risultati');
     montaRisultati(dati, params);
+  } else if (vista === 'scegli') {
+    mostra('scegli');
+    montaScegli(dati, params);
   } else if (vista === 'ricetta' && dati.bySlug.has(path[1])) {
     mostra('libro');
     montaLibro(dati, dati.bySlug.get(path[1]), params);

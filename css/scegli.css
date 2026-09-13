@@ -1,0 +1,74 @@
+/* Cucina — "Scegli tu": una ricetta sola sulla pagina. Foto 4:5 a sinistra, la scelta a destra. */
+.scelta {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  align-items: start;
+  padding: calc(var(--u) * 6) var(--margin) calc(var(--u) * 8);
+}
+.scelta-foto {
+  grid-column: 1 / span 5;
+  aspect-ratio: 4 / 5;
+  container-type: inline-size;
+}
+.scelta-corpo { grid-column: 6 / span 7; }
+.scelta-corpo .label { margin-bottom: calc(var(--u) * 2); }
+
+.scelta-titolo { margin-bottom: calc(var(--u) * 2); }
+.scelta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 16px;
+  font-size: var(--t-md);
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  padding-bottom: calc(var(--u) * 2);
+  border-bottom: var(--rule);
+}
+.scelta-meta .cat { color: var(--ink); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: var(--t-sm); }
+.scelta-meta .attr-manca { color: var(--ink); border: var(--rule-ink); padding: 0 6px; font-size: var(--t-xs); letter-spacing: 0.04em; }
+
+.scelta-sost { margin-top: calc(var(--u) * 2); font-size: var(--t-sm); color: var(--ink-2); }
+.scelta-sost b { color: var(--ink); font-weight: 700; }
+
+.scelta-desc {
+  margin-top: calc(var(--u) * 2);
+  font-size: var(--t-lg);
+  line-height: 1.45;
+  max-width: 46ch;
+}
+
+.scelta-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: calc(var(--u) * 4);
+}
+.scelta-azioni .btn-ghost,
+.scelta-azioni .btn-primary { height: 56px; }
+.scelta-azioni .btn-primary { gap: 16px; }
+
+.scelta-nota {
+  margin-top: calc(var(--u) * 3);
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+}
+.scelta-nota a { text-decoration: underline; text-underline-offset: 0.18em; }
+
+/* niente di pronto: non è un errore, è un'informazione */
+.scelta-vuota {
+  display: block;
+  max-width: 52ch;
+  font-size: var(--t-lg);
+  line-height: 1.5;
+}
+.scelta-vuota a { text-decoration: underline; text-underline-offset: 0.18em; }
+
+@media (max-width: 899px) {
+  .scelta { grid-template-columns: 1fr; row-gap: calc(var(--u) * 3); padding: calc(var(--u) * 4) var(--margin) calc(var(--u) * 6); }
+  .scelta-foto { grid-column: 1; max-width: 260px; }
+  .scelta-corpo { grid-column: 1; }
+  .scelta-desc { font-size: var(--t-md); }
+  .scelta-azioni .btn-ghost,
+  .scelta-azioni .btn-primary { height: 52px; flex: 1; justify-content: center; }
+}

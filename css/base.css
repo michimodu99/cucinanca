@@ -138,6 +138,8 @@ h1, h2, h3, p { margin: 0; }
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .btn-ghost:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
+.btn-ghost:disabled { color: #585858; border-color: var(--ash); cursor: not-allowed; }
+.btn-ghost:disabled:hover { background: none; color: #585858; }
 
 /* Swiss select: native picker, drawn chevron */
 select {

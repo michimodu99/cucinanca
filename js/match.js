@@ -185,3 +185,51 @@ export function scalaQuantita(ing, moltiplicatore) {
       return Math.round(v * 10) / 10;
   }
 }
+
+// ---------- "Scegli tu stasera" ----------
+
+const STAGIONE = ['inverno', 'inverno', 'primavera', 'primavera', 'primavera', 'estate', 'estate', 'estate', 'autunno', 'autunno', 'autunno', 'inverno'];
+
+export function stagione(ora = new Date()) {
+  return STAGIONE[ora.getMonth()];
+}
+
+/** Una ricetta è "lunga" se supera i 45 minuti o se è marcata weekend: di mercoledì sera non la vuoi. */
+function lunga(ricetta) {
+  return tempoTotale(ricetta) > 45 || (ricetta.tag || []).includes('weekend');
+}
+
+/** Quanto una ricetta c'entra con stasera. Non un punteggio di qualità: un peso per la pesca.
+ *  I tag di stagione nei dati sono solo `autunno` e `inverno`, quindi in primavera ed estate pesa solo il giorno. */
+export function pesoScelta(ricetta, ora = new Date()) {
+  let peso = 1;
+  if ((ricetta.tag || []).includes(stagione(ora))) peso *= 2;
+  const giorno = ora.getDay(); // 0 domenica … 6 sabato
+  const feriale = giorno >= 1 && giorno <= 5;
+  if (feriale) peso *= lunga(ricetta) ? 0.35 : 1.6;
+  else if (lunga(ricetta)) peso *= 1.8;
+  return peso;
+}
+
+/**
+ * Pesca una ricetta fra quelle che puoi fare **adesso** (zero mancanti): se devi uscire a comprare
+ * qualcosa non è un consiglio per stasera, è un compito. Con zero candidate torna null, e il bottone
+ * che porta qui resta spento.
+ * @param abbinate uscita di `abbina()`
+ * @param gia slug già mostrati in questa sessione: "Un'altra" non ripete finché non le ha girate tutte
+ * @param caso iniettabile, così i test sono ripetibili
+ */
+export function scegliPerMe({ abbinate, ora = new Date(), caso = Math.random, gia = [] }) {
+  const pronte = abbinate.filter((x) => x.mancanti.length === 0);
+  if (!pronte.length) return null;
+  const mai = pronte.filter((x) => !gia.includes(x.ricetta.slug));
+  const candidate = mai.length ? mai : pronte;
+  const pesi = candidate.map((x) => pesoScelta(x.ricetta, ora));
+  const totale = pesi.reduce((a, b) => a + b, 0);
+  let soglia = caso() * totale;
+  for (let i = 0; i < candidate.length; i++) {
+    soglia -= pesi[i];
+    if (soglia < 0) return candidate[i];
+  }
+  return candidate[candidate.length - 1]; // caso() che torna 1, o arrotondamenti
+}
