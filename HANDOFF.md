@@ -12,7 +12,7 @@ Delle cinque funzioni discusse il 13/09, **memoria della dispensa e preferenze �
 
 Da non inseguire: foto del frigo, migliaia di ricette, account.
 
-Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (al 13/09 no: `node scripts/build-data.mjs` stampa ancora 26 avvisi); (b) da quale delle tre partire.
+Cosa chiedere a Michele all'inizio: da quale delle tre partire. **Le foto sono tutte a posto: 126 su 126**, nessun avviso da `build-data.mjs`, nessun segnaposto.
 
 ## Fatto il 13/09/2026 (quinta sessione)
 
@@ -40,7 +40,7 @@ Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (al 
 
 ## Stato attuale
 
-- **126 ricette** (36 primi, 33 secondi, 28 piatti unici, 14 contorni, 15 dolci; 16 portoghesi). Le prime 100 hanno la foto; **le 26 del 13/09 no**: prompt in fondo a `prompts.md`, sezione "Da generare (26)", stesso flusso a mano (Gemini → `img/raw/<slug>.jpg` → `npm run images:optimize` → `npm run prompts`).
+- **126 ricette** (36 primi, 33 secondi, 28 piatti unici, 14 contorni, 15 dolci; 16 portoghesi), **tutte con foto** (le ultime 26 il 13/09). Flusso, per le prossime: prompt da `prompts.md` incollato in Gemini a mano → `img/raw/<slug>.jpg` → `npm run images:optimize` → `npm run prompts`. Il nome del file deve essere lo slug esatto; finora ogni lotto ne ha avuti tre o sei da rinominare.
 - Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). Tutto pushato a fine sessione: 126 ricette online, le 26 nuove col segnaposto tipografico finché non arrivano le foto. GitHub Pages tiene i file in cache 10 minuti: subito dopo un push il telefono può avere HTML nuovo e JS vecchio (successo il 12/09; il codice del video ora tollera l'elemento mancante).
 - **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
 - **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. ~200 ingredienti con sostituti su 126 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
@@ -57,12 +57,6 @@ Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (al 
 - Le connessioni MCP `canva` e `replicate` sono disattivate in questo progetto (`/mcp enable <nome>` per riattivarle).
 - Il plugin `humanizer` è abilitato ma il suo agent non compariva nella lista di sessione: da controllare con `/plugin`.
 - Gli screenshot del browser costano ~2k token l'uno: per verificare la UI preferire letture via `javascript_tool` e screenshot con `scale` basso.
-
-## Da fare subito: le 26 foto nuove
-
-Le foto le fa Michele **a mano**: prompt incollato in Gemini (Nano Banana 2), immagine salvata in `img/raw/<slug>.jpg`, poi `npm run images:optimize` → `npm run prompts` (la sezione "Da generare" di `prompts.md` si aggiorna da sola) → commit e push. Lo script `generate_image.py --all` con la chiave in `.env` non funziona (429: progetto senza fatturazione) e non è la strada usata. Il 12/09 sono arrivate tutte le 100; il 13/09 si sono aggiunte 26 ricette senza foto. Occhio al nome del file: deve essere lo slug esatto (tre erano arrivate con nomi accorciati o con l'accento e le ho rinominate).
-
-Controllo finale: `node scripts/build-data.mjs 2>&1 | grep -c "avviso: manca"` deve stampare 0.
 
 ## Lotto del 13/09/2026: 26 ricette dal report
 
@@ -81,4 +75,5 @@ Scelte da Michele fra le 41 del report (le "25 più attese", che contando le dop
 - `cous cous + ceci` non propone il cous cous di verdure (mancano 4 ingredienti: 3 verdure e cumino, soglia 3): non è un bug, ma le ricette con molti ingredienti richiesti escono facilmente dal matching; da tenere d'occhio con "scegli tu".
 - **Inglese dei contenuti** (126 ricette × procedimento) e selettore lingua.
 - Dosi frazionarie: "½ Uova" (spaghetti con polpette) è corretto ma brutto; valutare "1 uovo piccolo" nel dato.
+- La riga "By Michi" era schiacciata contro la barra "Cosa cucino" (13/09, corretto: lo spazio riservato al footer era esatto quanto la barra, senza il suo padding).
 - La barra fissa "Cosa cucino" copre l'ultima riga di ingredienti mentre scorri: è il comportamento normale di una barra fissa, Michele ha deciso di lasciarlo così (verificato dal vivo, non è un bug del footer).
