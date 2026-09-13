@@ -221,11 +221,13 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 | Fase | Contenuto | Checkpoint |
 |---|---|---|
 | 0 | Setup: git, skills, MCP Replicate, ricerca, SPEC, DOMANDE, lista ricette | ✅ fatto |
-| 1 | Tassonomia (142 ingredienti), schema, 61 schede per 1 persona, validatore, match.js con 21 test | ✅ fatto |
+| 1 | Tassonomia (142 ingredienti, oggi 159), schema, 61 schede per 1 persona (oggi 126), validatore, match.js con 21 test (oggi 30) | ✅ fatto |
 | 2 | Generazione e ottimizzazione foto (`scripts/generate_image.py`, `scripts/optimize-images.mjs`) | ✅ fatto — 61/61 foto generate a mano su Gemini (Nano Banana 2, free tier non abilitato per l'API) e ottimizzate |
 | 3 | UI (impeccable → build → review 'ship') + DESIGN.md | ✅ fatto |
 | 4 | Repo pubblico `michimodu99/cucinanca`, GitHub Pages, smoke test sull'URL live | ✅ fatto — da provare in cucina |
 | 5 | Aggiornamenti a richiesta | workflow in README.md |
+| 6 | 11–13/09: sito condivisibile (via i "vietati"), sostituzioni, i18n pronto, 100 → 126 ricette, ingrediente principale, hero video, home senza `#/`, dosi a quarti, singolari, escape, test funzionali | ✅ fatto — vedi `HANDOFF.md` |
+| 7 | Memoria della dispensa + preferenze (localStorage), "scegli tu stasera", PWA, lista della spesa | da decidere con Michele (ordine proposto in `HANDOFF.md`, analisi in `docs/2026-09-13-ricerca-ricette-e-app.md`) |
 
 ### Aperto
 - Vino bianco e prezzemolo contano come "mancanti": se sono sempre in casa, vanno marcati `base: true` in `data/ingredienti.json`.

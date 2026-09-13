@@ -1,6 +1,20 @@
-# HANDOFF — stato al 12/09/2026, fine sessione (terza)
+# HANDOFF — stato al 13/09/2026, fine sessione (quarta)
 
 Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
+
+## Prossima sessione: da dove ripartire
+
+Michele ha letto le spiegazioni sulle funzioni (memoria della dispensa senza account, lista della spesa che si accumula, "scegli tu stasera", PWA, preferenze) e vuole decidere da quale partire. Ordine proposto da Claude, non ancora confermato: **1) memoria della dispensa + preferenze personali** (stessa tecnica: `localStorage` con prefisso `cucinanca:`, un pannello; con `?i=` nell'URL vince il link; bottone "Svuota" e riga "Dispensa di martedì"), **2) "scegli tu stasera"** (funzione pura in `match.js`, pesca fra le ricette a 0 mancanti, pesi: stagione, giorno, non fatta di recente, caso; bottoni "Un'altra" e "Apri il libro"), **3) PWA** (manifest + service worker minimo: icona in Home, offline, e Safari smette di cancellare la memoria dopo 7 giorni), **4) lista della spesa** (vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share). Le spiegazioni complete sono nella conversazione del 13/09 e, in sintesi, in `docs/2026-09-13-ricerca-ricette-e-app.md` §2. Da non inseguire: foto del frigo, migliaia di ricette, account. Limite da dire chiaro: `localStorage` vive in quel browser di quel dispositivo, quattro coinquilini = quattro dispense; il ponte è il link con `?i=`.
+
+Cose pratiche da chiedere a Michele all'inizio: (a) le 26 foto sono pronte? (b) da quale funzione partire; (c) se vuole nascondere l'email dai commit (vedi "Repo GitHub" sotto).
+
+## Fatto il 13/09/2026 (quarta sessione)
+
+- **Foto 100/100** (arrivate 38 il 12/09 + spaghetti al pomodoro il 13/09; tre file rinominati allo slug esatto). Poi **+26 ricette** senza foto (vedi "Lotto del 13/09").
+- **Passata humanizer** sui testi delle 100 ricette (899 frammenti, 20k parole): puliti; ritoccate 9 frasi ("il segreto è", "per eccellenza", una frase doppia sui carciofi). I trattini lunghi sono intervalli numerici e restano; le code "non X: motivo" sono istruzioni vere e restano. Le parole vietate sono nel brief delle ricette.
+- **Test**: unit 30/30 (`npm test`); funzionali sui dati veri (ogni alias risolve, ogni ricetta raggiungibile con i suoi ingredienti, 87 ricette bloccate senza il principale, ordine deterministico, dosi mai 0/NaN) e nel browser (percorso completo, URL rotti, filtri non validi). **Quattro bug corretti**: (1) `scalaQuantita` arrotondava i pezzi a interi: mezza cipolla, ¼ di limone e il mezzo pollo del piri-piri comparivano come "1" in 67 dosi; ora a quarti, il libro scrive ½ ¼ ¾ e usa il singolare per q ≤ 1; (2) "sale" + Invio aggiungeva Capperi (unico suggerimento contenente "sale"): la corrispondenza esatta vince; (3) i singolari di nomi al plurale ("cece", "acciuga", "pistacchio") non risolvevano: euristica anche singolare → plurale; (4) testo utente in `innerHTML` (chip sconosciute, "non riconosciuto"): ora `escapeHtml` in `data.js`. Non bug ma scelta: "pomodor" + Invio con più suggerimenti aperti diventa chip sconosciuta (l'utente sceglie con frecce o click).
+- **Repo GitHub**: `cucinanca` è pubblica (serve per Pages gratis), `quizzettino` è privata e invisibile. Nessun segreto in repo. L'**email `michelemodugno99@gmail.com` è in tutti i commit** (pubblica): se Michele vuole nasconderla, GitHub → Settings → Emails → "Keep my email addresses private" + `git config user.email <id>+michimodu99@users.noreply.github.com`; i commit vecchi resterebbero (riscriverli è possibile ma invasivo). Rendere privata la repo con Pages richiede GitHub Pro.
+- **Report ricerca** (`docs/2026-09-13-ricerca-ricette-e-app.md`) e **lotto di 26 ricette** (sezioni sotto).
 
 ## Fatto il 12/09/2026 (terza sessione)
 
@@ -12,15 +26,15 @@ Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODU
 ## Stato attuale
 
 - **126 ricette** (36 primi, 33 secondi, 28 piatti unici, 14 contorni, 15 dolci; 16 portoghesi). Le prime 100 hanno la foto; **le 26 del 13/09 no**: prompt in fondo a `prompts.md`, sezione "Da generare (26)", stesso flusso a mano (Gemini → `img/raw/<slug>.jpg` → `npm run images:optimize` → `npm run prompts`).
-- Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). Tutto pushato a fine sessione: le 100 ricette sono online, le 39 nuove col segnaposto tipografico finché non arrivano le foto.
+- Sito live: **https://michimodu99.github.io/cucinanca/** (branch `main` = deploy). Tutto pushato a fine sessione: 126 ricette online, le 26 nuove col segnaposto tipografico finché non arrivano le foto. GitHub Pages tiene i file in cache 10 minuti: subito dopo un push il telefono può avere HTML nuovo e JS vecchio (successo il 12/09; il codice del video ora tollera l'elemento mancante).
 - **Il sito è condivisibile**: via il concetto di ingrediente "vietato" da dati, validatore, matcher, UI, test e prompt foto. Broccoli, cavolfiore, piselli, fagiolini, carciofi, piccante e pomodoro crudo sono ammessi. Restano fuori le frattaglie, per regola editoriale (nessun codice).
-- **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. 157 ingredienti con sostituti su 100 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
+- **Sostituzioni**: `ingredienti[].sostituti` per ricetta, validati (`scripts/build-data.mjs`), usati dal matcher (`abbina()` ritorna `sostituzioni: [{richiesto, usato, nota}]`, ordina a parità prima chi non sostituisce). UI: riga "con X al posto di Y" nei risultati, riquadro *Modifica* + ingrediente barrato nel libro. ~200 ingredienti con sostituti su 126 ricette. Esempio di riferimento: `#/ricetta/spaghetti-alla-carbonara?i=spaghetti,uova,pecorino,porchetta`.
 - **i18n pronto, UI in italiano**: `js/i18n.js` (`LINGUA`, `STRINGHE.it`, `t()`, `applicaTesti()`); `ETICHETTE` in `data.js` legge da lì; il testo statico di `index.html` ha `data-i18n`. Tradurre l'interfaccia = aggiungere `STRINGHE.en` e cambiare `LINGUA`. I contenuti (ricette) restano un progetto a parte.
 - Toggle crescente/decrescente su "Ordina" (bottone ↑/↓, `dir=desc` in URL) fatto a inizio sessione.
-- `npm run prompts` rigenera `prompts.md` da `recipes.json` (100 prompt, senza più la frase di esclusione).
-- Tassonomia: nuove voci `alheira`, `porchetta`, `panini`, `tahina`, `fagioli-borlotti`; alias `bacon`, `natas`, `grelos`, `riso carolino`, `piri-piri`. Mai usati direttamente: ricotta, gorgonzola, miele (piadina e porchetta compaiono solo come sostituti).
+- `npm run prompts` rigenera `prompts.md` da `recipes.json` (126 prompt; in fondo la sezione "Da generare" con quelli senza foto).
+- Tassonomia: 159 voci (12 nuove il 13/09, vedi "Lotto del 13/09"). Mai usato direttamente: gorgonzola (piadina e porchetta compaiono solo come sostituti). `risolvi()` capisce plurali e singolari ("pomodori", "cece"); "pane" → pane-raffermo e "pollo" → petto-di-pollo per scelta.
 - I file `data/ricette/*.json` sono ora tutti nello stile compatto (una riga per ingrediente/passo).
-- Le ricette nuove sono state scritte da 4 subagent in parallelo con il brief del piano contenuti (lotti A–D), rilette una a una prima del commit: il metodo ha funzionato bene, riusabile per la riserva.
+- Le ricette nuove (11/09 e 13/09) sono state scritte da 4 subagent in parallelo con un brief comune (lotti A–D), rilette una a una prima del commit: il metodo funziona, riusabile per il prossimo lotto.
 
 ## Ambiente Claude Code (da /doctor, 11/09/2026)
 
@@ -45,8 +59,9 @@ Scelte da Michele fra le 41 del report (le "25 più attese", che contando le dop
 
 ## Cose aperte non urgenti
 
-- **Preferenze personali per utente** ("non mangio…") e **dispensa base personalizzabile** (oggi curry, coriandolo, basilico, paprika sono "sempre presenti" perché sono di Michele): stesso problema dei vietati, da fare quando l'app viene davvero condivisa. Idea: preferenze salvate nel browser (localStorage), non nei dati.
-- **Persistenza della dispensa** fra visite (oggi si riparte da zero, scelta esplicita di Michele: per gli altri è la prima frizione).
-- **Inglese dei contenuti** (100 ricette × procedimento) e selettore lingua.
-- Riserva di ricette oltre le 100 in `RICETTE-LISTA.md` (Conteggi v2).
+- **Preferenze personali**, **memoria della dispensa**, **"scegli tu"**, **PWA**, **lista della spesa**: vedi "Prossima sessione" in testa. Con 126 ricette entrano piatti con piselli, fagiolini, pomodori, broccoli, cavolfiore: il filtro "non mangio" serve a Michele. La dispensa base (curry, coriandolo, basilico, paprika "sempre presenti") è di Michele: personalizzabile nello stesso pannello.
+- **Ritmo di crescita**: dopo il lotto del 13/09 conviene fissare "N ricette al mese" e una lista d'attesa (le 15 rimaste del report + `RICETTE-LISTA.md`) invece di rincorrere le mancanze.
+- `cous cous + ceci` non propone il cous cous di verdure (mancano 4 ingredienti: 3 verdure e cumino, soglia 3): non è un bug, ma le ricette con molti ingredienti richiesti escono facilmente dal matching; da tenere d'occhio con "scegli tu".
+- **Inglese dei contenuti** (126 ricette × procedimento) e selettore lingua.
+- Dosi frazionarie: "½ Uova" (spaghetti con polpette) è corretto ma brutto; valutare "1 uovo piccolo" nel dato.
 - La barra fissa "Cosa cucino" copre l'ultima riga di ingredienti mentre scorri: è il comportamento normale di una barra fissa, Michele ha deciso di lasciarlo così (verificato dal vivo, non è un bug del footer).
