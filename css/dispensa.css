@@ -170,9 +170,11 @@
 
 /* la barra fissa della dispensa coprirebbe il footer sottostante: gli riservo lo spazio */
 /* barra azione: 56px bottone + 24px padding verticale = 80px reali (52px + 24px = 76px su mobile) */
-body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+/* Sopra la riserva ci va il padding normale del footer (u*4): senza, la riga "By Michi" resta
+   incollata alla barra, con spazio sopra e niente sotto. */
+body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: calc(80px + var(--u) * 4 + env(safe-area-inset-bottom)); }
 @media (max-width: 899px) {
-  body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: calc(76px + var(--u) * 4 + env(safe-area-inset-bottom)); }
 }
 
 @media (max-width: 899px) {
