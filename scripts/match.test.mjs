@@ -234,3 +234,51 @@ test('abbina: a parità di mancanti, prima la copertura più alta', () => {
   const out = abbina({ ricette: r2, indice, ingredienti: ['zucca', 'salsiccia', 'riso'] });
   assert.deepEqual(out.map((x) => x.ricetta.slug), ['b-quattro', 'a-due']);
 });
+
+// ---------- esclusioni ("non mangio") ----------
+
+test('abbina: un ingrediente escluso e richiesto fa sparire la ricetta', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['zucca', 'salsiccia', 'riso'], esclusi: new Set(['salsiccia']) });
+  assert.ok(!out.some((x) => x.ricetta.slug === 'risotto-zucca'));
+  assert.ok(!out.some((x) => x.ricetta.slug === 'carbonara'));
+  assert.equal(out.esclusi, 2, 'conta quante ne ha nascoste, per poterlo dire all\'utente');
+});
+
+test('abbina: un ingrediente escluso ma opzionale lascia la ricetta in tavola', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['zucca'], esclusi: new Set(['pecorino']) });
+  const r = out.find((x) => x.ricetta.slug === 'zucca-forno');
+  assert.ok(r, 'il pecorino in zucca-forno è facoltativo: lo salti e basta');
+  assert.deepEqual(r.mancanti, []);
+});
+
+test('abbina: un escluso coperto da un sostituto posseduto resta, con la sostituzione', () => {
+  const out = abbina({ ricette: ricetteSost, indice, ingredienti: ['pecorino', 'pancetta'], esclusi: new Set(['salsiccia']) });
+  const r = out.find((x) => x.ricetta.slug === 'gricia');
+  assert.ok(r, 'la salsiccia non entra nel piatto: al suo posto c\'è la pancetta');
+  assert.deepEqual(r.sostituzioni, [{ richiesto: 'salsiccia', usato: 'pancetta', nota: 'meno grassa: aggiungi un filo d\'olio' }]);
+});
+
+test('abbina: un escluso passato dall\'URL non viene mai considerato posseduto', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['zucca', 'salsiccia', 'riso'], esclusi: new Set(['zucca']) });
+  assert.ok(!out.some((x) => x.ricetta.slug === 'zucca-forno'), 'il link diceva "ho la zucca", ma non la mangio');
+});
+
+test('abbina: escludere un ingrediente base lo rimette in conto', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['passata'], esclusi: new Set(['cipolla']) });
+  assert.ok(!out.some((x) => x.ricetta.slug === 'sugo'), 'la cipolla non è più "sempre presente" se non la mangi');
+});
+
+test('abbina: le esclusioni sono facoltative e l\'array vale quanto il Set', () => {
+  const senza = abbina({ ricette, indice, ingredienti: ['uova', 'salsiccia', 'pecorino'] });
+  const conArray = abbina({ ricette, indice, ingredienti: ['uova', 'salsiccia', 'pecorino'], esclusi: ['uova'] });
+  assert.ok(senza.some((x) => x.ricetta.slug === 'carbonara'));
+  assert.ok(!conArray.some((x) => x.ricetta.slug === 'carbonara'));
+  assert.equal(senza.esclusi, 0);
+});
+
+test('abbina: `richiesti` torna nel risultato e coincide con la frazione mostrata', () => {
+  const out = abbina({ ricette, indice, ingredienti: ['uova', 'salsiccia'] });
+  const r = out.find((x) => x.ricetta.slug === 'carbonara');
+  assert.equal(r.richiesti, 3, 'uova, pecorino, salsiccia: la cipolla e l\'olio sono base');
+  assert.equal(r.copertura, (r.richiesti - r.mancanti.length) / r.richiesti);
+});

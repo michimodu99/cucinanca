@@ -88,32 +88,49 @@ export function tempoTotale(ricetta) {
   return (t.preparazione || 0) + (t.cottura || 0);
 }
 
+const NESSUNO = new Set();
+
+/** Gli ingredienti che la ricetta chiede davvero: niente opzionali, niente dispensa base — tranne quelli
+ *  esclusi dall'utente, che tornano a contare (chi non mangia aglio non lo considera "sempre presente"). */
+export function ingredientiRichiesti(ricetta, indice, esclusi = NESSUNO) {
+  return (ricetta.ingredienti || []).filter((i) => !i.opzionale && (!indice.base.has(i.id) || esclusi.has(i.id)));
+}
+
 /**
  * Abbina la dispensa alle ricette. Una ricetta esce dai risultati se manca un ingrediente `principale`
- * senza sostituto posseduto, oppure se mancano più di `maxMancanti` ingredienti.
- * @returns array di { ricetta, mancanti: id[], copertura: 0..1, sostituzioni: {richiesto, usato, nota}[] } ordinato per rilevanza,
- *          con proprietà extra `nonRisolti` (testi non riconosciuti).
+ * senza sostituto posseduto, se ne richiede uno che l'utente non mangia (idem, senza sostituto),
+ * oppure se mancano più di `maxMancanti` ingredienti.
+ * @param esclusi Set (o array) di id che l'utente non mangia: non li possiede mai, nemmeno se glieli passa un link.
+ * @returns array di { ricetta, mancanti: id[], richiesti: n, copertura: 0..1, sostituzioni: {richiesto, usato, nota}[] }
+ *          ordinato per rilevanza, con proprietà extra `nonRisolti` (testi non riconosciuti) e `esclusi` (quante nascoste).
  */
-export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
-  const posseduti = new Set(indice.base);
+export function abbina({ ricette, indice, ingredienti, maxMancanti = 2, esclusi }) {
+  const vietati = esclusi instanceof Set ? esclusi : new Set(esclusi || []);
+  const posseduti = new Set([...indice.base].filter((id) => !vietati.has(id)));
   const nonRisolti = [];
   for (const testo of ingredienti) {
     const r = risolvi(indice, testo);
     if (!r) nonRisolti.push(testo);
-    else posseduti.add(r.id);
+    else if (!vietati.has(r.id)) posseduti.add(r.id);
   }
 
   const out = [];
+  let nascoste = 0;
   for (const ricetta of ricette) {
-    const richiesti = (ricetta.ingredienti || []).filter((i) => !i.opzionale && !indice.base.has(i.id));
+    const richiesti = ingredientiRichiesti(ricetta, indice, vietati);
     const mancanti = [];
     const sostituzioni = [];
+    let vietato = false;
     for (const i of richiesti) {
       if (posseduti.has(i.id)) continue;
       const s = (i.sostituti || []).find((x) => posseduti.has(x.id));
       if (s) sostituzioni.push({ richiesto: i.id, usato: s.id, nota: s.nota || null });
+      // l'ingrediente escluso è come uno che non potrai mai avere: se un sostituto lo rimpiazza il piatto
+      // resta in tavola (broccoli → cavolo nero), altrimenti la ricetta non ha senso proporla
+      else if (vietati.has(i.id)) { vietato = true; break; }
       else mancanti.push(i.id);
     }
+    if (vietato) { nascoste++; continue; }
     // manca l'ingrediente che dà identità al piatto (e nessun suo sostituto): non è cucinabile né
     // reinterpretabile (un bacalhau senza baccalà è un altro piatto), quindi non lo proponiamo
     if (richiesti.some((i) => i.principale && mancanti.includes(i.id))) continue;
@@ -121,7 +138,7 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
     // niente in comune con la dispensa (oltre alle basi): non è un suggerimento, è rumore
     if (richiesti.length && mancanti.length === richiesti.length) continue;
     const copertura = richiesti.length ? (richiesti.length - mancanti.length) / richiesti.length : 1;
-    out.push({ ricetta, mancanti, copertura, sostituzioni });
+    out.push({ ricetta, mancanti, richiesti: richiesti.length, copertura, sostituzioni });
   }
 
   out.sort(
@@ -133,6 +150,7 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2 }) {
       a.ricetta.titolo.localeCompare(b.ricetta.titolo, 'it'),
   );
   out.nonRisolti = nonRisolti;
+  out.esclusi = nascoste;
   return out;
 }
 
