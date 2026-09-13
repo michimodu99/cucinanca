@@ -1,8 +1,9 @@
 // Vista risultati: l'indice delle ricette ordinato per copertura, con filtri.
-import { abbina, tempoTotale, risolvi } from './match.js';
+import { abbina, tempoTotale, risolvi, ingredientiRichiesti, ricettaEsclusa } from './match.js';
 import { ETICHETTE, STACK, euro, minuti, escapeHtml } from './data.js';
 import { t } from './i18n.js';
 import { vai, ingredientiDaParams, costruisciHash, leggiHash } from './app.js';
+import { leggiEsclusi } from './memoria.js';
 
 const el = {
   titolo: document.getElementById('risultati-titolo'),
@@ -71,11 +72,20 @@ function leggiFiltri() {
 
 function render(ingredienti, f) {
   const conDispensa = ingredienti.length > 0;
+  // le preferenze valgono sempre, anche mentre sfogli tutte le ricette senza dispensa
+  const esclusi = new Set(leggiEsclusi().filter((id) => dati.indice.byId.has(id)));
   let lista;
+  let nascoste = 0;
   if (conDispensa) {
-    lista = abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti, maxMancanti: MAX_MANCANTI });
+    lista = abbina({ ricette: dati.ricette, indice: dati.indice, ingredienti, maxMancanti: MAX_MANCANTI, esclusi });
+    nascoste = lista.esclusi;
   } else {
-    lista = dati.ricette.map((ricetta) => ({ ricetta, mancanti: [], copertura: null, sostituzioni: [] }));
+    const tutte = dati.ricette.filter((r) => !ricettaEsclusa(r, dati.indice, esclusi));
+    nascoste = dati.ricette.length - tutte.length;
+    lista = tutte.map((ricetta) => ({
+      ricetta, mancanti: [], copertura: null, sostituzioni: [],
+      richiesti: ingredientiRichiesti(ricetta, dati.indice, esclusi).length,
+    }));
   }
   const nonRisolti = lista.nonRisolti || []; // .filter() sotto perde le proprietà extra dell'array, va salvato prima
 
@@ -109,9 +119,11 @@ function render(ingredienti, f) {
   const avviso = nonRisolti.length
     ? t(nonRisolti.length > 1 ? 'risultati.nonRiconosciuti' : 'risultati.nonRiconosciuto', { elenco: nonRisolti.map(escapeHtml).join(', ') })
     : '';
+  // far sparire ricette senza dirlo è una funzione che sembra un bug
+  const nota = nascoste ? t(nascoste > 1 ? 'risultati.nascoste' : 'risultati.nascosta', { n: nascoste }) : '';
   el.sotto.innerHTML = (conDispensa
     ? t('risultati.sottoDispensa', { n: lista.length, c: complete, link: linkDispensa })
-    : t('risultati.sottoTutte', { n: lista.length })) + avviso;
+    : t('risultati.sottoTutte', { n: lista.length })) + nota + avviso;
 
   // righe
   el.indice.innerHTML = '';
@@ -143,12 +155,11 @@ function render(ingredienti, f) {
   el.indice.appendChild(frag);
 }
 
-function riga({ ricetta: r, mancanti, copertura, sostituzioni }, k, ingredienti) {
+function riga({ ricetta: r, mancanti, copertura, sostituzioni, richiesti }, k, ingredienti) {
   const li = document.createElement('li');
   li.className = 'riga' + (mancanti.length === 0 && copertura !== null ? ' completa' : '');
   li.style.setProperty('--i', Math.min(k, 12));
   const href = costruisciHash(`ricetta/${r.slug}`, { i: ingredienti });
-  const richiesti = r.ingredienti.filter((i) => !i.opzionale && !dati.indice.base.has(i.id)).length;
   const attrManca = r.attrezzatura.filter((a) => !STACK.has(a));
   const rip = r.tempi.riposo ? ` <span>${t('risultati.riposo')}</span>` : '';
   const nome = (id) => dati.indice.byId.get(id).nome.toLowerCase();

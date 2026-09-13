@@ -71,7 +71,38 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </form>
         <p class="basi" id="basi"></p>
 
+
         <ul class="chips" id="chips" aria-label="Ingredienti scelti" data-i18n-attr="aria-label:dispensa.scelti"></ul>
+
+        <!-- memoria locale e preferenze: la dispensa vive in questo browser, il ponte verso un altro
+             dispositivo è il link con ?i= (bottone "Copia il link") -->
+        <div class="preferenze">
+          <p class="memoria" id="memoria" hidden>
+            <span class="memoria-quando" id="memoria-quando"></span>
+            <button type="button" class="link-btn" id="btn-svuota" data-i18n="dispensa.svuota">Svuota</button>
+            <button type="button" class="link-btn" id="btn-copia" data-i18n="dispensa.copiaLink">Copia il link</button>
+            <span class="memoria-nota" data-i18n="dispensa.soloQui">La ricordo solo in questo browser.</span>
+          </p>
+
+          <details class="pref" id="pref">
+            <summary><span data-i18n="dispensa.preferenze">Non mangio</span><span class="pref-conta" id="pref-conta"></span></summary>
+            <div class="pref-corpo">
+              <p class="pref-aiuto" data-i18n="dispensa.prefAiuto">Le ricette che lo richiedono non te le propongo più.</p>
+              <form class="ingresso ingresso-pref" id="ingresso-escluso" autocomplete="off">
+                <div class="ingresso-field">
+                  <input id="escluso" name="escluso" type="text" inputmode="text" enterkeyhint="done"
+                         placeholder="broccoli, piselli…" aria-autocomplete="list" aria-controls="suggerimenti-esclusi" aria-expanded="false"
+                         aria-label="Aggiungi fra quelli che non mangi"
+                         data-i18n-attr="placeholder:dispensa.prefPlaceholder;aria-label:dispensa.prefAggiungi">
+                  <button type="submit" class="ingresso-add" aria-label="Aggiungi fra quelli che non mangi" data-i18n-attr="aria-label:dispensa.prefAggiungi">+</button>
+                </div>
+                <ul class="suggerimenti" id="suggerimenti-esclusi" role="listbox" hidden></ul>
+                <p class="ingresso-msg" id="escluso-msg" aria-live="polite"></p>
+              </form>
+              <ul class="chips chips-pref" id="chips-esclusi" aria-label="Non mangio" data-i18n-attr="aria-label:dispensa.preferenze"></ul>
+            </div>
+          </details>
+        </div>
 
         <div class="indice-ingredienti" id="indice-ingredienti"></div>
     </div>

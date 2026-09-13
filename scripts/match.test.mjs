@@ -241,7 +241,8 @@ test('abbina: un ingrediente escluso e richiesto fa sparire la ricetta', () => {
   const out = abbina({ ricette, indice, ingredienti: ['zucca', 'salsiccia', 'riso'], esclusi: new Set(['salsiccia']) });
   assert.ok(!out.some((x) => x.ricetta.slug === 'risotto-zucca'));
   assert.ok(!out.some((x) => x.ricetta.slug === 'carbonara'));
-  assert.equal(out.esclusi, 2, 'conta quante ne ha nascoste, per poterlo dire all\'utente');
+  // la carbonara con questa dispensa aveva 3 mancanti: sarebbe caduta comunque, non gliela attribuiamo
+  assert.equal(out.esclusi, 1, "conta le ricette che avresti visto davvero, per poterlo dire all'utente");
 });
 
 test('abbina: un ingrediente escluso ma opzionale lascia la ricetta in tavola', () => {

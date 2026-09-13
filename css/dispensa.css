@@ -188,3 +188,78 @@ body:has(.view-dispensa:not([hidden]) .azione-bar) .footer { padding-bottom: cal
   .azione-count { display: none; }
   .btn-primary { height: 52px; }
 }
+
+/* memoria locale + preferenze: righe e barrature, nessun colore nuovo */
+.preferenze { margin-top: calc(var(--u) * 2); }
+
+.memoria {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+}
+.memoria-quando { font-weight: 600; color: var(--ink); }
+.memoria-quando:empty { display: none; }
+.memoria-nota { flex-basis: 100%; font-size: var(--t-xs); line-height: 1.5; max-width: 62ch; }
+
+.link-btn {
+  font-size: var(--t-sm);
+  color: var(--ink);
+  border-bottom: var(--rule-ink);
+  padding: 0 2px 1px;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.link-btn:hover { background: var(--ink); color: var(--paper); }
+
+.pref { margin-top: calc(var(--u) * 2); border-top: var(--rule); }
+.pref > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pref > summary::-webkit-details-marker { display: none; }
+/* apri/chiudi tipografico, non un'icona */
+.pref > summary::before { content: '+'; width: 12px; font-size: 17px; font-weight: 400; line-height: 1; }
+.pref[open] > summary::before { content: '−'; }
+.pref-conta {
+  min-width: 20px;
+  padding: 1px 5px;
+  background: var(--ink);
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  text-align: center;
+}
+.pref-conta:empty { display: none; }
+
+.pref-corpo { padding: 0 0 calc(var(--u) * 3) 22px; max-width: 62ch; }
+.pref-aiuto {
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin-bottom: calc(var(--u) * 2);
+}
+.ingresso-pref .ingresso-field input { font-size: var(--t-lg); }
+.ingresso-pref .ingresso-msg { min-height: 0; margin-top: 4px; }
+.chips-pref { margin: calc(var(--u) * 2) 0 0; }
+.pref-vuoto { font-size: var(--t-sm); color: var(--ink-2); }
+
+/* quello che non mangi resta leggibile: barrato, non cancellato */
+.chip.esclusa { color: var(--ink-2); }
+.chip.esclusa > span { text-decoration: line-through; text-decoration-thickness: 1px; }
+.indice-voci button.escluso { color: var(--ink-2); text-decoration: line-through; text-decoration-thickness: 1px; }
+
+@media (max-width: 899px) {
+  .pref-corpo { padding-left: 0; }
+  .ingresso-pref .ingresso-field input { font-size: var(--t-md); }
+  .memoria { gap: 6px 12px; }
+}

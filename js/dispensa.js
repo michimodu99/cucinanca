@@ -1,8 +1,10 @@
-// Vista dispensa: input con suggerimenti, chip, indice per categoria, barra azione.
+// Vista dispensa: input con suggerimenti, chip, indice per categoria, barra azione,
+// memoria locale (la dispensa si ricorda) e preferenze ("non mangio").
 import { normalizza, risolvi } from './match.js';
 import { ETICHETTE, escapeHtml } from './data.js';
 import { t } from './i18n.js';
 import { vai, ingredientiDaParams } from './app.js';
+import { leggiDispensa, salvaDispensa, leggiEsclusi, salvaEsclusi, giorniFa } from './memoria.js';
 
 const ORDINE_CATEGORIE = ['verdura', 'carne', 'pesce', 'salume', 'latticino', 'uova', 'pasta', 'cereale', 'legume', 'frutta', 'condimento', 'erba', 'spezia', 'dolce', 'altro'];
 
@@ -17,16 +19,37 @@ const el = {
   btn: document.getElementById('btn-cucina'),
   basi: document.getElementById('basi'),
   video: document.getElementById('hero-video'),
+  memoria: document.getElementById('memoria'),
+  quando: document.getElementById('memoria-quando'),
+  svuota: document.getElementById('btn-svuota'),
+  copia: document.getElementById('btn-copia'),
+  prefConta: document.getElementById('pref-conta'),
+  prefForm: document.getElementById('ingresso-escluso'),
+  prefInput: document.getElementById('escluso'),
+  prefSugg: document.getElementById('suggerimenti-esclusi'),
+  prefMsg: document.getElementById('escluso-msg'),
+  prefChips: document.getElementById('chips-esclusi'),
 };
 
 let dati;
 let scelti = []; // testi come digitati (o id canonici dall'indice)
+let esclusi = []; // id canonici che l'utente non mangia
+let ts = null; // quando è stata salvata la dispensa in memoria
+let daLink = false; // la lista arriva da un ?i= altrui: non sovrascrivo la memoria finché non tocchi niente
 let montato = false;
-let cursore = -1;
 
 export function montaDispensa(d, params) {
   dati = d;
-  scelti = ingredientiDaParams(params);
+  esclusi = leggiEsclusi().filter((id) => dati.indice.byId.has(id)); // la tassonomia cambia, la memoria resta
+  daLink = params.has('i');
+  if (daLink) {
+    scelti = ingredientiDaParams(params);
+    ts = null;
+  } else {
+    const memoria = leggiDispensa();
+    scelti = memoria.i;
+    ts = memoria.ts;
+  }
   if (!montato) {
     montaUnaVolta();
     montato = true;
@@ -39,6 +62,14 @@ export function videoDispensa(acceso) {
   if (!el.video) return; // HTML e JS possono arrivare da cache diverse subito dopo un deploy: mai bloccare le ricette per il video
   if (acceso) { if (el.video.hasAttribute('autoplay')) el.video.play().catch(() => {}); }
   else el.video.pause();
+}
+
+/** La dispensa mostrata diventa quella ricordata. Solo sulle modifiche vere: `render()` gira anche
+ *  al montaggio, e salvare lì sovrascriverebbe la tua dispensa appena apri il link di un altro. */
+function salva() {
+  daLink = false;
+  ts = Date.now();
+  salvaDispensa(scelti, undefined, ts);
 }
 
 function montaUnaVolta() {
@@ -91,81 +122,135 @@ function montaUnaVolta() {
   }
   el.indice.appendChild(frag);
 
-  // input + suggerimenti
-  el.input.addEventListener('input', () => suggerisci(el.input.value));
-  el.input.addEventListener('keydown', (e) => {
-    const items = [...el.sugg.querySelectorAll('li')];
-    if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); cursore = (cursore + 1) % items.length; evidenzia(items); }
-    else if (e.key === 'ArrowUp' && items.length) { e.preventDefault(); cursore = (cursore - 1 + items.length) % items.length; evidenzia(items); }
-    else if (e.key === 'Escape') chiudiSugg();
+  // dispensa: l'ingrediente scelto entra fra quelli posseduti
+  creaCampoIngrediente({
+    form: el.form,
+    input: el.input,
+    sugg: el.sugg,
+    onScelta: aggiungi,
+    onIgnoto: aggiungiTesto,
   });
-  el.input.addEventListener('blur', () => setTimeout(chiudiSugg, 150));
-  el.form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const items = [...el.sugg.querySelectorAll('li')];
-    const esatto = risolvi(dati.indice, el.input.value);
-    if (cursore >= 0 && items[cursore]) aggiungi(items[cursore].dataset.id);
-    else if (esatto) aggiungi(esatto.id); // "sale" è sale, non l'unico suggerimento che lo contiene (capperi sotto sale)
-    else if (items.length === 1) aggiungi(items[0].dataset.id);
-    else aggiungiTesto(el.input.value);
+
+  // preferenze: lo stesso campo, ma pesca anche fra i base (chi non mangia aglio non lo vuole "sempre presente")
+  creaCampoIngrediente({
+    form: el.prefForm,
+    input: el.prefInput,
+    sugg: el.prefSugg,
+    conBase: true,
+    onScelta: escludi,
+    onIgnoto: (testo) => { el.prefMsg.textContent = t('dispensa.sconosciuto', { t: testo }); },
   });
+
+  el.svuota.addEventListener('click', () => {
+    scelti = [];
+    salva(); // salvare il vuoto è un'operazione vera: domani non deve ripescare la dispensa di oggi
+    render();
+  });
+
+  el.copia.addEventListener('click', async () => {
+    const url = location.origin + location.pathname + '#/?i=' + encodeURIComponent(scelti.join(','));
+    try {
+      await navigator.clipboard.writeText(url);
+      lampeggia(el.copia, t('dispensa.copiato'));
+    } catch {
+      lampeggia(el.copia, t('dispensa.copiaErrore'));
+    }
+  });
+
   el.btn.addEventListener('click', () => vai('risultati', { i: scelti }));
 }
 
-function suggerisci(testo) {
-  const q = normalizza(testo);
-  cursore = -1;
-  if (q.length < 2) return chiudiSugg();
-  const hit = [];
-  for (const i of dati.tassonomia) {
-    if (i.base) continue;
-    const chiavi = [i.nome, ...(i.alias || [])];
-    const m = chiavi.find((k) => normalizza(k).includes(q));
-    if (m) hit.push({ i, alias: normalizza(m) !== normalizza(i.nome) ? m : null, prio: normalizza(i.nome).startsWith(q) ? 0 : 1 });
-  }
-  hit.sort((a, b) => a.prio - b.prio || (dati.uso.get(b.i.id) || 0) - (dati.uso.get(a.i.id) || 0));
-  el.sugg.innerHTML = '';
-  for (const { i, alias } of hit.slice(0, 8)) {
-    const li = document.createElement('li');
-    li.dataset.id = i.id;
-    li.setAttribute('role', 'option');
-    li.setAttribute('aria-selected', 'false');
-    li.innerHTML = `<span>${i.nome}</span><small>${alias ? t('dispensa.anche', { alias }) : (ETICHETTE.categoriaIngrediente[i.categoria] || '')}</small>`;
-    li.addEventListener('mousedown', (e) => { e.preventDefault(); aggiungi(i.id); });
-    el.sugg.appendChild(li);
-  }
-  el.sugg.hidden = !hit.length;
-  el.input.setAttribute('aria-expanded', String(!!hit.length));
+/** Testo temporaneo su un bottone, poi torna quello di prima (come la copia della spesa nel libro). */
+function lampeggia(bottone, testo, chiave = 'dispensa.copiaLink') {
+  bottone.textContent = testo;
+  setTimeout(() => { bottone.textContent = t(chiave); }, 1800);
 }
 
-function evidenzia(items) {
-  items.forEach((li, k) => li.setAttribute('aria-selected', String(k === cursore)));
-}
+/** L'input con i suggerimenti: frecce, Invio, corrispondenza esatta che batte i contenuti ("sale" è
+ *  il sale, non i capperi sotto sale). Dispensa e "non mangio" lo usano entrambi, quindi sta qui una volta sola. */
+function creaCampoIngrediente({ form, input, sugg, conBase = false, onScelta, onIgnoto }) {
+  let cursore = -1;
 
-function chiudiSugg() {
-  el.sugg.hidden = true;
-  el.input.setAttribute('aria-expanded', 'false');
-  cursore = -1;
+  const chiudi = () => {
+    sugg.hidden = true;
+    input.setAttribute('aria-expanded', 'false');
+    cursore = -1;
+  };
+
+  const evidenzia = (items) => items.forEach((li, k) => li.setAttribute('aria-selected', String(k === cursore)));
+
+  const suggerisci = (testo) => {
+    const q = normalizza(testo);
+    cursore = -1;
+    if (q.length < 2) return chiudi();
+    const hit = [];
+    for (const i of dati.tassonomia) {
+      if (i.base && !conBase) continue;
+      const chiavi = [i.nome, ...(i.alias || [])];
+      const m = chiavi.find((k) => normalizza(k).includes(q));
+      if (m) hit.push({ i, alias: normalizza(m) !== normalizza(i.nome) ? m : null, prio: normalizza(i.nome).startsWith(q) ? 0 : 1 });
+    }
+    hit.sort((a, b) => a.prio - b.prio || (dati.uso.get(b.i.id) || 0) - (dati.uso.get(a.i.id) || 0));
+    sugg.innerHTML = '';
+    for (const { i, alias } of hit.slice(0, 8)) {
+      const li = document.createElement('li');
+      li.dataset.id = i.id;
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', 'false');
+      li.innerHTML = `<span>${i.nome}</span><small>${alias ? t('dispensa.anche', { alias }) : (ETICHETTE.categoriaIngrediente[i.categoria] || '')}</small>`;
+      li.addEventListener('mousedown', (e) => { e.preventDefault(); scegli(i.id); });
+      sugg.appendChild(li);
+    }
+    sugg.hidden = !hit.length;
+    input.setAttribute('aria-expanded', String(!!hit.length));
+  };
+
+  const scegli = (id) => {
+    input.value = '';
+    chiudi();
+    onScelta(id);
+    input.focus();
+  };
+
+  input.addEventListener('input', () => suggerisci(input.value));
+  input.addEventListener('keydown', (e) => {
+    const items = [...sugg.querySelectorAll('li')];
+    if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); cursore = (cursore + 1) % items.length; evidenzia(items); }
+    else if (e.key === 'ArrowUp' && items.length) { e.preventDefault(); cursore = (cursore - 1 + items.length) % items.length; evidenzia(items); }
+    else if (e.key === 'Escape') chiudi();
+  });
+  input.addEventListener('blur', () => setTimeout(chiudi, 150));
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const items = [...sugg.querySelectorAll('li')];
+    const esatto = risolvi(dati.indice, input.value);
+    if (cursore >= 0 && items[cursore]) scegli(items[cursore].dataset.id);
+    else if (esatto) scegli(esatto.id); // "sale" è sale, non l'unico suggerimento che lo contiene (capperi sotto sale)
+    else if (items.length === 1) scegli(items[0].dataset.id);
+    else {
+      const testo = input.value.trim();
+      input.value = '';
+      chiudi();
+      if (testo) onIgnoto(testo);
+    }
+  });
 }
 
 function aggiungiTesto(testo) {
-  const t0 = testo.trim();
-  if (!t0) return;
-  const r = risolvi(dati.indice, t0);
-  if (r) return aggiungi(r.id);
   // non riconosciuto: lo teniamo come chip tratteggiato, il matching lo ignorerà
-  if (!scelti.includes(t0)) scelti.push(t0);
-  el.msg.textContent = t('dispensa.sconosciuto', { t: t0 });
+  if (!scelti.includes(testo)) scelti.push(testo);
+  el.msg.textContent = t('dispensa.sconosciuto', { t: testo });
   el.msg.classList.remove('err');
-  el.input.value = '';
-  chiudiSugg();
+  salva();
   render();
 }
 
 function aggiungi(id) {
   const ing = dati.indice.byId.get(id);
-  el.input.value = '';
-  chiudiSugg();
+  if (esclusi.includes(id)) {
+    el.msg.textContent = t('dispensa.giaEscluso', { nome: ing.nome });
+    return;
+  }
   if (ing.base) {
     el.msg.textContent = t('dispensa.giaBase', { nome: ing.nome });
     el.msg.classList.remove('err');
@@ -173,45 +258,124 @@ function aggiungi(id) {
   }
   el.msg.textContent = '';
   if (!scelti.includes(id)) scelti.push(id);
+  salva();
   render();
-  el.input.focus();
 }
 
 function toggle(id) {
+  if (esclusi.includes(id)) {
+    el.msg.textContent = t('dispensa.giaEscluso', { nome: dati.indice.byId.get(id).nome });
+    return;
+  }
   if (scelti.includes(id)) scelti = scelti.filter((s) => s !== id);
   else scelti.push(id);
+  salva();
   render();
 }
 
 function rimuovi(s) {
   scelti = scelti.filter((x) => x !== s);
+  salva();
   render();
 }
 
+/** Da qui in poi non lo mangio: esce anche dalla dispensa, altrimenti resterebbe una chip che non conta nulla. */
+function escludi(id) {
+  el.prefMsg.textContent = '';
+  if (!esclusi.includes(id)) esclusi.push(id);
+  salvaEsclusi(esclusi);
+  const prima = scelti.length;
+  scelti = scelti.filter((s) => risolvi(dati.indice, s)?.id !== id);
+  if (scelti.length !== prima) salva();
+  render();
+}
+
+function rimetti(id) {
+  esclusi = esclusi.filter((x) => x !== id);
+  salvaEsclusi(esclusi);
+  render();
+}
+
+function chip({ testo, nome, classe, etichettaTogli, onTogli, titolo }) {
+  const li = document.createElement('li');
+  li.className = 'chip' + (classe ? ' ' + classe : '');
+  if (titolo) li.title = titolo;
+  li.innerHTML = `<span>${nome ? nome : escapeHtml(testo)}</span>`;
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.setAttribute('aria-label', etichettaTogli);
+  b.textContent = '×';
+  b.addEventListener('click', onTogli);
+  li.appendChild(b);
+  return li;
+}
+
 function render() {
-  // chips
+  // chip della dispensa
   el.chips.innerHTML = '';
   for (const s of scelti) {
     const r = risolvi(dati.indice, s);
-    const li = document.createElement('li');
-    li.className = 'chip' + (r ? '' : ' sconosciuto');
-    li.innerHTML = `<span>${r ? r.nome : escapeHtml(s)}</span>`;
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('aria-label', t('dispensa.togli', { nome: r ? r.nome : s }));
-    b.textContent = '×';
-    b.addEventListener('click', () => rimuovi(s));
-    li.appendChild(b);
-    el.chips.appendChild(li);
+    const fuori = Boolean(r && esclusi.includes(r.id)); // arrivato da un link: lo mostro barrato, il matcher lo ignora
+    el.chips.appendChild(chip({
+      testo: s,
+      nome: r ? r.nome : null,
+      classe: (r ? '' : 'sconosciuto') + (fuori ? ' esclusa' : ''),
+      titolo: fuori ? t('dispensa.esclusoTitolo') : null,
+      etichettaTogli: t('dispensa.togli', { nome: r ? r.nome : s }),
+      onTogli: () => rimuovi(s),
+    }));
   }
-  // indice
+
+  // chip di "non mangio"
+  el.prefChips.innerHTML = '';
+  for (const id of esclusi) {
+    const nome = dati.indice.byId.get(id).nome;
+    el.prefChips.appendChild(chip({
+      nome,
+      classe: 'esclusa',
+      etichettaTogli: t('dispensa.togliEscluso', { nome }),
+      onTogli: () => rimetti(id),
+    }));
+  }
+  if (!esclusi.length) {
+    const vuoto = document.createElement('li');
+    vuoto.className = 'pref-vuoto';
+    vuoto.textContent = t('dispensa.prefVuoto');
+    el.prefChips.appendChild(vuoto);
+  }
+  el.prefConta.textContent = esclusi.length ? t('dispensa.prefConta', { n: esclusi.length }) : '';
+
+  // indice: premuto quello che hai, barrato quello che non mangi
   const ids = new Set(scelti.map((s) => risolvi(dati.indice, s)?.id).filter(Boolean));
-  for (const b of el.indice.querySelectorAll('button[data-id]')) b.setAttribute('aria-pressed', String(ids.has(b.dataset.id)));
-  // barra
-  const n = ids.size;
+  for (const b of el.indice.querySelectorAll('button[data-id]')) {
+    const fuori = esclusi.includes(b.dataset.id);
+    b.setAttribute('aria-pressed', String(!fuori && ids.has(b.dataset.id)));
+    b.classList.toggle('escluso', fuori);
+    if (fuori) b.title = t('dispensa.esclusoTitolo');
+    else b.removeAttribute('title');
+  }
+
+  // barra: conta solo quello che finirà davvero nel calcolo
+  const n = [...ids].filter((id) => !esclusi.includes(id)).length;
   el.count.textContent = n === 0 ? t('dispensa.nessuno') : n === 1 ? t('dispensa.uno') : t('dispensa.molti', { n });
   el.btn.disabled = n === 0;
-  // URL senza navigare (così un refresh non perde la lista)
+
+  // riga della memoria: compare quando c'è qualcosa da ricordare o da passare a un altro dispositivo
+  el.memoria.hidden = !scelti.length;
+  el.quando.textContent = etichettaQuando();
+
+  // URL senza navigare (così un refresh non perde la lista, e il link resta condivisibile)
   const hash = scelti.length ? `#/?i=${encodeURIComponent(scelti.join(','))}` : '#/';
   if (location.hash !== hash) history.replaceState(null, '', hash);
+}
+
+/** "Dispensa di ieri", "di martedì", "del 3 settembre": dire da quando è lì spiega perché è già piena. */
+function etichettaQuando() {
+  if (daLink) return t('dispensa.memoriaLink');
+  const g = giorniFa(ts);
+  if (g === null) return '';
+  if (g <= 0) return t('dispensa.memoriaOggi');
+  if (g === 1) return t('dispensa.memoriaIeri');
+  if (g < 7) return t('dispensa.memoriaGiorno', { giorno: new Intl.DateTimeFormat('it-IT', { weekday: 'long' }).format(ts) });
+  return t('dispensa.memoriaData', { data: new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long' }).format(ts) });
 }

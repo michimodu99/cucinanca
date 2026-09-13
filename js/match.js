@@ -96,6 +96,15 @@ export function ingredientiRichiesti(ricetta, indice, esclusi = NESSUNO) {
   return (ricetta.ingredienti || []).filter((i) => !i.opzionale && (!indice.base.has(i.id) || esclusi.has(i.id)));
 }
 
+/** La ricetta chiede qualcosa che non mangi, e niente di quello che hai lo rimpiazza davvero nel piatto.
+ *  Senza dispensa `posseduti` sono i soli ingredienti base. */
+export function ricettaEsclusa(ricetta, indice, esclusi, posseduti = indice.base) {
+  if (!esclusi || !esclusi.size) return false;
+  return ingredientiRichiesti(ricetta, indice, esclusi).some(
+    (i) => esclusi.has(i.id) && !(i.sostituti || []).some((s) => posseduti.has(s.id) && !esclusi.has(s.id)),
+  );
+}
+
 /**
  * Abbina la dispensa alle ricette. Una ricetta esce dai risultati se manca un ingrediente `principale`
  * senza sostituto posseduto, se ne richiede uno che l'utente non mangia (idem, senza sostituto),
@@ -117,26 +126,27 @@ export function abbina({ ricette, indice, ingredienti, maxMancanti = 2, esclusi 
   const out = [];
   let nascoste = 0;
   for (const ricetta of ricette) {
+    // l'escluso è come un ingrediente che non potrai mai avere: se un sostituto posseduto lo rimpiazza
+    // il piatto resta in tavola (broccoli → cavolo nero), altrimenti non ha senso proporlo
+    const vietata = ricettaEsclusa(ricetta, indice, vietati, posseduti);
     const richiesti = ingredientiRichiesti(ricetta, indice, vietati);
     const mancanti = [];
     const sostituzioni = [];
-    let vietato = false;
     for (const i of richiesti) {
       if (posseduti.has(i.id)) continue;
       const s = (i.sostituti || []).find((x) => posseduti.has(x.id));
       if (s) sostituzioni.push({ richiesto: i.id, usato: s.id, nota: s.nota || null });
-      // l'ingrediente escluso è come uno che non potrai mai avere: se un sostituto lo rimpiazza il piatto
-      // resta in tavola (broccoli → cavolo nero), altrimenti la ricetta non ha senso proporla
-      else if (vietati.has(i.id)) { vietato = true; break; }
       else mancanti.push(i.id);
     }
-    if (vietato) { nascoste++; continue; }
     // manca l'ingrediente che dà identità al piatto (e nessun suo sostituto): non è cucinabile né
     // reinterpretabile (un bacalhau senza baccalà è un altro piatto), quindi non lo proponiamo
     if (richiesti.some((i) => i.principale && mancanti.includes(i.id))) continue;
     if (mancanti.length > maxMancanti) continue;
     // niente in comune con la dispensa (oltre alle basi): non è un suggerimento, è rumore
     if (richiesti.length && mancanti.length === richiesti.length) continue;
+    // il controllo va in fondo apposta: "nascoste" deve contare le ricette che avresti visto davvero,
+    // non quelle che sarebbero comunque cadute per troppi mancanti
+    if (vietata) { nascoste++; continue; }
     const copertura = richiesti.length ? (richiesti.length - mancanti.length) / richiesti.length : 1;
     out.push({ ricetta, mancanti, richiesti: richiesti.length, copertura, sostituzioni });
   }
