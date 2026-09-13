@@ -3,7 +3,7 @@
 126 prompt in inglese, uno per ricetta, nello stile editoriale del progetto (SPEC §8). Generati da `scripts/prompts-md.mjs` (`npm run prompts`) dal campo `foto.prompt` di ogni ricetta, con lo stesso template di `scripts/generate_image.py`.
 Il formato **4:5 verticale** è dichiarato in ogni prompt; se l'interfaccia ha un selettore di aspect ratio, imposta comunque 4:5 (o 3:4 se 4:5 non c'è, poi il crop lo fa `optimize-images`). Salva l'output come `img/raw/<slug>.png` (o .jpg), poi `npm run images:optimize`.
 
-Due parti: **100 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, in fondo, **26 ricette da generare**. Rilanciando `npm run prompts` dopo aver ottimizzato le foto, la lista in fondo si svuota da sola.
+Due parti: **126 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, in fondo, **0 ricette da generare**. Rilanciando `npm run prompts` dopo aver ottimizzato le foto, la lista in fondo si svuota da sola.
 
 **Stile comune:** editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload
 
@@ -11,7 +11,7 @@ Due parti: **100 ricette con la foto già fatta** (`img/<slug>.webp` esiste) e, 
 
 ---
 
-# Foto già fatte (100)
+# Foto già fatte (126)
 
 ## Contorno
 
@@ -85,6 +85,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, crispy golden roasted potato chunks with rosemary and flaky salt, white ceramic plate, overhead. Vertical 4:5 portrait format.
 ```
 
+### Purè di patate
+`pure-di-patate`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, smooth creamy mashed potatoes in a white bowl, small pool of melted butter on top, light dusting of nutmeg, soft natural light. Vertical 4:5 portrait format.
+```
+
+### Verdure grigliate
+`verdure-grigliate`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, grilled zucchini, eggplant and red pepper slices with dark char marks, glossy with olive oil, torn basil leaves, white ceramic plate, overhead. Vertical 4:5 portrait format.
+```
+
 ### Verze stufate con pancetta
 `verze-stufate-con-pancetta`
 
@@ -108,6 +122,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, creamy Portuguese rice pudding in a shallow white ceramic bowl, decorated on top with a lattice pattern of ground cinnamon. Vertical 4:5 portrait format.
 ```
 
+### Cheesecake senza cottura
+`cheesecake-senza-cottura`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, slice of no-bake cheesecake with a biscuit base and smooth white cream layer, mixed berry sauce dripping over the top, white ceramic plate. Vertical 4:5 portrait format.
+```
+
+### Crêpes dolci
+`crepes-dolci`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, thin golden crêpes folded into triangles on a white plate, hazelnut cream spread inside, light dusting of powdered sugar, soft natural light. Vertical 4:5 portrait format.
+```
+
 ### Crostata alla crema pasticcera
 `crostata-alla-crema-pasticcera`
 
@@ -120,6 +148,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, airy dark chocolate mousse in a small white ceramic cup with a spoon-scooped surface showing its light texture, on a white plate. Vertical 4:5 portrait format.
+```
+
+### Muffin al cioccolato
+`muffin-al-cioccolato`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, six dark chocolate muffins with tall cracked domes in paper liners, one broken open showing melted chocolate chunks, white ceramic plate, soft light. Vertical 4:5 portrait format.
+```
+
+### Pancakes
+`pancakes`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, stack of fluffy golden pancakes on a white plate, honey dripping down the sides, a few blueberries and raspberries on top, soft morning light. Vertical 4:5 portrait format.
 ```
 
 ### Panna cotta ai frutti di bosco
@@ -148,6 +190,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, single-serving tiramisu in a glass, visible layers of mascarpone cream and coffee-soaked ladyfingers, cocoa dusting, minimal light grey background. Vertical 4:5 portrait format.
+```
+
+### Torta al cioccolato
+`torta-al-cioccolato`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, small round chocolate cake with a cracked crust, one slice cut out showing a moist dark crumb, light dusting of powdered sugar, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
 ### Torta allo yogurt
@@ -187,6 +236,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese arroz de pato, baked duck rice with crispy chourico slices on top, golden crust, white ceramic baking dish. Vertical 4:5 portrait format.
 ```
 
+### Bifana
+`bifana`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese bifana sandwich, crusty white bread roll filled with thin pork slices soaked in red paprika garlic sauce, sauce dripping onto white ceramic plate. Vertical 4:5 portrait format.
+```
+
 ### Bitoque
 `bitoque`
 
@@ -206,6 +262,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese-Goan chicken curry with coconut sauce, tomato and fresh coriander, white rice on the side, white ceramic bowl. Vertical 4:5 portrait format.
+```
+
+### Chili con carne
+`chili-con-carne`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, chili con carne, dark red minced beef stew with kidney beans and corn, served over white rice, chopped coriander on top, white ceramic bowl. Vertical 4:5 portrait format.
+```
+
+### Cous cous di verdure
+`cous-cous-di-verdure`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, vegetable couscous, fluffy golden couscous topped with roasted diced zucchini, carrot, red pepper and chickpeas, raisins, toasted almond flakes and mint leaves, white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
 ### Crêpes salate prosciutto e formaggio
@@ -299,11 +369,25 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, thick Tuscan ribollita with dark kale, white beans and bread, olive oil drizzle, rustic white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
+### Riso saltato con uovo e verdure
+`riso-saltato-con-uovo`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Chinese style fried rice with soft scrambled egg pieces, diced carrot and green peas, soy sauce glaze, chopped chives on top, white ceramic bowl. Vertical 4:5 portrait format.
+```
+
 ### Shakshuka
 `shakshuka`
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, shakshuka with two eggs poached in a rich red tomato and pepper sauce, runny yolks, chopped parsley, served in a white ceramic bowl. Vertical 4:5 portrait format.
+```
+
+### Sopa de castanhas
+`sopa-de-castanhas`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese chestnut soup, thick creamy hazelnut-colored soup with whole chestnuts, borlotti beans, rice and chourico slices, drizzle of olive oil, white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
 ### Spaghetti con polpette e pomodorini
@@ -350,6 +434,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, cacio e pepe spaghetti with glossy pecorino cream and cracked black pepper, nest of pasta in a white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
+### Cannelloni ricotta e spinaci
+`cannelloni-ricotta-e-spinaci`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, four baked cannelloni filled with ricotta and spinach, topped with tomato sauce, béchamel and golden parmesan crust, small white ceramic dish. Vertical 4:5 portrait format.
+```
+
+### Gnocchi alla sorrentina
+`gnocchi-alla-sorrentina`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, baked potato gnocchi in tomato sauce with melted golden mozzarella and fresh basil leaves, small white ceramic baking dish, bubbling edges. Vertical 4:5 portrait format.
+```
+
 ### Gnocchi di patate burro e salvia
 `gnocchi-di-patate-burro-e-salvia`
 
@@ -392,6 +490,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, orecchiette pasta with crumbled sausage and dark green turnip tops, glossy olive oil, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
+### Pasta al forno al ragù
+`pasta-al-forno-al-ragu`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, slice of baked rigatoni with meat ragù, melted mozzarella and golden crust, sliced boiled egg visible inside, white ceramic plate, warm light. Vertical 4:5 portrait format.
+```
+
 ### Pasta al limone e mascarpone
 `pasta-al-limone-e-mascarpone`
 
@@ -404,6 +509,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, trofie pasta coated in bright green basil pesto with a few whole basil leaves and grated parmesan on top, in a shallow white ceramic bowl. Vertical 4:5 portrait format.
+```
+
+### Pasta al salmone
+`pasta-al-salmone`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, farfalle pasta in creamy sauce with ribbons of smoked salmon, chopped chives and lemon zest, shallow white ceramic bowl, soft daylight. Vertical 4:5 portrait format.
+```
+
+### Pasta alla boscaiola
+`pasta-alla-boscaiola`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, penne pasta with sautéed mushrooms and crumbled sausage in light cream sauce, chopped parsley and grated parmesan, white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
 ### Pasta alla gricia
@@ -532,6 +651,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, spaghetti with flaked tuna, black olives, capers, parsley and grated lemon zest, glossy with olive oil, twirled in a shallow white ceramic bowl. Vertical 4:5 portrait format.
 ```
 
+### Tagliatelle al ragù alla bolognese
+`tagliatelle-al-ragu-alla-bolognese`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, fresh tagliatelle coated in dark rich bolognese meat ragù, grated parmesan on top, nest of pasta on a white ceramic plate, soft natural light. Vertical 4:5 portrait format.
+```
+
 ### Tagliatelle al ragù bianco
 `tagliatelle-al-ragu-bianco`
 
@@ -562,6 +688,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, bacalhau a bras, shredded cod with matchstick potatoes and soft scrambled eggs, black olives and parsley, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
+### Bacalhau com broa
+`bacalhau-com-broa`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese bacalhau com broa, baked cod fillet with golden crispy cornbread crumb crust, sliced potatoes and soft onions in olive oil underneath, black olives, white ceramic dish. Vertical 4:5 portrait format.
+```
+
 ### Bacalhau com natas
 `bacalhau-com-natas`
 
@@ -590,11 +723,25 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, bone-in veal cotoletta alla milanese with golden breadcrumb crust and a lemon wedge, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
+### Cotoletta di pollo impanata
+`cotoletta-di-pollo`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, golden breaded chicken cutlet with crisp crust, lemon wedge and small green salad on the side, white ceramic plate. Vertical 4:5 portrait format.
+```
+
 ### Filetto di maiale in crosta di pancetta
 `filetto-di-maiale-in-crosta-di-pancetta`
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, sliced pork tenderloin wrapped in crispy pancetta, pink center, rosemary, light pan jus, white ceramic plate. Vertical 4:5 portrait format.
+```
+
+### Filetto di merluzzo al forno con patate
+`filetto-di-merluzzo-al-forno`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, baked white fish fillet flaking on thin roasted potato slices with cherry tomatoes, black olives and parsley, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
 ### Frango piri-piri
@@ -630,6 +777,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, turkey roulades wrapped with speck, melted smoked cheese oozing, sage, light pan sauce, white ceramic plate. Vertical 4:5 portrait format.
+```
+
+### Omelette
+`omelette`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, folded French omelette with pale golden smooth surface, melted cheese peeking from the fold, chopped chives on top, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
 ### Orata al forno con patate e olive
@@ -674,6 +828,20 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, golden baked meatballs with a bowl of white yogurt mint sauce, parsley, white ceramic plate, minimal. Vertical 4:5 portrait format.
 ```
 
+### Polpette al sugo
+`polpette-al-sugo`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, meatballs simmered in thick tomato sauce with basil leaves, glossy red sauce, slice of rustic bread on the side, white ceramic plate. Vertical 4:5 portrait format.
+```
+
+### Posta mirandesa
+`posta-mirandesa`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, posta mirandesa, thick grilled beef steak sliced to show pink center, dark seared crust, sliced garlic in olive oil on top, crushed potatoes with crispy skin on the side, white ceramic plate. Vertical 4:5 portrait format.
+```
+
 ### Salmone al forno in crosta di erbe e pistacchi
 `salmone-in-crosta-di-erbe-e-pistacchi`
 
@@ -686,6 +854,13 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, pan-seared salmon fillet with crispy golden skin next to a dollop of white yogurt sauce flecked with chives and lemon zest, white ceramic plate. Vertical 4:5 portrait format.
+```
+
+### Salsicce e patate al forno
+`salsicce-e-patate-al-forno`
+
+```
+editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, roasted pork sausages on golden potato wedges with rosemary and whole garlic cloves, crispy edges, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
 ### Salsiccia e broccoli in padella
@@ -721,195 +896,6 @@ editorial food photography, white ceramic plate on light grey linen, soft natura
 
 ```
 editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, beef stew with potatoes and carrots in a light rosemary gravy, rustic, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
----
-
-# Da generare (26)
-
-## Contorno
-
-### Purè di patate
-`pure-di-patate`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, smooth creamy mashed potatoes in a white bowl, small pool of melted butter on top, light dusting of nutmeg, soft natural light. Vertical 4:5 portrait format.
-```
-
-### Verdure grigliate
-`verdure-grigliate`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, grilled zucchini, eggplant and red pepper slices with dark char marks, glossy with olive oil, torn basil leaves, white ceramic plate, overhead. Vertical 4:5 portrait format.
-```
-
-## Dolce
-
-### Cheesecake senza cottura
-`cheesecake-senza-cottura`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, slice of no-bake cheesecake with a biscuit base and smooth white cream layer, mixed berry sauce dripping over the top, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Crêpes dolci
-`crepes-dolci`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, thin golden crêpes folded into triangles on a white plate, hazelnut cream spread inside, light dusting of powdered sugar, soft natural light. Vertical 4:5 portrait format.
-```
-
-### Muffin al cioccolato
-`muffin-al-cioccolato`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, six dark chocolate muffins with tall cracked domes in paper liners, one broken open showing melted chocolate chunks, white ceramic plate, soft light. Vertical 4:5 portrait format.
-```
-
-### Pancakes
-`pancakes`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, stack of fluffy golden pancakes on a white plate, honey dripping down the sides, a few blueberries and raspberries on top, soft morning light. Vertical 4:5 portrait format.
-```
-
-### Torta al cioccolato
-`torta-al-cioccolato`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, small round chocolate cake with a cracked crust, one slice cut out showing a moist dark crumb, light dusting of powdered sugar, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-## Piatto unico
-
-### Bifana
-`bifana`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese bifana sandwich, crusty white bread roll filled with thin pork slices soaked in red paprika garlic sauce, sauce dripping onto white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Chili con carne
-`chili-con-carne`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, chili con carne, dark red minced beef stew with kidney beans and corn, served over white rice, chopped coriander on top, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
-### Cous cous di verdure
-`cous-cous-di-verdure`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, vegetable couscous, fluffy golden couscous topped with roasted diced zucchini, carrot, red pepper and chickpeas, raisins, toasted almond flakes and mint leaves, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
-### Riso saltato con uovo e verdure
-`riso-saltato-con-uovo`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Chinese style fried rice with soft scrambled egg pieces, diced carrot and green peas, soy sauce glaze, chopped chives on top, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
-### Sopa de castanhas
-`sopa-de-castanhas`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese chestnut soup, thick creamy hazelnut-colored soup with whole chestnuts, borlotti beans, rice and chourico slices, drizzle of olive oil, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
-## Primo
-
-### Cannelloni ricotta e spinaci
-`cannelloni-ricotta-e-spinaci`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, four baked cannelloni filled with ricotta and spinach, topped with tomato sauce, béchamel and golden parmesan crust, small white ceramic dish. Vertical 4:5 portrait format.
-```
-
-### Gnocchi alla sorrentina
-`gnocchi-alla-sorrentina`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, baked potato gnocchi in tomato sauce with melted golden mozzarella and fresh basil leaves, small white ceramic baking dish, bubbling edges. Vertical 4:5 portrait format.
-```
-
-### Pasta al forno al ragù
-`pasta-al-forno-al-ragu`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, slice of baked rigatoni with meat ragù, melted mozzarella and golden crust, sliced boiled egg visible inside, white ceramic plate, warm light. Vertical 4:5 portrait format.
-```
-
-### Pasta al salmone
-`pasta-al-salmone`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, farfalle pasta in creamy sauce with ribbons of smoked salmon, chopped chives and lemon zest, shallow white ceramic bowl, soft daylight. Vertical 4:5 portrait format.
-```
-
-### Pasta alla boscaiola
-`pasta-alla-boscaiola`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, penne pasta with sautéed mushrooms and crumbled sausage in light cream sauce, chopped parsley and grated parmesan, white ceramic bowl. Vertical 4:5 portrait format.
-```
-
-### Tagliatelle al ragù alla bolognese
-`tagliatelle-al-ragu-alla-bolognese`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, fresh tagliatelle coated in dark rich bolognese meat ragù, grated parmesan on top, nest of pasta on a white ceramic plate, soft natural light. Vertical 4:5 portrait format.
-```
-
-## Secondo
-
-### Bacalhau com broa
-`bacalhau-com-broa`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, Portuguese bacalhau com broa, baked cod fillet with golden crispy cornbread crumb crust, sliced potatoes and soft onions in olive oil underneath, black olives, white ceramic dish. Vertical 4:5 portrait format.
-```
-
-### Cotoletta di pollo impanata
-`cotoletta-di-pollo`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, golden breaded chicken cutlet with crisp crust, lemon wedge and small green salad on the side, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Filetto di merluzzo al forno con patate
-`filetto-di-merluzzo-al-forno`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, baked white fish fillet flaking on thin roasted potato slices with cherry tomatoes, black olives and parsley, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Omelette
-`omelette`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, folded French omelette with pale golden smooth surface, melted cheese peeking from the fold, chopped chives on top, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Polpette al sugo
-`polpette-al-sugo`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, meatballs simmered in thick tomato sauce with basil leaves, glossy red sauce, slice of rustic bread on the side, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Posta mirandesa
-`posta-mirandesa`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, posta mirandesa, thick grilled beef steak sliced to show pink center, dark seared crust, sliced garlic in olive oil on top, crushed potatoes with crispy skin on the side, white ceramic plate. Vertical 4:5 portrait format.
-```
-
-### Salsicce e patate al forno
-`salsicce-e-patate-al-forno`
-
-```
-editorial food photography, white ceramic plate on light grey linen, soft natural daylight from the left, 45-degree angle, minimal Swiss composition, neutral muted background, shallow depth of field, no text, no hands, no cutlery clutter, no garnish overload, roasted pork sausages on golden potato wedges with rosemary and whole garlic cloves, crispy edges, white ceramic plate. Vertical 4:5 portrait format.
 ```
 
 ### Straccetti di manzo con rucola
