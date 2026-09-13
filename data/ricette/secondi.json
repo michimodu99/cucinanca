@@ -494,7 +494,7 @@
     "ingredienti": [
       { "id": "peperoni", "qta": 1, "unita": "pz", "note": "grande, rosso o giallo", "principale": true },
       { "id": "macinato-misto", "qta": 120, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "sbriciolata, senza altro sale" }], "principale": true },
-      { "id": "riso-carnaroli", "qta": 40, "unita": "g", "note": "qualsiasi riso" },
+      { "id": "riso-lungo", "qta": 40, "unita": "g", "note": "qualsiasi riso", "sostituti": [{ "id": "riso-carnaroli", "nota": "va bene: qui il riso finisce di cuocere dentro il peperone" }] },
       { "id": "parmigiano", "qta": 20, "unita": "g" },
       { "id": "uova", "qta": 1, "unita": "pz", "note": "piccolo" },
       { "id": "cipolla", "qta": 0.25, "unita": "pz" },

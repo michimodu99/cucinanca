@@ -293,10 +293,16 @@
     "principale": true
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 90,
     "unita": "g",
-    "note": "arroz carolino o qualsiasi riso",
+    "note": "carolino o agulha, il riso portoghese di tutti i giorni",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "cede più amido: sciacqualo prima o il piatto lega"
+     }
+    ],
     "principale": true
    },
    {
@@ -1252,10 +1258,16 @@
     "principale": true
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 70,
     "unita": "g",
-    "note": "riso bianco, carolino se lo trovi"
+    "note": "riso bianco",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "il carolino portoghese va benissimo"
+     }
+    ]
    },
    {
     "id": "patate",
@@ -2214,10 +2226,16 @@
     "principale": true
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 80,
     "unita": "g",
-    "note": "o qualsiasi riso bianco, per servire"
+    "note": "o qualsiasi riso bianco, per servire",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "va bene, ma sciacqualo: qui il riso deve restare sgranato"
+     }
+    ]
    },
    {
     "id": "coriandolo",
@@ -3595,7 +3613,7 @@
     "unita": "qb"
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 70,
     "unita": "g",
     "opzionale": true,
@@ -3915,7 +3933,7 @@
     "unita": "qb"
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 60,
     "unita": "g",
     "opzionale": true,
@@ -5592,10 +5610,16 @@
   "reinventata": null,
   "ingredienti": [
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 80,
     "unita": "g",
-    "note": "meglio un riso che resti sgranato: parboiled o carolino",
+    "note": "meglio un parboiled: resta sgranato anche da freddo",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "sciacqualo sotto l'acqua fredda appena cotto, o da freddo si impasta"
+     }
+    ],
     "principale": true
    },
    {
@@ -6250,7 +6274,7 @@
     "note": "perlato",
     "sostituti": [
      {
-      "id": "riso-carnaroli",
+      "id": "riso-lungo",
       "nota": "20 minuti invece di 30"
      }
     ],
@@ -10307,10 +10331,16 @@
     "principale": true
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 40,
     "unita": "g",
-    "note": "qualsiasi riso"
+    "note": "qualsiasi riso",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "va bene: qui il riso finisce di cuocere dentro il peperone"
+     }
+    ]
    },
    {
     "id": "parmigiano",
@@ -12106,10 +12136,16 @@
   "reinventata": null,
   "ingredienti": [
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 80,
     "unita": "g",
     "note": "peso da crudo; meglio riso avanzato del giorno prima, freddo di frigo: quello appena cotto si impasta. Va bene anche il carolino portoghese",
+    "sostituti": [
+     {
+      "id": "riso-carnaroli",
+      "nota": "sciacquato e ben freddo, altrimenti in padella diventa una crema"
+     }
+    ],
     "principale": true
    },
    {
@@ -13837,13 +13873,17 @@
     ]
    },
    {
-    "id": "riso-carnaroli",
+    "id": "riso-lungo",
     "qta": 40,
     "unita": "g",
     "sostituti": [
      {
       "id": "pasta-corta",
       "nota": "ditalini, 2 minuti di cottura in più; la zuppa non è più senza glutine"
+     },
+     {
+      "id": "riso-carnaroli",
+      "nota": "lega di più: la zuppa viene più densa"
      }
     ]
    },

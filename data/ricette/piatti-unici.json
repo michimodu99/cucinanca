@@ -276,7 +276,7 @@
     "reinventata": null,
     "ingredienti": [
       { "id": "anatra", "qta": 350, "unita": "g", "note": "una coscia grande", "sostituti": [{ "id": "pollo-intero", "nota": "cosce: diventa arroz de frango, 20 minuti in meno" }], "principale": true },
-      { "id": "riso-carnaroli", "qta": 90, "unita": "g", "note": "arroz carolino o qualsiasi riso", "principale": true },
+      { "id": "riso-lungo", "qta": 90, "unita": "g", "note": "carolino o agulha, il riso portoghese di tutti i giorni", "sostituti": [{ "id": "riso-carnaroli", "nota": "cede più amido: sciacqualo prima o il piatto lega" }], "principale": true },
       { "id": "chourico", "qta": 60, "unita": "g", "sostituti": [{ "id": "salsiccia", "nota": "manca la paprika: aggiungine un cucchiaino" }] },
       { "id": "pancetta", "qta": 30, "unita": "g", "sostituti": [{ "id": "guanciale" }, { "id": "speck" }] },
       { "id": "cipolla", "qta": 1, "unita": "pz" },
@@ -429,7 +429,7 @@
       { "id": "curry", "qta": 1, "unita": "cucchiai", "note": "dolce, non piccante" },
       { "id": "pomodoro-fresco", "qta": 100, "unita": "g", "note": "a pezzi, cotto nel sugo" },
       { "id": "latte-di-cocco", "qta": 150, "unita": "ml", "sostituti": [{ "id": "yogurt-greco", "nota": "a fuoco spento, altrimenti impazzisce" }], "principale": true },
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "o qualsiasi riso bianco, per servire" },
+      { "id": "riso-lungo", "qta": 80, "unita": "g", "note": "o qualsiasi riso bianco, per servire", "sostituti": [{ "id": "riso-carnaroli", "nota": "va bene, ma sciacqualo: qui il riso deve restare sgranato" }] },
       { "id": "coriandolo", "qta": null, "unita": "qb" },
       { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
       { "id": "limone", "qta": 0.25, "unita": "pz", "opzionale": true }
@@ -638,7 +638,7 @@
       { "id": "coriandolo", "qta": 1, "unita": "cucchiai" },
       { "id": "olio-evo", "qta": 1, "unita": "cucchiai" },
       { "id": "sale", "qta": null, "unita": "qb" },
-      { "id": "riso-carnaroli", "qta": 70, "unita": "g", "opzionale": true, "note": "bollito, per accompagnare" }
+      { "id": "riso-lungo", "qta": 70, "unita": "g", "opzionale": true, "note": "bollito, per accompagnare" }
     ],
     "procedimento": [
       { "n": 1, "titolo": "Cipolla", "testo": "Trita cipolla e aglio e falli appassire nell'olio a fuoco medio 5 minuti, finché la cipolla è morbida e trasparente. Se vuoi il riso, mettilo a bollire adesso in acqua salata.", "minuti": 7 },
@@ -710,7 +710,7 @@
     "origine": "Italia",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "meglio un riso che resti sgranato: parboiled o carolino", "principale": true },
+      { "id": "riso-lungo", "qta": 80, "unita": "g", "note": "meglio un parboiled: resta sgranato anche da freddo", "sostituti": [{ "id": "riso-carnaroli", "nota": "sciacqualo sotto l'acqua fredda appena cotto, o da freddo si impasta" }], "principale": true },
       { "id": "tonno", "qta": 80, "unita": "g", "note": "una scatoletta, sgocciolata", "sostituti": [{ "id": "prosciutto-cotto", "nota": "a dadini" }], "principale": true },
       { "id": "piselli", "qta": 50, "unita": "g", "note": "2 minuti nell'acqua del riso" },
       { "id": "olive-verdi", "qta": 30, "unita": "g", "sostituti": [{ "id": "olive-nere" }] },
@@ -795,7 +795,7 @@
     "ingredienti": [
       { "id": "bistecca", "qta": 150, "unita": "g", "note": "sottile, di manzo", "sostituti": [{ "id": "lonza-di-maiale", "nota": "a fette: 'bitoque de porco'" }, { "id": "petto-di-pollo", "nota": "battuto" }], "principale": true },
       { "id": "uova", "qta": 1, "unita": "pz", "principale": true },
-      { "id": "riso-carnaroli", "qta": 70, "unita": "g", "note": "riso bianco, carolino se lo trovi" },
+      { "id": "riso-lungo", "qta": 70, "unita": "g", "note": "riso bianco", "sostituti": [{ "id": "riso-carnaroli", "nota": "il carolino portoghese va benissimo" }] },
       { "id": "patate", "qta": 150, "unita": "g", "note": "a bastoncini sottili, in padella (o fritte, se hai l'olio da buttare)" },
       { "id": "aglio", "qta": 2, "unita": "spicchi" },
       { "id": "vino-bianco", "qta": 30, "unita": "ml" },
@@ -885,7 +885,7 @@
       { "id": "olio-evo", "qta": 2, "unita": "cucchiai" },
       { "id": "sale", "qta": null, "unita": "qb" },
       { "id": "pepe", "qta": null, "unita": "qb" },
-      { "id": "riso-carnaroli", "qta": 60, "unita": "g", "opzionale": true, "note": "bianco, per accompagnare" }
+      { "id": "riso-lungo", "qta": 60, "unita": "g", "opzionale": true, "note": "bianco, per accompagnare" }
     ],
     "procedimento": [
       { "n": 1, "titolo": "Rosola le carni", "testo": "Taglia la lonza a cubi di 3 cm, la pancetta a dadi, il chouriço a rondelle spesse. In pentola con l'olio a fuoco vivo rosola prima pancetta e chouriço finché rilasciano il grasso rosso, poi la lonza, pochi pezzi per volta: deve prendere colore, non bollire. Togli e tieni da parte.", "minuti": 10 },
@@ -917,7 +917,7 @@
     "origine": "Cina · versione da casa",
     "reinventata": null,
     "ingredienti": [
-      { "id": "riso-carnaroli", "qta": 80, "unita": "g", "note": "peso da crudo; meglio riso avanzato del giorno prima, freddo di frigo: quello appena cotto si impasta. Va bene anche il carolino portoghese", "principale": true },
+      { "id": "riso-lungo", "qta": 80, "unita": "g", "note": "peso da crudo; meglio riso avanzato del giorno prima, freddo di frigo: quello appena cotto si impasta. Va bene anche il carolino portoghese", "sostituti": [{ "id": "riso-carnaroli", "nota": "sciacquato e ben freddo, altrimenti in padella diventa una crema" }], "principale": true },
       { "id": "uova", "qta": 2, "unita": "pz", "principale": true },
       { "id": "carote", "qta": 0.5, "unita": "pz", "note": "a dadini piccoli" },
       { "id": "piselli", "qta": 50, "unita": "g", "note": "surgelati, senza scongelare", "sostituti": [{ "id": "mais", "nota": "in scatola, scolato" }, { "id": "zucchine", "nota": "a dadini, mezza" }] },
@@ -1049,7 +1049,7 @@
     "ingredienti": [
       { "id": "castagne", "qta": 200, "unita": "g", "note": "fresche da ottobre a dicembre (4 €/kg al mercato), incise e sbollentate 5 minuti per pelarle; oppure 'castanhas cozidas' in vaso già pelate, che ti fanno saltare 20 minuti", "principale": true },
       { "id": "fagioli-borlotti", "qta": 100, "unita": "g", "note": "cotti, in vaso, scolati", "sostituti": [{ "id": "fagioli-cannellini" }] },
-      { "id": "riso-carnaroli", "qta": 40, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "ditalini, 2 minuti di cottura in più; la zuppa non è più senza glutine" }] },
+      { "id": "riso-lungo", "qta": 40, "unita": "g", "sostituti": [{ "id": "pasta-corta", "nota": "ditalini, 2 minuti di cottura in più; la zuppa non è più senza glutine" }, { "id": "riso-carnaroli", "nota": "lega di più: la zuppa viene più densa" }] },
       { "id": "cipolla", "qta": 0.5, "unita": "pz", "note": "tritata" },
       { "id": "aglio", "qta": 1, "unita": "spicchi" },
       { "id": "carote", "qta": 0.5, "unita": "pz", "opzionale": true, "note": "a dadini" },

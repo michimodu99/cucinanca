@@ -629,7 +629,7 @@
     "origine": "Italia · Toscana",
     "reinventata": null,
     "ingredienti": [
-      { "id": "farro", "qta": 60, "unita": "g", "note": "perlato", "sostituti": [{ "id": "riso-carnaroli", "nota": "20 minuti invece di 30" }], "principale": true },
+      { "id": "farro", "qta": 60, "unita": "g", "note": "perlato", "sostituti": [{ "id": "riso-lungo", "nota": "20 minuti invece di 30" }], "principale": true },
       { "id": "zucca", "qta": 150, "unita": "g", "principale": true },
       { "id": "cavolo-nero", "qta": 80, "unita": "g", "note": "senza la costa centrale", "sostituti": [{ "id": "verza" }, { "id": "cime-di-rapa" }] },
       { "id": "fagioli-cannellini", "qta": 100, "unita": "g", "opzionale": true },
