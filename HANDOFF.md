@@ -1,19 +1,23 @@
-# HANDOFF — stato al 13/09/2026, fine sessione (quinta)
+# HANDOFF — stato al 13/09/2026, fine sessione (sesta)
 
 Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
 
 ## Prossima sessione: da dove ripartire
 
-Delle cinque funzioni discusse il 13/09, **memoria della dispensa e preferenze «non mangio» sono fatte** (sezione sotto). Restano, nell'ordine proposto:
+Fatte: memoria della dispensa, «non mangio», «scegli tu stasera», e tutte e 126 le foto. Restano due cose, in quest'ordine:
 
-1. **«Scegli tu stasera»** — funzione pura in `match.js`, pesca fra le ricette a 0 mancanti con pesi (stagione, giorno, non fatta di recente, caso), bottoni «Un'altra» e «Apri il libro». È la più corta e ora ha la memoria su cui appoggiarsi («non fatta di recente» vuole una chiave `cucinanca:fatte` in `js/memoria.js`).
-2. **PWA** — manifest + service worker minimo: icona in Home, offline in cucina, e Safari smette di cancellare `localStorage` dopo 7 giorni (oggi la memoria della dispensa è esposta a questo).
-3. **Lista della spesa** — vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share.
+1. **PWA** — manifest + service worker minimo: icona in Home, offline in cucina, e su iPhone Safari smette di cancellare `localStorage` dopo 7 giorni di inattività (oggi la memoria della dispensa è esposta a questo: **da verificare sul telefono vero prima di darlo per scontato**). Il grattacapo è la cache del service worker: rete-prima per ricette e dati, cache-prima per font e immagini, o gli aggiornamenti non arrivano più.
+2. **Lista della spesa** — vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share.
 
 Da non inseguire: foto del frigo, migliaia di ricette, account.
 
-Cosa chiedere a Michele all'inizio: da quale delle tre partire. **Le foto sono tutte a posto: 126 su 126**, nessun avviso da `build-data.mjs`, nessun segnaposto.
+## Fatto il 13/09/2026 (sesta sessione)
 
+- **Le 26 foto mancanti**: 126 su 126. Sei file avevano il nome diverso dallo slug (`cannelloni-ricotta-e-spinacci`, `cotoletta-di-pollo-impanata`, `cous-cous`, `flietto-di-merluzzo-al-forno-con-patate`, `riso-saltato-con-uovo-e-verdure`, `tagliatelle-al-ragu`): succede a ogni lotto, il confronto fra `img/raw/*.jpg` e gli avvisi di `build-data.mjs` lo risolve in un comando.
+- **Footer**: la riga «By Michi» era schiacciata sulla barra «Cosa cucino». Lo spazio riservato al footer era esatto quanto la barra, senza il suo padding: ora è barra + `u*4`.
+- **«Scegli tu stasera»** (`js/scegli.js`, vista `#/scegli?i=…`, bottone secondario nella barra della dispensa). Pesca solo fra le ricette a **zero mancanti**; il bottone è spento se non ce n'è nessuna. La regola viene da un'obiezione di Michele: con solo «piselli» in dispensa i risultati sono vuoti, quindi cosa starebbe scegliendo? Pesi in `pesoScelta()`: stagione dal mese, e il giorno della settimana (di mercoledì il brasato vale un terzo, di sabato il doppio). Niente storico delle ricette fatte, per scelta sua; «Un'altra» non si ripete grazie a una lista di slug che vive solo nella scheda aperta.
+- Dettaglio emerso provando: con una sola ricetta pronta «Un'altra» riproponeva quella sullo schermo. Ora è spenta e la nota dice «È l'unica che puoi fare senza comprare niente».
+- **Test: 60** (erano 48). `scegliPerMe()` prende il caso dall'esterno, quindi le pescate sono ripetibili.
 ## Fatto il 13/09/2026 (quinta sessione)
 
 - **La dispensa si ricorda** (`localStorage`, nessun account). Regole: il link con `?i=` vince sulla memoria ma **non la sovrascrive** finché non tocchi niente (guardi la dispensa di un coinquilino, torni alla home, ritrovi la tua); si salva solo sulle modifiche vere, mai dentro `render()`; «Svuota» salva il vuoto. Sotto le chip: da quando è lì («Dispensa di venerdì»), «Svuota» e «Copia il link».
@@ -22,7 +26,7 @@ Cosa chiedere a Michele all'inizio: da quale delle tre partire. **Le foto sono t
 - **Il numero delle nascoste si dice** («6 nascoste da «non mangio»»): far sparire ricette in silenzio sembra un bug. Conta solo quelle che avresti visto davvero — il controllo in `abbina()` sta in fondo al ciclo apposta, dopo la soglia dei mancanti.
 - **`js/memoria.js`**: l'unico punto che tocca `localStorage` (prefisso `cucinanca:`, formato `{v:1,…}` versionato, ogni accesso in `try/catch` — in navigazione privata il solo tocco lancia). Store iniettabile: i test girano in node. Verificato dal vivo che col browser che blocca lo storage il sito funziona, semplicemente non ricorda.
 - **Refactor**: l'autocomplete (frecce, Invio, corrispondenza esatta che batte i contenuti) è ora `creaCampoIngrediente()` in `dispensa.js`, usato due volte invece di duplicare 40 righe già collaudate. Il conteggio degli ingredienti richiesti viene da `ingredientiRichiesti()` in `match.js`: prima `risultati.js` lo ricalcolava per conto suo e sarebbe andato fuori sincrono con le esclusioni.
-- **Test: 48** (erano 30). 18 nuovi fra esclusioni e memoria. Verifica nel browser: memoria fra ricariche, link altrui che non sovrascrive, Svuota, copia negli appunti con un click vero (quella via script fallisce sempre: serve il gesto utente), 120 + 6 = 126, minestrone nascosto dai piselli.
+- **Test: 48** a fine quinta sessione (erano 30). 18 nuovi fra esclusioni e memoria. Verifica nel browser: memoria fra ricariche, link altrui che non sovrascrive, Svuota, copia negli appunti con un click vero (quella via script fallisce sempre: serve il gesto utente), 120 + 6 = 126, minestrone nascosto dai piselli.
 ## Fatto il 13/09/2026 (quarta sessione)
 
 - **Foto 100/100** (arrivate 38 il 12/09 + spaghetti al pomodoro il 13/09; tre file rinominati allo slug esatto). Poi **+26 ricette** senza foto (vedi "Lotto del 13/09").

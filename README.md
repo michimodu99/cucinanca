@@ -72,10 +72,11 @@ Tutto il codice che tocca `localStorage` sta in `js/memoria.js`: ha lo store ini
 ## Struttura
 
 ```
-index.html            tre viste: dispensa, risultati, libro (router hash in js/app.js)
+index.html            quattro viste: dispensa, risultati, scegli tu, libro (router hash in js/app.js)
 css/                  tokens (palette, tipografia) · base · dispensa · risultati · libro
 js/match.js           logica pura: alias → id, copertura, mancanti, esclusioni, scala porzioni (testata)
 js/memoria.js         l'unico punto che tocca localStorage: dispensa ricordata e "non mangio" (testata)
+js/scegli.js          «Scegli tu stasera»: pesca una ricetta fra quelle a zero mancanti
 js/libro.js           doppia pagina desktop con impaginazione automatica; pagine a swipe su mobile; Wake Lock
 js/i18n.js            tutte le stringhe dell'interfaccia (solo `it` per ora): t(), applicaTesti(), etichette di dominio
 video/                hero.mp4 (le clip della fascia in testa alla dispensa, montate in un file); raw/ le sorgenti, ignorate da git

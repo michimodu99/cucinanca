@@ -74,6 +74,12 @@ Campi **specifici di questo progetto**, assenti nei canali:
 - **La dispensa si ricorda** (`localStorage`, chiavi `cucinanca:dispensa` e `cucinanca:esclusi`, nessun account). Il link con `?i=` vince sulla memoria ma non la sovrascrive finché non si modifica nulla; "Svuota" salva il vuoto. Sotto le chip: da quando è lì, Svuota, e "Copia il link" — la memoria vive in un solo browser di un solo dispositivo, e l'URL è il ponte verso gli altri.
 - **"Non mangio"**: lista personale di ingredienti (pannello a scomparsa, stesso autocomplete, pesca anche fra i base). Quello che escludi esce dalla dispensa ed è barrato nell'indice; le ricette che lo richiedono spariscono, sia dai risultati sia sfogliando tutte le ricette, e il sottotitolo dice quante ne ha nascoste.
 
+### 4.1-bis «Scegli tu stasera»
+- Un bottone secondario nella barra della dispensa porta a `#/scegli?i=…`: **una** ricetta sola, con «Un'altra» e «Apri il libro».
+- Pesca **solo fra le ricette a zero mancanti**, e il bottone è spento se non ce n'è nessuna: se devi uscire a comprare qualcosa non è un consiglio per stasera, è un compito. La soglia è il `maxMancanti` passato ad `abbina()`.
+- Pesi (`pesoScelta()`): stagione dal mese ×2 se il tag c'è (nei dati esistono solo `autunno` e `inverno`); giorno feriale ×1,6 sotto i 45′ e ×0,35 sopra o se `weekend`; sabato e domenica ×1,8 alle lunghe.
+- Nessuno storico delle ricette fatte (scelta di Michele): «Un'altra» evita le ripetizioni tenendo gli slug mostrati in memoria di sessione, e riparte da capo quando le ha girate tutte. Con una sola ricetta pronta il bottone è spento e la nota lo dice.
+
 ### 4.2 Risultati
 - Card: foto, titolo, categoria, difficoltà, tempo totale, costo, **copertura** ("hai tutto" / "manca: pecorino").
 - Ordine: copertura 100 % → 1 mancante → 2 mancanti; a parità, tempo totale crescente. Oltre 2 mancanti non compare (soglia in `config`). Se manca un ingrediente `principale` (senza sostituto posseduto) la ricetta non compare mai: senza baccalà il bacalhau è un altro piatto, senza prezzemolo no.
@@ -204,8 +210,8 @@ Test unitari coprono: alias → id, base ignorato, opzionale ignorato, sostituzi
 ## 9. Architettura tecnica
 
 - Sito statico, **HTML/CSS/JS vanilla, senza build**. Hosting **GitHub Pages**, repo `michimodu99/cucinanca` pubblico (con GitHub Student/Pro si può rendere privato in qualsiasi momento senza perdere Pages).
-- Single-page con router hash: `#/` dispensa · `#/risultati?i=…&f=…` · `#/ricetta/<slug>`.
-- Struttura: `css/tokens.css base.css dispensa.css risultati.css libro.css`, `js/app.js data.js match.js memoria.js dispensa.js risultati.js libro.js i18n.js`, `data/`, `schema/`, `scripts/`, `img/`, `video/`, `reference/`.
+- Single-page con router hash: `#/` dispensa · `#/risultati?i=…&f=…` · `#/scegli?i=…` · `#/ricetta/<slug>`.
+- Struttura: `css/tokens.css base.css dispensa.css risultati.css libro.css`, `js/app.js data.js match.js memoria.js dispensa.js risultati.js scegli.js libro.js i18n.js`, `data/`, `schema/`, `scripts/`, `img/`, `video/`, `reference/`.
 - Stato locale: `js/memoria.js` è **l'unico** punto che tocca `localStorage` (prefisso `cucinanca:`, formato versionato `{v:1,…}`, ogni accesso in `try/catch` perché in navigazione privata il solo tocco lancia). Lo store è iniettabile, così i test girano in node senza browser.
 - Dipendenze runtime: nessuna. Dipendenze dev (solo per gli script): `sharp` (ottimizzazione immagini), `ajv` (validazione schema).
 - Test: `node --test scripts/` (match), `node scripts/validate.mjs` (dati), screenshot Playwright a 1440×900 e 390×844.
@@ -232,7 +238,8 @@ Modifiche a una ricetta esistente ("la carbonara con 5 tuorli invece di 6") segu
 | 5 | Aggiornamenti a richiesta | workflow in README.md |
 | 6 | 11–13/09: sito condivisibile (via i "vietati"), sostituzioni, i18n pronto, 100 → 126 ricette, ingrediente principale, hero video, home senza `#/`, dosi a quarti, singolari, escape, test funzionali | ✅ fatto — vedi `HANDOFF.md` |
 | 7 | Memoria della dispensa + preferenze "non mangio" (localStorage) | ✅ fatto il 13/09/2026 — §4.1 |
-| 8 | "Scegli tu stasera", PWA (icona in Home + offline), lista della spesa | nell'ordine, da fare (analisi in `docs/2026-09-13-ricerca-ricette-e-app.md`) |
+| 8 | "Scegli tu stasera" | ✅ fatto il 13/09/2026 — §4.1-bis |
+| 9 | PWA (icona in Home + offline), poi lista della spesa | nell'ordine, da fare (analisi in `docs/2026-09-13-ricerca-ricette-e-app.md`) |
 
 ### Aperto
 - Vino bianco e prezzemolo contano come "mancanti": se sono sempre in casa, vanno marcati `base: true` in `data/ingredienti.json`.
