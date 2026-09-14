@@ -1,15 +1,49 @@
-# HANDOFF — stato al 13/09/2026, fine sessione (sesta)
+# HANDOFF — stato al 14/09/2026, fine sessione (sesta)
 
 Contesto per la prossima sessione. Leggi anche `SPEC.md` (stato/roadmap), `PRODUCT.md`, e la spec di design `docs/superpowers/specs/2026-09-11-cucinanca-100-ricette-design.md` (il perché delle decisioni di questa sessione), con i due piani in `docs/superpowers/plans/`.
 
 ## Prossima sessione: da dove ripartire
 
-Fatte: memoria della dispensa, «non mangio», «scegli tu stasera», e tutte e 126 le foto. Restano due cose, in quest'ordine:
+**Il lotto di 20 ricette è approvato e scritto: si parte da lì.** Lista, ingredienti nuovi e metodo
+in `docs/2026-09-14-controllo-ingredienti.md`. In due righe: 7 di mare (vongole, cozze, gamberi,
+polpo, carapaus, arroz de marisco, calamari), 4 di verdure crude, 3 da dieci minuti, 3 dolci
+portoghesi col latte condensato, 3 di pollo economico. 17 ingredienti nuovi, la tassonomia passa da
+160 a 177 voci.
 
-1. **PWA**: manifest + service worker minimo, icona in Home, offline in cucina, e su iPhone Safari smette di cancellare `localStorage` dopo 7 giorni di inattività (oggi la memoria della dispensa è esposta a questo: **da verificare sul telefono vero prima di darlo per scontato**). Il grattacapo è la cache del service worker: rete-prima per ricette e dati, cache-prima per font e immagini, o gli aggiornamenti non arrivano più.
-2. **Lista della spesa**: vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta = comprato = in dispensa, condivisione via Web Share.
+**Prima di scrivere, una domanda a Michele**: al Continente di Bragança si trovano polpo congelato,
+vongole e gamberi a prezzo decente? Sette ricette su venti sono di mare, e se lì quella roba non
+c'è restano a fare numero. Lui è sul posto.
+
+**Metodo confermato**: brief comune, quattro subagent in parallelo su file `_lotto-*.json` separati
+(mare 7 · crude e veloci 7 · dolci PT 3 · pollo 3), rilettura una a una prima del commit, fusione
+nei file di categoria. Michele ha chiesto il riepilogo di cosa fanno prima di attivarli: è nel
+documento, punto "Come scrivere il lotto".
+
+Dopo il lotto restano, nell'ordine:
+
+1. **PWA**: manifest + service worker minimo, icona in Home, offline in cucina, e su iPhone Safari
+   smette di cancellare `localStorage` dopo 7 giorni di inattività (da verificare sul telefono vero,
+   non darlo per scontato). Il grattacapo è la cache del service worker: rete-prima per ricette e
+   dati, cache-prima per font e immagini, o gli aggiornamenti non arrivano più.
+2. **Lista della spesa**: vista `#/spesa`, raggruppata per reparto, quantità sommate, spunta =
+   comprato = in dispensa, condivisione via Web Share.
 
 Da non inseguire: foto del frigo, migliaia di ricette, account.
+
+## Fatto il 14/09/2026 (coda della sesta sessione)
+
+- **Controllo della tassonomia** contro i siti di cucina, su richiesta di Michele:
+  `docs/2026-09-14-controllo-ingredienti.md`. Sette buchi, il più grosso è il mare (15 ricette su
+  126 con pesce, e nessun mollusco, crostaceo o pesce azzurro fresco, in Portogallo). GialloZafferano
+  e Cucchiaio bloccano il fetch (402 e 403): le fonti lette sono Food From Portugal, Tavolartegusto,
+  un menù settimanale vero di un blog GialloZafferano, un articolo sulla dispensa base, Wikipedia.
+- **Riso sistemato** (vedi sotto, sezione del 13/09): era l'unico buco che peggiorava ricette già
+  pubblicate, quindi è stato chiuso subito invece di aspettare il lotto.
+- **Passata humanizer** sulle stringhe delle funzioni nuove. Quattro riscritte (l'aiuto di "Scegli
+  tu" ripeteva l'etichetta del bottone; lo stato vuoto diceva due volte la stessa cosa; "rimettilo
+  in gioco" era un fronzolo). Nei documenti, un dato misurabile: nelle sezioni scritte quel giorno i
+  trattini lunghi stavano a 6,5 per mille parole nell'HANDOFF e 8,3 nel README, contro 1,7 e 1,1 del
+  testo preesistente. Sostituiti. SPEC lasciato stare: lì erano già a 7,3 per mille.
 
 ## Fatto il 13/09/2026 (sesta sessione)
 
