@@ -2,9 +2,9 @@
 
 **Live:** https://michimodu99.github.io/cucinanca/
 
-> **EN** · *"What's in my fridge?"* A recipe book for Erasmus students in Bragança, Portugal. Enter what you have in your pantry and it suggests what you can cook tonight, accepting sensible substitutes but never dropping a dish's key ingredient. 126 recipes and 160 ingredients, portions for one person, local prices. Static site (vanilla JS, JSON Schema-validated data, Node tests), no backend: your pantry is saved on your device.
+> EN · *"What's in my fridge?"* A recipe book for Erasmus students in Bragança, Portugal. You enter what's in your pantry and it lists what you can cook tonight. A substitute counts when the recipe allows one, but a dish missing its main ingredient is never suggested. 126 recipes and 160 ingredients, portions for one person, local prices. It is a static site (vanilla JS, data validated with JSON Schema, Node tests) with no backend, and your pantry is saved on your device.
 >
-> **PT** · *"O que há no frigorífico?"* Um livro de receitas para estudantes Erasmus em Bragança. Indicas o que tens na despensa e a app sugere o que podes cozinhar hoje, aceitando substitutos sensatos mas nunca retirando o ingrediente principal de um prato. 126 receitas e 160 ingredientes, doses para uma pessoa, preços locais. Site estático (JavaScript puro, dados validados com JSON Schema, testes em Node), sem servidor: a tua despensa fica guardada no teu dispositivo.
+> PT · *"O que há no frigorífico?"* Um livro de receitas para estudantes Erasmus em Bragança. Indicas o que tens na despensa e a app mostra o que podes cozinhar hoje. Um substituto conta quando a receita o permite, mas um prato sem o seu ingrediente principal nunca é sugerido. 126 receitas e 160 ingredientes, doses para uma pessoa, preços locais. É um site estático (JavaScript puro, dados validados com JSON Schema, testes em Node) sem servidor, e a tua despensa fica guardada no teu dispositivo.
 >
 > *The rest of this README (development notes) is in Italian.*
 
