@@ -1,5 +1,13 @@
 # Cucinança
 
+**Live:** https://michimodu99.github.io/cucinanca/
+
+> **EN** · *"What's in my fridge?"* A recipe book for Erasmus students in Bragança, Portugal. Enter what you have in your pantry and it suggests what you can cook tonight, accepting sensible substitutes but never dropping a dish's key ingredient. 126 recipes and 160 ingredients, portions for one person, local prices. Static site (vanilla JS, JSON Schema-validated data, Node tests), no backend: your pantry is saved on your device.
+>
+> **PT** · *"O que há no frigorífico?"* Um livro de receitas para estudantes Erasmus em Bragança. Indicas o que tens na despensa e a app sugere o que podes cozinhar hoje, aceitando substitutos sensatos mas nunca retirando o ingrediente principal de um prato. 126 receitas e 160 ingredientes, doses para uma pessoa, preços locais. Site estático (JavaScript puro, dados validados com JSON Schema, testes em Node), sem servidor: a tua despensa fica guardada no teu dispositivo.
+>
+> *The rest of this README (development notes) is in Italian.*
+
 Ricettario condiviso per erasmus a Bragança: scrivi cosa hai in dispensa, sfoglia le ricette che puoi cucinare stasera (anche con un sostituto al posto di quello che manca), leggile dal telefono come un libro. Dosi per 1 persona, prezzi di Bragança.
 
 Sito statico (HTML/CSS/JS, nessun build) su GitHub Pages. Specifica in `SPEC.md`, prodotto in `PRODUCT.md`, sistema di design in `DESIGN.md`.
